@@ -32,6 +32,8 @@
 		* stm32_flash.ld
 	* Startup
 		* startup_stm32f10x_md.s
+	* picrecord
+		* *.png
 	* main.c
 	* stm32f10x_conf.h
 	* stm32f10x_it.c
@@ -243,18 +245,26 @@ void USART1_IRQHandler(){
 ## 连线图 ##
 
 原理图
-![原理图](./原理图.png)
+![原理图](./picrecord/原理图.png)
 
 ## 实物效果 ##
 
-CP2102
-![CP2102](./cp2102.png)
+### DTR/RTS控制 ###
 
-103
-![103](./103.png)
+DTR接rst引脚，RTS接BOOT0引脚
 
-LED
-![LED](./LED.png)
+![](./picrecord/boot_reset.png)
 
-串口信息
-![串口](./串口信息.PNG)
+![](./picrecord/flymcu_setting.PNG)
+
+### CP2102 ###
+![CP2102](./picrecord/cp2102.png)
+
+### 103 ###
+![103](./picrecord/103.png)
+
+### LED ###
+![LED](./picrecord/LED.png)
+
+### 串口信息 ###
+![串口](./picrecord/串口信息.PNG)
