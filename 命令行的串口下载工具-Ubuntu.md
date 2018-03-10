@@ -36,9 +36,13 @@
 `stm32isp <.hex path> <USBtty> <baud rate>`
 ##### Example
 
+``` bash
 stm32isp test.hex /dev/ttyUSB0 115200
+```
 
-Note: `<USBtty>` could vary on different systems, on my Ubuntu, it is `/dev/ttyUSB0`
+Note: 
+* `<USBtty>` could vary on different systems, on my Ubuntu, it is `/dev/ttyUSB0`
+* Press the RST button right after seeing `Sync` in the terminal
 
 #### Options
 
