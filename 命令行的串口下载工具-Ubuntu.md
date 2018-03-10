@@ -95,7 +95,7 @@ Note:
 ## Example Workflow
 
 ### Find the USB Terminal
-![](img/02_ttyUSB0.png)
+![](img/u02_ttyUSB0.png)
 
 ### Download the .hex file
-![](img/04_download_exp.png)
+![](img/u04_download_exp.png)
