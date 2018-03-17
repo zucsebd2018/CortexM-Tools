@@ -84,11 +84,10 @@ if(!flag)
 
 **Remark**
 
-In this code snippet, I used the following functions:
+In this code snippet, I use the following functions:
 
 ```C
-void HAL_GPIO_WritePin (GPIO_TypeDef * GPIOx, uint16_t
-GPIO_Pin, GPIO_PinState PinState);
+void HAL_GPIO_WritePin (GPIO_TypeDef * GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
 ```
 Parameters:
 
