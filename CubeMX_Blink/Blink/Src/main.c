@@ -72,7 +72,7 @@ static void MX_GPIO_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+  int flag = 0;
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -99,22 +99,20 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int flag = 0;
   while (1)
   {
-    if(!flag){
-      GPIO_WriteBit(GPIOA,GPIO_Pin_2,Bit_SET);
-      delay_ms(500);
-      flag = 1;
-    }else{
-      GPIO_WriteBit(GPIOA,GPIO_Pin_2,Bit_RESET);
-      delay_ms(500);
-      flag = 0;
-    }
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-
+   if(!flag){
+      HAL_GPIO_WritePin(GPIOA,GPIO_PIN_2,GPIO_PIN_SET);
+      HAL_Delay(500);
+      flag = 1;
+    }else{
+      HAL_GPIO_WritePin(GPIOA,GPIO_PIN_2,GPIO_PIN_RESET);
+      HAL_Delay(500);
+      flag = 0;
+    }
   }
   /* USER CODE END 3 */
 
