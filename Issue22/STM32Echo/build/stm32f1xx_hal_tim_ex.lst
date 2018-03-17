@@ -1,0 +1,31 @@
+ARM GAS  /tmp/ccRpEGXM.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"stm32f1xx_hal_tim_ex.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              	.Letext0:
+  19              		.file 1 "/usr/include/newlib/machine/_default_types.h"
+  20              		.file 2 "/usr/include/newlib/sys/_stdint.h"
+  21              		.file 3 "Drivers/CMSIS/Include/core_cm3.h"
+ARM GAS  /tmp/ccRpEGXM.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32f1xx_hal_tim_ex.c
+
+NO UNDEFINED SYMBOLS
