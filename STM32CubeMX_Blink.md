@@ -2,6 +2,7 @@
 
 ## Prerequisites
 
+* JRE 1.8 32-bit (Only 32bit can work)
 * [STM32CudeMX](http://www.st.com/en/development-tools/stm32cubemx.html) from STMicroelectronics 
 * Download STM32F1 Library in the CubeMX IDE (A proxy may be needed if you are in Mainland China)
 
