@@ -1,0 +1,988 @@
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"main.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.MX_GPIO_Init,"ax",%progbits
+  16              		.align	1
+  17              		.syntax unified
+  18              		.thumb
+  19              		.thumb_func
+  20              		.fpu softvfp
+  22              	MX_GPIO_Init:
+  23              	.LFB70:
+  24              		.file 1 "Src/main.c"
+   1:Src/main.c    **** 
+   2:Src/main.c    **** /**
+   3:Src/main.c    ****   ******************************************************************************
+   4:Src/main.c    ****   * @file           : main.c
+   5:Src/main.c    ****   * @brief          : Main program body
+   6:Src/main.c    ****   ******************************************************************************
+   7:Src/main.c    ****   ** This notice applies to any and all portions of this file
+   8:Src/main.c    ****   * that are not between comment pairs USER CODE BEGIN and
+   9:Src/main.c    ****   * USER CODE END. Other portions of this file, whether 
+  10:Src/main.c    ****   * inserted by the user or by software development tools
+  11:Src/main.c    ****   * are owned by their respective copyright owners.
+  12:Src/main.c    ****   *
+  13:Src/main.c    ****   * COPYRIGHT(c) 2018 STMicroelectronics
+  14:Src/main.c    ****   *
+  15:Src/main.c    ****   * Redistribution and use in source and binary forms, with or without modification,
+  16:Src/main.c    ****   * are permitted provided that the following conditions are met:
+  17:Src/main.c    ****   *   1. Redistributions of source code must retain the above copyright notice,
+  18:Src/main.c    ****   *      this list of conditions and the following disclaimer.
+  19:Src/main.c    ****   *   2. Redistributions in binary form must reproduce the above copyright notice,
+  20:Src/main.c    ****   *      this list of conditions and the following disclaimer in the documentation
+  21:Src/main.c    ****   *      and/or other materials provided with the distribution.
+  22:Src/main.c    ****   *   3. Neither the name of STMicroelectronics nor the names of its contributors
+  23:Src/main.c    ****   *      may be used to endorse or promote products derived from this software
+  24:Src/main.c    ****   *      without specific prior written permission.
+  25:Src/main.c    ****   *
+  26:Src/main.c    ****   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  27:Src/main.c    ****   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  28:Src/main.c    ****   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  29:Src/main.c    ****   * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  30:Src/main.c    ****   * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  31:Src/main.c    ****   * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  32:Src/main.c    ****   * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  33:Src/main.c    ****   * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  34:Src/main.c    ****   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s 			page 2
+
+
+  35:Src/main.c    ****   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  36:Src/main.c    ****   *
+  37:Src/main.c    ****   ******************************************************************************
+  38:Src/main.c    ****   */
+  39:Src/main.c    **** /* Includes ------------------------------------------------------------------*/
+  40:Src/main.c    **** #include "main.h"
+  41:Src/main.c    **** #include "stm32f1xx_hal.h"
+  42:Src/main.c    **** 
+  43:Src/main.c    **** /* USER CODE BEGIN Includes */
+  44:Src/main.c    **** #include "string.h"
+  45:Src/main.c    **** /* USER CODE END Includes */
+  46:Src/main.c    **** 
+  47:Src/main.c    **** /* Private variables ---------------------------------------------------------*/
+  48:Src/main.c    **** ADC_HandleTypeDef hadc1;
+  49:Src/main.c    **** 
+  50:Src/main.c    **** UART_HandleTypeDef huart1;
+  51:Src/main.c    **** 
+  52:Src/main.c    **** /* USER CODE BEGIN PV */
+  53:Src/main.c    **** /* Private variables ---------------------------------------------------------*/
+  54:Src/main.c    **** 
+  55:Src/main.c    **** /* USER CODE END PV */
+  56:Src/main.c    **** 
+  57:Src/main.c    **** /* Private function prototypes -----------------------------------------------*/
+  58:Src/main.c    **** void SystemClock_Config(void);
+  59:Src/main.c    **** static void MX_GPIO_Init(void);
+  60:Src/main.c    **** static void MX_ADC1_Init(void);
+  61:Src/main.c    **** static void MX_USART1_UART_Init(void);
+  62:Src/main.c    **** 
+  63:Src/main.c    **** /* USER CODE BEGIN PFP */
+  64:Src/main.c    **** /* Private function prototypes -----------------------------------------------*/
+  65:Src/main.c    **** 
+  66:Src/main.c    **** /* USER CODE END PFP */
+  67:Src/main.c    **** 
+  68:Src/main.c    **** /* USER CODE BEGIN 0 */
+  69:Src/main.c    **** 
+  70:Src/main.c    **** /* USER CODE END 0 */
+  71:Src/main.c    **** 
+  72:Src/main.c    **** /**
+  73:Src/main.c    ****   * @brief  The application entry point.
+  74:Src/main.c    ****   *
+  75:Src/main.c    ****   * @retval None
+  76:Src/main.c    ****   */
+  77:Src/main.c    **** int main(void)
+  78:Src/main.c    **** {
+  79:Src/main.c    ****   /* USER CODE BEGIN 1 */
+  80:Src/main.c    **** 
+  81:Src/main.c    ****   /* USER CODE END 1 */
+  82:Src/main.c    **** 
+  83:Src/main.c    ****   /* MCU Configuration----------------------------------------------------------*/
+  84:Src/main.c    **** 
+  85:Src/main.c    ****   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  86:Src/main.c    ****   HAL_Init();
+  87:Src/main.c    **** 
+  88:Src/main.c    ****   /* USER CODE BEGIN Init */
+  89:Src/main.c    **** 
+  90:Src/main.c    ****   /* USER CODE END Init */
+  91:Src/main.c    **** 
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s 			page 3
+
+
+  92:Src/main.c    ****   /* Configure the system clock */
+  93:Src/main.c    ****   SystemClock_Config();
+  94:Src/main.c    **** 
+  95:Src/main.c    ****   /* USER CODE BEGIN SysInit */
+  96:Src/main.c    **** 
+  97:Src/main.c    ****   /* USER CODE END SysInit */
+  98:Src/main.c    **** 
+  99:Src/main.c    ****   /* Initialize all configured peripherals */
+ 100:Src/main.c    ****   MX_GPIO_Init();
+ 101:Src/main.c    ****   MX_ADC1_Init();
+ 102:Src/main.c    ****   MX_USART1_UART_Init();
+ 103:Src/main.c    ****   /* USER CODE BEGIN 2 */
+ 104:Src/main.c    ****   HAL_GPIO_WritePin(GPIOA,GPIO_PIN_2,GPIO_PIN_RESET);
+ 105:Src/main.c    ****   HAL_ADCEx_Calibration_Start(&hadc1);
+ 106:Src/main.c    ****   
+ 107:Src/main.c    ****   uint32_t adc1_value;
+ 108:Src/main.c    ****   float adc1_v;
+ 109:Src/main.c    ****   char buf[100];
+ 110:Src/main.c    ****   /* USER CODE END 2 */
+ 111:Src/main.c    **** 
+ 112:Src/main.c    ****   /* Infinite loop */
+ 113:Src/main.c    ****   /* USER CODE BEGIN WHILE */
+ 114:Src/main.c    ****   HAL_ADC_Start(&hadc1);
+ 115:Src/main.c    ****   while (1)
+ 116:Src/main.c    ****   {
+ 117:Src/main.c    **** 
+ 118:Src/main.c    ****   /* USER CODE END WHILE */
+ 119:Src/main.c    **** 
+ 120:Src/main.c    ****   /* USER CODE BEGIN 3 */
+ 121:Src/main.c    ****    HAL_GPIO_WritePin(GPIOA,GPIO_PIN_2,GPIO_PIN_RESET);
+ 122:Src/main.c    ****    
+ 123:Src/main.c    ****    HAL_ADC_PollForConversion(&hadc1, 100);
+ 124:Src/main.c    ****    adc1_value = HAL_ADC_GetValue(&hadc1);
+ 125:Src/main.c    ****    adc1_v = (float)adc1_value / 4095 * 3.3;
+ 126:Src/main.c    ****    sprintf(buf, "Current Voltage is: %.2f\n", adc1_v);
+ 127:Src/main.c    ****    HAL_UART_Transmit(&huart1, (uint8_t*)buf, strlen(buf), 0xFFFF);
+ 128:Src/main.c    ****    
+ 129:Src/main.c    ****    HAL_Delay(100);
+ 130:Src/main.c    ****    HAL_GPIO_WritePin(GPIOA,GPIO_PIN_2,GPIO_PIN_SET);
+ 131:Src/main.c    ****    HAL_Delay(400);
+ 132:Src/main.c    ****   }
+ 133:Src/main.c    ****   HAL_ADC_Stop(&hadc1);
+ 134:Src/main.c    ****   /* USER CODE END 3 */
+ 135:Src/main.c    **** 
+ 136:Src/main.c    **** }
+ 137:Src/main.c    **** 
+ 138:Src/main.c    **** /**
+ 139:Src/main.c    ****   * @brief System Clock Configuration
+ 140:Src/main.c    ****   * @retval None
+ 141:Src/main.c    ****   */
+ 142:Src/main.c    **** void SystemClock_Config(void)
+ 143:Src/main.c    **** {
+ 144:Src/main.c    **** 
+ 145:Src/main.c    ****   RCC_OscInitTypeDef RCC_OscInitStruct;
+ 146:Src/main.c    ****   RCC_ClkInitTypeDef RCC_ClkInitStruct;
+ 147:Src/main.c    ****   RCC_PeriphCLKInitTypeDef PeriphClkInit;
+ 148:Src/main.c    **** 
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s 			page 4
+
+
+ 149:Src/main.c    ****     /**Initializes the CPU, AHB and APB busses clocks 
+ 150:Src/main.c    ****     */
+ 151:Src/main.c    ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+ 152:Src/main.c    ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+ 153:Src/main.c    ****   RCC_OscInitStruct.HSICalibrationValue = 16;
+ 154:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+ 155:Src/main.c    ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 156:Src/main.c    ****   {
+ 157:Src/main.c    ****     _Error_Handler(__FILE__, __LINE__);
+ 158:Src/main.c    ****   }
+ 159:Src/main.c    **** 
+ 160:Src/main.c    ****     /**Initializes the CPU, AHB and APB busses clocks 
+ 161:Src/main.c    ****     */
+ 162:Src/main.c    ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+ 163:Src/main.c    ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 164:Src/main.c    ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+ 165:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 166:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 167:Src/main.c    ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 168:Src/main.c    **** 
+ 169:Src/main.c    ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+ 170:Src/main.c    ****   {
+ 171:Src/main.c    ****     _Error_Handler(__FILE__, __LINE__);
+ 172:Src/main.c    ****   }
+ 173:Src/main.c    **** 
+ 174:Src/main.c    ****   PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
+ 175:Src/main.c    ****   PeriphClkInit.AdcClockSelection = RCC_ADCPCLK2_DIV2;
+ 176:Src/main.c    ****   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+ 177:Src/main.c    ****   {
+ 178:Src/main.c    ****     _Error_Handler(__FILE__, __LINE__);
+ 179:Src/main.c    ****   }
+ 180:Src/main.c    **** 
+ 181:Src/main.c    ****     /**Configure the Systick interrupt time 
+ 182:Src/main.c    ****     */
+ 183:Src/main.c    ****   HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq()/1000);
+ 184:Src/main.c    **** 
+ 185:Src/main.c    ****     /**Configure the Systick 
+ 186:Src/main.c    ****     */
+ 187:Src/main.c    ****   HAL_SYSTICK_CLKSourceConfig(SYSTICK_CLKSOURCE_HCLK);
+ 188:Src/main.c    **** 
+ 189:Src/main.c    ****   /* SysTick_IRQn interrupt configuration */
+ 190:Src/main.c    ****   HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
+ 191:Src/main.c    **** }
+ 192:Src/main.c    **** 
+ 193:Src/main.c    **** /* ADC1 init function */
+ 194:Src/main.c    **** static void MX_ADC1_Init(void)
+ 195:Src/main.c    **** {
+ 196:Src/main.c    **** 
+ 197:Src/main.c    ****   ADC_ChannelConfTypeDef sConfig;
+ 198:Src/main.c    **** 
+ 199:Src/main.c    ****     /**Common config 
+ 200:Src/main.c    ****     */
+ 201:Src/main.c    ****   hadc1.Instance = ADC1;
+ 202:Src/main.c    ****   hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;
+ 203:Src/main.c    ****   hadc1.Init.ContinuousConvMode = ENABLE;
+ 204:Src/main.c    ****   hadc1.Init.DiscontinuousConvMode = DISABLE;
+ 205:Src/main.c    ****   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s 			page 5
+
+
+ 206:Src/main.c    ****   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+ 207:Src/main.c    ****   hadc1.Init.NbrOfConversion = 1;
+ 208:Src/main.c    ****   if (HAL_ADC_Init(&hadc1) != HAL_OK)
+ 209:Src/main.c    ****   {
+ 210:Src/main.c    ****     _Error_Handler(__FILE__, __LINE__);
+ 211:Src/main.c    ****   }
+ 212:Src/main.c    **** 
+ 213:Src/main.c    ****     /**Configure Regular Channel 
+ 214:Src/main.c    ****     */
+ 215:Src/main.c    ****   sConfig.Channel = ADC_CHANNEL_0;
+ 216:Src/main.c    ****   sConfig.Rank = ADC_REGULAR_RANK_1;
+ 217:Src/main.c    ****   sConfig.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
+ 218:Src/main.c    ****   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+ 219:Src/main.c    ****   {
+ 220:Src/main.c    ****     _Error_Handler(__FILE__, __LINE__);
+ 221:Src/main.c    ****   }
+ 222:Src/main.c    **** 
+ 223:Src/main.c    **** }
+ 224:Src/main.c    **** 
+ 225:Src/main.c    **** /* USART1 init function */
+ 226:Src/main.c    **** static void MX_USART1_UART_Init(void)
+ 227:Src/main.c    **** {
+ 228:Src/main.c    **** 
+ 229:Src/main.c    ****   huart1.Instance = USART1;
+ 230:Src/main.c    ****   huart1.Init.BaudRate = 9600;
+ 231:Src/main.c    ****   huart1.Init.WordLength = UART_WORDLENGTH_8B;
+ 232:Src/main.c    ****   huart1.Init.StopBits = UART_STOPBITS_1;
+ 233:Src/main.c    ****   huart1.Init.Parity = UART_PARITY_NONE;
+ 234:Src/main.c    ****   huart1.Init.Mode = UART_MODE_TX_RX;
+ 235:Src/main.c    ****   huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+ 236:Src/main.c    ****   huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+ 237:Src/main.c    ****   if (HAL_UART_Init(&huart1) != HAL_OK)
+ 238:Src/main.c    ****   {
+ 239:Src/main.c    ****     _Error_Handler(__FILE__, __LINE__);
+ 240:Src/main.c    ****   }
+ 241:Src/main.c    **** 
+ 242:Src/main.c    **** }
+ 243:Src/main.c    **** 
+ 244:Src/main.c    **** /** Configure pins as 
+ 245:Src/main.c    ****         * Analog 
+ 246:Src/main.c    ****         * Input 
+ 247:Src/main.c    ****         * Output
+ 248:Src/main.c    ****         * EVENT_OUT
+ 249:Src/main.c    ****         * EXTI
+ 250:Src/main.c    **** */
+ 251:Src/main.c    **** static void MX_GPIO_Init(void)
+ 252:Src/main.c    **** {
+  25              		.loc 1 252 0
+  26              		.cfi_startproc
+  27              		@ args = 0, pretend = 0, frame = 24
+  28              		@ frame_needed = 0, uses_anonymous_args = 0
+  29 0000 10B5     		push	{r4, lr}
+  30              	.LCFI0:
+  31              		.cfi_def_cfa_offset 8
+  32              		.cfi_offset 4, -8
+  33              		.cfi_offset 14, -4
+  34 0002 86B0     		sub	sp, sp, #24
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s 			page 6
+
+
+  35              	.LCFI1:
+  36              		.cfi_def_cfa_offset 32
+  37              	.LBB2:
+ 253:Src/main.c    **** 
+ 254:Src/main.c    ****   GPIO_InitTypeDef GPIO_InitStruct;
+ 255:Src/main.c    **** 
+ 256:Src/main.c    ****   /* GPIO Ports Clock Enable */
+ 257:Src/main.c    ****   __HAL_RCC_GPIOA_CLK_ENABLE();
+  38              		.loc 1 257 0
+  39 0004 0D4B     		ldr	r3, .L3
+  40 0006 9A69     		ldr	r2, [r3, #24]
+  41 0008 42F00402 		orr	r2, r2, #4
+  42 000c 9A61     		str	r2, [r3, #24]
+  43 000e 9B69     		ldr	r3, [r3, #24]
+  44 0010 03F00403 		and	r3, r3, #4
+  45 0014 0193     		str	r3, [sp, #4]
+  46 0016 019B     		ldr	r3, [sp, #4]
+  47              	.LBE2:
+ 258:Src/main.c    **** 
+ 259:Src/main.c    ****   /*Configure GPIO pin Output Level */
+ 260:Src/main.c    ****   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_RESET);
+  48              		.loc 1 260 0
+  49 0018 094C     		ldr	r4, .L3+4
+  50 001a 0022     		movs	r2, #0
+  51 001c 0421     		movs	r1, #4
+  52 001e 2046     		mov	r0, r4
+  53 0020 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  54              	.LVL0:
+ 261:Src/main.c    **** 
+ 262:Src/main.c    ****   /*Configure GPIO pin : PA2 */
+ 263:Src/main.c    ****   GPIO_InitStruct.Pin = GPIO_PIN_2;
+  55              		.loc 1 263 0
+  56 0024 0423     		movs	r3, #4
+  57 0026 0293     		str	r3, [sp, #8]
+ 264:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  58              		.loc 1 264 0
+  59 0028 0123     		movs	r3, #1
+  60 002a 0393     		str	r3, [sp, #12]
+ 265:Src/main.c    ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  61              		.loc 1 265 0
+  62 002c 0223     		movs	r3, #2
+  63 002e 0593     		str	r3, [sp, #20]
+ 266:Src/main.c    ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  64              		.loc 1 266 0
+  65 0030 02A9     		add	r1, sp, #8
+  66 0032 2046     		mov	r0, r4
+  67 0034 FFF7FEFF 		bl	HAL_GPIO_Init
+  68              	.LVL1:
+ 267:Src/main.c    **** 
+ 268:Src/main.c    **** }
+  69              		.loc 1 268 0
+  70 0038 06B0     		add	sp, sp, #24
+  71              	.LCFI2:
+  72              		.cfi_def_cfa_offset 8
+  73              		@ sp needed
+  74 003a 10BD     		pop	{r4, pc}
+  75              	.L4:
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s 			page 7
+
+
+  76              		.align	2
+  77              	.L3:
+  78 003c 00100240 		.word	1073876992
+  79 0040 00080140 		.word	1073809408
+  80              		.cfi_endproc
+  81              	.LFE70:
+  83              		.section	.text._Error_Handler,"ax",%progbits
+  84              		.align	1
+  85              		.global	_Error_Handler
+  86              		.syntax unified
+  87              		.thumb
+  88              		.thumb_func
+  89              		.fpu softvfp
+  91              	_Error_Handler:
+  92              	.LFB71:
+ 269:Src/main.c    **** 
+ 270:Src/main.c    **** /* USER CODE BEGIN 4 */
+ 271:Src/main.c    **** 
+ 272:Src/main.c    **** /* USER CODE END 4 */
+ 273:Src/main.c    **** 
+ 274:Src/main.c    **** /**
+ 275:Src/main.c    ****   * @brief  This function is executed in case of error occurrence.
+ 276:Src/main.c    ****   * @param  file: The file name as string.
+ 277:Src/main.c    ****   * @param  line: The line in file as a number.
+ 278:Src/main.c    ****   * @retval None
+ 279:Src/main.c    ****   */
+ 280:Src/main.c    **** void _Error_Handler(char *file, int line)
+ 281:Src/main.c    **** {
+  93              		.loc 1 281 0
+  94              		.cfi_startproc
+  95              		@ Volatile: function does not return.
+  96              		@ args = 0, pretend = 0, frame = 0
+  97              		@ frame_needed = 0, uses_anonymous_args = 0
+  98              		@ link register save eliminated.
+  99              	.LVL2:
+ 100              	.L6:
+ 101 0000 FEE7     		b	.L6
+ 102              		.cfi_endproc
+ 103              	.LFE71:
+ 105              		.section	.text.MX_ADC1_Init,"ax",%progbits
+ 106              		.align	1
+ 107              		.syntax unified
+ 108              		.thumb
+ 109              		.thumb_func
+ 110              		.fpu softvfp
+ 112              	MX_ADC1_Init:
+ 113              	.LFB68:
+ 195:Src/main.c    **** 
+ 114              		.loc 1 195 0
+ 115              		.cfi_startproc
+ 116              		@ args = 0, pretend = 0, frame = 16
+ 117              		@ frame_needed = 0, uses_anonymous_args = 0
+ 195:Src/main.c    **** 
+ 118              		.loc 1 195 0
+ 119 0000 00B5     		push	{lr}
+ 120              	.LCFI3:
+ 121              		.cfi_def_cfa_offset 4
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s 			page 8
+
+
+ 122              		.cfi_offset 14, -4
+ 123 0002 85B0     		sub	sp, sp, #20
+ 124              	.LCFI4:
+ 125              		.cfi_def_cfa_offset 24
+ 201:Src/main.c    ****   hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;
+ 126              		.loc 1 201 0
+ 127 0004 1248     		ldr	r0, .L13
+ 128 0006 134B     		ldr	r3, .L13+4
+ 129 0008 0360     		str	r3, [r0]
+ 202:Src/main.c    ****   hadc1.Init.ContinuousConvMode = ENABLE;
+ 130              		.loc 1 202 0
+ 131 000a 0023     		movs	r3, #0
+ 132 000c 8360     		str	r3, [r0, #8]
+ 203:Src/main.c    ****   hadc1.Init.DiscontinuousConvMode = DISABLE;
+ 133              		.loc 1 203 0
+ 134 000e 0122     		movs	r2, #1
+ 135 0010 C260     		str	r2, [r0, #12]
+ 204:Src/main.c    ****   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
+ 136              		.loc 1 204 0
+ 137 0012 4361     		str	r3, [r0, #20]
+ 205:Src/main.c    ****   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+ 138              		.loc 1 205 0
+ 139 0014 4FF46021 		mov	r1, #917504
+ 140 0018 C161     		str	r1, [r0, #28]
+ 206:Src/main.c    ****   hadc1.Init.NbrOfConversion = 1;
+ 141              		.loc 1 206 0
+ 142 001a 4360     		str	r3, [r0, #4]
+ 207:Src/main.c    ****   if (HAL_ADC_Init(&hadc1) != HAL_OK)
+ 143              		.loc 1 207 0
+ 144 001c 0261     		str	r2, [r0, #16]
+ 208:Src/main.c    ****   {
+ 145              		.loc 1 208 0
+ 146 001e FFF7FEFF 		bl	HAL_ADC_Init
+ 147              	.LVL3:
+ 148 0022 60B9     		cbnz	r0, .L11
+ 215:Src/main.c    ****   sConfig.Rank = ADC_REGULAR_RANK_1;
+ 149              		.loc 1 215 0
+ 150 0024 0023     		movs	r3, #0
+ 151 0026 0193     		str	r3, [sp, #4]
+ 216:Src/main.c    ****   sConfig.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
+ 152              		.loc 1 216 0
+ 153 0028 0122     		movs	r2, #1
+ 154 002a 0292     		str	r2, [sp, #8]
+ 217:Src/main.c    ****   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+ 155              		.loc 1 217 0
+ 156 002c 0393     		str	r3, [sp, #12]
+ 218:Src/main.c    ****   {
+ 157              		.loc 1 218 0
+ 158 002e 01A9     		add	r1, sp, #4
+ 159 0030 0748     		ldr	r0, .L13
+ 160 0032 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
+ 161              	.LVL4:
+ 162 0036 30B9     		cbnz	r0, .L12
+ 223:Src/main.c    **** 
+ 163              		.loc 1 223 0
+ 164 0038 05B0     		add	sp, sp, #20
+ 165              	.LCFI5:
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s 			page 9
+
+
+ 166              		.cfi_remember_state
+ 167              		.cfi_def_cfa_offset 4
+ 168              		@ sp needed
+ 169 003a 5DF804FB 		ldr	pc, [sp], #4
+ 170              	.L11:
+ 171              	.LCFI6:
+ 172              		.cfi_restore_state
+ 210:Src/main.c    ****   }
+ 173              		.loc 1 210 0
+ 174 003e D221     		movs	r1, #210
+ 175 0040 0548     		ldr	r0, .L13+8
+ 176 0042 FFF7FEFF 		bl	_Error_Handler
+ 177              	.LVL5:
+ 178              	.L12:
+ 220:Src/main.c    ****   }
+ 179              		.loc 1 220 0
+ 180 0046 DC21     		movs	r1, #220
+ 181 0048 0348     		ldr	r0, .L13+8
+ 182 004a FFF7FEFF 		bl	_Error_Handler
+ 183              	.LVL6:
+ 184              	.L14:
+ 185 004e 00BF     		.align	2
+ 186              	.L13:
+ 187 0050 00000000 		.word	hadc1
+ 188 0054 00240140 		.word	1073816576
+ 189 0058 00000000 		.word	.LC0
+ 190              		.cfi_endproc
+ 191              	.LFE68:
+ 193              		.section	.text.MX_USART1_UART_Init,"ax",%progbits
+ 194              		.align	1
+ 195              		.syntax unified
+ 196              		.thumb
+ 197              		.thumb_func
+ 198              		.fpu softvfp
+ 200              	MX_USART1_UART_Init:
+ 201              	.LFB69:
+ 227:Src/main.c    **** 
+ 202              		.loc 1 227 0
+ 203              		.cfi_startproc
+ 204              		@ args = 0, pretend = 0, frame = 0
+ 205              		@ frame_needed = 0, uses_anonymous_args = 0
+ 206 0000 08B5     		push	{r3, lr}
+ 207              	.LCFI7:
+ 208              		.cfi_def_cfa_offset 8
+ 209              		.cfi_offset 3, -8
+ 210              		.cfi_offset 14, -4
+ 229:Src/main.c    ****   huart1.Init.BaudRate = 9600;
+ 211              		.loc 1 229 0
+ 212 0002 0B48     		ldr	r0, .L19
+ 213 0004 0B4B     		ldr	r3, .L19+4
+ 214 0006 0360     		str	r3, [r0]
+ 230:Src/main.c    ****   huart1.Init.WordLength = UART_WORDLENGTH_8B;
+ 215              		.loc 1 230 0
+ 216 0008 4FF41653 		mov	r3, #9600
+ 217 000c 4360     		str	r3, [r0, #4]
+ 231:Src/main.c    ****   huart1.Init.StopBits = UART_STOPBITS_1;
+ 218              		.loc 1 231 0
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s 			page 10
+
+
+ 219 000e 0023     		movs	r3, #0
+ 220 0010 8360     		str	r3, [r0, #8]
+ 232:Src/main.c    ****   huart1.Init.Parity = UART_PARITY_NONE;
+ 221              		.loc 1 232 0
+ 222 0012 C360     		str	r3, [r0, #12]
+ 233:Src/main.c    ****   huart1.Init.Mode = UART_MODE_TX_RX;
+ 223              		.loc 1 233 0
+ 224 0014 0361     		str	r3, [r0, #16]
+ 234:Src/main.c    ****   huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+ 225              		.loc 1 234 0
+ 226 0016 0C22     		movs	r2, #12
+ 227 0018 4261     		str	r2, [r0, #20]
+ 235:Src/main.c    ****   huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+ 228              		.loc 1 235 0
+ 229 001a 8361     		str	r3, [r0, #24]
+ 236:Src/main.c    ****   if (HAL_UART_Init(&huart1) != HAL_OK)
+ 230              		.loc 1 236 0
+ 231 001c C361     		str	r3, [r0, #28]
+ 237:Src/main.c    ****   {
+ 232              		.loc 1 237 0
+ 233 001e FFF7FEFF 		bl	HAL_UART_Init
+ 234              	.LVL7:
+ 235 0022 00B9     		cbnz	r0, .L18
+ 242:Src/main.c    **** 
+ 236              		.loc 1 242 0
+ 237 0024 08BD     		pop	{r3, pc}
+ 238              	.L18:
+ 239:Src/main.c    ****   }
+ 239              		.loc 1 239 0
+ 240 0026 EF21     		movs	r1, #239
+ 241 0028 0348     		ldr	r0, .L19+8
+ 242 002a FFF7FEFF 		bl	_Error_Handler
+ 243              	.LVL8:
+ 244              	.L20:
+ 245 002e 00BF     		.align	2
+ 246              	.L19:
+ 247 0030 00000000 		.word	huart1
+ 248 0034 00380140 		.word	1073821696
+ 249 0038 00000000 		.word	.LC0
+ 250              		.cfi_endproc
+ 251              	.LFE69:
+ 253              		.section	.text.SystemClock_Config,"ax",%progbits
+ 254              		.align	1
+ 255              		.global	SystemClock_Config
+ 256              		.syntax unified
+ 257              		.thumb
+ 258              		.thumb_func
+ 259              		.fpu softvfp
+ 261              	SystemClock_Config:
+ 262              	.LFB67:
+ 143:Src/main.c    **** 
+ 263              		.loc 1 143 0
+ 264              		.cfi_startproc
+ 265              		@ args = 0, pretend = 0, frame = 80
+ 266              		@ frame_needed = 0, uses_anonymous_args = 0
+ 267 0000 00B5     		push	{lr}
+ 268              	.LCFI8:
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s 			page 11
+
+
+ 269              		.cfi_def_cfa_offset 4
+ 270              		.cfi_offset 14, -4
+ 271 0002 95B0     		sub	sp, sp, #84
+ 272              	.LCFI9:
+ 273              		.cfi_def_cfa_offset 88
+ 151:Src/main.c    ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+ 274              		.loc 1 151 0
+ 275 0004 0223     		movs	r3, #2
+ 276 0006 0A93     		str	r3, [sp, #40]
+ 152:Src/main.c    ****   RCC_OscInitStruct.HSICalibrationValue = 16;
+ 277              		.loc 1 152 0
+ 278 0008 0123     		movs	r3, #1
+ 279 000a 0E93     		str	r3, [sp, #56]
+ 153:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+ 280              		.loc 1 153 0
+ 281 000c 1023     		movs	r3, #16
+ 282 000e 0F93     		str	r3, [sp, #60]
+ 154:Src/main.c    ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 283              		.loc 1 154 0
+ 284 0010 0023     		movs	r3, #0
+ 285 0012 1193     		str	r3, [sp, #68]
+ 155:Src/main.c    ****   {
+ 286              		.loc 1 155 0
+ 287 0014 0AA8     		add	r0, sp, #40
+ 288 0016 FFF7FEFF 		bl	HAL_RCC_OscConfig
+ 289              	.LVL9:
+ 290 001a 30BB     		cbnz	r0, .L26
+ 162:Src/main.c    ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 291              		.loc 1 162 0
+ 292 001c 0F23     		movs	r3, #15
+ 293 001e 0593     		str	r3, [sp, #20]
+ 164:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 294              		.loc 1 164 0
+ 295 0020 0021     		movs	r1, #0
+ 296 0022 0691     		str	r1, [sp, #24]
+ 165:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 297              		.loc 1 165 0
+ 298 0024 0791     		str	r1, [sp, #28]
+ 166:Src/main.c    ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 299              		.loc 1 166 0
+ 300 0026 0891     		str	r1, [sp, #32]
+ 167:Src/main.c    **** 
+ 301              		.loc 1 167 0
+ 302 0028 0991     		str	r1, [sp, #36]
+ 169:Src/main.c    ****   {
+ 303              		.loc 1 169 0
+ 304 002a 05A8     		add	r0, sp, #20
+ 305 002c FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ 306              	.LVL10:
+ 307 0030 F8B9     		cbnz	r0, .L27
+ 174:Src/main.c    ****   PeriphClkInit.AdcClockSelection = RCC_ADCPCLK2_DIV2;
+ 308              		.loc 1 174 0
+ 309 0032 0223     		movs	r3, #2
+ 310 0034 0193     		str	r3, [sp, #4]
+ 175:Src/main.c    ****   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+ 311              		.loc 1 175 0
+ 312 0036 0023     		movs	r3, #0
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s 			page 12
+
+
+ 313 0038 0393     		str	r3, [sp, #12]
+ 176:Src/main.c    ****   {
+ 314              		.loc 1 176 0
+ 315 003a 01A8     		add	r0, sp, #4
+ 316 003c FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
+ 317              	.LVL11:
+ 318 0040 D8B9     		cbnz	r0, .L28
+ 183:Src/main.c    **** 
+ 319              		.loc 1 183 0
+ 320 0042 FFF7FEFF 		bl	HAL_RCC_GetHCLKFreq
+ 321              	.LVL12:
+ 322 0046 0F4B     		ldr	r3, .L29
+ 323 0048 A3FB0030 		umull	r3, r0, r3, r0
+ 324 004c 8009     		lsrs	r0, r0, #6
+ 325 004e FFF7FEFF 		bl	HAL_SYSTICK_Config
+ 326              	.LVL13:
+ 187:Src/main.c    **** 
+ 327              		.loc 1 187 0
+ 328 0052 0420     		movs	r0, #4
+ 329 0054 FFF7FEFF 		bl	HAL_SYSTICK_CLKSourceConfig
+ 330              	.LVL14:
+ 190:Src/main.c    **** }
+ 331              		.loc 1 190 0
+ 332 0058 0022     		movs	r2, #0
+ 333 005a 1146     		mov	r1, r2
+ 334 005c 4FF0FF30 		mov	r0, #-1
+ 335 0060 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 336              	.LVL15:
+ 191:Src/main.c    **** 
+ 337              		.loc 1 191 0
+ 338 0064 15B0     		add	sp, sp, #84
+ 339              	.LCFI10:
+ 340              		.cfi_remember_state
+ 341              		.cfi_def_cfa_offset 4
+ 342              		@ sp needed
+ 343 0066 5DF804FB 		ldr	pc, [sp], #4
+ 344              	.L26:
+ 345              	.LCFI11:
+ 346              		.cfi_restore_state
+ 157:Src/main.c    ****   }
+ 347              		.loc 1 157 0
+ 348 006a 9D21     		movs	r1, #157
+ 349 006c 0648     		ldr	r0, .L29+4
+ 350 006e FFF7FEFF 		bl	_Error_Handler
+ 351              	.LVL16:
+ 352              	.L27:
+ 171:Src/main.c    ****   }
+ 353              		.loc 1 171 0
+ 354 0072 AB21     		movs	r1, #171
+ 355 0074 0448     		ldr	r0, .L29+4
+ 356 0076 FFF7FEFF 		bl	_Error_Handler
+ 357              	.LVL17:
+ 358              	.L28:
+ 178:Src/main.c    ****   }
+ 359              		.loc 1 178 0
+ 360 007a B221     		movs	r1, #178
+ 361 007c 0248     		ldr	r0, .L29+4
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s 			page 13
+
+
+ 362 007e FFF7FEFF 		bl	_Error_Handler
+ 363              	.LVL18:
+ 364              	.L30:
+ 365 0082 00BF     		.align	2
+ 366              	.L29:
+ 367 0084 D34D6210 		.word	274877907
+ 368 0088 00000000 		.word	.LC0
+ 369              		.cfi_endproc
+ 370              	.LFE67:
+ 372              		.global	__aeabi_ui2f
+ 373              		.global	__aeabi_fdiv
+ 374              		.global	__aeabi_f2d
+ 375              		.global	__aeabi_dmul
+ 376              		.global	__aeabi_d2f
+ 377              		.section	.text.main,"ax",%progbits
+ 378              		.align	1
+ 379              		.global	main
+ 380              		.syntax unified
+ 381              		.thumb
+ 382              		.thumb_func
+ 383              		.fpu softvfp
+ 385              	main:
+ 386              	.LFB66:
+  78:Src/main.c    ****   /* USER CODE BEGIN 1 */
+ 387              		.loc 1 78 0
+ 388              		.cfi_startproc
+ 389              		@ args = 0, pretend = 0, frame = 104
+ 390              		@ frame_needed = 0, uses_anonymous_args = 0
+ 391 0000 30B5     		push	{r4, r5, lr}
+ 392              	.LCFI12:
+ 393              		.cfi_def_cfa_offset 12
+ 394              		.cfi_offset 4, -12
+ 395              		.cfi_offset 5, -8
+ 396              		.cfi_offset 14, -4
+ 397 0002 9BB0     		sub	sp, sp, #108
+ 398              	.LCFI13:
+ 399              		.cfi_def_cfa_offset 120
+  86:Src/main.c    **** 
+ 400              		.loc 1 86 0
+ 401 0004 FFF7FEFF 		bl	HAL_Init
+ 402              	.LVL19:
+  93:Src/main.c    **** 
+ 403              		.loc 1 93 0
+ 404 0008 FFF7FEFF 		bl	SystemClock_Config
+ 405              	.LVL20:
+ 100:Src/main.c    ****   MX_ADC1_Init();
+ 406              		.loc 1 100 0
+ 407 000c FFF7FEFF 		bl	MX_GPIO_Init
+ 408              	.LVL21:
+ 101:Src/main.c    ****   MX_USART1_UART_Init();
+ 409              		.loc 1 101 0
+ 410 0010 FFF7FEFF 		bl	MX_ADC1_Init
+ 411              	.LVL22:
+ 102:Src/main.c    ****   /* USER CODE BEGIN 2 */
+ 412              		.loc 1 102 0
+ 413 0014 FFF7FEFF 		bl	MX_USART1_UART_Init
+ 414              	.LVL23:
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s 			page 14
+
+
+ 104:Src/main.c    ****   HAL_ADCEx_Calibration_Start(&hadc1);
+ 415              		.loc 1 104 0
+ 416 0018 0022     		movs	r2, #0
+ 417 001a 0421     		movs	r1, #4
+ 418 001c 2448     		ldr	r0, .L34+8
+ 419 001e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 420              	.LVL24:
+ 105:Src/main.c    ****   
+ 421              		.loc 1 105 0
+ 422 0022 244C     		ldr	r4, .L34+12
+ 423 0024 2046     		mov	r0, r4
+ 424 0026 FFF7FEFF 		bl	HAL_ADCEx_Calibration_Start
+ 425              	.LVL25:
+ 114:Src/main.c    ****   while (1)
+ 426              		.loc 1 114 0
+ 427 002a 2046     		mov	r0, r4
+ 428 002c FFF7FEFF 		bl	HAL_ADC_Start
+ 429              	.LVL26:
+ 430              	.L32:
+ 121:Src/main.c    ****    
+ 431              		.loc 1 121 0 discriminator 1
+ 432 0030 1F4C     		ldr	r4, .L34+8
+ 433 0032 0022     		movs	r2, #0
+ 434 0034 0421     		movs	r1, #4
+ 435 0036 2046     		mov	r0, r4
+ 436 0038 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 437              	.LVL27:
+ 123:Src/main.c    ****    adc1_value = HAL_ADC_GetValue(&hadc1);
+ 438              		.loc 1 123 0 discriminator 1
+ 439 003c 1D4D     		ldr	r5, .L34+12
+ 440 003e 6421     		movs	r1, #100
+ 441 0040 2846     		mov	r0, r5
+ 442 0042 FFF7FEFF 		bl	HAL_ADC_PollForConversion
+ 443              	.LVL28:
+ 124:Src/main.c    ****    adc1_v = (float)adc1_value / 4095 * 3.3;
+ 444              		.loc 1 124 0 discriminator 1
+ 445 0046 2846     		mov	r0, r5
+ 446 0048 FFF7FEFF 		bl	HAL_ADC_GetValue
+ 447              	.LVL29:
+ 125:Src/main.c    ****    sprintf(buf, "Current Voltage is: %.2f\n", adc1_v);
+ 448              		.loc 1 125 0 discriminator 1
+ 449 004c FFF7FEFF 		bl	__aeabi_ui2f
+ 450              	.LVL30:
+ 451 0050 1949     		ldr	r1, .L34+16
+ 452 0052 FFF7FEFF 		bl	__aeabi_fdiv
+ 453              	.LVL31:
+ 454 0056 FFF7FEFF 		bl	__aeabi_f2d
+ 455              	.LVL32:
+ 456 005a 13A3     		adr	r3, .L34
+ 457 005c D3E90023 		ldrd	r2, [r3]
+ 458 0060 FFF7FEFF 		bl	__aeabi_dmul
+ 459              	.LVL33:
+ 460 0064 FFF7FEFF 		bl	__aeabi_d2f
+ 461              	.LVL34:
+ 126:Src/main.c    ****    HAL_UART_Transmit(&huart1, (uint8_t*)buf, strlen(buf), 0xFFFF);
+ 462              		.loc 1 126 0 discriminator 1
+ 463 0068 FFF7FEFF 		bl	__aeabi_f2d
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s 			page 15
+
+
+ 464              	.LVL35:
+ 465 006c 0246     		mov	r2, r0
+ 466 006e 0B46     		mov	r3, r1
+ 467 0070 1249     		ldr	r1, .L34+20
+ 468 0072 01A8     		add	r0, sp, #4
+ 469 0074 FFF7FEFF 		bl	sprintf
+ 470              	.LVL36:
+ 127:Src/main.c    ****    
+ 471              		.loc 1 127 0 discriminator 1
+ 472 0078 01A8     		add	r0, sp, #4
+ 473 007a FFF7FEFF 		bl	strlen
+ 474              	.LVL37:
+ 475 007e 4FF6FF73 		movw	r3, #65535
+ 476 0082 82B2     		uxth	r2, r0
+ 477 0084 01A9     		add	r1, sp, #4
+ 478 0086 0E48     		ldr	r0, .L34+24
+ 479 0088 FFF7FEFF 		bl	HAL_UART_Transmit
+ 480              	.LVL38:
+ 129:Src/main.c    ****    HAL_GPIO_WritePin(GPIOA,GPIO_PIN_2,GPIO_PIN_SET);
+ 481              		.loc 1 129 0 discriminator 1
+ 482 008c 6420     		movs	r0, #100
+ 483 008e FFF7FEFF 		bl	HAL_Delay
+ 484              	.LVL39:
+ 130:Src/main.c    ****    HAL_Delay(400);
+ 485              		.loc 1 130 0 discriminator 1
+ 486 0092 0122     		movs	r2, #1
+ 487 0094 0421     		movs	r1, #4
+ 488 0096 2046     		mov	r0, r4
+ 489 0098 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 490              	.LVL40:
+ 131:Src/main.c    ****   }
+ 491              		.loc 1 131 0 discriminator 1
+ 492 009c 4FF4C870 		mov	r0, #400
+ 493 00a0 FFF7FEFF 		bl	HAL_Delay
+ 494              	.LVL41:
+ 495 00a4 C4E7     		b	.L32
+ 496              	.L35:
+ 497 00a6 00BF     		.align	3
+ 498              	.L34:
+ 499 00a8 66666666 		.word	1717986918
+ 500 00ac 66660A40 		.word	1074423398
+ 501 00b0 00080140 		.word	1073809408
+ 502 00b4 00000000 		.word	hadc1
+ 503 00b8 00F07F45 		.word	1166012416
+ 504 00bc 00000000 		.word	.LC1
+ 505 00c0 00000000 		.word	huart1
+ 506              		.cfi_endproc
+ 507              	.LFE66:
+ 509              		.comm	huart1,64,4
+ 510              		.comm	hadc1,48,4
+ 511              		.section	.rodata.MX_ADC1_Init.str1.4,"aMS",%progbits,1
+ 512              		.align	2
+ 513              	.LC0:
+ 514 0000 5372632F 		.ascii	"Src/main.c\000"
+ 514      6D61696E 
+ 514      2E6300
+ 515              		.section	.rodata.main.str1.4,"aMS",%progbits,1
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s 			page 16
+
+
+ 516              		.align	2
+ 517              	.LC1:
+ 518 0000 43757272 		.ascii	"Current Voltage is: %.2f\012\000"
+ 518      656E7420 
+ 518      566F6C74 
+ 518      61676520 
+ 518      69733A20 
+ 519              		.text
+ 520              	.Letext0:
+ 521              		.file 2 "d:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 522              		.file 3 "d:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 523              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
+ 524              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
+ 525              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 526              		.file 7 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 527              		.file 8 "d:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 528              		.file 9 "d:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include\
+ 529              		.file 10 "d:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\lib\\gcc\\arm-none-eab
+ 530              		.file 11 "d:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include
+ 531              		.file 12 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 532              		.file 13 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h"
+ 533              		.file 14 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h"
+ 534              		.file 15 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 535              		.file 16 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 536              		.file 17 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h"
+ 537              		.file 18 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
+ 538              		.file 19 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
+ 539              		.file 20 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 540              		.file 21 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h"
+ 541              		.file 22 "d:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include
+ 542              		.file 23 "d:\\program files (x86)\\gnu tools arm embedded\\7 2017-q4-major\\arm-none-eabi\\include
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s 			page 17
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s:16     .text.MX_GPIO_Init:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s:22     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s:78     .text.MX_GPIO_Init:0000003c $d
+C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s:84     .text._Error_Handler:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s:91     .text._Error_Handler:00000000 _Error_Handler
+C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s:106    .text.MX_ADC1_Init:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s:112    .text.MX_ADC1_Init:00000000 MX_ADC1_Init
+C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s:187    .text.MX_ADC1_Init:00000050 $d
+                            *COM*:00000030 hadc1
+C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s:194    .text.MX_USART1_UART_Init:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s:200    .text.MX_USART1_UART_Init:00000000 MX_USART1_UART_Init
+C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s:247    .text.MX_USART1_UART_Init:00000030 $d
+                            *COM*:00000040 huart1
+C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s:254    .text.SystemClock_Config:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s:261    .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s:367    .text.SystemClock_Config:00000084 $d
+C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s:378    .text.main:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s:385    .text.main:00000000 main
+C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s:499    .text.main:000000a8 $d
+C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s:512    .rodata.MX_ADC1_Init.str1.4:00000000 $d
+C:\Users\Qian\AppData\Local\Temp\ccUi8Fry.s:516    .rodata.main.str1.4:00000000 $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_WritePin
+HAL_GPIO_Init
+HAL_ADC_Init
+HAL_ADC_ConfigChannel
+HAL_UART_Init
+HAL_RCC_OscConfig
+HAL_RCC_ClockConfig
+HAL_RCCEx_PeriphCLKConfig
+HAL_RCC_GetHCLKFreq
+HAL_SYSTICK_Config
+HAL_SYSTICK_CLKSourceConfig
+HAL_NVIC_SetPriority
+__aeabi_ui2f
+__aeabi_fdiv
+__aeabi_f2d
+__aeabi_dmul
+__aeabi_d2f
+HAL_Init
+HAL_ADCEx_Calibration_Start
+HAL_ADC_Start
+HAL_ADC_PollForConversion
+HAL_ADC_GetValue
+sprintf
+strlen
+HAL_UART_Transmit
+HAL_Delay
