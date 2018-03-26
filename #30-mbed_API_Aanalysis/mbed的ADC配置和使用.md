@@ -101,8 +101,8 @@ int main()
 
 接ADC_VREF的口，效果：
 
-![52203471273](img_ADC\ADC_VREF.png)
+![52203471273](img_ADC/ADC_VREF.png)
 
 接ADC_TEMP的口，效果：
 
-![52203484746](img_ADC\ADC_TEMP.png)
+![52203484746](img_ADC/ADC_TEMP.png)
