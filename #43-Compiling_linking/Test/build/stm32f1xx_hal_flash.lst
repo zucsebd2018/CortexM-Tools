@@ -1,0 +1,612 @@
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_hal_flash.c"
+  12              		.section	.text.FLASH_SetErrorCode,"ax",%progbits
+  13              		.align	1
+  14              		.syntax unified
+  15              		.thumb
+  16              		.thumb_func
+  17              		.fpu softvfp
+  19              	FLASH_SetErrorCode:
+  20              		@ args = 0, pretend = 0, frame = 0
+  21              		@ frame_needed = 0, uses_anonymous_args = 0
+  22              		@ link register save eliminated.
+  23 0000 114A     		ldr	r2, .L12
+  24 0002 D368     		ldr	r3, [r2, #12]
+  25 0004 13F01003 		ands	r3, r3, #16
+  26 0008 05D0     		beq	.L2
+  27 000a 1049     		ldr	r1, .L12+4
+  28 000c CB69     		ldr	r3, [r1, #28]
+  29 000e 43F00203 		orr	r3, r3, #2
+  30 0012 CB61     		str	r3, [r1, #28]
+  31 0014 1023     		movs	r3, #16
+  32              	.L2:
+  33 0016 D268     		ldr	r2, [r2, #12]
+  34 0018 5007     		lsls	r0, r2, #29
+  35 001a 06D5     		bpl	.L3
+  36 001c 0B49     		ldr	r1, .L12+4
+  37 001e 43F00403 		orr	r3, r3, #4
+  38 0022 CA69     		ldr	r2, [r1, #28]
+  39 0024 42F00102 		orr	r2, r2, #1
+  40 0028 CA61     		str	r2, [r1, #28]
+  41              	.L3:
+  42 002a 074A     		ldr	r2, .L12
+  43 002c D169     		ldr	r1, [r2, #28]
+  44 002e C907     		lsls	r1, r1, #31
+  45 0030 08D5     		bpl	.L4
+  46 0032 0648     		ldr	r0, .L12+4
+  47 0034 C169     		ldr	r1, [r0, #28]
+  48 0036 41F00401 		orr	r1, r1, #4
+  49 003a C161     		str	r1, [r0, #28]
+  50 003c D169     		ldr	r1, [r2, #28]
+  51 003e 21F00101 		bic	r1, r1, #1
+  52 0042 D161     		str	r1, [r2, #28]
+  53              	.L4:
+  54 0044 D360     		str	r3, [r2, #12]
+  55 0046 7047     		bx	lr
+  56              	.L13:
+  57              		.align	2
+  58              	.L12:
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s 			page 2
+
+
+  59 0048 00200240 		.word	1073881088
+  60 004c 00000000 		.word	pFlash
+  62              		.section	.text.HAL_FLASH_Program_IT,"ax",%progbits
+  63              		.align	1
+  64              		.global	HAL_FLASH_Program_IT
+  65              		.syntax unified
+  66              		.thumb
+  67              		.thumb_func
+  68              		.fpu softvfp
+  70              	HAL_FLASH_Program_IT:
+  71              		@ args = 0, pretend = 0, frame = 0
+  72              		@ frame_needed = 0, uses_anonymous_args = 0
+  73 0000 70B5     		push	{r4, r5, r6, lr}
+  74 0002 1D46     		mov	r5, r3
+  75 0004 134B     		ldr	r3, .L21
+  76 0006 1446     		mov	r4, r2
+  77 0008 1A7E     		ldrb	r2, [r3, #24]	@ zero_extendqisi2
+  78 000a 012A     		cmp	r2, #1
+  79 000c 20D0     		beq	.L19
+  80 000e 0122     		movs	r2, #1
+  81 0010 114E     		ldr	r6, .L21+4
+  82 0012 1A76     		strb	r2, [r3, #24]
+  83 0014 3269     		ldr	r2, [r6, #16]
+  84 0016 0128     		cmp	r0, #1
+  85 0018 42F4A052 		orr	r2, r2, #5120
+  86 001c 3261     		str	r2, [r6, #16]
+  87 001e 9960     		str	r1, [r3, #8]
+  88 0020 C3E90445 		strd	r4, [r3, #16]
+  89 0024 0CD1     		bne	.L16
+  90 0026 0322     		movs	r2, #3
+  91              	.L20:
+  92 0028 1A70     		strb	r2, [r3]
+  93 002a 5860     		str	r0, [r3, #4]
+  94              	.L17:
+  95 002c 0020     		movs	r0, #0
+  96 002e 0A4A     		ldr	r2, .L21+4
+  97 0030 D861     		str	r0, [r3, #28]
+  98 0032 1369     		ldr	r3, [r2, #16]
+  99 0034 A4B2     		uxth	r4, r4
+ 100 0036 43F00103 		orr	r3, r3, #1
+ 101 003a 1361     		str	r3, [r2, #16]
+ 102 003c 0C80     		strh	r4, [r1]	@ movhi
+ 103              	.L15:
+ 104 003e 70BD     		pop	{r4, r5, r6, pc}
+ 105              	.L16:
+ 106 0040 0228     		cmp	r0, #2
+ 107 0042 4FF00402 		mov	r2, #4
+ 108 0046 EFD0     		beq	.L20
+ 109 0048 0520     		movs	r0, #5
+ 110 004a 1870     		strb	r0, [r3]
+ 111 004c 5A60     		str	r2, [r3, #4]
+ 112 004e EDE7     		b	.L17
+ 113              	.L19:
+ 114 0050 0220     		movs	r0, #2
+ 115 0052 F4E7     		b	.L15
+ 116              	.L22:
+ 117              		.align	2
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s 			page 3
+
+
+ 118              	.L21:
+ 119 0054 00000000 		.word	pFlash
+ 120 0058 00200240 		.word	1073881088
+ 122              		.section	.text.HAL_FLASH_EndOfOperationCallback,"ax",%progbits
+ 123              		.align	1
+ 124              		.weak	HAL_FLASH_EndOfOperationCallback
+ 125              		.syntax unified
+ 126              		.thumb
+ 127              		.thumb_func
+ 128              		.fpu softvfp
+ 130              	HAL_FLASH_EndOfOperationCallback:
+ 131              		@ args = 0, pretend = 0, frame = 0
+ 132              		@ frame_needed = 0, uses_anonymous_args = 0
+ 133              		@ link register save eliminated.
+ 134 0000 7047     		bx	lr
+ 136              		.section	.text.HAL_FLASH_OperationErrorCallback,"ax",%progbits
+ 137              		.align	1
+ 138              		.weak	HAL_FLASH_OperationErrorCallback
+ 139              		.syntax unified
+ 140              		.thumb
+ 141              		.thumb_func
+ 142              		.fpu softvfp
+ 144              	HAL_FLASH_OperationErrorCallback:
+ 145              		@ args = 0, pretend = 0, frame = 0
+ 146              		@ frame_needed = 0, uses_anonymous_args = 0
+ 147              		@ link register save eliminated.
+ 148 0000 7047     		bx	lr
+ 150              		.section	.text.HAL_FLASH_IRQHandler,"ax",%progbits
+ 151              		.align	1
+ 152              		.global	HAL_FLASH_IRQHandler
+ 153              		.syntax unified
+ 154              		.thumb
+ 155              		.thumb_func
+ 156              		.fpu softvfp
+ 158              	HAL_FLASH_IRQHandler:
+ 159              		@ args = 0, pretend = 0, frame = 0
+ 160              		@ frame_needed = 0, uses_anonymous_args = 0
+ 161 0000 424B     		ldr	r3, .L47
+ 162 0002 70B5     		push	{r4, r5, r6, lr}
+ 163 0004 DA68     		ldr	r2, [r3, #12]
+ 164 0006 424C     		ldr	r4, .L47+4
+ 165 0008 12F0100F 		tst	r2, #16
+ 166 000c 02D1     		bne	.L26
+ 167 000e DB68     		ldr	r3, [r3, #12]
+ 168 0010 5A07     		lsls	r2, r3, #29
+ 169 0012 0AD5     		bpl	.L27
+ 170              	.L26:
+ 171 0014 4FF0FF33 		mov	r3, #-1
+ 172 0018 A568     		ldr	r5, [r4, #8]
+ 173 001a A360     		str	r3, [r4, #8]
+ 174 001c FFF7FEFF 		bl	FLASH_SetErrorCode
+ 175 0020 2846     		mov	r0, r5
+ 176 0022 FFF7FEFF 		bl	HAL_FLASH_OperationErrorCallback
+ 177 0026 0023     		movs	r3, #0
+ 178 0028 2370     		strb	r3, [r4]
+ 179              	.L27:
+ 180 002a 384D     		ldr	r5, .L47
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s 			page 4
+
+
+ 181 002c EB68     		ldr	r3, [r5, #12]
+ 182 002e 9B06     		lsls	r3, r3, #26
+ 183 0030 18D5     		bpl	.L29
+ 184 0032 2023     		movs	r3, #32
+ 185 0034 EB60     		str	r3, [r5, #12]
+ 186 0036 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 187 0038 A3B1     		cbz	r3, .L29
+ 188 003a 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 189 003c 012B     		cmp	r3, #1
+ 190 003e 27D1     		bne	.L31
+ 191 0040 6368     		ldr	r3, [r4, #4]
+ 192 0042 013B     		subs	r3, r3, #1
+ 193 0044 6360     		str	r3, [r4, #4]
+ 194 0046 6368     		ldr	r3, [r4, #4]
+ 195 0048 DBB1     		cbz	r3, .L32
+ 196 004a A068     		ldr	r0, [r4, #8]
+ 197 004c FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ 198 0050 A068     		ldr	r0, [r4, #8]
+ 199 0052 00F58060 		add	r0, r0, #1024
+ 200 0056 A060     		str	r0, [r4, #8]
+ 201 0058 2B69     		ldr	r3, [r5, #16]
+ 202 005a 23F00203 		bic	r3, r3, #2
+ 203 005e 2B61     		str	r3, [r5, #16]
+ 204 0060 FFF7FEFF 		bl	FLASH_PageErase
+ 205              	.L29:
+ 206 0064 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 207 0066 03F0FF01 		and	r1, r3, #255
+ 208 006a 4BB9     		cbnz	r3, .L25
+ 209 006c 274B     		ldr	r3, .L47
+ 210 006e 1A69     		ldr	r2, [r3, #16]
+ 211 0070 22F00702 		bic	r2, r2, #7
+ 212 0074 1A61     		str	r2, [r3, #16]
+ 213 0076 1A69     		ldr	r2, [r3, #16]
+ 214 0078 22F4A052 		bic	r2, r2, #5120
+ 215 007c 1A61     		str	r2, [r3, #16]
+ 216 007e 2176     		strb	r1, [r4, #24]
+ 217              	.L25:
+ 218 0080 70BD     		pop	{r4, r5, r6, pc}
+ 219              	.L32:
+ 220 0082 4FF0FF30 		mov	r0, #-1
+ 221 0086 A060     		str	r0, [r4, #8]
+ 222 0088 2370     		strb	r3, [r4]
+ 223 008a FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ 224 008e E9E7     		b	.L29
+ 225              	.L31:
+ 226 0090 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 227 0092 022B     		cmp	r3, #2
+ 228 0094 09D1     		bne	.L33
+ 229 0096 2B69     		ldr	r3, [r5, #16]
+ 230 0098 0020     		movs	r0, #0
+ 231 009a 23F00403 		bic	r3, r3, #4
+ 232 009e 2B61     		str	r3, [r5, #16]
+ 233 00a0 FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ 234              	.L46:
+ 235 00a4 0023     		movs	r3, #0
+ 236 00a6 2370     		strb	r3, [r4]
+ 237 00a8 DCE7     		b	.L29
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s 			page 5
+
+
+ 238              	.L33:
+ 239 00aa 6368     		ldr	r3, [r4, #4]
+ 240 00ac 013B     		subs	r3, r3, #1
+ 241 00ae 6360     		str	r3, [r4, #4]
+ 242 00b0 6368     		ldr	r3, [r4, #4]
+ 243 00b2 D3B1     		cbz	r3, .L34
+ 244 00b4 A368     		ldr	r3, [r4, #8]
+ 245 00b6 0233     		adds	r3, r3, #2
+ 246 00b8 A360     		str	r3, [r4, #8]
+ 247 00ba A668     		ldr	r6, [r4, #8]
+ 248 00bc D4E90401 		ldrd	r0, [r4, #16]
+ 249 00c0 020C     		lsrs	r2, r0, #16
+ 250 00c2 42EA0142 		orr	r2, r2, r1, lsl #16
+ 251 00c6 0B0C     		lsrs	r3, r1, #16
+ 252 00c8 C4E90423 		strd	r2, [r4, #16]
+ 253 00cc 2B69     		ldr	r3, [r5, #16]
+ 254 00ce 23F00103 		bic	r3, r3, #1
+ 255 00d2 2B61     		str	r3, [r5, #16]
+ 256 00d4 D4E90423 		ldrd	r2, [r4, #16]
+ 257 00d8 0023     		movs	r3, #0
+ 258 00da E361     		str	r3, [r4, #28]
+ 259 00dc 2B69     		ldr	r3, [r5, #16]
+ 260 00de 92B2     		uxth	r2, r2
+ 261 00e0 43F00103 		orr	r3, r3, #1
+ 262 00e4 2B61     		str	r3, [r5, #16]
+ 263 00e6 3280     		strh	r2, [r6]	@ movhi
+ 264 00e8 BCE7     		b	.L29
+ 265              	.L34:
+ 266 00ea 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 267 00ec 032B     		cmp	r3, #3
+ 268 00ee 06D1     		bne	.L35
+ 269 00f0 A068     		ldr	r0, [r4, #8]
+ 270              	.L45:
+ 271 00f2 FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ 272 00f6 4FF0FF33 		mov	r3, #-1
+ 273 00fa A360     		str	r3, [r4, #8]
+ 274 00fc D2E7     		b	.L46
+ 275              	.L35:
+ 276 00fe 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 277 0100 A068     		ldr	r0, [r4, #8]
+ 278 0102 042B     		cmp	r3, #4
+ 279 0104 0CBF     		ite	eq
+ 280 0106 0238     		subeq	r0, r0, #2
+ 281 0108 0638     		subne	r0, r0, #6
+ 282 010a F2E7     		b	.L45
+ 283              	.L48:
+ 284              		.align	2
+ 285              	.L47:
+ 286 010c 00200240 		.word	1073881088
+ 287 0110 00000000 		.word	pFlash
+ 289              		.section	.text.HAL_FLASH_Unlock,"ax",%progbits
+ 290              		.align	1
+ 291              		.global	HAL_FLASH_Unlock
+ 292              		.syntax unified
+ 293              		.thumb
+ 294              		.thumb_func
+ 295              		.fpu softvfp
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s 			page 6
+
+
+ 297              	HAL_FLASH_Unlock:
+ 298              		@ args = 0, pretend = 0, frame = 0
+ 299              		@ frame_needed = 0, uses_anonymous_args = 0
+ 300              		@ link register save eliminated.
+ 301 0000 064B     		ldr	r3, .L52
+ 302 0002 1869     		ldr	r0, [r3, #16]
+ 303 0004 10F08000 		ands	r0, r0, #128
+ 304 0008 07D0     		beq	.L50
+ 305 000a 054A     		ldr	r2, .L52+4
+ 306 000c 5A60     		str	r2, [r3, #4]
+ 307 000e 02F18832 		add	r2, r2, #-2004318072
+ 308 0012 5A60     		str	r2, [r3, #4]
+ 309 0014 1869     		ldr	r0, [r3, #16]
+ 310 0016 C0F3C010 		ubfx	r0, r0, #7, #1
+ 311              	.L50:
+ 312 001a 7047     		bx	lr
+ 313              	.L53:
+ 314              		.align	2
+ 315              	.L52:
+ 316 001c 00200240 		.word	1073881088
+ 317 0020 23016745 		.word	1164378403
+ 319              		.section	.text.HAL_FLASH_Lock,"ax",%progbits
+ 320              		.align	1
+ 321              		.global	HAL_FLASH_Lock
+ 322              		.syntax unified
+ 323              		.thumb
+ 324              		.thumb_func
+ 325              		.fpu softvfp
+ 327              	HAL_FLASH_Lock:
+ 328              		@ args = 0, pretend = 0, frame = 0
+ 329              		@ frame_needed = 0, uses_anonymous_args = 0
+ 330              		@ link register save eliminated.
+ 331 0000 034A     		ldr	r2, .L55
+ 332 0002 0020     		movs	r0, #0
+ 333 0004 1369     		ldr	r3, [r2, #16]
+ 334 0006 43F08003 		orr	r3, r3, #128
+ 335 000a 1361     		str	r3, [r2, #16]
+ 336 000c 7047     		bx	lr
+ 337              	.L56:
+ 338 000e 00BF     		.align	2
+ 339              	.L55:
+ 340 0010 00200240 		.word	1073881088
+ 342              		.section	.text.HAL_FLASH_OB_Unlock,"ax",%progbits
+ 343              		.align	1
+ 344              		.global	HAL_FLASH_OB_Unlock
+ 345              		.syntax unified
+ 346              		.thumb
+ 347              		.thumb_func
+ 348              		.fpu softvfp
+ 350              	HAL_FLASH_OB_Unlock:
+ 351              		@ args = 0, pretend = 0, frame = 0
+ 352              		@ frame_needed = 0, uses_anonymous_args = 0
+ 353              		@ link register save eliminated.
+ 354 0000 064B     		ldr	r3, .L60
+ 355 0002 1869     		ldr	r0, [r3, #16]
+ 356 0004 10F40070 		ands	r0, r0, #512
+ 357 0008 09BF     		itett	eq
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s 			page 7
+
+
+ 358 000a 054A     		ldreq	r2, .L60+4
+ 359 000c 0120     		movne	r0, #1
+ 360 000e 9A60     		streq	r2, [r3, #8]
+ 361 0010 02F18832 		addeq	r2, r2, #-2004318072
+ 362 0014 08BF     		it	eq
+ 363 0016 9A60     		streq	r2, [r3, #8]
+ 364 0018 7047     		bx	lr
+ 365              	.L61:
+ 366 001a 00BF     		.align	2
+ 367              	.L60:
+ 368 001c 00200240 		.word	1073881088
+ 369 0020 23016745 		.word	1164378403
+ 371              		.section	.text.HAL_FLASH_OB_Lock,"ax",%progbits
+ 372              		.align	1
+ 373              		.global	HAL_FLASH_OB_Lock
+ 374              		.syntax unified
+ 375              		.thumb
+ 376              		.thumb_func
+ 377              		.fpu softvfp
+ 379              	HAL_FLASH_OB_Lock:
+ 380              		@ args = 0, pretend = 0, frame = 0
+ 381              		@ frame_needed = 0, uses_anonymous_args = 0
+ 382              		@ link register save eliminated.
+ 383 0000 034A     		ldr	r2, .L63
+ 384 0002 0020     		movs	r0, #0
+ 385 0004 1369     		ldr	r3, [r2, #16]
+ 386 0006 23F40073 		bic	r3, r3, #512
+ 387 000a 1361     		str	r3, [r2, #16]
+ 388 000c 7047     		bx	lr
+ 389              	.L64:
+ 390 000e 00BF     		.align	2
+ 391              	.L63:
+ 392 0010 00200240 		.word	1073881088
+ 394              		.section	.text.HAL_FLASH_OB_Launch,"ax",%progbits
+ 395              		.align	1
+ 396              		.global	HAL_FLASH_OB_Launch
+ 397              		.syntax unified
+ 398              		.thumb
+ 399              		.thumb_func
+ 400              		.fpu softvfp
+ 402              	HAL_FLASH_OB_Launch:
+ 403              		@ args = 0, pretend = 0, frame = 0
+ 404              		@ frame_needed = 0, uses_anonymous_args = 0
+ 405              		@ link register save eliminated.
+ 406 0000 FFF7FEBF 		b	HAL_NVIC_SystemReset
+ 408              		.section	.text.HAL_FLASH_GetError,"ax",%progbits
+ 409              		.align	1
+ 410              		.global	HAL_FLASH_GetError
+ 411              		.syntax unified
+ 412              		.thumb
+ 413              		.thumb_func
+ 414              		.fpu softvfp
+ 416              	HAL_FLASH_GetError:
+ 417              		@ args = 0, pretend = 0, frame = 0
+ 418              		@ frame_needed = 0, uses_anonymous_args = 0
+ 419              		@ link register save eliminated.
+ 420 0000 014B     		ldr	r3, .L67
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s 			page 8
+
+
+ 421 0002 D869     		ldr	r0, [r3, #28]
+ 422 0004 7047     		bx	lr
+ 423              	.L68:
+ 424 0006 00BF     		.align	2
+ 425              	.L67:
+ 426 0008 00000000 		.word	pFlash
+ 428              		.section	.text.FLASH_WaitForLastOperation,"ax",%progbits
+ 429              		.align	1
+ 430              		.global	FLASH_WaitForLastOperation
+ 431              		.syntax unified
+ 432              		.thumb
+ 433              		.thumb_func
+ 434              		.fpu softvfp
+ 436              	FLASH_WaitForLastOperation:
+ 437              		@ args = 0, pretend = 0, frame = 0
+ 438              		@ frame_needed = 0, uses_anonymous_args = 0
+ 439 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 440 0002 0646     		mov	r6, r0
+ 441 0004 FFF7FEFF 		bl	HAL_GetTick
+ 442 0008 114C     		ldr	r4, .L84
+ 443 000a 0746     		mov	r7, r0
+ 444 000c 2546     		mov	r5, r4
+ 445              	.L71:
+ 446 000e E368     		ldr	r3, [r4, #12]
+ 447 0010 D807     		lsls	r0, r3, #31
+ 448 0012 12D4     		bmi	.L75
+ 449 0014 E368     		ldr	r3, [r4, #12]
+ 450 0016 9906     		lsls	r1, r3, #26
+ 451 0018 44BF     		itt	mi
+ 452 001a 2023     		movmi	r3, #32
+ 453 001c E360     		strmi	r3, [r4, #12]
+ 454 001e EB68     		ldr	r3, [r5, #12]
+ 455 0020 DA06     		lsls	r2, r3, #27
+ 456 0022 06D4     		bmi	.L77
+ 457 0024 EB69     		ldr	r3, [r5, #28]
+ 458 0026 DB07     		lsls	r3, r3, #31
+ 459 0028 03D4     		bmi	.L77
+ 460 002a E868     		ldr	r0, [r5, #12]
+ 461 002c 10F00400 		ands	r0, r0, #4
+ 462 0030 07D0     		beq	.L73
+ 463              	.L77:
+ 464 0032 FFF7FEFF 		bl	FLASH_SetErrorCode
+ 465 0036 0120     		movs	r0, #1
+ 466 0038 03E0     		b	.L73
+ 467              	.L75:
+ 468 003a 731C     		adds	r3, r6, #1
+ 469 003c E7D0     		beq	.L71
+ 470 003e 0EB9     		cbnz	r6, .L72
+ 471              	.L74:
+ 472 0040 0320     		movs	r0, #3
+ 473              	.L73:
+ 474 0042 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 475              	.L72:
+ 476 0044 FFF7FEFF 		bl	HAL_GetTick
+ 477 0048 C01B     		subs	r0, r0, r7
+ 478 004a B042     		cmp	r0, r6
+ 479 004c DFD9     		bls	.L71
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s 			page 9
+
+
+ 480 004e F7E7     		b	.L74
+ 481              	.L85:
+ 482              		.align	2
+ 483              	.L84:
+ 484 0050 00200240 		.word	1073881088
+ 486              		.section	.text.HAL_FLASH_Program,"ax",%progbits
+ 487              		.align	1
+ 488              		.global	HAL_FLASH_Program
+ 489              		.syntax unified
+ 490              		.thumb
+ 491              		.thumb_func
+ 492              		.fpu softvfp
+ 494              	HAL_FLASH_Program:
+ 495              		@ args = 0, pretend = 0, frame = 0
+ 496              		@ frame_needed = 0, uses_anonymous_args = 0
+ 497 0000 2DE9F84F 		push	{r3, r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 498 0004 244C     		ldr	r4, .L95
+ 499 0006 1E46     		mov	r6, r3
+ 500 0008 237E     		ldrb	r3, [r4, #24]	@ zero_extendqisi2
+ 501 000a 0546     		mov	r5, r0
+ 502 000c 012B     		cmp	r3, #1
+ 503 000e 0F46     		mov	r7, r1
+ 504 0010 9046     		mov	r8, r2
+ 505 0012 3FD0     		beq	.L91
+ 506 0014 0123     		movs	r3, #1
+ 507 0016 4CF25030 		movw	r0, #50000
+ 508 001a 2376     		strb	r3, [r4, #24]
+ 509 001c FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 510 0020 A0BB     		cbnz	r0, .L88
+ 511 0022 012D     		cmp	r5, #1
+ 512 0024 03D0     		beq	.L89
+ 513 0026 022D     		cmp	r5, #2
+ 514 0028 0CBF     		ite	eq
+ 515 002a 0225     		moveq	r5, #2
+ 516 002c 0425     		movne	r5, #4
+ 517              	.L89:
+ 518 002e 4FF00009 		mov	r9, #0
+ 519 0032 CB46     		mov	fp, r9
+ 520 0034 DFF864A0 		ldr	r10, .L95+4
+ 521              	.L90:
+ 522 0038 4FEA0913 		lsl	r3, r9, #4
+ 523 003c C3F12001 		rsb	r1, r3, #32
+ 524 0040 A3F12002 		sub	r2, r3, #32
+ 525 0044 06FA01F1 		lsl	r1, r6, r1
+ 526 0048 28FA03F3 		lsr	r3, r8, r3
+ 527 004c C4F81CB0 		str	fp, [r4, #28]
+ 528 0050 0B43     		orrs	r3, r3, r1
+ 529 0052 26FA02F2 		lsr	r2, r6, r2
+ 530 0056 1343     		orrs	r3, r3, r2
+ 531 0058 DAF81020 		ldr	r2, [r10, #16]
+ 532 005c 9BB2     		uxth	r3, r3
+ 533 005e 42F00102 		orr	r2, r2, #1
+ 534 0062 CAF81020 		str	r2, [r10, #16]
+ 535 0066 4CF25030 		movw	r0, #50000
+ 536 006a 27F81930 		strh	r3, [r7, r9, lsl #1]	@ movhi
+ 537 006e FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 538 0072 DAF81030 		ldr	r3, [r10, #16]
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s 			page 10
+
+
+ 539 0076 23F00103 		bic	r3, r3, #1
+ 540 007a CAF81030 		str	r3, [r10, #16]
+ 541 007e 28B9     		cbnz	r0, .L88
+ 542 0080 09F10109 		add	r9, r9, #1
+ 543 0084 5FFA89F3 		uxtb	r3, r9
+ 544 0088 9D42     		cmp	r5, r3
+ 545 008a D5D8     		bhi	.L90
+ 546              	.L88:
+ 547 008c 0023     		movs	r3, #0
+ 548 008e 2376     		strb	r3, [r4, #24]
+ 549              	.L87:
+ 550 0090 BDE8F88F 		pop	{r3, r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 551              	.L91:
+ 552 0094 0220     		movs	r0, #2
+ 553 0096 FBE7     		b	.L87
+ 554              	.L96:
+ 555              		.align	2
+ 556              	.L95:
+ 557 0098 00000000 		.word	pFlash
+ 558 009c 00200240 		.word	1073881088
+ 560              		.comm	pFlash,32,8
+ 561              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s 			page 11
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f1xx_hal_flash.c
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:13     .text.FLASH_SetErrorCode:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:19     .text.FLASH_SetErrorCode:00000000 FLASH_SetErrorCode
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:59     .text.FLASH_SetErrorCode:00000048 $d
+                            *COM*:00000020 pFlash
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:63     .text.HAL_FLASH_Program_IT:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:70     .text.HAL_FLASH_Program_IT:00000000 HAL_FLASH_Program_IT
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:119    .text.HAL_FLASH_Program_IT:00000054 $d
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:123    .text.HAL_FLASH_EndOfOperationCallback:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:130    .text.HAL_FLASH_EndOfOperationCallback:00000000 HAL_FLASH_EndOfOperationCallback
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:137    .text.HAL_FLASH_OperationErrorCallback:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:144    .text.HAL_FLASH_OperationErrorCallback:00000000 HAL_FLASH_OperationErrorCallback
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:151    .text.HAL_FLASH_IRQHandler:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:158    .text.HAL_FLASH_IRQHandler:00000000 HAL_FLASH_IRQHandler
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:286    .text.HAL_FLASH_IRQHandler:0000010c $d
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:290    .text.HAL_FLASH_Unlock:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:297    .text.HAL_FLASH_Unlock:00000000 HAL_FLASH_Unlock
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:316    .text.HAL_FLASH_Unlock:0000001c $d
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:320    .text.HAL_FLASH_Lock:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:327    .text.HAL_FLASH_Lock:00000000 HAL_FLASH_Lock
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:340    .text.HAL_FLASH_Lock:00000010 $d
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:343    .text.HAL_FLASH_OB_Unlock:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:350    .text.HAL_FLASH_OB_Unlock:00000000 HAL_FLASH_OB_Unlock
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:368    .text.HAL_FLASH_OB_Unlock:0000001c $d
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:372    .text.HAL_FLASH_OB_Lock:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:379    .text.HAL_FLASH_OB_Lock:00000000 HAL_FLASH_OB_Lock
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:392    .text.HAL_FLASH_OB_Lock:00000010 $d
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:395    .text.HAL_FLASH_OB_Launch:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:402    .text.HAL_FLASH_OB_Launch:00000000 HAL_FLASH_OB_Launch
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:409    .text.HAL_FLASH_GetError:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:416    .text.HAL_FLASH_GetError:00000000 HAL_FLASH_GetError
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:426    .text.HAL_FLASH_GetError:00000008 $d
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:429    .text.FLASH_WaitForLastOperation:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:436    .text.FLASH_WaitForLastOperation:00000000 FLASH_WaitForLastOperation
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:484    .text.FLASH_WaitForLastOperation:00000050 $d
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:487    .text.HAL_FLASH_Program:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:494    .text.HAL_FLASH_Program:00000000 HAL_FLASH_Program
+C:\Users\Qian\AppData\Local\Temp\ccNclHoa.s:557    .text.HAL_FLASH_Program:00000098 $d
+
+UNDEFINED SYMBOLS
+FLASH_PageErase
+HAL_NVIC_SystemReset
+HAL_GetTick

@@ -1,0 +1,92 @@
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccLwBLDV.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_hal_msp.c"
+  12              		.section	.text.HAL_MspInit,"ax",%progbits
+  13              		.align	1
+  14              		.global	HAL_MspInit
+  15              		.syntax unified
+  16              		.thumb
+  17              		.thumb_func
+  18              		.fpu softvfp
+  20              	HAL_MspInit:
+  21              		@ args = 0, pretend = 0, frame = 8
+  22              		@ frame_needed = 0, uses_anonymous_args = 0
+  23 0000 204B     		ldr	r3, .L2
+  24 0002 07B5     		push	{r0, r1, r2, lr}
+  25 0004 9A69     		ldr	r2, [r3, #24]
+  26 0006 0320     		movs	r0, #3
+  27 0008 42F00102 		orr	r2, r2, #1
+  28 000c 9A61     		str	r2, [r3, #24]
+  29 000e 9B69     		ldr	r3, [r3, #24]
+  30 0010 03F00103 		and	r3, r3, #1
+  31 0014 0193     		str	r3, [sp, #4]
+  32 0016 019B     		ldr	r3, [sp, #4]
+  33 0018 FFF7FEFF 		bl	HAL_NVIC_SetPriorityGrouping
+  34 001c 0022     		movs	r2, #0
+  35 001e 6FF00B00 		mvn	r0, #11
+  36 0022 1146     		mov	r1, r2
+  37 0024 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+  38 0028 0022     		movs	r2, #0
+  39 002a 6FF00A00 		mvn	r0, #10
+  40 002e 1146     		mov	r1, r2
+  41 0030 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+  42 0034 0022     		movs	r2, #0
+  43 0036 6FF00900 		mvn	r0, #9
+  44 003a 1146     		mov	r1, r2
+  45 003c FFF7FEFF 		bl	HAL_NVIC_SetPriority
+  46 0040 0022     		movs	r2, #0
+  47 0042 6FF00400 		mvn	r0, #4
+  48 0046 1146     		mov	r1, r2
+  49 0048 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+  50 004c 0022     		movs	r2, #0
+  51 004e 6FF00300 		mvn	r0, #3
+  52 0052 1146     		mov	r1, r2
+  53 0054 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+  54 0058 0022     		movs	r2, #0
+  55 005a 6FF00100 		mvn	r0, #1
+  56 005e 1146     		mov	r1, r2
+  57 0060 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+  58 0064 0022     		movs	r2, #0
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccLwBLDV.s 			page 2
+
+
+  59 0066 4FF0FF30 		mov	r0, #-1
+  60 006a 1146     		mov	r1, r2
+  61 006c FFF7FEFF 		bl	HAL_NVIC_SetPriority
+  62 0070 054A     		ldr	r2, .L2+4
+  63 0072 5368     		ldr	r3, [r2, #4]
+  64 0074 23F0E063 		bic	r3, r3, #117440512
+  65 0078 43F08063 		orr	r3, r3, #67108864
+  66 007c 5360     		str	r3, [r2, #4]
+  67 007e 03B0     		add	sp, sp, #12
+  68              		@ sp needed
+  69 0080 5DF804FB 		ldr	pc, [sp], #4
+  70              	.L3:
+  71              		.align	2
+  72              	.L2:
+  73 0084 00100240 		.word	1073876992
+  74 0088 00000140 		.word	1073807360
+  76              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccLwBLDV.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f1xx_hal_msp.c
+C:\Users\Qian\AppData\Local\Temp\ccLwBLDV.s:13     .text.HAL_MspInit:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccLwBLDV.s:20     .text.HAL_MspInit:00000000 HAL_MspInit
+C:\Users\Qian\AppData\Local\Temp\ccLwBLDV.s:73     .text.HAL_MspInit:00000084 $d
+
+UNDEFINED SYMBOLS
+HAL_NVIC_SetPriorityGrouping
+HAL_NVIC_SetPriority

@@ -1,0 +1,166 @@
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_it.c"
+  12              		.section	.text.NMI_Handler,"ax",%progbits
+  13              		.align	1
+  14              		.global	NMI_Handler
+  15              		.syntax unified
+  16              		.thumb
+  17              		.thumb_func
+  18              		.fpu softvfp
+  20              	NMI_Handler:
+  21              		@ args = 0, pretend = 0, frame = 0
+  22              		@ frame_needed = 0, uses_anonymous_args = 0
+  23              		@ link register save eliminated.
+  24 0000 7047     		bx	lr
+  26              		.section	.text.HardFault_Handler,"ax",%progbits
+  27              		.align	1
+  28              		.global	HardFault_Handler
+  29              		.syntax unified
+  30              		.thumb
+  31              		.thumb_func
+  32              		.fpu softvfp
+  34              	HardFault_Handler:
+  35              		@ Volatile: function does not return.
+  36              		@ args = 0, pretend = 0, frame = 0
+  37              		@ frame_needed = 0, uses_anonymous_args = 0
+  38              		@ link register save eliminated.
+  39              	.L3:
+  40 0000 FEE7     		b	.L3
+  42              		.section	.text.MemManage_Handler,"ax",%progbits
+  43              		.align	1
+  44              		.global	MemManage_Handler
+  45              		.syntax unified
+  46              		.thumb
+  47              		.thumb_func
+  48              		.fpu softvfp
+  50              	MemManage_Handler:
+  51              		@ Volatile: function does not return.
+  52              		@ args = 0, pretend = 0, frame = 0
+  53              		@ frame_needed = 0, uses_anonymous_args = 0
+  54              		@ link register save eliminated.
+  55              	.L5:
+  56 0000 FEE7     		b	.L5
+  58              		.section	.text.BusFault_Handler,"ax",%progbits
+  59              		.align	1
+  60              		.global	BusFault_Handler
+  61              		.syntax unified
+  62              		.thumb
+  63              		.thumb_func
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s 			page 2
+
+
+  64              		.fpu softvfp
+  66              	BusFault_Handler:
+  67              		@ Volatile: function does not return.
+  68              		@ args = 0, pretend = 0, frame = 0
+  69              		@ frame_needed = 0, uses_anonymous_args = 0
+  70              		@ link register save eliminated.
+  71              	.L7:
+  72 0000 FEE7     		b	.L7
+  74              		.section	.text.UsageFault_Handler,"ax",%progbits
+  75              		.align	1
+  76              		.global	UsageFault_Handler
+  77              		.syntax unified
+  78              		.thumb
+  79              		.thumb_func
+  80              		.fpu softvfp
+  82              	UsageFault_Handler:
+  83              		@ Volatile: function does not return.
+  84              		@ args = 0, pretend = 0, frame = 0
+  85              		@ frame_needed = 0, uses_anonymous_args = 0
+  86              		@ link register save eliminated.
+  87              	.L9:
+  88 0000 FEE7     		b	.L9
+  90              		.section	.text.SVC_Handler,"ax",%progbits
+  91              		.align	1
+  92              		.global	SVC_Handler
+  93              		.syntax unified
+  94              		.thumb
+  95              		.thumb_func
+  96              		.fpu softvfp
+  98              	SVC_Handler:
+  99              		@ args = 0, pretend = 0, frame = 0
+ 100              		@ frame_needed = 0, uses_anonymous_args = 0
+ 101              		@ link register save eliminated.
+ 102 0000 7047     		bx	lr
+ 104              		.section	.text.DebugMon_Handler,"ax",%progbits
+ 105              		.align	1
+ 106              		.global	DebugMon_Handler
+ 107              		.syntax unified
+ 108              		.thumb
+ 109              		.thumb_func
+ 110              		.fpu softvfp
+ 112              	DebugMon_Handler:
+ 113              		@ args = 0, pretend = 0, frame = 0
+ 114              		@ frame_needed = 0, uses_anonymous_args = 0
+ 115              		@ link register save eliminated.
+ 116 0000 7047     		bx	lr
+ 118              		.section	.text.PendSV_Handler,"ax",%progbits
+ 119              		.align	1
+ 120              		.global	PendSV_Handler
+ 121              		.syntax unified
+ 122              		.thumb
+ 123              		.thumb_func
+ 124              		.fpu softvfp
+ 126              	PendSV_Handler:
+ 127              		@ args = 0, pretend = 0, frame = 0
+ 128              		@ frame_needed = 0, uses_anonymous_args = 0
+ 129              		@ link register save eliminated.
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s 			page 3
+
+
+ 130 0000 7047     		bx	lr
+ 132              		.section	.text.SysTick_Handler,"ax",%progbits
+ 133              		.align	1
+ 134              		.global	SysTick_Handler
+ 135              		.syntax unified
+ 136              		.thumb
+ 137              		.thumb_func
+ 138              		.fpu softvfp
+ 140              	SysTick_Handler:
+ 141              		@ args = 0, pretend = 0, frame = 0
+ 142              		@ frame_needed = 0, uses_anonymous_args = 0
+ 143 0000 08B5     		push	{r3, lr}
+ 144 0002 FFF7FEFF 		bl	HAL_IncTick
+ 145 0006 BDE80840 		pop	{r3, lr}
+ 146 000a FFF7FEBF 		b	HAL_SYSTICK_IRQHandler
+ 148              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f1xx_it.c
+C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s:13     .text.NMI_Handler:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s:20     .text.NMI_Handler:00000000 NMI_Handler
+C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s:27     .text.HardFault_Handler:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s:34     .text.HardFault_Handler:00000000 HardFault_Handler
+C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s:43     .text.MemManage_Handler:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s:50     .text.MemManage_Handler:00000000 MemManage_Handler
+C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s:59     .text.BusFault_Handler:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s:66     .text.BusFault_Handler:00000000 BusFault_Handler
+C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s:75     .text.UsageFault_Handler:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s:82     .text.UsageFault_Handler:00000000 UsageFault_Handler
+C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s:91     .text.SVC_Handler:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s:98     .text.SVC_Handler:00000000 SVC_Handler
+C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s:105    .text.DebugMon_Handler:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s:112    .text.DebugMon_Handler:00000000 DebugMon_Handler
+C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s:119    .text.PendSV_Handler:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s:126    .text.PendSV_Handler:00000000 PendSV_Handler
+C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s:133    .text.SysTick_Handler:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccRzw2cs.s:140    .text.SysTick_Handler:00000000 SysTick_Handler
+
+UNDEFINED SYMBOLS
+HAL_IncTick
+HAL_SYSTICK_IRQHandler

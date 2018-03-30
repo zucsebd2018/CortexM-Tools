@@ -1,0 +1,329 @@
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccckMfqP.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_hal_rcc_ex.c"
+  12              		.section	.text.HAL_RCCEx_PeriphCLKConfig,"ax",%progbits
+  13              		.align	1
+  14              		.global	HAL_RCCEx_PeriphCLKConfig
+  15              		.syntax unified
+  16              		.thumb
+  17              		.thumb_func
+  18              		.fpu softvfp
+  20              	HAL_RCCEx_PeriphCLKConfig:
+  21              		@ args = 0, pretend = 0, frame = 8
+  22              		@ frame_needed = 0, uses_anonymous_args = 0
+  23 0000 0368     		ldr	r3, [r0]
+  24 0002 2DE9F341 		push	{r0, r1, r4, r5, r6, r7, r8, lr}
+  25 0006 D907     		lsls	r1, r3, #31
+  26 0008 0546     		mov	r5, r0
+  27 000a 20D5     		bpl	.L3
+  28 000c 354C     		ldr	r4, .L27
+  29 000e E369     		ldr	r3, [r4, #28]
+  30 0010 DA00     		lsls	r2, r3, #3
+  31 0012 32D4     		bmi	.L18
+  32 0014 0127     		movs	r7, #1
+  33 0016 E369     		ldr	r3, [r4, #28]
+  34 0018 43F08053 		orr	r3, r3, #268435456
+  35 001c E361     		str	r3, [r4, #28]
+  36 001e E369     		ldr	r3, [r4, #28]
+  37 0020 03F08053 		and	r3, r3, #268435456
+  38 0024 0193     		str	r3, [sp, #4]
+  39 0026 019B     		ldr	r3, [sp, #4]
+  40              	.L4:
+  41 0028 2F4E     		ldr	r6, .L27+4
+  42 002a 3368     		ldr	r3, [r6]
+  43 002c DB05     		lsls	r3, r3, #23
+  44 002e 26D5     		bpl	.L5
+  45              	.L11:
+  46 0030 236A     		ldr	r3, [r4, #32]
+  47 0032 13F44073 		ands	r3, r3, #768
+  48 0036 36D1     		bne	.L6
+  49              	.L7:
+  50 0038 236A     		ldr	r3, [r4, #32]
+  51 003a 6A68     		ldr	r2, [r5, #4]
+  52 003c 23F44073 		bic	r3, r3, #768
+  53 0040 1343     		orrs	r3, r3, r2
+  54 0042 2362     		str	r3, [r4, #32]
+  55 0044 1FB1     		cbz	r7, .L3
+  56 0046 E369     		ldr	r3, [r4, #28]
+  57 0048 23F08053 		bic	r3, r3, #268435456
+  58 004c E361     		str	r3, [r4, #28]
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccckMfqP.s 			page 2
+
+
+  59              	.L3:
+  60 004e 2868     		ldr	r0, [r5]
+  61 0050 8307     		lsls	r3, r0, #30
+  62 0052 06D5     		bpl	.L17
+  63 0054 234A     		ldr	r2, .L27
+  64 0056 A968     		ldr	r1, [r5, #8]
+  65 0058 5368     		ldr	r3, [r2, #4]
+  66 005a 23F44043 		bic	r3, r3, #49152
+  67 005e 0B43     		orrs	r3, r3, r1
+  68 0060 5360     		str	r3, [r2, #4]
+  69              	.L17:
+  70 0062 10F01000 		ands	r0, r0, #16
+  71 0066 1BD0     		beq	.L9
+  72 0068 1E4A     		ldr	r2, .L27
+  73 006a E968     		ldr	r1, [r5, #12]
+  74 006c 5368     		ldr	r3, [r2, #4]
+  75 006e 0020     		movs	r0, #0
+  76 0070 23F48003 		bic	r3, r3, #4194304
+  77 0074 0B43     		orrs	r3, r3, r1
+  78 0076 5360     		str	r3, [r2, #4]
+  79 0078 12E0     		b	.L9
+  80              	.L18:
+  81 007a 0027     		movs	r7, #0
+  82 007c D4E7     		b	.L4
+  83              	.L5:
+  84 007e 3368     		ldr	r3, [r6]
+  85 0080 43F48073 		orr	r3, r3, #256
+  86 0084 3360     		str	r3, [r6]
+  87 0086 FFF7FEFF 		bl	HAL_GetTick
+  88 008a 8046     		mov	r8, r0
+  89              	.L8:
+  90 008c 3368     		ldr	r3, [r6]
+  91 008e D805     		lsls	r0, r3, #23
+  92 0090 CED4     		bmi	.L11
+  93 0092 FFF7FEFF 		bl	HAL_GetTick
+  94 0096 A0EB0800 		sub	r0, r0, r8
+  95 009a 6428     		cmp	r0, #100
+  96 009c F6D9     		bls	.L8
+  97              	.L15:
+  98 009e 0320     		movs	r0, #3
+  99              	.L9:
+ 100 00a0 02B0     		add	sp, sp, #8
+ 101              		@ sp needed
+ 102 00a2 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 103              	.L6:
+ 104 00a6 6A68     		ldr	r2, [r5, #4]
+ 105 00a8 02F44072 		and	r2, r2, #768
+ 106 00ac 9A42     		cmp	r2, r3
+ 107 00ae C3D0     		beq	.L7
+ 108 00b0 0120     		movs	r0, #1
+ 109 00b2 0E4A     		ldr	r2, .L27+8
+ 110 00b4 236A     		ldr	r3, [r4, #32]
+ 111 00b6 1060     		str	r0, [r2]
+ 112 00b8 0020     		movs	r0, #0
+ 113 00ba 23F44071 		bic	r1, r3, #768
+ 114 00be 1060     		str	r0, [r2]
+ 115 00c0 2162     		str	r1, [r4, #32]
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccckMfqP.s 			page 3
+
+
+ 116 00c2 D907     		lsls	r1, r3, #31
+ 117 00c4 B8D5     		bpl	.L7
+ 118 00c6 FFF7FEFF 		bl	HAL_GetTick
+ 119 00ca 41F28838 		movw	r8, #5000
+ 120 00ce 0646     		mov	r6, r0
+ 121              	.L14:
+ 122 00d0 236A     		ldr	r3, [r4, #32]
+ 123 00d2 9A07     		lsls	r2, r3, #30
+ 124 00d4 B0D4     		bmi	.L7
+ 125 00d6 FFF7FEFF 		bl	HAL_GetTick
+ 126 00da 801B     		subs	r0, r0, r6
+ 127 00dc 4045     		cmp	r0, r8
+ 128 00de F7D9     		bls	.L14
+ 129 00e0 DDE7     		b	.L15
+ 130              	.L28:
+ 131 00e2 00BF     		.align	2
+ 132              	.L27:
+ 133 00e4 00100240 		.word	1073876992
+ 134 00e8 00700040 		.word	1073770496
+ 135 00ec 40044242 		.word	1111622720
+ 137              		.section	.text.HAL_RCCEx_GetPeriphCLKConfig,"ax",%progbits
+ 138              		.align	1
+ 139              		.global	HAL_RCCEx_GetPeriphCLKConfig
+ 140              		.syntax unified
+ 141              		.thumb
+ 142              		.thumb_func
+ 143              		.fpu softvfp
+ 145              	HAL_RCCEx_GetPeriphCLKConfig:
+ 146              		@ args = 0, pretend = 0, frame = 0
+ 147              		@ frame_needed = 0, uses_anonymous_args = 0
+ 148              		@ link register save eliminated.
+ 149 0000 074B     		ldr	r3, .L30
+ 150 0002 1A6A     		ldr	r2, [r3, #32]
+ 151 0004 02F44072 		and	r2, r2, #768
+ 152 0008 4260     		str	r2, [r0, #4]
+ 153 000a 5A68     		ldr	r2, [r3, #4]
+ 154 000c 02F44042 		and	r2, r2, #49152
+ 155 0010 8260     		str	r2, [r0, #8]
+ 156 0012 1322     		movs	r2, #19
+ 157 0014 0260     		str	r2, [r0]
+ 158 0016 5B68     		ldr	r3, [r3, #4]
+ 159 0018 03F48003 		and	r3, r3, #4194304
+ 160 001c C360     		str	r3, [r0, #12]
+ 161 001e 7047     		bx	lr
+ 162              	.L31:
+ 163              		.align	2
+ 164              	.L30:
+ 165 0020 00100240 		.word	1073876992
+ 167              		.section	.text.HAL_RCCEx_GetPeriphCLKFreq,"ax",%progbits
+ 168              		.align	1
+ 169              		.global	HAL_RCCEx_GetPeriphCLKFreq
+ 170              		.syntax unified
+ 171              		.thumb
+ 172              		.thumb_func
+ 173              		.fpu softvfp
+ 175              	HAL_RCCEx_GetPeriphCLKFreq:
+ 176              		@ args = 0, pretend = 0, frame = 24
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccckMfqP.s 			page 4
+
+
+ 177              		@ frame_needed = 0, uses_anonymous_args = 0
+ 178 0000 70B5     		push	{r4, r5, r6, lr}
+ 179 0002 0446     		mov	r4, r0
+ 180 0004 344B     		ldr	r3, .L52
+ 181 0006 86B0     		sub	sp, sp, #24
+ 182 0008 02AD     		add	r5, sp, #8
+ 183 000a 03F11006 		add	r6, r3, #16
+ 184              	.L33:
+ 185 000e 2A46     		mov	r2, r5
+ 186 0010 1868     		ldr	r0, [r3]	@ unaligned
+ 187 0012 5968     		ldr	r1, [r3, #4]	@ unaligned
+ 188 0014 0833     		adds	r3, r3, #8
+ 189 0016 03C2     		stmia	r2!, {r0, r1}
+ 190 0018 B342     		cmp	r3, r6
+ 191 001a 1546     		mov	r5, r2
+ 192 001c F7D1     		bne	.L33
+ 193 001e 40F20123 		movw	r3, #513
+ 194 0022 022C     		cmp	r4, #2
+ 195 0024 ADF80430 		strh	r3, [sp, #4]	@ movhi
+ 196 0028 47D0     		beq	.L35
+ 197 002a 102C     		cmp	r4, #16
+ 198 002c 17D0     		beq	.L36
+ 199 002e 012C     		cmp	r4, #1
+ 200 0030 4FD1     		bne	.L45
+ 201 0032 40F20231 		movw	r1, #770
+ 202 0036 294A     		ldr	r2, .L52+4
+ 203 0038 136A     		ldr	r3, [r2, #32]
+ 204 003a 1940     		ands	r1, r1, r3
+ 205 003c B1F5817F 		cmp	r1, #258
+ 206 0040 44D0     		beq	.L43
+ 207 0042 03F44073 		and	r3, r3, #768
+ 208 0046 B3F5007F 		cmp	r3, #512
+ 209 004a 2DD1     		bne	.L40
+ 210 004c 49F64040 		movw	r0, #40000
+ 211 0050 536A     		ldr	r3, [r2, #36]
+ 212 0052 13F0020F 		tst	r3, #2
+ 213              	.L51:
+ 214 0056 08BF     		it	eq
+ 215 0058 0020     		moveq	r0, #0
+ 216              	.L32:
+ 217 005a 06B0     		add	sp, sp, #24
+ 218              		@ sp needed
+ 219 005c 70BD     		pop	{r4, r5, r6, pc}
+ 220              	.L36:
+ 221 005e 1F4B     		ldr	r3, .L52+4
+ 222 0060 5968     		ldr	r1, [r3, #4]
+ 223 0062 1868     		ldr	r0, [r3]
+ 224 0064 10F08070 		ands	r0, r0, #16777216
+ 225 0068 F7D0     		beq	.L32
+ 226 006a C1F38342 		ubfx	r2, r1, #18, #4
+ 227 006e 06A8     		add	r0, sp, #24
+ 228 0070 0244     		add	r2, r2, r0
+ 229 0072 12F8100C 		ldrb	r0, [r2, #-16]	@ zero_extendqisi2
+ 230 0076 CA03     		lsls	r2, r1, #15
+ 231 0078 41BF     		itttt	mi
+ 232 007a 5A68     		ldrmi	r2, [r3, #4]
+ 233 007c 06A9     		addmi	r1, sp, #24
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccckMfqP.s 			page 5
+
+
+ 234 007e C2F34042 		ubfxmi	r2, r2, #17, #1
+ 235 0082 5218     		addmi	r2, r2, r1
+ 236 0084 44BF     		itt	mi
+ 237 0086 12F8141C 		ldrbmi	r1, [r2, #-20]	@ zero_extendqisi2
+ 238 008a 154A     		ldrmi	r2, .L52+8
+ 239 008c 5B68     		ldr	r3, [r3, #4]
+ 240 008e 4CBF     		ite	mi
+ 241 0090 B2FBF1F2 		udivmi	r2, r2, r1
+ 242 0094 134A     		ldrpl	r2, .L52+12
+ 243 0096 5B02     		lsls	r3, r3, #9
+ 244 0098 02FB00F0 		mul	r0, r2, r0
+ 245 009c DDD4     		bmi	.L32
+ 246 009e 0323     		movs	r3, #3
+ 247 00a0 4000     		lsls	r0, r0, #1
+ 248              	.L50:
+ 249 00a2 B0FBF3F0 		udiv	r0, r0, r3
+ 250 00a6 D8E7     		b	.L32
+ 251              	.L40:
+ 252 00a8 B3F5407F 		cmp	r3, #768
+ 253 00ac 11D1     		bne	.L45
+ 254 00ae 1368     		ldr	r3, [r2]
+ 255 00b0 4FF22440 		movw	r0, #62500
+ 256 00b4 13F4003F 		tst	r3, #131072
+ 257 00b8 CDE7     		b	.L51
+ 258              	.L35:
+ 259 00ba FFF7FEFF 		bl	HAL_RCC_GetPCLK2Freq
+ 260 00be 074B     		ldr	r3, .L52+4
+ 261 00c0 5B68     		ldr	r3, [r3, #4]
+ 262 00c2 C3F38133 		ubfx	r3, r3, #14, #2
+ 263 00c6 0133     		adds	r3, r3, #1
+ 264 00c8 5B00     		lsls	r3, r3, #1
+ 265 00ca EAE7     		b	.L50
+ 266              	.L43:
+ 267 00cc 4FF40040 		mov	r0, #32768
+ 268 00d0 C3E7     		b	.L32
+ 269              	.L45:
+ 270 00d2 0020     		movs	r0, #0
+ 271 00d4 C1E7     		b	.L32
+ 272              	.L53:
+ 273 00d6 00BF     		.align	2
+ 274              	.L52:
+ 275 00d8 00000000 		.word	.LANCHOR0
+ 276 00dc 00100240 		.word	1073876992
+ 277 00e0 00127A00 		.word	8000000
+ 278 00e4 00093D00 		.word	4000000
+ 280              		.section	.rodata
+ 281              		.set	.LANCHOR0,. + 0
+ 282              	.LC0:
+ 283 0000 02       		.byte	2
+ 284 0001 03       		.byte	3
+ 285 0002 04       		.byte	4
+ 286 0003 05       		.byte	5
+ 287 0004 06       		.byte	6
+ 288 0005 07       		.byte	7
+ 289 0006 08       		.byte	8
+ 290 0007 09       		.byte	9
+ 291 0008 0A       		.byte	10
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccckMfqP.s 			page 6
+
+
+ 292 0009 0B       		.byte	11
+ 293 000a 0C       		.byte	12
+ 294 000b 0D       		.byte	13
+ 295 000c 0E       		.byte	14
+ 296 000d 0F       		.byte	15
+ 297 000e 10       		.byte	16
+ 298 000f 10       		.byte	16
+ 299              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccckMfqP.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f1xx_hal_rcc_ex.c
+C:\Users\Qian\AppData\Local\Temp\ccckMfqP.s:13     .text.HAL_RCCEx_PeriphCLKConfig:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccckMfqP.s:20     .text.HAL_RCCEx_PeriphCLKConfig:00000000 HAL_RCCEx_PeriphCLKConfig
+C:\Users\Qian\AppData\Local\Temp\ccckMfqP.s:133    .text.HAL_RCCEx_PeriphCLKConfig:000000e4 $d
+C:\Users\Qian\AppData\Local\Temp\ccckMfqP.s:138    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccckMfqP.s:145    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 HAL_RCCEx_GetPeriphCLKConfig
+C:\Users\Qian\AppData\Local\Temp\ccckMfqP.s:165    .text.HAL_RCCEx_GetPeriphCLKConfig:00000020 $d
+C:\Users\Qian\AppData\Local\Temp\ccckMfqP.s:168    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccckMfqP.s:175    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 HAL_RCCEx_GetPeriphCLKFreq
+C:\Users\Qian\AppData\Local\Temp\ccckMfqP.s:275    .text.HAL_RCCEx_GetPeriphCLKFreq:000000d8 $d
+
+UNDEFINED SYMBOLS
+HAL_GetTick
+HAL_RCC_GetPCLK2Freq

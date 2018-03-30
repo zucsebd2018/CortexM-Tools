@@ -1,0 +1,237 @@
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"DigitalOut.cpp"
+  12              		.section	.text._ZN10DigitalOutC2EP12GPIO_TypeDeft,"ax",%progbits
+  13              		.align	1
+  14              		.global	_ZN10DigitalOutC2EP12GPIO_TypeDeft
+  15              		.syntax unified
+  16              		.thumb
+  17              		.thumb_func
+  18              		.fpu softvfp
+  20              	_ZN10DigitalOutC2EP12GPIO_TypeDeft:
+  21              		@ args = 0, pretend = 0, frame = 24
+  22              		@ frame_needed = 0, uses_anonymous_args = 0
+  23 0000 70B5     		push	{r4, r5, r6, lr}
+  24 0002 1646     		mov	r6, r2
+  25 0004 0022     		movs	r2, #0
+  26 0006 0D46     		mov	r5, r1
+  27 0008 0F4B     		ldr	r3, .L2
+  28 000a C0E90021 		strd	r2, r1, [r0]
+  29 000e 9969     		ldr	r1, [r3, #24]
+  30 0010 0681     		strh	r6, [r0, #8]	@ movhi
+  31 0012 41F00401 		orr	r1, r1, #4
+  32 0016 9961     		str	r1, [r3, #24]
+  33 0018 9B69     		ldr	r3, [r3, #24]
+  34 001a 86B0     		sub	sp, sp, #24
+  35 001c 03F00403 		and	r3, r3, #4
+  36 0020 0446     		mov	r4, r0
+  37 0022 0193     		str	r3, [sp, #4]
+  38 0024 3146     		mov	r1, r6
+  39 0026 2846     		mov	r0, r5
+  40 0028 019B     		ldr	r3, [sp, #4]
+  41 002a FFF7FEFF 		bl	HAL_GPIO_WritePin
+  42 002e 0123     		movs	r3, #1
+  43 0030 0393     		str	r3, [sp, #12]
+  44 0032 0223     		movs	r3, #2
+  45 0034 2846     		mov	r0, r5
+  46 0036 02A9     		add	r1, sp, #8
+  47 0038 0296     		str	r6, [sp, #8]
+  48 003a 0593     		str	r3, [sp, #20]
+  49 003c FFF7FEFF 		bl	HAL_GPIO_Init
+  50 0040 2046     		mov	r0, r4
+  51 0042 06B0     		add	sp, sp, #24
+  52              		@ sp needed
+  53 0044 70BD     		pop	{r4, r5, r6, pc}
+  54              	.L3:
+  55 0046 00BF     		.align	2
+  56              	.L2:
+  57 0048 00100240 		.word	1073876992
+  59              		.global	_ZN10DigitalOutC1EP12GPIO_TypeDeft
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s 			page 2
+
+
+  60              		.thumb_set _ZN10DigitalOutC1EP12GPIO_TypeDeft,_ZN10DigitalOutC2EP12GPIO_TypeDeft
+  61              		.section	.text._ZN10DigitalOutC2EP12GPIO_TypeDeftmm,"ax",%progbits
+  62              		.align	1
+  63              		.global	_ZN10DigitalOutC2EP12GPIO_TypeDeftmm
+  64              		.syntax unified
+  65              		.thumb
+  66              		.thumb_func
+  67              		.fpu softvfp
+  69              	_ZN10DigitalOutC2EP12GPIO_TypeDeftmm:
+  70              		@ args = 4, pretend = 0, frame = 24
+  71              		@ frame_needed = 0, uses_anonymous_args = 0
+  72 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  73 0002 1646     		mov	r6, r2
+  74 0004 0022     		movs	r2, #0
+  75 0006 0D46     		mov	r5, r1
+  76 0008 0446     		mov	r4, r0
+  77 000a 1F46     		mov	r7, r3
+  78 000c 0D49     		ldr	r1, .L5
+  79 000e 0260     		str	r2, [r0]
+  80 0010 8869     		ldr	r0, [r1, #24]
+  81 0012 87B0     		sub	sp, sp, #28
+  82 0014 40F00400 		orr	r0, r0, #4
+  83 0018 8861     		str	r0, [r1, #24]
+  84 001a 8969     		ldr	r1, [r1, #24]
+  85 001c 2846     		mov	r0, r5
+  86 001e 01F00401 		and	r1, r1, #4
+  87 0022 0191     		str	r1, [sp, #4]
+  88 0024 3146     		mov	r1, r6
+  89 0026 019B     		ldr	r3, [sp, #4]
+  90 0028 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  91 002c 0C9B     		ldr	r3, [sp, #48]
+  92 002e 2846     		mov	r0, r5
+  93 0030 02A9     		add	r1, sp, #8
+  94 0032 CDE90267 		strd	r6, r7, [sp, #8]
+  95 0036 0593     		str	r3, [sp, #20]
+  96 0038 FFF7FEFF 		bl	HAL_GPIO_Init
+  97 003c 2046     		mov	r0, r4
+  98 003e 07B0     		add	sp, sp, #28
+  99              		@ sp needed
+ 100 0040 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 101              	.L6:
+ 102 0042 00BF     		.align	2
+ 103              	.L5:
+ 104 0044 00100240 		.word	1073876992
+ 106              		.global	_ZN10DigitalOutC1EP12GPIO_TypeDeftmm
+ 107              		.thumb_set _ZN10DigitalOutC1EP12GPIO_TypeDeftmm,_ZN10DigitalOutC2EP12GPIO_TypeDeftmm
+ 108              		.section	.text._ZN10DigitalOutD2Ev,"ax",%progbits
+ 109              		.align	1
+ 110              		.global	_ZN10DigitalOutD2Ev
+ 111              		.syntax unified
+ 112              		.thumb
+ 113              		.thumb_func
+ 114              		.fpu softvfp
+ 116              	_ZN10DigitalOutD2Ev:
+ 117              		@ args = 0, pretend = 0, frame = 0
+ 118              		@ frame_needed = 0, uses_anonymous_args = 0
+ 119              		@ link register save eliminated.
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s 			page 3
+
+
+ 120 0000 7047     		bx	lr
+ 122              		.global	_ZN10DigitalOutD1Ev
+ 123              		.thumb_set _ZN10DigitalOutD1Ev,_ZN10DigitalOutD2Ev
+ 124              		.section	.text._ZN10DigitalOut5writeEi,"ax",%progbits
+ 125              		.align	1
+ 126              		.global	_ZN10DigitalOut5writeEi
+ 127              		.syntax unified
+ 128              		.thumb
+ 129              		.thumb_func
+ 130              		.fpu softvfp
+ 132              	_ZN10DigitalOut5writeEi:
+ 133              		@ args = 0, pretend = 0, frame = 0
+ 134              		@ frame_needed = 0, uses_anonymous_args = 0
+ 135 0000 38B5     		push	{r3, r4, r5, lr}
+ 136 0002 0446     		mov	r4, r0
+ 137 0004 0D46     		mov	r5, r1
+ 138 0006 31B9     		cbnz	r1, .L9
+ 139              	.L11:
+ 140 0008 2A46     		mov	r2, r5
+ 141 000a 2189     		ldrh	r1, [r4, #8]
+ 142 000c 6068     		ldr	r0, [r4, #4]
+ 143 000e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 144 0012 2560     		str	r5, [r4]
+ 145 0014 01E0     		b	.L8
+ 146              	.L9:
+ 147 0016 0129     		cmp	r1, #1
+ 148 0018 F6D0     		beq	.L11
+ 149              	.L8:
+ 150 001a 38BD     		pop	{r3, r4, r5, pc}
+ 152              		.section	.text._ZN10DigitalOut4readEv,"ax",%progbits
+ 153              		.align	1
+ 154              		.global	_ZN10DigitalOut4readEv
+ 155              		.syntax unified
+ 156              		.thumb
+ 157              		.thumb_func
+ 158              		.fpu softvfp
+ 160              	_ZN10DigitalOut4readEv:
+ 161              		@ args = 0, pretend = 0, frame = 0
+ 162              		@ frame_needed = 0, uses_anonymous_args = 0
+ 163              		@ link register save eliminated.
+ 164 0000 0068     		ldr	r0, [r0]
+ 165 0002 7047     		bx	lr
+ 167              		.section	.text._ZN10DigitalOutcviEv,"ax",%progbits
+ 168              		.align	1
+ 169              		.global	_ZN10DigitalOutcviEv
+ 170              		.syntax unified
+ 171              		.thumb
+ 172              		.thumb_func
+ 173              		.fpu softvfp
+ 175              	_ZN10DigitalOutcviEv:
+ 176              		@ args = 0, pretend = 0, frame = 0
+ 177              		@ frame_needed = 0, uses_anonymous_args = 0
+ 178              		@ link register save eliminated.
+ 179 0000 0068     		ldr	r0, [r0]
+ 180 0002 7047     		bx	lr
+ 182              		.section	.text._ZN10DigitalOutaSEi,"ax",%progbits
+ 183              		.align	1
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s 			page 4
+
+
+ 184              		.global	_ZN10DigitalOutaSEi
+ 185              		.syntax unified
+ 186              		.thumb
+ 187              		.thumb_func
+ 188              		.fpu softvfp
+ 190              	_ZN10DigitalOutaSEi:
+ 191              		@ args = 0, pretend = 0, frame = 0
+ 192              		@ frame_needed = 0, uses_anonymous_args = 0
+ 193 0000 38B5     		push	{r3, r4, r5, lr}
+ 194 0002 0446     		mov	r4, r0
+ 195 0004 0D46     		mov	r5, r1
+ 196 0006 31B9     		cbnz	r1, .L15
+ 197              	.L17:
+ 198 0008 2A46     		mov	r2, r5
+ 199 000a 2189     		ldrh	r1, [r4, #8]
+ 200 000c 6068     		ldr	r0, [r4, #4]
+ 201 000e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 202 0012 2560     		str	r5, [r4]
+ 203 0014 01E0     		b	.L16
+ 204              	.L15:
+ 205 0016 0129     		cmp	r1, #1
+ 206 0018 F6D0     		beq	.L17
+ 207              	.L16:
+ 208 001a 2046     		mov	r0, r4
+ 209 001c 38BD     		pop	{r3, r4, r5, pc}
+ 211              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 DigitalOut.cpp
+C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s:13     .text._ZN10DigitalOutC2EP12GPIO_TypeDeft:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s:20     .text._ZN10DigitalOutC2EP12GPIO_TypeDeft:00000000 _ZN10DigitalOutC2EP12GPIO_TypeDeft
+C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s:57     .text._ZN10DigitalOutC2EP12GPIO_TypeDeft:00000048 $d
+C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s:20     .text._ZN10DigitalOutC2EP12GPIO_TypeDeft:00000000 _ZN10DigitalOutC1EP12GPIO_TypeDeft
+C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s:62     .text._ZN10DigitalOutC2EP12GPIO_TypeDeftmm:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s:69     .text._ZN10DigitalOutC2EP12GPIO_TypeDeftmm:00000000 _ZN10DigitalOutC2EP12GPIO_TypeDeftmm
+C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s:104    .text._ZN10DigitalOutC2EP12GPIO_TypeDeftmm:00000044 $d
+C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s:69     .text._ZN10DigitalOutC2EP12GPIO_TypeDeftmm:00000000 _ZN10DigitalOutC1EP12GPIO_TypeDeftmm
+C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s:109    .text._ZN10DigitalOutD2Ev:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s:116    .text._ZN10DigitalOutD2Ev:00000000 _ZN10DigitalOutD2Ev
+C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s:116    .text._ZN10DigitalOutD2Ev:00000000 _ZN10DigitalOutD1Ev
+C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s:125    .text._ZN10DigitalOut5writeEi:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s:132    .text._ZN10DigitalOut5writeEi:00000000 _ZN10DigitalOut5writeEi
+C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s:153    .text._ZN10DigitalOut4readEv:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s:160    .text._ZN10DigitalOut4readEv:00000000 _ZN10DigitalOut4readEv
+C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s:168    .text._ZN10DigitalOutcviEv:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s:175    .text._ZN10DigitalOutcviEv:00000000 _ZN10DigitalOutcviEv
+C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s:183    .text._ZN10DigitalOutaSEi:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\cckv4bjO.s:190    .text._ZN10DigitalOutaSEi:00000000 _ZN10DigitalOutaSEi
+
+UNDEFINED SYMBOLS
+HAL_GPIO_WritePin
+HAL_GPIO_Init
