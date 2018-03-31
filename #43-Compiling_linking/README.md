@@ -143,7 +143,7 @@ CXXFLAGS = $(CFLAGS) -fno-rtti
 
 ```Makefile
 # libraries
-LIBS = -lc -lm -lnosys -lstdc++
+LIBS = -lc -lm -lnosys -lstdc++_nano
 LIBDIR = 
 LDFLAGS = $(MCU) -specs=nano.specs -specs=nosys.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections
 ```
