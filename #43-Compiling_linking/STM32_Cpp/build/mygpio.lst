@@ -1,0 +1,241 @@
+ARM GAS  /tmp/cc18TQsq.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"mygpio.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text._ZN6mygpioC2EP12GPIO_TypeDef,"ax",%progbits
+  16              		.align	1
+  17              		.global	_ZN6mygpioC2EP12GPIO_TypeDef
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	_ZN6mygpioC2EP12GPIO_TypeDef:
+  24              	.LFB65:
+  25              		.file 1 "Src/mygpio.c"
+   1:Src/mygpio.c  **** #include "mygpio.h"
+   2:Src/mygpio.c  **** #include "stm32f1xx_hal.h"
+   3:Src/mygpio.c  **** 
+   4:Src/mygpio.c  **** mygpio::mygpio(GPIO_TypeDef *myGPIO){
+  26              		.loc 1 4 0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 0
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30              		@ link register save eliminated.
+  31              	.LVL0:
+  32              	.LBB2:
+   5:Src/mygpio.c  ****     this->myGPIO = myGPIO;
+  33              		.loc 1 5 0
+  34 0000 0160     		str	r1, [r0]
+  35              	.LBE2:
+   6:Src/mygpio.c  **** }
+  36              		.loc 1 6 0
+  37 0002 7047     		bx	lr
+  38              		.cfi_endproc
+  39              	.LFE65:
+  41              		.global	_ZN6mygpioC1EP12GPIO_TypeDef
+  42              		.thumb_set _ZN6mygpioC1EP12GPIO_TypeDef,_ZN6mygpioC2EP12GPIO_TypeDef
+  43              		.section	.text._ZN6mygpio4initEtmm,"ax",%progbits
+  44              		.align	1
+  45              		.global	_ZN6mygpio4initEtmm
+  46              		.syntax unified
+  47              		.thumb
+  48              		.thumb_func
+  49              		.fpu softvfp
+  51              	_ZN6mygpio4initEtmm:
+  52              	.LFB67:
+   7:Src/mygpio.c  **** 
+   8:Src/mygpio.c  **** void mygpio::init(uint16_t Pin, uint32_t Mode, uint32_t Speed){
+ARM GAS  /tmp/cc18TQsq.s 			page 2
+
+
+  53              		.loc 1 8 0
+  54              		.cfi_startproc
+  55              		@ args = 0, pretend = 0, frame = 24
+  56              		@ frame_needed = 0, uses_anonymous_args = 0
+  57              	.LVL1:
+  58 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  59              	.LCFI0:
+  60              		.cfi_def_cfa_offset 20
+  61              		.cfi_offset 4, -20
+  62              		.cfi_offset 5, -16
+  63              		.cfi_offset 6, -12
+  64              		.cfi_offset 7, -8
+  65              		.cfi_offset 14, -4
+  66 0002 87B0     		sub	sp, sp, #28
+  67              	.LCFI1:
+  68              		.cfi_def_cfa_offset 48
+  69 0004 0446     		mov	r4, r0
+  70 0006 0F46     		mov	r7, r1
+  71 0008 1646     		mov	r6, r2
+  72 000a 1D46     		mov	r5, r3
+  73              	.LBB3:
+   9:Src/mygpio.c  ****     GPIO_InitTypeDef GPIO_InitStruct;
+  10:Src/mygpio.c  **** 
+  11:Src/mygpio.c  ****     __HAL_RCC_GPIOA_CLK_ENABLE();
+  74              		.loc 1 11 0
+  75 000c 0A4B     		ldr	r3, .L4
+  76              	.LVL2:
+  77 000e 9A69     		ldr	r2, [r3, #24]
+  78              	.LVL3:
+  79 0010 42F00402 		orr	r2, r2, #4
+  80 0014 9A61     		str	r2, [r3, #24]
+  81 0016 9B69     		ldr	r3, [r3, #24]
+  82 0018 03F00403 		and	r3, r3, #4
+  83 001c 0193     		str	r3, [sp, #4]
+  84              	.LBE3:
+  12:Src/mygpio.c  **** 
+  13:Src/mygpio.c  ****     HAL_GPIO_WritePin(this->myGPIO, Pin, GPIO_PIN_RESET);
+  85              		.loc 1 13 0
+  86 001e 0022     		movs	r2, #0
+  87 0020 0068     		ldr	r0, [r0]
+  88              	.LVL4:
+  89 0022 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  90              	.LVL5:
+  14:Src/mygpio.c  **** 
+  15:Src/mygpio.c  ****     GPIO_InitStruct.Pin = Pin;
+  91              		.loc 1 15 0
+  92 0026 0297     		str	r7, [sp, #8]
+  16:Src/mygpio.c  ****     GPIO_InitStruct.Mode = Mode;
+  93              		.loc 1 16 0
+  94 0028 0396     		str	r6, [sp, #12]
+  17:Src/mygpio.c  ****     GPIO_InitStruct.Speed = Speed;
+  95              		.loc 1 17 0
+  96 002a 0595     		str	r5, [sp, #20]
+  18:Src/mygpio.c  ****     HAL_GPIO_Init(this->myGPIO, &GPIO_InitStruct);
+  97              		.loc 1 18 0
+  98 002c 02A9     		add	r1, sp, #8
+  99 002e 2068     		ldr	r0, [r4]
+ARM GAS  /tmp/cc18TQsq.s 			page 3
+
+
+ 100 0030 FFF7FEFF 		bl	HAL_GPIO_Init
+ 101              	.LVL6:
+  19:Src/mygpio.c  **** 
+  20:Src/mygpio.c  **** }
+ 102              		.loc 1 20 0
+ 103 0034 07B0     		add	sp, sp, #28
+ 104              	.LCFI2:
+ 105              		.cfi_def_cfa_offset 20
+ 106              		@ sp needed
+ 107 0036 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 108              	.LVL7:
+ 109              	.L5:
+ 110              		.align	2
+ 111              	.L4:
+ 112 0038 00100240 		.word	1073876992
+ 113              		.cfi_endproc
+ 114              	.LFE67:
+ 116              		.section	.text._ZN6mygpio3setEt13GPIO_PinState,"ax",%progbits
+ 117              		.align	1
+ 118              		.global	_ZN6mygpio3setEt13GPIO_PinState
+ 119              		.syntax unified
+ 120              		.thumb
+ 121              		.thumb_func
+ 122              		.fpu softvfp
+ 124              	_ZN6mygpio3setEt13GPIO_PinState:
+ 125              	.LFB68:
+  21:Src/mygpio.c  **** 
+  22:Src/mygpio.c  **** void mygpio::set(uint16_t Pin, GPIO_PinState state){
+ 126              		.loc 1 22 0
+ 127              		.cfi_startproc
+ 128              		@ args = 0, pretend = 0, frame = 0
+ 129              		@ frame_needed = 0, uses_anonymous_args = 0
+ 130              	.LVL8:
+ 131 0000 08B5     		push	{r3, lr}
+ 132              	.LCFI3:
+ 133              		.cfi_def_cfa_offset 8
+ 134              		.cfi_offset 3, -8
+ 135              		.cfi_offset 14, -4
+  23:Src/mygpio.c  ****     HAL_GPIO_WritePin(this->myGPIO, Pin, state);
+ 136              		.loc 1 23 0
+ 137 0002 0068     		ldr	r0, [r0]
+ 138              	.LVL9:
+ 139 0004 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 140              	.LVL10:
+  24:Src/mygpio.c  **** }
+ 141              		.loc 1 24 0
+ 142 0008 08BD     		pop	{r3, pc}
+ 143              		.cfi_endproc
+ 144              	.LFE68:
+ 146              		.section	.text._ZN6mygpio3getEt,"ax",%progbits
+ 147              		.align	1
+ 148              		.global	_ZN6mygpio3getEt
+ 149              		.syntax unified
+ 150              		.thumb
+ 151              		.thumb_func
+ 152              		.fpu softvfp
+ 154              	_ZN6mygpio3getEt:
+ARM GAS  /tmp/cc18TQsq.s 			page 4
+
+
+ 155              	.LFB69:
+  25:Src/mygpio.c  **** 
+  26:Src/mygpio.c  **** GPIO_PinState mygpio::get(uint16_t Pin){
+ 156              		.loc 1 26 0
+ 157              		.cfi_startproc
+ 158              		@ args = 0, pretend = 0, frame = 0
+ 159              		@ frame_needed = 0, uses_anonymous_args = 0
+ 160              	.LVL11:
+ 161 0000 08B5     		push	{r3, lr}
+ 162              	.LCFI4:
+ 163              		.cfi_def_cfa_offset 8
+ 164              		.cfi_offset 3, -8
+ 165              		.cfi_offset 14, -4
+  27:Src/mygpio.c  ****     GPIO_PinState state = HAL_GPIO_ReadPin(this->myGPIO,Pin);
+ 166              		.loc 1 27 0
+ 167 0002 0068     		ldr	r0, [r0]
+ 168              	.LVL12:
+ 169 0004 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 170              	.LVL13:
+  28:Src/mygpio.c  ****     return state;
+  29:Src/mygpio.c  **** }...
+ 171              		.loc 1 29 0
+ 172 0008 08BD     		pop	{r3, pc}
+ 173              		.cfi_endproc
+ 174              	.LFE69:
+ 176              		.text
+ 177              	.Letext0:
+ 178              		.file 2 "/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/machine/_def
+ 179              		.file 3 "/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/_stdint.
+ 180              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
+ 181              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
+ 182              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 183              		.file 7 "/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/lock.h"
+ 184              		.file 8 "/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/_types.h
+ 185              		.file 9 "/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/lib/gcc/arm-none-eabi/7.2.1/includ
+ 186              		.file 10 "/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/sys/reent.h
+ 187              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 188              		.file 12 "Inc/mygpio.h"
+ARM GAS  /tmp/cc18TQsq.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 mygpio.c
+     /tmp/cc18TQsq.s:16     .text._ZN6mygpioC2EP12GPIO_TypeDef:0000000000000000 $t
+     /tmp/cc18TQsq.s:23     .text._ZN6mygpioC2EP12GPIO_TypeDef:0000000000000000 _ZN6mygpioC2EP12GPIO_TypeDef
+     /tmp/cc18TQsq.s:23     .text._ZN6mygpioC2EP12GPIO_TypeDef:0000000000000000 _ZN6mygpioC1EP12GPIO_TypeDef
+     /tmp/cc18TQsq.s:44     .text._ZN6mygpio4initEtmm:0000000000000000 $t
+     /tmp/cc18TQsq.s:51     .text._ZN6mygpio4initEtmm:0000000000000000 _ZN6mygpio4initEtmm
+     /tmp/cc18TQsq.s:112    .text._ZN6mygpio4initEtmm:0000000000000038 $d
+     /tmp/cc18TQsq.s:117    .text._ZN6mygpio3setEt13GPIO_PinState:0000000000000000 $t
+     /tmp/cc18TQsq.s:124    .text._ZN6mygpio3setEt13GPIO_PinState:0000000000000000 _ZN6mygpio3setEt13GPIO_PinState
+     /tmp/cc18TQsq.s:147    .text._ZN6mygpio3getEt:0000000000000000 $t
+     /tmp/cc18TQsq.s:154    .text._ZN6mygpio3getEt:0000000000000000 _ZN6mygpio3getEt
+
+UNDEFINED SYMBOLS
+HAL_GPIO_WritePin
+HAL_GPIO_Init
+HAL_GPIO_ReadPin

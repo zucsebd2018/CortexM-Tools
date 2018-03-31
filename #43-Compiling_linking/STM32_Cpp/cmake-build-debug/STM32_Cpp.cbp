@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="STM32_Cpp"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="STM32_Cpp">
+				<Option output="/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/STM32_Cpp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 STM32_Cpp"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="STM32_Cpp/fast">
+				<Option output="/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/STM32_Cpp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 STM32_Cpp/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/crabfish/code/Embeded/STM32_Cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/CMSIS/Include/arm_common_tables.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/CMSIS/Include/arm_const_structs.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/CMSIS/Include/arm_math.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/CMSIS/Include/cmsis_armcc.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/CMSIS/Include/cmsis_armcc_V6.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/CMSIS/Include/cmsis_gcc.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/CMSIS/Include/core_cm0.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/CMSIS/Include/core_cm0plus.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/CMSIS/Include/core_cm3.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/CMSIS/Include/core_cm4.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/CMSIS/Include/core_cm7.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/CMSIS/Include/core_cmFunc.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/CMSIS/Include/core_cmInstr.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/CMSIS/Include/core_cmSimd.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/CMSIS/Include/core_sc000.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/CMSIS/Include/core_sc300.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Inc/main.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Inc/mygpio.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Inc/stm32f1xx_hal_conf.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Inc/stm32f1xx_it.h">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Src/main.c">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Src/stm32f1xx_hal_msp.c">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Src/stm32f1xx_it.c">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/Src/system_stm32f1xx.c">
+			<Option target="STM32_Cpp"/>
+		</Unit>
+		<Unit filename="/home/crabfish/code/Embeded/STM32_Cpp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
