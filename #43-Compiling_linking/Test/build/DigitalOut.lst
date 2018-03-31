@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s 			page 1
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s 			page 1
   56              	.L2:
   57 0048 00100240 		.word	1073876992
   59              		.global	_ZN10DigitalOutC1EP12GPIO_TypeDeft
-ARM GAS  C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s 			page 2
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s 			page 2
 
 
   60              		.thumb_set _ZN10DigitalOutC1EP12GPIO_TypeDeft,_ZN10DigitalOutC2EP12GPIO_TypeDeft
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s 			page 1
  117              		@ args = 0, pretend = 0, frame = 0
  118              		@ frame_needed = 0, uses_anonymous_args = 0
  119              		@ link register save eliminated.
-ARM GAS  C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s 			page 3
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s 			page 3
 
 
  120 0000 7047     		bx	lr
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s 			page 1
  180 0002 7047     		bx	lr
  182              		.section	.text._ZN10DigitalOutaSEi,"ax",%progbits
  183              		.align	1
-ARM GAS  C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s 			page 4
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s 			page 4
 
 
  184              		.global	_ZN10DigitalOutaSEi
@@ -207,30 +207,30 @@ ARM GAS  C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s 			page 1
  208 001a 2046     		mov	r0, r4
  209 001c 38BD     		pop	{r3, r4, r5, pc}
  211              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
-ARM GAS  C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s 			page 5
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 DigitalOut.cpp
-C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s:13     .text._ZN10DigitalOutC2EP12GPIO_TypeDeft:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s:20     .text._ZN10DigitalOutC2EP12GPIO_TypeDeft:00000000 _ZN10DigitalOutC2EP12GPIO_TypeDeft
-C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s:57     .text._ZN10DigitalOutC2EP12GPIO_TypeDeft:00000048 $d
-C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s:20     .text._ZN10DigitalOutC2EP12GPIO_TypeDeft:00000000 _ZN10DigitalOutC1EP12GPIO_TypeDeft
-C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s:62     .text._ZN10DigitalOutC2EP12GPIO_TypeDeftmm:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s:69     .text._ZN10DigitalOutC2EP12GPIO_TypeDeftmm:00000000 _ZN10DigitalOutC2EP12GPIO_TypeDeftmm
-C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s:104    .text._ZN10DigitalOutC2EP12GPIO_TypeDeftmm:00000044 $d
-C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s:69     .text._ZN10DigitalOutC2EP12GPIO_TypeDeftmm:00000000 _ZN10DigitalOutC1EP12GPIO_TypeDeftmm
-C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s:109    .text._ZN10DigitalOutD2Ev:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s:116    .text._ZN10DigitalOutD2Ev:00000000 _ZN10DigitalOutD2Ev
-C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s:116    .text._ZN10DigitalOutD2Ev:00000000 _ZN10DigitalOutD1Ev
-C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s:125    .text._ZN10DigitalOut5writeEi:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s:132    .text._ZN10DigitalOut5writeEi:00000000 _ZN10DigitalOut5writeEi
-C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s:153    .text._ZN10DigitalOut4readEv:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s:160    .text._ZN10DigitalOut4readEv:00000000 _ZN10DigitalOut4readEv
-C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s:168    .text._ZN10DigitalOutcviEv:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s:175    .text._ZN10DigitalOutcviEv:00000000 _ZN10DigitalOutcviEv
-C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s:183    .text._ZN10DigitalOutaSEi:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\cc2I8RS7.s:190    .text._ZN10DigitalOutaSEi:00000000 _ZN10DigitalOutaSEi
+C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s:13     .text._ZN10DigitalOutC2EP12GPIO_TypeDeft:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s:20     .text._ZN10DigitalOutC2EP12GPIO_TypeDeft:00000000 _ZN10DigitalOutC2EP12GPIO_TypeDeft
+C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s:57     .text._ZN10DigitalOutC2EP12GPIO_TypeDeft:00000048 $d
+C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s:20     .text._ZN10DigitalOutC2EP12GPIO_TypeDeft:00000000 _ZN10DigitalOutC1EP12GPIO_TypeDeft
+C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s:62     .text._ZN10DigitalOutC2EP12GPIO_TypeDeftmm:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s:69     .text._ZN10DigitalOutC2EP12GPIO_TypeDeftmm:00000000 _ZN10DigitalOutC2EP12GPIO_TypeDeftmm
+C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s:104    .text._ZN10DigitalOutC2EP12GPIO_TypeDeftmm:00000044 $d
+C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s:69     .text._ZN10DigitalOutC2EP12GPIO_TypeDeftmm:00000000 _ZN10DigitalOutC1EP12GPIO_TypeDeftmm
+C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s:109    .text._ZN10DigitalOutD2Ev:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s:116    .text._ZN10DigitalOutD2Ev:00000000 _ZN10DigitalOutD2Ev
+C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s:116    .text._ZN10DigitalOutD2Ev:00000000 _ZN10DigitalOutD1Ev
+C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s:125    .text._ZN10DigitalOut5writeEi:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s:132    .text._ZN10DigitalOut5writeEi:00000000 _ZN10DigitalOut5writeEi
+C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s:153    .text._ZN10DigitalOut4readEv:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s:160    .text._ZN10DigitalOut4readEv:00000000 _ZN10DigitalOut4readEv
+C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s:168    .text._ZN10DigitalOutcviEv:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s:175    .text._ZN10DigitalOutcviEv:00000000 _ZN10DigitalOutcviEv
+C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s:183    .text._ZN10DigitalOutaSEi:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\cc4eX2ON.s:190    .text._ZN10DigitalOutaSEi:00000000 _ZN10DigitalOutaSEi
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin

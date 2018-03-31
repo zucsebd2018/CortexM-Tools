@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 1
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 1
   60 0016 2046     		mov	r0, r4
   61 0018 10BD     		pop	{r4, pc}
   62              	.L5:
-ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 2
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 2
 
 
   63 001a 00BF     		.align	2
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 1
  121              		@ frame_needed = 0, uses_anonymous_args = 0
  122 0000 074A     		ldr	r2, .L13
  123 0002 08B5     		push	{r3, lr}
-ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 3
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 3
 
 
  124 0004 1368     		ldr	r3, [r2]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 1
  182 0008 00000000 		.word	uwTick
  184              		.section	.text.HAL_GetTickPrio,"ax",%progbits
  185              		.align	1
-ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 4
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 4
 
 
  186              		.global	HAL_GetTickPrio
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 1
  245              		@ frame_needed = 0, uses_anonymous_args = 0
  246              		@ link register save eliminated.
  247 0000 014B     		ldr	r3, .L30
-ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 5
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 5
 
 
  248 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 1
  306 000c 10E000E0 		.word	-536813552
  308              		.section	.text.HAL_ResumeTick,"ax",%progbits
  309              		.align	1
-ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 6
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 6
 
 
  310              		.weak	HAL_ResumeTick
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 1
  370              		.section	.text.HAL_GetDEVID,"ax",%progbits
  371              		.align	1
  372              		.global	HAL_GetDEVID
-ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 7
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 7
 
 
  373              		.syntax unified
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 1
  432              	.L60:
  433 000c 002004E0 		.word	-536600576
  435              		.section	.text.HAL_DBGMCU_EnableDBGStopMode,"ax",%progbits
-ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 8
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 8
 
 
  436              		.align	1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 1
  495 000a 7047     		bx	lr
  496              	.L70:
  497              		.align	2
-ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 9
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 9
 
 
  498              	.L69:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 1
  559              	uwTickFreq:
  560 0000 01       		.byte	1
  561              		.section	.data.uwTickPrio,"aw",%progbits
-ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 10
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 10
 
 
  562              		.align	2
@@ -546,85 +546,85 @@ ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 1
  566              	uwTickPrio:
  567 0000 10000000 		.word	16
  568              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
-ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 11
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f1xx_hal.c
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:13     .text.HAL_MspInit:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:20     .text.HAL_MspInit:00000000 HAL_MspInit
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:27     .text.HAL_MspDeInit:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:34     .text.HAL_MspDeInit:00000000 HAL_MspDeInit
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:41     .text.HAL_DeInit:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:48     .text.HAL_DeInit:00000000 HAL_DeInit
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:65     .text.HAL_DeInit:0000001c $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:68     .text.HAL_InitTick:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:75     .text.HAL_InitTick:00000000 HAL_InitTick
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:107    .text.HAL_InitTick:0000003c $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:112    .text.HAL_Init:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:119    .text.HAL_Init:00000000 HAL_Init
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:137    .text.HAL_Init:00000020 $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:140    .text.HAL_IncTick:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:147    .text.HAL_IncTick:00000000 HAL_IncTick
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:161    .text.HAL_IncTick:00000010 $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:13     .text.HAL_MspInit:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:20     .text.HAL_MspInit:00000000 HAL_MspInit
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:27     .text.HAL_MspDeInit:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:34     .text.HAL_MspDeInit:00000000 HAL_MspDeInit
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:41     .text.HAL_DeInit:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:48     .text.HAL_DeInit:00000000 HAL_DeInit
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:65     .text.HAL_DeInit:0000001c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:68     .text.HAL_InitTick:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:75     .text.HAL_InitTick:00000000 HAL_InitTick
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:107    .text.HAL_InitTick:0000003c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:112    .text.HAL_Init:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:119    .text.HAL_Init:00000000 HAL_Init
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:137    .text.HAL_Init:00000020 $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:140    .text.HAL_IncTick:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:147    .text.HAL_IncTick:00000000 HAL_IncTick
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:161    .text.HAL_IncTick:00000010 $d
                             *COM*:00000004 uwTick
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:165    .text.HAL_GetTick:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:172    .text.HAL_GetTick:00000000 HAL_GetTick
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:182    .text.HAL_GetTick:00000008 $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:185    .text.HAL_GetTickPrio:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:192    .text.HAL_GetTickPrio:00000000 HAL_GetTickPrio
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:202    .text.HAL_GetTickPrio:00000008 $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:205    .text.HAL_SetTickFreq:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:212    .text.HAL_SetTickFreq:00000000 HAL_SetTickFreq
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:232    .text.HAL_SetTickFreq:0000001c $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:236    .text.HAL_GetTickFreq:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:243    .text.HAL_GetTickFreq:00000000 HAL_GetTickFreq
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:253    .text.HAL_GetTickFreq:00000008 $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:256    .text.HAL_Delay:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:263    .text.HAL_Delay:00000000 HAL_Delay
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:284    .text.HAL_Delay:00000020 $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:287    .text.HAL_SuspendTick:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:294    .text.HAL_SuspendTick:00000000 HAL_SuspendTick
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:306    .text.HAL_SuspendTick:0000000c $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:309    .text.HAL_ResumeTick:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:316    .text.HAL_ResumeTick:00000000 HAL_ResumeTick
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:328    .text.HAL_ResumeTick:0000000c $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:331    .text.HAL_GetHalVersion:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:338    .text.HAL_GetHalVersion:00000000 HAL_GetHalVersion
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:347    .text.HAL_GetHalVersion:00000004 $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:350    .text.HAL_GetREVID:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:357    .text.HAL_GetREVID:00000000 HAL_GetREVID
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:368    .text.HAL_GetREVID:00000008 $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:371    .text.HAL_GetDEVID:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:378    .text.HAL_GetDEVID:00000000 HAL_GetDEVID
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:389    .text.HAL_GetDEVID:0000000c $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:392    .text.HAL_DBGMCU_EnableDBGSleepMode:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:399    .text.HAL_DBGMCU_EnableDBGSleepMode:00000000 HAL_DBGMCU_EnableDBGSleepMode
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:411    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000c $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:414    .text.HAL_DBGMCU_DisableDBGSleepMode:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:421    .text.HAL_DBGMCU_DisableDBGSleepMode:00000000 HAL_DBGMCU_DisableDBGSleepMode
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:433    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000c $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:436    .text.HAL_DBGMCU_EnableDBGStopMode:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:443    .text.HAL_DBGMCU_EnableDBGStopMode:00000000 HAL_DBGMCU_EnableDBGStopMode
-ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s 			page 12
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:165    .text.HAL_GetTick:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:172    .text.HAL_GetTick:00000000 HAL_GetTick
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:182    .text.HAL_GetTick:00000008 $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:185    .text.HAL_GetTickPrio:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:192    .text.HAL_GetTickPrio:00000000 HAL_GetTickPrio
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:202    .text.HAL_GetTickPrio:00000008 $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:205    .text.HAL_SetTickFreq:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:212    .text.HAL_SetTickFreq:00000000 HAL_SetTickFreq
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:232    .text.HAL_SetTickFreq:0000001c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:236    .text.HAL_GetTickFreq:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:243    .text.HAL_GetTickFreq:00000000 HAL_GetTickFreq
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:253    .text.HAL_GetTickFreq:00000008 $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:256    .text.HAL_Delay:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:263    .text.HAL_Delay:00000000 HAL_Delay
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:284    .text.HAL_Delay:00000020 $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:287    .text.HAL_SuspendTick:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:294    .text.HAL_SuspendTick:00000000 HAL_SuspendTick
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:306    .text.HAL_SuspendTick:0000000c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:309    .text.HAL_ResumeTick:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:316    .text.HAL_ResumeTick:00000000 HAL_ResumeTick
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:328    .text.HAL_ResumeTick:0000000c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:331    .text.HAL_GetHalVersion:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:338    .text.HAL_GetHalVersion:00000000 HAL_GetHalVersion
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:347    .text.HAL_GetHalVersion:00000004 $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:350    .text.HAL_GetREVID:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:357    .text.HAL_GetREVID:00000000 HAL_GetREVID
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:368    .text.HAL_GetREVID:00000008 $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:371    .text.HAL_GetDEVID:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:378    .text.HAL_GetDEVID:00000000 HAL_GetDEVID
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:389    .text.HAL_GetDEVID:0000000c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:392    .text.HAL_DBGMCU_EnableDBGSleepMode:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:399    .text.HAL_DBGMCU_EnableDBGSleepMode:00000000 HAL_DBGMCU_EnableDBGSleepMode
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:411    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:414    .text.HAL_DBGMCU_DisableDBGSleepMode:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:421    .text.HAL_DBGMCU_DisableDBGSleepMode:00000000 HAL_DBGMCU_DisableDBGSleepMode
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:433    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:436    .text.HAL_DBGMCU_EnableDBGStopMode:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:443    .text.HAL_DBGMCU_EnableDBGStopMode:00000000 HAL_DBGMCU_EnableDBGStopMode
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 12
 
 
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:455    .text.HAL_DBGMCU_EnableDBGStopMode:0000000c $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:458    .text.HAL_DBGMCU_DisableDBGStopMode:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:465    .text.HAL_DBGMCU_DisableDBGStopMode:00000000 HAL_DBGMCU_DisableDBGStopMode
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:477    .text.HAL_DBGMCU_DisableDBGStopMode:0000000c $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:480    .text.HAL_DBGMCU_EnableDBGStandbyMode:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:487    .text.HAL_DBGMCU_EnableDBGStandbyMode:00000000 HAL_DBGMCU_EnableDBGStandbyMode
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:499    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000c $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:502    .text.HAL_DBGMCU_DisableDBGStandbyMode:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:509    .text.HAL_DBGMCU_DisableDBGStandbyMode:00000000 HAL_DBGMCU_DisableDBGStandbyMode
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:521    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000c $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:524    .text.HAL_GetUID:00000000 $t
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:531    .text.HAL_GetUID:00000000 HAL_GetUID
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:548    .text.HAL_GetUID:00000014 $d
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:559    .data.uwTickFreq:00000000 uwTickFreq
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:566    .data.uwTickPrio:00000000 uwTickPrio
-C:\Users\Qian\AppData\Local\Temp\ccuG25Pt.s:562    .data.uwTickPrio:00000000 $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:455    .text.HAL_DBGMCU_EnableDBGStopMode:0000000c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:458    .text.HAL_DBGMCU_DisableDBGStopMode:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:465    .text.HAL_DBGMCU_DisableDBGStopMode:00000000 HAL_DBGMCU_DisableDBGStopMode
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:477    .text.HAL_DBGMCU_DisableDBGStopMode:0000000c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:480    .text.HAL_DBGMCU_EnableDBGStandbyMode:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:487    .text.HAL_DBGMCU_EnableDBGStandbyMode:00000000 HAL_DBGMCU_EnableDBGStandbyMode
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:499    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:502    .text.HAL_DBGMCU_DisableDBGStandbyMode:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:509    .text.HAL_DBGMCU_DisableDBGStandbyMode:00000000 HAL_DBGMCU_DisableDBGStandbyMode
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:521    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:524    .text.HAL_GetUID:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:531    .text.HAL_GetUID:00000000 HAL_GetUID
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:548    .text.HAL_GetUID:00000014 $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:559    .data.uwTickFreq:00000000 uwTickFreq
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:566    .data.uwTickPrio:00000000 uwTickPrio
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:562    .data.uwTickPrio:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_SYSTICK_Config
