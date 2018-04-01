@@ -1,0 +1,633 @@
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_hal.c"
+  12              		.section	.text.HAL_MspInit,"ax",%progbits
+  13              		.align	1
+  14              		.weak	HAL_MspInit
+  15              		.syntax unified
+  16              		.thumb
+  17              		.thumb_func
+  18              		.fpu softvfp
+  20              	HAL_MspInit:
+  21              		@ args = 0, pretend = 0, frame = 0
+  22              		@ frame_needed = 0, uses_anonymous_args = 0
+  23              		@ link register save eliminated.
+  24 0000 7047     		bx	lr
+  26              		.section	.text.HAL_MspDeInit,"ax",%progbits
+  27              		.align	1
+  28              		.weak	HAL_MspDeInit
+  29              		.syntax unified
+  30              		.thumb
+  31              		.thumb_func
+  32              		.fpu softvfp
+  34              	HAL_MspDeInit:
+  35              		@ args = 0, pretend = 0, frame = 0
+  36              		@ frame_needed = 0, uses_anonymous_args = 0
+  37              		@ link register save eliminated.
+  38 0000 7047     		bx	lr
+  40              		.section	.text.HAL_DeInit,"ax",%progbits
+  41              		.align	1
+  42              		.global	HAL_DeInit
+  43              		.syntax unified
+  44              		.thumb
+  45              		.thumb_func
+  46              		.fpu softvfp
+  48              	HAL_DeInit:
+  49              		@ args = 0, pretend = 0, frame = 0
+  50              		@ frame_needed = 0, uses_anonymous_args = 0
+  51 0000 10B5     		push	{r4, lr}
+  52 0002 4FF0FF32 		mov	r2, #-1
+  53 0006 0024     		movs	r4, #0
+  54 0008 044B     		ldr	r3, .L4
+  55 000a DA60     		str	r2, [r3, #12]
+  56 000c 1C61     		str	r4, [r3, #16]
+  57 000e DA60     		str	r2, [r3, #12]
+  58 0010 DC60     		str	r4, [r3, #12]
+  59 0012 FFF7FEFF 		bl	HAL_MspDeInit
+  60 0016 2046     		mov	r0, r4
+  61 0018 10BD     		pop	{r4, pc}
+  62              	.L5:
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 2
+
+
+  63 001a 00BF     		.align	2
+  64              	.L4:
+  65 001c 00100240 		.word	1073876992
+  67              		.section	.text.HAL_InitTick,"ax",%progbits
+  68              		.align	1
+  69              		.weak	HAL_InitTick
+  70              		.syntax unified
+  71              		.thumb
+  72              		.thumb_func
+  73              		.fpu softvfp
+  75              	HAL_InitTick:
+  76              		@ args = 0, pretend = 0, frame = 0
+  77              		@ frame_needed = 0, uses_anonymous_args = 0
+  78 0000 38B5     		push	{r3, r4, r5, lr}
+  79 0002 0E4B     		ldr	r3, .L10
+  80 0004 0546     		mov	r5, r0
+  81 0006 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+  82 0008 4FF47A73 		mov	r3, #1000
+  83 000c B3FBF0F3 		udiv	r3, r3, r0
+  84 0010 0B4A     		ldr	r2, .L10+4
+  85 0012 1068     		ldr	r0, [r2]
+  86 0014 B0FBF3F0 		udiv	r0, r0, r3
+  87 0018 FFF7FEFF 		bl	HAL_SYSTICK_Config
+  88 001c 0446     		mov	r4, r0
+  89 001e 58B9     		cbnz	r0, .L9
+  90 0020 0F2D     		cmp	r5, #15
+  91 0022 09D8     		bhi	.L9
+  92 0024 0246     		mov	r2, r0
+  93 0026 2946     		mov	r1, r5
+  94 0028 4FF0FF30 		mov	r0, #-1
+  95 002c FFF7FEFF 		bl	HAL_NVIC_SetPriority
+  96 0030 2046     		mov	r0, r4
+  97 0032 044B     		ldr	r3, .L10+8
+  98 0034 1D60     		str	r5, [r3]
+  99              	.L7:
+ 100 0036 38BD     		pop	{r3, r4, r5, pc}
+ 101              	.L9:
+ 102 0038 0120     		movs	r0, #1
+ 103 003a FCE7     		b	.L7
+ 104              	.L11:
+ 105              		.align	2
+ 106              	.L10:
+ 107 003c 00000000 		.word	.LANCHOR0
+ 108 0040 00000000 		.word	SystemCoreClock
+ 109 0044 00000000 		.word	.LANCHOR1
+ 111              		.section	.text.HAL_Init,"ax",%progbits
+ 112              		.align	1
+ 113              		.global	HAL_Init
+ 114              		.syntax unified
+ 115              		.thumb
+ 116              		.thumb_func
+ 117              		.fpu softvfp
+ 119              	HAL_Init:
+ 120              		@ args = 0, pretend = 0, frame = 0
+ 121              		@ frame_needed = 0, uses_anonymous_args = 0
+ 122 0000 074A     		ldr	r2, .L13
+ 123 0002 08B5     		push	{r3, lr}
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 3
+
+
+ 124 0004 1368     		ldr	r3, [r2]
+ 125 0006 0320     		movs	r0, #3
+ 126 0008 43F01003 		orr	r3, r3, #16
+ 127 000c 1360     		str	r3, [r2]
+ 128 000e FFF7FEFF 		bl	HAL_NVIC_SetPriorityGrouping
+ 129 0012 0020     		movs	r0, #0
+ 130 0014 FFF7FEFF 		bl	HAL_InitTick
+ 131 0018 FFF7FEFF 		bl	HAL_MspInit
+ 132 001c 0020     		movs	r0, #0
+ 133 001e 08BD     		pop	{r3, pc}
+ 134              	.L14:
+ 135              		.align	2
+ 136              	.L13:
+ 137 0020 00200240 		.word	1073881088
+ 139              		.section	.text.HAL_IncTick,"ax",%progbits
+ 140              		.align	1
+ 141              		.weak	HAL_IncTick
+ 142              		.syntax unified
+ 143              		.thumb
+ 144              		.thumb_func
+ 145              		.fpu softvfp
+ 147              	HAL_IncTick:
+ 148              		@ args = 0, pretend = 0, frame = 0
+ 149              		@ frame_needed = 0, uses_anonymous_args = 0
+ 150              		@ link register save eliminated.
+ 151 0000 034A     		ldr	r2, .L16
+ 152 0002 044B     		ldr	r3, .L16+4
+ 153 0004 1168     		ldr	r1, [r2]
+ 154 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 155 0008 0B44     		add	r3, r3, r1
+ 156 000a 1360     		str	r3, [r2]
+ 157 000c 7047     		bx	lr
+ 158              	.L17:
+ 159 000e 00BF     		.align	2
+ 160              	.L16:
+ 161 0010 00000000 		.word	uwTick
+ 162 0014 00000000 		.word	.LANCHOR0
+ 164              		.section	.text.HAL_GetTick,"ax",%progbits
+ 165              		.align	1
+ 166              		.weak	HAL_GetTick
+ 167              		.syntax unified
+ 168              		.thumb
+ 169              		.thumb_func
+ 170              		.fpu softvfp
+ 172              	HAL_GetTick:
+ 173              		@ args = 0, pretend = 0, frame = 0
+ 174              		@ frame_needed = 0, uses_anonymous_args = 0
+ 175              		@ link register save eliminated.
+ 176 0000 014B     		ldr	r3, .L19
+ 177 0002 1868     		ldr	r0, [r3]
+ 178 0004 7047     		bx	lr
+ 179              	.L20:
+ 180 0006 00BF     		.align	2
+ 181              	.L19:
+ 182 0008 00000000 		.word	uwTick
+ 184              		.section	.text.HAL_GetTickPrio,"ax",%progbits
+ 185              		.align	1
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 4
+
+
+ 186              		.global	HAL_GetTickPrio
+ 187              		.syntax unified
+ 188              		.thumb
+ 189              		.thumb_func
+ 190              		.fpu softvfp
+ 192              	HAL_GetTickPrio:
+ 193              		@ args = 0, pretend = 0, frame = 0
+ 194              		@ frame_needed = 0, uses_anonymous_args = 0
+ 195              		@ link register save eliminated.
+ 196 0000 014B     		ldr	r3, .L22
+ 197 0002 1868     		ldr	r0, [r3]
+ 198 0004 7047     		bx	lr
+ 199              	.L23:
+ 200 0006 00BF     		.align	2
+ 201              	.L22:
+ 202 0008 00000000 		.word	.LANCHOR1
+ 204              		.section	.text.HAL_SetTickFreq,"ax",%progbits
+ 205              		.align	1
+ 206              		.global	HAL_SetTickFreq
+ 207              		.syntax unified
+ 208              		.thumb
+ 209              		.thumb_func
+ 210              		.fpu softvfp
+ 212              	HAL_SetTickFreq:
+ 213              		@ args = 0, pretend = 0, frame = 0
+ 214              		@ frame_needed = 0, uses_anonymous_args = 0
+ 215 0000 08B5     		push	{r3, lr}
+ 216 0002 064B     		ldr	r3, .L27
+ 217 0004 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 218 0006 8242     		cmp	r2, r0
+ 219 0008 05D0     		beq	.L26
+ 220 000a 1870     		strb	r0, [r3]
+ 221 000c 044B     		ldr	r3, .L27+4
+ 222 000e 1868     		ldr	r0, [r3]
+ 223 0010 FFF7FEFF 		bl	HAL_InitTick
+ 224              	.L25:
+ 225 0014 08BD     		pop	{r3, pc}
+ 226              	.L26:
+ 227 0016 0020     		movs	r0, #0
+ 228 0018 FCE7     		b	.L25
+ 229              	.L28:
+ 230 001a 00BF     		.align	2
+ 231              	.L27:
+ 232 001c 00000000 		.word	.LANCHOR0
+ 233 0020 00000000 		.word	.LANCHOR1
+ 235              		.section	.text.HAL_GetTickFreq,"ax",%progbits
+ 236              		.align	1
+ 237              		.global	HAL_GetTickFreq
+ 238              		.syntax unified
+ 239              		.thumb
+ 240              		.thumb_func
+ 241              		.fpu softvfp
+ 243              	HAL_GetTickFreq:
+ 244              		@ args = 0, pretend = 0, frame = 0
+ 245              		@ frame_needed = 0, uses_anonymous_args = 0
+ 246              		@ link register save eliminated.
+ 247 0000 014B     		ldr	r3, .L30
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 5
+
+
+ 248 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 249 0004 7047     		bx	lr
+ 250              	.L31:
+ 251 0006 00BF     		.align	2
+ 252              	.L30:
+ 253 0008 00000000 		.word	.LANCHOR0
+ 255              		.section	.text.HAL_Delay,"ax",%progbits
+ 256              		.align	1
+ 257              		.weak	HAL_Delay
+ 258              		.syntax unified
+ 259              		.thumb
+ 260              		.thumb_func
+ 261              		.fpu softvfp
+ 263              	HAL_Delay:
+ 264              		@ args = 0, pretend = 0, frame = 0
+ 265              		@ frame_needed = 0, uses_anonymous_args = 0
+ 266 0000 38B5     		push	{r3, r4, r5, lr}
+ 267 0002 0446     		mov	r4, r0
+ 268 0004 FFF7FEFF 		bl	HAL_GetTick
+ 269 0008 0546     		mov	r5, r0
+ 270 000a 631C     		adds	r3, r4, #1
+ 271 000c 1EBF     		ittt	ne
+ 272 000e 044B     		ldrne	r3, .L39
+ 273 0010 1B78     		ldrbne	r3, [r3]	@ zero_extendqisi2
+ 274 0012 E418     		addne	r4, r4, r3
+ 275              	.L34:
+ 276 0014 FFF7FEFF 		bl	HAL_GetTick
+ 277 0018 401B     		subs	r0, r0, r5
+ 278 001a A042     		cmp	r0, r4
+ 279 001c FAD3     		bcc	.L34
+ 280 001e 38BD     		pop	{r3, r4, r5, pc}
+ 281              	.L40:
+ 282              		.align	2
+ 283              	.L39:
+ 284 0020 00000000 		.word	.LANCHOR0
+ 286              		.section	.text.HAL_SuspendTick,"ax",%progbits
+ 287              		.align	1
+ 288              		.weak	HAL_SuspendTick
+ 289              		.syntax unified
+ 290              		.thumb
+ 291              		.thumb_func
+ 292              		.fpu softvfp
+ 294              	HAL_SuspendTick:
+ 295              		@ args = 0, pretend = 0, frame = 0
+ 296              		@ frame_needed = 0, uses_anonymous_args = 0
+ 297              		@ link register save eliminated.
+ 298 0000 024A     		ldr	r2, .L42
+ 299 0002 1368     		ldr	r3, [r2]
+ 300 0004 23F00203 		bic	r3, r3, #2
+ 301 0008 1360     		str	r3, [r2]
+ 302 000a 7047     		bx	lr
+ 303              	.L43:
+ 304              		.align	2
+ 305              	.L42:
+ 306 000c 10E000E0 		.word	-536813552
+ 308              		.section	.text.HAL_ResumeTick,"ax",%progbits
+ 309              		.align	1
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 6
+
+
+ 310              		.weak	HAL_ResumeTick
+ 311              		.syntax unified
+ 312              		.thumb
+ 313              		.thumb_func
+ 314              		.fpu softvfp
+ 316              	HAL_ResumeTick:
+ 317              		@ args = 0, pretend = 0, frame = 0
+ 318              		@ frame_needed = 0, uses_anonymous_args = 0
+ 319              		@ link register save eliminated.
+ 320 0000 024A     		ldr	r2, .L45
+ 321 0002 1368     		ldr	r3, [r2]
+ 322 0004 43F00203 		orr	r3, r3, #2
+ 323 0008 1360     		str	r3, [r2]
+ 324 000a 7047     		bx	lr
+ 325              	.L46:
+ 326              		.align	2
+ 327              	.L45:
+ 328 000c 10E000E0 		.word	-536813552
+ 330              		.section	.text.HAL_GetHalVersion,"ax",%progbits
+ 331              		.align	1
+ 332              		.global	HAL_GetHalVersion
+ 333              		.syntax unified
+ 334              		.thumb
+ 335              		.thumb_func
+ 336              		.fpu softvfp
+ 338              	HAL_GetHalVersion:
+ 339              		@ args = 0, pretend = 0, frame = 0
+ 340              		@ frame_needed = 0, uses_anonymous_args = 0
+ 341              		@ link register save eliminated.
+ 342 0000 0048     		ldr	r0, .L48
+ 343 0002 7047     		bx	lr
+ 344              	.L49:
+ 345              		.align	2
+ 346              	.L48:
+ 347 0004 00020101 		.word	16843264
+ 349              		.section	.text.HAL_GetREVID,"ax",%progbits
+ 350              		.align	1
+ 351              		.global	HAL_GetREVID
+ 352              		.syntax unified
+ 353              		.thumb
+ 354              		.thumb_func
+ 355              		.fpu softvfp
+ 357              	HAL_GetREVID:
+ 358              		@ args = 0, pretend = 0, frame = 0
+ 359              		@ frame_needed = 0, uses_anonymous_args = 0
+ 360              		@ link register save eliminated.
+ 361 0000 014B     		ldr	r3, .L51
+ 362 0002 1868     		ldr	r0, [r3]
+ 363 0004 000C     		lsrs	r0, r0, #16
+ 364 0006 7047     		bx	lr
+ 365              	.L52:
+ 366              		.align	2
+ 367              	.L51:
+ 368 0008 002004E0 		.word	-536600576
+ 370              		.section	.text.HAL_GetDEVID,"ax",%progbits
+ 371              		.align	1
+ 372              		.global	HAL_GetDEVID
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 7
+
+
+ 373              		.syntax unified
+ 374              		.thumb
+ 375              		.thumb_func
+ 376              		.fpu softvfp
+ 378              	HAL_GetDEVID:
+ 379              		@ args = 0, pretend = 0, frame = 0
+ 380              		@ frame_needed = 0, uses_anonymous_args = 0
+ 381              		@ link register save eliminated.
+ 382 0000 024B     		ldr	r3, .L54
+ 383 0002 1868     		ldr	r0, [r3]
+ 384 0004 C0F30B00 		ubfx	r0, r0, #0, #12
+ 385 0008 7047     		bx	lr
+ 386              	.L55:
+ 387 000a 00BF     		.align	2
+ 388              	.L54:
+ 389 000c 002004E0 		.word	-536600576
+ 391              		.section	.text.HAL_DBGMCU_EnableDBGSleepMode,"ax",%progbits
+ 392              		.align	1
+ 393              		.global	HAL_DBGMCU_EnableDBGSleepMode
+ 394              		.syntax unified
+ 395              		.thumb
+ 396              		.thumb_func
+ 397              		.fpu softvfp
+ 399              	HAL_DBGMCU_EnableDBGSleepMode:
+ 400              		@ args = 0, pretend = 0, frame = 0
+ 401              		@ frame_needed = 0, uses_anonymous_args = 0
+ 402              		@ link register save eliminated.
+ 403 0000 024A     		ldr	r2, .L57
+ 404 0002 5368     		ldr	r3, [r2, #4]
+ 405 0004 43F00103 		orr	r3, r3, #1
+ 406 0008 5360     		str	r3, [r2, #4]
+ 407 000a 7047     		bx	lr
+ 408              	.L58:
+ 409              		.align	2
+ 410              	.L57:
+ 411 000c 002004E0 		.word	-536600576
+ 413              		.section	.text.HAL_DBGMCU_DisableDBGSleepMode,"ax",%progbits
+ 414              		.align	1
+ 415              		.global	HAL_DBGMCU_DisableDBGSleepMode
+ 416              		.syntax unified
+ 417              		.thumb
+ 418              		.thumb_func
+ 419              		.fpu softvfp
+ 421              	HAL_DBGMCU_DisableDBGSleepMode:
+ 422              		@ args = 0, pretend = 0, frame = 0
+ 423              		@ frame_needed = 0, uses_anonymous_args = 0
+ 424              		@ link register save eliminated.
+ 425 0000 024A     		ldr	r2, .L60
+ 426 0002 5368     		ldr	r3, [r2, #4]
+ 427 0004 23F00103 		bic	r3, r3, #1
+ 428 0008 5360     		str	r3, [r2, #4]
+ 429 000a 7047     		bx	lr
+ 430              	.L61:
+ 431              		.align	2
+ 432              	.L60:
+ 433 000c 002004E0 		.word	-536600576
+ 435              		.section	.text.HAL_DBGMCU_EnableDBGStopMode,"ax",%progbits
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 8
+
+
+ 436              		.align	1
+ 437              		.global	HAL_DBGMCU_EnableDBGStopMode
+ 438              		.syntax unified
+ 439              		.thumb
+ 440              		.thumb_func
+ 441              		.fpu softvfp
+ 443              	HAL_DBGMCU_EnableDBGStopMode:
+ 444              		@ args = 0, pretend = 0, frame = 0
+ 445              		@ frame_needed = 0, uses_anonymous_args = 0
+ 446              		@ link register save eliminated.
+ 447 0000 024A     		ldr	r2, .L63
+ 448 0002 5368     		ldr	r3, [r2, #4]
+ 449 0004 43F00203 		orr	r3, r3, #2
+ 450 0008 5360     		str	r3, [r2, #4]
+ 451 000a 7047     		bx	lr
+ 452              	.L64:
+ 453              		.align	2
+ 454              	.L63:
+ 455 000c 002004E0 		.word	-536600576
+ 457              		.section	.text.HAL_DBGMCU_DisableDBGStopMode,"ax",%progbits
+ 458              		.align	1
+ 459              		.global	HAL_DBGMCU_DisableDBGStopMode
+ 460              		.syntax unified
+ 461              		.thumb
+ 462              		.thumb_func
+ 463              		.fpu softvfp
+ 465              	HAL_DBGMCU_DisableDBGStopMode:
+ 466              		@ args = 0, pretend = 0, frame = 0
+ 467              		@ frame_needed = 0, uses_anonymous_args = 0
+ 468              		@ link register save eliminated.
+ 469 0000 024A     		ldr	r2, .L66
+ 470 0002 5368     		ldr	r3, [r2, #4]
+ 471 0004 23F00203 		bic	r3, r3, #2
+ 472 0008 5360     		str	r3, [r2, #4]
+ 473 000a 7047     		bx	lr
+ 474              	.L67:
+ 475              		.align	2
+ 476              	.L66:
+ 477 000c 002004E0 		.word	-536600576
+ 479              		.section	.text.HAL_DBGMCU_EnableDBGStandbyMode,"ax",%progbits
+ 480              		.align	1
+ 481              		.global	HAL_DBGMCU_EnableDBGStandbyMode
+ 482              		.syntax unified
+ 483              		.thumb
+ 484              		.thumb_func
+ 485              		.fpu softvfp
+ 487              	HAL_DBGMCU_EnableDBGStandbyMode:
+ 488              		@ args = 0, pretend = 0, frame = 0
+ 489              		@ frame_needed = 0, uses_anonymous_args = 0
+ 490              		@ link register save eliminated.
+ 491 0000 024A     		ldr	r2, .L69
+ 492 0002 5368     		ldr	r3, [r2, #4]
+ 493 0004 43F00403 		orr	r3, r3, #4
+ 494 0008 5360     		str	r3, [r2, #4]
+ 495 000a 7047     		bx	lr
+ 496              	.L70:
+ 497              		.align	2
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 9
+
+
+ 498              	.L69:
+ 499 000c 002004E0 		.word	-536600576
+ 501              		.section	.text.HAL_DBGMCU_DisableDBGStandbyMode,"ax",%progbits
+ 502              		.align	1
+ 503              		.global	HAL_DBGMCU_DisableDBGStandbyMode
+ 504              		.syntax unified
+ 505              		.thumb
+ 506              		.thumb_func
+ 507              		.fpu softvfp
+ 509              	HAL_DBGMCU_DisableDBGStandbyMode:
+ 510              		@ args = 0, pretend = 0, frame = 0
+ 511              		@ frame_needed = 0, uses_anonymous_args = 0
+ 512              		@ link register save eliminated.
+ 513 0000 024A     		ldr	r2, .L72
+ 514 0002 5368     		ldr	r3, [r2, #4]
+ 515 0004 23F00403 		bic	r3, r3, #4
+ 516 0008 5360     		str	r3, [r2, #4]
+ 517 000a 7047     		bx	lr
+ 518              	.L73:
+ 519              		.align	2
+ 520              	.L72:
+ 521 000c 002004E0 		.word	-536600576
+ 523              		.section	.text.HAL_GetUID,"ax",%progbits
+ 524              		.align	1
+ 525              		.global	HAL_GetUID
+ 526              		.syntax unified
+ 527              		.thumb
+ 528              		.thumb_func
+ 529              		.fpu softvfp
+ 531              	HAL_GetUID:
+ 532              		@ args = 0, pretend = 0, frame = 0
+ 533              		@ frame_needed = 0, uses_anonymous_args = 0
+ 534              		@ link register save eliminated.
+ 535 0000 044B     		ldr	r3, .L75
+ 536 0002 1B68     		ldr	r3, [r3]
+ 537 0004 0360     		str	r3, [r0]
+ 538 0006 044B     		ldr	r3, .L75+4
+ 539 0008 1B68     		ldr	r3, [r3]
+ 540 000a 4360     		str	r3, [r0, #4]
+ 541 000c 034B     		ldr	r3, .L75+8
+ 542 000e 1B68     		ldr	r3, [r3]
+ 543 0010 8360     		str	r3, [r0, #8]
+ 544 0012 7047     		bx	lr
+ 545              	.L76:
+ 546              		.align	2
+ 547              	.L75:
+ 548 0014 E8F7FF1F 		.word	536868840
+ 549 0018 ECF7FF1F 		.word	536868844
+ 550 001c F0F7FF1F 		.word	536868848
+ 552              		.global	uwTickFreq
+ 553              		.global	uwTickPrio
+ 554              		.comm	uwTick,4,4
+ 555              		.section	.data.uwTickFreq,"aw",%progbits
+ 556              		.set	.LANCHOR0,. + 0
+ 559              	uwTickFreq:
+ 560 0000 01       		.byte	1
+ 561              		.section	.data.uwTickPrio,"aw",%progbits
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 10
+
+
+ 562              		.align	2
+ 563              		.set	.LANCHOR1,. + 0
+ 566              	uwTickPrio:
+ 567 0000 10000000 		.word	16
+ 568              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 11
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f1xx_hal.c
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:13     .text.HAL_MspInit:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:20     .text.HAL_MspInit:00000000 HAL_MspInit
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:27     .text.HAL_MspDeInit:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:34     .text.HAL_MspDeInit:00000000 HAL_MspDeInit
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:41     .text.HAL_DeInit:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:48     .text.HAL_DeInit:00000000 HAL_DeInit
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:65     .text.HAL_DeInit:0000001c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:68     .text.HAL_InitTick:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:75     .text.HAL_InitTick:00000000 HAL_InitTick
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:107    .text.HAL_InitTick:0000003c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:112    .text.HAL_Init:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:119    .text.HAL_Init:00000000 HAL_Init
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:137    .text.HAL_Init:00000020 $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:140    .text.HAL_IncTick:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:147    .text.HAL_IncTick:00000000 HAL_IncTick
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:161    .text.HAL_IncTick:00000010 $d
+                            *COM*:00000004 uwTick
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:165    .text.HAL_GetTick:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:172    .text.HAL_GetTick:00000000 HAL_GetTick
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:182    .text.HAL_GetTick:00000008 $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:185    .text.HAL_GetTickPrio:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:192    .text.HAL_GetTickPrio:00000000 HAL_GetTickPrio
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:202    .text.HAL_GetTickPrio:00000008 $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:205    .text.HAL_SetTickFreq:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:212    .text.HAL_SetTickFreq:00000000 HAL_SetTickFreq
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:232    .text.HAL_SetTickFreq:0000001c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:236    .text.HAL_GetTickFreq:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:243    .text.HAL_GetTickFreq:00000000 HAL_GetTickFreq
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:253    .text.HAL_GetTickFreq:00000008 $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:256    .text.HAL_Delay:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:263    .text.HAL_Delay:00000000 HAL_Delay
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:284    .text.HAL_Delay:00000020 $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:287    .text.HAL_SuspendTick:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:294    .text.HAL_SuspendTick:00000000 HAL_SuspendTick
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:306    .text.HAL_SuspendTick:0000000c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:309    .text.HAL_ResumeTick:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:316    .text.HAL_ResumeTick:00000000 HAL_ResumeTick
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:328    .text.HAL_ResumeTick:0000000c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:331    .text.HAL_GetHalVersion:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:338    .text.HAL_GetHalVersion:00000000 HAL_GetHalVersion
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:347    .text.HAL_GetHalVersion:00000004 $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:350    .text.HAL_GetREVID:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:357    .text.HAL_GetREVID:00000000 HAL_GetREVID
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:368    .text.HAL_GetREVID:00000008 $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:371    .text.HAL_GetDEVID:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:378    .text.HAL_GetDEVID:00000000 HAL_GetDEVID
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:389    .text.HAL_GetDEVID:0000000c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:392    .text.HAL_DBGMCU_EnableDBGSleepMode:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:399    .text.HAL_DBGMCU_EnableDBGSleepMode:00000000 HAL_DBGMCU_EnableDBGSleepMode
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:411    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:414    .text.HAL_DBGMCU_DisableDBGSleepMode:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:421    .text.HAL_DBGMCU_DisableDBGSleepMode:00000000 HAL_DBGMCU_DisableDBGSleepMode
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:433    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:436    .text.HAL_DBGMCU_EnableDBGStopMode:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:443    .text.HAL_DBGMCU_EnableDBGStopMode:00000000 HAL_DBGMCU_EnableDBGStopMode
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s 			page 12
+
+
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:455    .text.HAL_DBGMCU_EnableDBGStopMode:0000000c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:458    .text.HAL_DBGMCU_DisableDBGStopMode:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:465    .text.HAL_DBGMCU_DisableDBGStopMode:00000000 HAL_DBGMCU_DisableDBGStopMode
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:477    .text.HAL_DBGMCU_DisableDBGStopMode:0000000c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:480    .text.HAL_DBGMCU_EnableDBGStandbyMode:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:487    .text.HAL_DBGMCU_EnableDBGStandbyMode:00000000 HAL_DBGMCU_EnableDBGStandbyMode
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:499    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:502    .text.HAL_DBGMCU_DisableDBGStandbyMode:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:509    .text.HAL_DBGMCU_DisableDBGStandbyMode:00000000 HAL_DBGMCU_DisableDBGStandbyMode
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:521    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000c $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:524    .text.HAL_GetUID:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:531    .text.HAL_GetUID:00000000 HAL_GetUID
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:548    .text.HAL_GetUID:00000014 $d
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:559    .data.uwTickFreq:00000000 uwTickFreq
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:566    .data.uwTickPrio:00000000 uwTickPrio
+C:\Users\Qian\AppData\Local\Temp\ccmrHjFb.s:562    .data.uwTickPrio:00000000 $d
+
+UNDEFINED SYMBOLS
+HAL_SYSTICK_Config
+HAL_NVIC_SetPriority
+SystemCoreClock
+HAL_NVIC_SetPriorityGrouping

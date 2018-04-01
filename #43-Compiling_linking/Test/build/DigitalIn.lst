@@ -1,0 +1,120 @@
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccvWiYfF.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"DigitalIn.cpp"
+  12              		.section	.text._ZN9DigitalInC2EP12GPIO_TypeDeftm,"ax",%progbits
+  13              		.align	1
+  14              		.global	_ZN9DigitalInC2EP12GPIO_TypeDeftm
+  15              		.syntax unified
+  16              		.thumb
+  17              		.thumb_func
+  18              		.fpu softvfp
+  20              	_ZN9DigitalInC2EP12GPIO_TypeDeftm:
+  21              		@ args = 0, pretend = 0, frame = 24
+  22              		@ frame_needed = 0, uses_anonymous_args = 0
+  23 0000 30B5     		push	{r4, r5, lr}
+  24 0002 0446     		mov	r4, r0
+  25 0004 0846     		mov	r0, r1
+  26 0006 2160     		str	r1, [r4]
+  27 0008 0949     		ldr	r1, .L2
+  28 000a A280     		strh	r2, [r4, #4]	@ movhi
+  29 000c 8D69     		ldr	r5, [r1, #24]
+  30 000e 87B0     		sub	sp, sp, #28
+  31 0010 45F00405 		orr	r5, r5, #4
+  32 0014 8D61     		str	r5, [r1, #24]
+  33 0016 8969     		ldr	r1, [r1, #24]
+  34 0018 0292     		str	r2, [sp, #8]
+  35 001a 01F00401 		and	r1, r1, #4
+  36 001e 0191     		str	r1, [sp, #4]
+  37 0020 0199     		ldr	r1, [sp, #4]
+  38 0022 02A9     		add	r1, sp, #8
+  39 0024 0493     		str	r3, [sp, #16]
+  40 0026 FFF7FEFF 		bl	HAL_GPIO_Init
+  41 002a 2046     		mov	r0, r4
+  42 002c 07B0     		add	sp, sp, #28
+  43              		@ sp needed
+  44 002e 30BD     		pop	{r4, r5, pc}
+  45              	.L3:
+  46              		.align	2
+  47              	.L2:
+  48 0030 00100240 		.word	1073876992
+  50              		.global	_ZN9DigitalInC1EP12GPIO_TypeDeftm
+  51              		.thumb_set _ZN9DigitalInC1EP12GPIO_TypeDeftm,_ZN9DigitalInC2EP12GPIO_TypeDeftm
+  52              		.section	.text._ZN9DigitalInD2Ev,"ax",%progbits
+  53              		.align	1
+  54              		.global	_ZN9DigitalInD2Ev
+  55              		.syntax unified
+  56              		.thumb
+  57              		.thumb_func
+  58              		.fpu softvfp
+  60              	_ZN9DigitalInD2Ev:
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccvWiYfF.s 			page 2
+
+
+  61              		@ args = 0, pretend = 0, frame = 0
+  62              		@ frame_needed = 0, uses_anonymous_args = 0
+  63              		@ link register save eliminated.
+  64 0000 7047     		bx	lr
+  66              		.global	_ZN9DigitalInD1Ev
+  67              		.thumb_set _ZN9DigitalInD1Ev,_ZN9DigitalInD2Ev
+  68              		.section	.text._ZN9DigitalIn4readEv,"ax",%progbits
+  69              		.align	1
+  70              		.global	_ZN9DigitalIn4readEv
+  71              		.syntax unified
+  72              		.thumb
+  73              		.thumb_func
+  74              		.fpu softvfp
+  76              	_ZN9DigitalIn4readEv:
+  77              		@ args = 0, pretend = 0, frame = 0
+  78              		@ frame_needed = 0, uses_anonymous_args = 0
+  79 0000 08B5     		push	{r3, lr}
+  80 0002 8188     		ldrh	r1, [r0, #4]
+  81 0004 0068     		ldr	r0, [r0]
+  82 0006 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+  83 000a 431E     		subs	r3, r0, #1
+  84 000c 5842     		rsbs	r0, r3, #0
+  85 000e 5841     		adcs	r0, r0, r3
+  86 0010 08BD     		pop	{r3, pc}
+  88              		.section	.text._ZN9DigitalIncviEv,"ax",%progbits
+  89              		.align	1
+  90              		.global	_ZN9DigitalIncviEv
+  91              		.syntax unified
+  92              		.thumb
+  93              		.thumb_func
+  94              		.fpu softvfp
+  96              	_ZN9DigitalIncviEv:
+  97              		@ args = 0, pretend = 0, frame = 0
+  98              		@ frame_needed = 0, uses_anonymous_args = 0
+  99              		@ link register save eliminated.
+ 100 0000 FFF7FEBF 		b	_ZN9DigitalIn4readEv
+ 102              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccvWiYfF.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 DigitalIn.cpp
+C:\Users\Qian\AppData\Local\Temp\ccvWiYfF.s:13     .text._ZN9DigitalInC2EP12GPIO_TypeDeftm:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccvWiYfF.s:20     .text._ZN9DigitalInC2EP12GPIO_TypeDeftm:00000000 _ZN9DigitalInC2EP12GPIO_TypeDeftm
+C:\Users\Qian\AppData\Local\Temp\ccvWiYfF.s:48     .text._ZN9DigitalInC2EP12GPIO_TypeDeftm:00000030 $d
+C:\Users\Qian\AppData\Local\Temp\ccvWiYfF.s:20     .text._ZN9DigitalInC2EP12GPIO_TypeDeftm:00000000 _ZN9DigitalInC1EP12GPIO_TypeDeftm
+C:\Users\Qian\AppData\Local\Temp\ccvWiYfF.s:53     .text._ZN9DigitalInD2Ev:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccvWiYfF.s:60     .text._ZN9DigitalInD2Ev:00000000 _ZN9DigitalInD2Ev
+C:\Users\Qian\AppData\Local\Temp\ccvWiYfF.s:60     .text._ZN9DigitalInD2Ev:00000000 _ZN9DigitalInD1Ev
+C:\Users\Qian\AppData\Local\Temp\ccvWiYfF.s:69     .text._ZN9DigitalIn4readEv:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccvWiYfF.s:76     .text._ZN9DigitalIn4readEv:00000000 _ZN9DigitalIn4readEv
+C:\Users\Qian\AppData\Local\Temp\ccvWiYfF.s:89     .text._ZN9DigitalIncviEv:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccvWiYfF.s:96     .text._ZN9DigitalIncviEv:00000000 _ZN9DigitalIncviEv
+
+UNDEFINED SYMBOLS
+HAL_GPIO_Init
+HAL_GPIO_ReadPin

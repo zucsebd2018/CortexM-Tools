@@ -1,0 +1,487 @@
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_hal_cortex.c"
+  12              		.section	.text.HAL_NVIC_SetPriorityGrouping,"ax",%progbits
+  13              		.align	1
+  14              		.global	HAL_NVIC_SetPriorityGrouping
+  15              		.syntax unified
+  16              		.thumb
+  17              		.thumb_func
+  18              		.fpu softvfp
+  20              	HAL_NVIC_SetPriorityGrouping:
+  21              		@ args = 0, pretend = 0, frame = 0
+  22              		@ frame_needed = 0, uses_anonymous_args = 0
+  23              		@ link register save eliminated.
+  24 0000 074A     		ldr	r2, .L2
+  25 0002 0002     		lsls	r0, r0, #8
+  26 0004 D368     		ldr	r3, [r2, #12]
+  27 0006 00F4E060 		and	r0, r0, #1792
+  28 000a 23F4E063 		bic	r3, r3, #1792
+  29 000e 1B04     		lsls	r3, r3, #16
+  30 0010 1B0C     		lsrs	r3, r3, #16
+  31 0012 43F0BF63 		orr	r3, r3, #100139008
+  32 0016 43F40033 		orr	r3, r3, #131072
+  33 001a 0343     		orrs	r3, r3, r0
+  34 001c D360     		str	r3, [r2, #12]
+  35 001e 7047     		bx	lr
+  36              	.L3:
+  37              		.align	2
+  38              	.L2:
+  39 0020 00ED00E0 		.word	-536810240
+  41              		.section	.text.HAL_NVIC_SetPriority,"ax",%progbits
+  42              		.align	1
+  43              		.global	HAL_NVIC_SetPriority
+  44              		.syntax unified
+  45              		.thumb
+  46              		.thumb_func
+  47              		.fpu softvfp
+  49              	HAL_NVIC_SetPriority:
+  50              		@ args = 0, pretend = 0, frame = 0
+  51              		@ frame_needed = 0, uses_anonymous_args = 0
+  52 0000 174B     		ldr	r3, .L9
+  53 0002 70B5     		push	{r4, r5, r6, lr}
+  54 0004 DC68     		ldr	r4, [r3, #12]
+  55 0006 4FF0FF36 		mov	r6, #-1
+  56 000a C4F30224 		ubfx	r4, r4, #8, #3
+  57 000e C4F10705 		rsb	r5, r4, #7
+  58 0012 042D     		cmp	r5, #4
+  59 0014 04F10403 		add	r3, r4, #4
+  60 0018 28BF     		it	cs
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s 			page 2
+
+
+  61 001a 0425     		movcs	r5, #4
+  62 001c 062B     		cmp	r3, #6
+  63 001e 98BF     		it	ls
+  64 0020 0024     		movls	r4, #0
+  65 0022 06FA05F3 		lsl	r3, r6, r5
+  66 0026 88BF     		it	hi
+  67 0028 033C     		subhi	r4, r4, #3
+  68 002a 21EA0303 		bic	r3, r1, r3
+  69 002e A340     		lsls	r3, r3, r4
+  70 0030 06FA04F4 		lsl	r4, r6, r4
+  71 0034 22EA0404 		bic	r4, r2, r4
+  72 0038 0028     		cmp	r0, #0
+  73 003a 43EA0403 		orr	r3, r3, r4
+  74 003e A8BF     		it	ge
+  75 0040 00F16040 		addge	r0, r0, #-536870912
+  76 0044 4FEA0313 		lsl	r3, r3, #4
+  77 0048 B8BF     		it	lt
+  78 004a 064A     		ldrlt	r2, .L9+4
+  79 004c DBB2     		uxtb	r3, r3
+  80 004e B5BF     		itete	lt
+  81 0050 00F00F00 		andlt	r0, r0, #15
+  82 0054 00F56140 		addge	r0, r0, #57600
+  83 0058 1354     		strblt	r3, [r2, r0]
+  84 005a 80F80033 		strbge	r3, [r0, #768]
+  85 005e 70BD     		pop	{r4, r5, r6, pc}
+  86              	.L10:
+  87              		.align	2
+  88              	.L9:
+  89 0060 00ED00E0 		.word	-536810240
+  90 0064 14ED00E0 		.word	-536810220
+  92              		.section	.text.HAL_NVIC_EnableIRQ,"ax",%progbits
+  93              		.align	1
+  94              		.global	HAL_NVIC_EnableIRQ
+  95              		.syntax unified
+  96              		.thumb
+  97              		.thumb_func
+  98              		.fpu softvfp
+ 100              	HAL_NVIC_EnableIRQ:
+ 101              		@ args = 0, pretend = 0, frame = 0
+ 102              		@ frame_needed = 0, uses_anonymous_args = 0
+ 103              		@ link register save eliminated.
+ 104 0000 0123     		movs	r3, #1
+ 105 0002 4209     		lsrs	r2, r0, #5
+ 106 0004 00F01F00 		and	r0, r0, #31
+ 107 0008 03FA00F0 		lsl	r0, r3, r0
+ 108 000c 014B     		ldr	r3, .L12
+ 109 000e 43F82200 		str	r0, [r3, r2, lsl #2]
+ 110 0012 7047     		bx	lr
+ 111              	.L13:
+ 112              		.align	2
+ 113              	.L12:
+ 114 0014 00E100E0 		.word	-536813312
+ 116              		.section	.text.HAL_NVIC_DisableIRQ,"ax",%progbits
+ 117              		.align	1
+ 118              		.global	HAL_NVIC_DisableIRQ
+ 119              		.syntax unified
+ 120              		.thumb
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s 			page 3
+
+
+ 121              		.thumb_func
+ 122              		.fpu softvfp
+ 124              	HAL_NVIC_DisableIRQ:
+ 125              		@ args = 0, pretend = 0, frame = 0
+ 126              		@ frame_needed = 0, uses_anonymous_args = 0
+ 127              		@ link register save eliminated.
+ 128 0000 0122     		movs	r2, #1
+ 129 0002 4309     		lsrs	r3, r0, #5
+ 130 0004 00F01F00 		and	r0, r0, #31
+ 131 0008 02FA00F0 		lsl	r0, r2, r0
+ 132 000c 024A     		ldr	r2, .L15
+ 133 000e 2033     		adds	r3, r3, #32
+ 134 0010 42F82300 		str	r0, [r2, r3, lsl #2]
+ 135 0014 7047     		bx	lr
+ 136              	.L16:
+ 137 0016 00BF     		.align	2
+ 138              	.L15:
+ 139 0018 00E100E0 		.word	-536813312
+ 141              		.section	.text.HAL_NVIC_SystemReset,"ax",%progbits
+ 142              		.align	1
+ 143              		.global	HAL_NVIC_SystemReset
+ 144              		.syntax unified
+ 145              		.thumb
+ 146              		.thumb_func
+ 147              		.fpu softvfp
+ 149              	HAL_NVIC_SystemReset:
+ 150              		@ Volatile: function does not return.
+ 151              		@ args = 0, pretend = 0, frame = 0
+ 152              		@ frame_needed = 0, uses_anonymous_args = 0
+ 153              		@ link register save eliminated.
+ 154              		.syntax unified
+ 155              	@ 429 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 156 0000 BFF34F8F 		dsb 0xF
+ 157              	@ 0 "" 2
+ 158              		.thumb
+ 159              		.syntax unified
+ 160 0004 0549     		ldr	r1, .L19
+ 161 0006 064B     		ldr	r3, .L19+4
+ 162 0008 CA68     		ldr	r2, [r1, #12]
+ 163 000a 02F4E062 		and	r2, r2, #1792
+ 164 000e 1343     		orrs	r3, r3, r2
+ 165 0010 CB60     		str	r3, [r1, #12]
+ 166              		.syntax unified
+ 167              	@ 429 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 168 0012 BFF34F8F 		dsb 0xF
+ 169              	@ 0 "" 2
+ 170              		.thumb
+ 171              		.syntax unified
+ 172              	.L18:
+ 173              		.syntax unified
+ 174              	@ 375 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 175 0016 00BF     		nop
+ 176              	@ 0 "" 2
+ 177              		.thumb
+ 178              		.syntax unified
+ 179 0018 FDE7     		b	.L18
+ 180              	.L20:
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s 			page 4
+
+
+ 181 001a 00BF     		.align	2
+ 182              	.L19:
+ 183 001c 00ED00E0 		.word	-536810240
+ 184 0020 0400FA05 		.word	100270084
+ 186              		.section	.text.HAL_SYSTICK_Config,"ax",%progbits
+ 187              		.align	1
+ 188              		.global	HAL_SYSTICK_Config
+ 189              		.syntax unified
+ 190              		.thumb
+ 191              		.thumb_func
+ 192              		.fpu softvfp
+ 194              	HAL_SYSTICK_Config:
+ 195              		@ args = 0, pretend = 0, frame = 0
+ 196              		@ frame_needed = 0, uses_anonymous_args = 0
+ 197              		@ link register save eliminated.
+ 198 0000 0138     		subs	r0, r0, #1
+ 199 0002 B0F1807F 		cmp	r0, #16777216
+ 200 0006 0AD2     		bcs	.L23
+ 201 0008 F021     		movs	r1, #240
+ 202 000a 064B     		ldr	r3, .L24
+ 203 000c 064A     		ldr	r2, .L24+4
+ 204 000e 5860     		str	r0, [r3, #4]
+ 205 0010 82F82310 		strb	r1, [r2, #35]
+ 206 0014 0020     		movs	r0, #0
+ 207 0016 0722     		movs	r2, #7
+ 208 0018 9860     		str	r0, [r3, #8]
+ 209 001a 1A60     		str	r2, [r3]
+ 210 001c 7047     		bx	lr
+ 211              	.L23:
+ 212 001e 0120     		movs	r0, #1
+ 213 0020 7047     		bx	lr
+ 214              	.L25:
+ 215 0022 00BF     		.align	2
+ 216              	.L24:
+ 217 0024 10E000E0 		.word	-536813552
+ 218 0028 00ED00E0 		.word	-536810240
+ 220              		.section	.text.HAL_NVIC_GetPriorityGrouping,"ax",%progbits
+ 221              		.align	1
+ 222              		.global	HAL_NVIC_GetPriorityGrouping
+ 223              		.syntax unified
+ 224              		.thumb
+ 225              		.thumb_func
+ 226              		.fpu softvfp
+ 228              	HAL_NVIC_GetPriorityGrouping:
+ 229              		@ args = 0, pretend = 0, frame = 0
+ 230              		@ frame_needed = 0, uses_anonymous_args = 0
+ 231              		@ link register save eliminated.
+ 232 0000 024B     		ldr	r3, .L27
+ 233 0002 D868     		ldr	r0, [r3, #12]
+ 234 0004 C0F30220 		ubfx	r0, r0, #8, #3
+ 235 0008 7047     		bx	lr
+ 236              	.L28:
+ 237 000a 00BF     		.align	2
+ 238              	.L27:
+ 239 000c 00ED00E0 		.word	-536810240
+ 241              		.section	.text.HAL_NVIC_GetPriority,"ax",%progbits
+ 242              		.align	1
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s 			page 5
+
+
+ 243              		.global	HAL_NVIC_GetPriority
+ 244              		.syntax unified
+ 245              		.thumb
+ 246              		.thumb_func
+ 247              		.fpu softvfp
+ 249              	HAL_NVIC_GetPriority:
+ 250              		@ args = 0, pretend = 0, frame = 0
+ 251              		@ frame_needed = 0, uses_anonymous_args = 0
+ 252 0000 70B5     		push	{r4, r5, r6, lr}
+ 253 0002 0028     		cmp	r0, #0
+ 254 0004 B8BF     		it	lt
+ 255 0006 154C     		ldrlt	r4, .L35
+ 256 0008 01F00701 		and	r1, r1, #7
+ 257 000c ADBF     		iteet	ge
+ 258 000e 00F16040 		addge	r0, r0, #-536870912
+ 259 0012 00F00F00 		andlt	r0, r0, #15
+ 260 0016 205C     		ldrblt	r0, [r4, r0]	@ zero_extendqisi2
+ 261 0018 00F56140 		addge	r0, r0, #57600
+ 262 001c C1F10704 		rsb	r4, r1, #7
+ 263 0020 01F10405 		add	r5, r1, #4
+ 264 0024 A8BF     		it	ge
+ 265 0026 90F80003 		ldrbge	r0, [r0, #768]	@ zero_extendqisi2
+ 266 002a 042C     		cmp	r4, #4
+ 267 002c 28BF     		it	cs
+ 268 002e 0424     		movcs	r4, #4
+ 269 0030 062D     		cmp	r5, #6
+ 270 0032 98BF     		it	ls
+ 271 0034 0021     		movls	r1, #0
+ 272 0036 4FF0FF35 		mov	r5, #-1
+ 273 003a 4FEA1010 		lsr	r0, r0, #4
+ 274 003e 88BF     		it	hi
+ 275 0040 0339     		subhi	r1, r1, #3
+ 276 0042 20FA01F6 		lsr	r6, r0, r1
+ 277 0046 05FA04F4 		lsl	r4, r5, r4
+ 278 004a 05FA01F1 		lsl	r1, r5, r1
+ 279 004e 26EA0404 		bic	r4, r6, r4
+ 280 0052 20EA0100 		bic	r0, r0, r1
+ 281 0056 1460     		str	r4, [r2]
+ 282 0058 1860     		str	r0, [r3]
+ 283 005a 70BD     		pop	{r4, r5, r6, pc}
+ 284              	.L36:
+ 285              		.align	2
+ 286              	.L35:
+ 287 005c 14ED00E0 		.word	-536810220
+ 289              		.section	.text.HAL_NVIC_SetPendingIRQ,"ax",%progbits
+ 290              		.align	1
+ 291              		.global	HAL_NVIC_SetPendingIRQ
+ 292              		.syntax unified
+ 293              		.thumb
+ 294              		.thumb_func
+ 295              		.fpu softvfp
+ 297              	HAL_NVIC_SetPendingIRQ:
+ 298              		@ args = 0, pretend = 0, frame = 0
+ 299              		@ frame_needed = 0, uses_anonymous_args = 0
+ 300              		@ link register save eliminated.
+ 301 0000 0122     		movs	r2, #1
+ 302 0002 4309     		lsrs	r3, r0, #5
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s 			page 6
+
+
+ 303 0004 00F01F00 		and	r0, r0, #31
+ 304 0008 02FA00F0 		lsl	r0, r2, r0
+ 305 000c 024A     		ldr	r2, .L38
+ 306 000e 4033     		adds	r3, r3, #64
+ 307 0010 42F82300 		str	r0, [r2, r3, lsl #2]
+ 308 0014 7047     		bx	lr
+ 309              	.L39:
+ 310 0016 00BF     		.align	2
+ 311              	.L38:
+ 312 0018 00E100E0 		.word	-536813312
+ 314              		.section	.text.HAL_NVIC_GetPendingIRQ,"ax",%progbits
+ 315              		.align	1
+ 316              		.global	HAL_NVIC_GetPendingIRQ
+ 317              		.syntax unified
+ 318              		.thumb
+ 319              		.thumb_func
+ 320              		.fpu softvfp
+ 322              	HAL_NVIC_GetPendingIRQ:
+ 323              		@ args = 0, pretend = 0, frame = 0
+ 324              		@ frame_needed = 0, uses_anonymous_args = 0
+ 325              		@ link register save eliminated.
+ 326 0000 4309     		lsrs	r3, r0, #5
+ 327 0002 054A     		ldr	r2, .L41
+ 328 0004 4033     		adds	r3, r3, #64
+ 329 0006 52F82330 		ldr	r3, [r2, r3, lsl #2]
+ 330 000a 00F01F00 		and	r0, r0, #31
+ 331 000e 23FA00F0 		lsr	r0, r3, r0
+ 332 0012 00F00100 		and	r0, r0, #1
+ 333 0016 7047     		bx	lr
+ 334              	.L42:
+ 335              		.align	2
+ 336              	.L41:
+ 337 0018 00E100E0 		.word	-536813312
+ 339              		.section	.text.HAL_NVIC_ClearPendingIRQ,"ax",%progbits
+ 340              		.align	1
+ 341              		.global	HAL_NVIC_ClearPendingIRQ
+ 342              		.syntax unified
+ 343              		.thumb
+ 344              		.thumb_func
+ 345              		.fpu softvfp
+ 347              	HAL_NVIC_ClearPendingIRQ:
+ 348              		@ args = 0, pretend = 0, frame = 0
+ 349              		@ frame_needed = 0, uses_anonymous_args = 0
+ 350              		@ link register save eliminated.
+ 351 0000 0122     		movs	r2, #1
+ 352 0002 4309     		lsrs	r3, r0, #5
+ 353 0004 00F01F00 		and	r0, r0, #31
+ 354 0008 02FA00F0 		lsl	r0, r2, r0
+ 355 000c 024A     		ldr	r2, .L44
+ 356 000e 6033     		adds	r3, r3, #96
+ 357 0010 42F82300 		str	r0, [r2, r3, lsl #2]
+ 358 0014 7047     		bx	lr
+ 359              	.L45:
+ 360 0016 00BF     		.align	2
+ 361              	.L44:
+ 362 0018 00E100E0 		.word	-536813312
+ 364              		.section	.text.HAL_NVIC_GetActive,"ax",%progbits
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s 			page 7
+
+
+ 365              		.align	1
+ 366              		.global	HAL_NVIC_GetActive
+ 367              		.syntax unified
+ 368              		.thumb
+ 369              		.thumb_func
+ 370              		.fpu softvfp
+ 372              	HAL_NVIC_GetActive:
+ 373              		@ args = 0, pretend = 0, frame = 0
+ 374              		@ frame_needed = 0, uses_anonymous_args = 0
+ 375              		@ link register save eliminated.
+ 376 0000 4309     		lsrs	r3, r0, #5
+ 377 0002 054A     		ldr	r2, .L47
+ 378 0004 8033     		adds	r3, r3, #128
+ 379 0006 52F82330 		ldr	r3, [r2, r3, lsl #2]
+ 380 000a 00F01F00 		and	r0, r0, #31
+ 381 000e 23FA00F0 		lsr	r0, r3, r0
+ 382 0012 00F00100 		and	r0, r0, #1
+ 383 0016 7047     		bx	lr
+ 384              	.L48:
+ 385              		.align	2
+ 386              	.L47:
+ 387 0018 00E100E0 		.word	-536813312
+ 389              		.section	.text.HAL_SYSTICK_CLKSourceConfig,"ax",%progbits
+ 390              		.align	1
+ 391              		.global	HAL_SYSTICK_CLKSourceConfig
+ 392              		.syntax unified
+ 393              		.thumb
+ 394              		.thumb_func
+ 395              		.fpu softvfp
+ 397              	HAL_SYSTICK_CLKSourceConfig:
+ 398              		@ args = 0, pretend = 0, frame = 0
+ 399              		@ frame_needed = 0, uses_anonymous_args = 0
+ 400              		@ link register save eliminated.
+ 401 0000 044B     		ldr	r3, .L53
+ 402 0002 0428     		cmp	r0, #4
+ 403 0004 1A68     		ldr	r2, [r3]
+ 404 0006 0CBF     		ite	eq
+ 405 0008 42F00402 		orreq	r2, r2, #4
+ 406 000c 22F00402 		bicne	r2, r2, #4
+ 407 0010 1A60     		str	r2, [r3]
+ 408 0012 7047     		bx	lr
+ 409              	.L54:
+ 410              		.align	2
+ 411              	.L53:
+ 412 0014 10E000E0 		.word	-536813552
+ 414              		.section	.text.HAL_SYSTICK_Callback,"ax",%progbits
+ 415              		.align	1
+ 416              		.weak	HAL_SYSTICK_Callback
+ 417              		.syntax unified
+ 418              		.thumb
+ 419              		.thumb_func
+ 420              		.fpu softvfp
+ 422              	HAL_SYSTICK_Callback:
+ 423              		@ args = 0, pretend = 0, frame = 0
+ 424              		@ frame_needed = 0, uses_anonymous_args = 0
+ 425              		@ link register save eliminated.
+ 426 0000 7047     		bx	lr
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s 			page 8
+
+
+ 428              		.section	.text.HAL_SYSTICK_IRQHandler,"ax",%progbits
+ 429              		.align	1
+ 430              		.global	HAL_SYSTICK_IRQHandler
+ 431              		.syntax unified
+ 432              		.thumb
+ 433              		.thumb_func
+ 434              		.fpu softvfp
+ 436              	HAL_SYSTICK_IRQHandler:
+ 437              		@ args = 0, pretend = 0, frame = 0
+ 438              		@ frame_needed = 0, uses_anonymous_args = 0
+ 439 0000 08B5     		push	{r3, lr}
+ 440 0002 FFF7FEFF 		bl	HAL_SYSTICK_Callback
+ 441 0006 08BD     		pop	{r3, pc}
+ 443              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f1xx_hal_cortex.c
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:13     .text.HAL_NVIC_SetPriorityGrouping:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:20     .text.HAL_NVIC_SetPriorityGrouping:00000000 HAL_NVIC_SetPriorityGrouping
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:39     .text.HAL_NVIC_SetPriorityGrouping:00000020 $d
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:42     .text.HAL_NVIC_SetPriority:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:49     .text.HAL_NVIC_SetPriority:00000000 HAL_NVIC_SetPriority
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:89     .text.HAL_NVIC_SetPriority:00000060 $d
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:93     .text.HAL_NVIC_EnableIRQ:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:100    .text.HAL_NVIC_EnableIRQ:00000000 HAL_NVIC_EnableIRQ
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:114    .text.HAL_NVIC_EnableIRQ:00000014 $d
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:117    .text.HAL_NVIC_DisableIRQ:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:124    .text.HAL_NVIC_DisableIRQ:00000000 HAL_NVIC_DisableIRQ
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:139    .text.HAL_NVIC_DisableIRQ:00000018 $d
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:142    .text.HAL_NVIC_SystemReset:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:149    .text.HAL_NVIC_SystemReset:00000000 HAL_NVIC_SystemReset
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:183    .text.HAL_NVIC_SystemReset:0000001c $d
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:187    .text.HAL_SYSTICK_Config:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:194    .text.HAL_SYSTICK_Config:00000000 HAL_SYSTICK_Config
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:217    .text.HAL_SYSTICK_Config:00000024 $d
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:221    .text.HAL_NVIC_GetPriorityGrouping:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:228    .text.HAL_NVIC_GetPriorityGrouping:00000000 HAL_NVIC_GetPriorityGrouping
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:239    .text.HAL_NVIC_GetPriorityGrouping:0000000c $d
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:242    .text.HAL_NVIC_GetPriority:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:249    .text.HAL_NVIC_GetPriority:00000000 HAL_NVIC_GetPriority
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:287    .text.HAL_NVIC_GetPriority:0000005c $d
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:290    .text.HAL_NVIC_SetPendingIRQ:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:297    .text.HAL_NVIC_SetPendingIRQ:00000000 HAL_NVIC_SetPendingIRQ
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:312    .text.HAL_NVIC_SetPendingIRQ:00000018 $d
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:315    .text.HAL_NVIC_GetPendingIRQ:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:322    .text.HAL_NVIC_GetPendingIRQ:00000000 HAL_NVIC_GetPendingIRQ
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:337    .text.HAL_NVIC_GetPendingIRQ:00000018 $d
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:340    .text.HAL_NVIC_ClearPendingIRQ:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:347    .text.HAL_NVIC_ClearPendingIRQ:00000000 HAL_NVIC_ClearPendingIRQ
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:362    .text.HAL_NVIC_ClearPendingIRQ:00000018 $d
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:365    .text.HAL_NVIC_GetActive:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:372    .text.HAL_NVIC_GetActive:00000000 HAL_NVIC_GetActive
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:387    .text.HAL_NVIC_GetActive:00000018 $d
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:390    .text.HAL_SYSTICK_CLKSourceConfig:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:397    .text.HAL_SYSTICK_CLKSourceConfig:00000000 HAL_SYSTICK_CLKSourceConfig
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:412    .text.HAL_SYSTICK_CLKSourceConfig:00000014 $d
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:415    .text.HAL_SYSTICK_Callback:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:422    .text.HAL_SYSTICK_Callback:00000000 HAL_SYSTICK_Callback
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:429    .text.HAL_SYSTICK_IRQHandler:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccqK56Dd.s:436    .text.HAL_SYSTICK_IRQHandler:00000000 HAL_SYSTICK_IRQHandler
+
+NO UNDEFINED SYMBOLS

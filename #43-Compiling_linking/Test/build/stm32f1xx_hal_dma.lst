@@ -1,0 +1,996 @@
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_hal_dma.c"
+  12              		.section	.text.HAL_DMA_Init,"ax",%progbits
+  13              		.align	1
+  14              		.global	HAL_DMA_Init
+  15              		.syntax unified
+  16              		.thumb
+  17              		.thumb_func
+  18              		.fpu softvfp
+  20              	HAL_DMA_Init:
+  21              		@ args = 0, pretend = 0, frame = 0
+  22              		@ frame_needed = 0, uses_anonymous_args = 0
+  23 0000 10B5     		push	{r4, lr}
+  24 0002 50B3     		cbz	r0, .L3
+  25 0004 1422     		movs	r2, #20
+  26 0006 0168     		ldr	r1, [r0]
+  27 0008 154B     		ldr	r3, .L4
+  28 000a 0B44     		add	r3, r3, r1
+  29 000c B3FBF2F3 		udiv	r3, r3, r2
+  30 0010 9B00     		lsls	r3, r3, #2
+  31 0012 0364     		str	r3, [r0, #64]
+  32 0014 134B     		ldr	r3, .L4+4
+  33 0016 0A68     		ldr	r2, [r1]
+  34 0018 C363     		str	r3, [r0, #60]
+  35 001a D0E90134 		ldrd	r3, r4, [r0, #4]
+  36 001e 2343     		orrs	r3, r3, r4
+  37 0020 C468     		ldr	r4, [r0, #12]
+  38 0022 22F47F52 		bic	r2, r2, #16320
+  39 0026 2343     		orrs	r3, r3, r4
+  40 0028 0469     		ldr	r4, [r0, #16]
+  41 002a 22F03002 		bic	r2, r2, #48
+  42 002e 2343     		orrs	r3, r3, r4
+  43 0030 4469     		ldr	r4, [r0, #20]
+  44 0032 2343     		orrs	r3, r3, r4
+  45 0034 8469     		ldr	r4, [r0, #24]
+  46 0036 2343     		orrs	r3, r3, r4
+  47 0038 C469     		ldr	r4, [r0, #28]
+  48 003a 2343     		orrs	r3, r3, r4
+  49 003c 1343     		orrs	r3, r3, r2
+  50 003e 0B60     		str	r3, [r1]
+  51 0040 0122     		movs	r2, #1
+  52 0042 0023     		movs	r3, #0
+  53 0044 80F82120 		strb	r2, [r0, #33]
+  54 0048 C0E90A33 		strd	r3, r3, [r0, #40]
+  55 004c C0E90C33 		strd	r3, r3, [r0, #48]
+  56 0050 8363     		str	r3, [r0, #56]
+  57 0052 80F82030 		strb	r3, [r0, #32]
+  58 0056 1846     		mov	r0, r3
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s 			page 2
+
+
+  59              	.L2:
+  60 0058 10BD     		pop	{r4, pc}
+  61              	.L3:
+  62 005a 0120     		movs	r0, #1
+  63 005c FCE7     		b	.L2
+  64              	.L5:
+  65 005e 00BF     		.align	2
+  66              	.L4:
+  67 0060 F8FFFDBF 		.word	-1073872904
+  68 0064 00000240 		.word	1073872896
+  70              		.section	.text.HAL_DMA_DeInit,"ax",%progbits
+  71              		.align	1
+  72              		.global	HAL_DMA_DeInit
+  73              		.syntax unified
+  74              		.thumb
+  75              		.thumb_func
+  76              		.fpu softvfp
+  78              	HAL_DMA_DeInit:
+  79              		@ args = 0, pretend = 0, frame = 0
+  80              		@ frame_needed = 0, uses_anonymous_args = 0
+  81 0000 10B5     		push	{r4, lr}
+  82 0002 E8B1     		cbz	r0, .L8
+  83 0004 0168     		ldr	r1, [r0]
+  84 0006 0F4A     		ldr	r2, .L9
+  85 0008 0B68     		ldr	r3, [r1]
+  86 000a 0A44     		add	r2, r2, r1
+  87 000c 23F00103 		bic	r3, r3, #1
+  88 0010 0B60     		str	r3, [r1]
+  89 0012 0023     		movs	r3, #0
+  90 0014 0B60     		str	r3, [r1]
+  91 0016 4B60     		str	r3, [r1, #4]
+  92 0018 8B60     		str	r3, [r1, #8]
+  93 001a CB60     		str	r3, [r1, #12]
+  94 001c 1421     		movs	r1, #20
+  95 001e B2FBF1F2 		udiv	r2, r2, r1
+  96 0022 0121     		movs	r1, #1
+  97 0024 9200     		lsls	r2, r2, #2
+  98 0026 084C     		ldr	r4, .L9+4
+  99 0028 0264     		str	r2, [r0, #64]
+ 100 002a 01FA02F2 		lsl	r2, r1, r2
+ 101 002e C463     		str	r4, [r0, #60]
+ 102 0030 6260     		str	r2, [r4, #4]
+ 103 0032 8363     		str	r3, [r0, #56]
+ 104 0034 80F82130 		strb	r3, [r0, #33]
+ 105 0038 80F82030 		strb	r3, [r0, #32]
+ 106 003c 1846     		mov	r0, r3
+ 107              	.L7:
+ 108 003e 10BD     		pop	{r4, pc}
+ 109              	.L8:
+ 110 0040 0120     		movs	r0, #1
+ 111 0042 FCE7     		b	.L7
+ 112              	.L10:
+ 113              		.align	2
+ 114              	.L9:
+ 115 0044 F8FFFDBF 		.word	-1073872904
+ 116 0048 00000240 		.word	1073872896
+ 118              		.section	.text.HAL_DMA_Start,"ax",%progbits
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s 			page 3
+
+
+ 119              		.align	1
+ 120              		.global	HAL_DMA_Start
+ 121              		.syntax unified
+ 122              		.thumb
+ 123              		.thumb_func
+ 124              		.fpu softvfp
+ 126              	HAL_DMA_Start:
+ 127              		@ args = 0, pretend = 0, frame = 0
+ 128              		@ frame_needed = 0, uses_anonymous_args = 0
+ 129 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 130 0002 90F82040 		ldrb	r4, [r0, #32]	@ zero_extendqisi2
+ 131 0006 012C     		cmp	r4, #1
+ 132 0008 26D0     		beq	.L16
+ 133 000a 0124     		movs	r4, #1
+ 134 000c 90F82150 		ldrb	r5, [r0, #33]	@ zero_extendqisi2
+ 135 0010 80F82040 		strb	r4, [r0, #32]
+ 136 0014 A542     		cmp	r5, r4
+ 137 0016 4FF00006 		mov	r6, #0
+ 138 001a 4FF00204 		mov	r4, #2
+ 139 001e 19D1     		bne	.L13
+ 140 0020 80F82140 		strb	r4, [r0, #33]
+ 141 0024 0468     		ldr	r4, [r0]
+ 142 0026 8663     		str	r6, [r0, #56]
+ 143 0028 2668     		ldr	r6, [r4]
+ 144 002a 26F00106 		bic	r6, r6, #1
+ 145 002e 2660     		str	r6, [r4]
+ 146 0030 D0E90F67 		ldrd	r6, r7, [r0, #60]
+ 147 0034 BD40     		lsls	r5, r5, r7
+ 148 0036 7560     		str	r5, [r6, #4]
+ 149 0038 6360     		str	r3, [r4, #4]
+ 150 003a 4368     		ldr	r3, [r0, #4]
+ 151 003c 0020     		movs	r0, #0
+ 152 003e 102B     		cmp	r3, #16
+ 153 0040 0BBF     		itete	eq
+ 154 0042 A260     		streq	r2, [r4, #8]
+ 155 0044 A160     		strne	r1, [r4, #8]
+ 156 0046 E160     		streq	r1, [r4, #12]
+ 157 0048 E260     		strne	r2, [r4, #12]
+ 158 004a 2368     		ldr	r3, [r4]
+ 159 004c 43F00103 		orr	r3, r3, #1
+ 160 0050 2360     		str	r3, [r4]
+ 161              	.L12:
+ 162 0052 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 163              	.L13:
+ 164 0054 80F82060 		strb	r6, [r0, #32]
+ 165              	.L16:
+ 166 0058 0220     		movs	r0, #2
+ 167 005a FAE7     		b	.L12
+ 169              		.section	.text.HAL_DMA_Start_IT,"ax",%progbits
+ 170              		.align	1
+ 171              		.global	HAL_DMA_Start_IT
+ 172              		.syntax unified
+ 173              		.thumb
+ 174              		.thumb_func
+ 175              		.fpu softvfp
+ 177              	HAL_DMA_Start_IT:
+ 178              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s 			page 4
+
+
+ 179              		@ frame_needed = 0, uses_anonymous_args = 0
+ 180 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 181 0002 90F82040 		ldrb	r4, [r0, #32]	@ zero_extendqisi2
+ 182 0006 012C     		cmp	r4, #1
+ 183 0008 35D0     		beq	.L24
+ 184 000a 0124     		movs	r4, #1
+ 185 000c 90F82150 		ldrb	r5, [r0, #33]	@ zero_extendqisi2
+ 186 0010 80F82040 		strb	r4, [r0, #32]
+ 187 0014 A542     		cmp	r5, r4
+ 188 0016 4FF00006 		mov	r6, #0
+ 189 001a 4FF00204 		mov	r4, #2
+ 190 001e 28D1     		bne	.L19
+ 191 0020 80F82140 		strb	r4, [r0, #33]
+ 192 0024 0468     		ldr	r4, [r0]
+ 193 0026 8663     		str	r6, [r0, #56]
+ 194 0028 2668     		ldr	r6, [r4]
+ 195 002a 26F00106 		bic	r6, r6, #1
+ 196 002e 2660     		str	r6, [r4]
+ 197 0030 D0E90F67 		ldrd	r6, r7, [r0, #60]
+ 198 0034 BD40     		lsls	r5, r5, r7
+ 199 0036 7560     		str	r5, [r6, #4]
+ 200 0038 6360     		str	r3, [r4, #4]
+ 201 003a 4368     		ldr	r3, [r0, #4]
+ 202 003c 0568     		ldr	r5, [r0]
+ 203 003e 102B     		cmp	r3, #16
+ 204 0040 C36A     		ldr	r3, [r0, #44]
+ 205 0042 0BBF     		itete	eq
+ 206 0044 A260     		streq	r2, [r4, #8]
+ 207 0046 A160     		strne	r1, [r4, #8]
+ 208 0048 E160     		streq	r1, [r4, #12]
+ 209 004a E260     		strne	r2, [r4, #12]
+ 210 004c 4BB1     		cbz	r3, .L22
+ 211 004e 2368     		ldr	r3, [r4]
+ 212 0050 43F00E03 		orr	r3, r3, #14
+ 213              	.L25:
+ 214 0054 0020     		movs	r0, #0
+ 215 0056 2360     		str	r3, [r4]
+ 216 0058 2B68     		ldr	r3, [r5]
+ 217 005a 43F00103 		orr	r3, r3, #1
+ 218 005e 2B60     		str	r3, [r5]
+ 219              	.L18:
+ 220 0060 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 221              	.L22:
+ 222 0062 2368     		ldr	r3, [r4]
+ 223 0064 23F00403 		bic	r3, r3, #4
+ 224 0068 2360     		str	r3, [r4]
+ 225 006a 2368     		ldr	r3, [r4]
+ 226 006c 43F00A03 		orr	r3, r3, #10
+ 227 0070 F0E7     		b	.L25
+ 228              	.L19:
+ 229 0072 80F82060 		strb	r6, [r0, #32]
+ 230              	.L24:
+ 231 0076 0220     		movs	r0, #2
+ 232 0078 F2E7     		b	.L18
+ 234              		.section	.text.HAL_DMA_Abort,"ax",%progbits
+ 235              		.align	1
+ 236              		.global	HAL_DMA_Abort
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s 			page 5
+
+
+ 237              		.syntax unified
+ 238              		.thumb
+ 239              		.thumb_func
+ 240              		.fpu softvfp
+ 242              	HAL_DMA_Abort:
+ 243              		@ args = 0, pretend = 0, frame = 0
+ 244              		@ frame_needed = 0, uses_anonymous_args = 0
+ 245              		@ link register save eliminated.
+ 246 0000 0268     		ldr	r2, [r0]
+ 247 0002 0346     		mov	r3, r0
+ 248 0004 1168     		ldr	r1, [r2]
+ 249 0006 C06B     		ldr	r0, [r0, #60]
+ 250 0008 21F00E01 		bic	r1, r1, #14
+ 251 000c 1160     		str	r1, [r2]
+ 252 000e 1168     		ldr	r1, [r2]
+ 253 0010 21F00101 		bic	r1, r1, #1
+ 254 0014 1160     		str	r1, [r2]
+ 255 0016 0121     		movs	r1, #1
+ 256 0018 1A6C     		ldr	r2, [r3, #64]
+ 257 001a 01FA02F2 		lsl	r2, r1, r2
+ 258 001e 4260     		str	r2, [r0, #4]
+ 259 0020 0020     		movs	r0, #0
+ 260 0022 83F82110 		strb	r1, [r3, #33]
+ 261 0026 83F82000 		strb	r0, [r3, #32]
+ 262 002a 7047     		bx	lr
+ 264              		.section	.text.HAL_DMA_Abort_IT,"ax",%progbits
+ 265              		.align	1
+ 266              		.global	HAL_DMA_Abort_IT
+ 267              		.syntax unified
+ 268              		.thumb
+ 269              		.thumb_func
+ 270              		.fpu softvfp
+ 272              	HAL_DMA_Abort_IT:
+ 273              		@ args = 0, pretend = 0, frame = 0
+ 274              		@ frame_needed = 0, uses_anonymous_args = 0
+ 275 0000 90F82130 		ldrb	r3, [r0, #33]	@ zero_extendqisi2
+ 276 0004 10B5     		push	{r4, lr}
+ 277 0006 022B     		cmp	r3, #2
+ 278 0008 03D0     		beq	.L28
+ 279 000a 0423     		movs	r3, #4
+ 280 000c 8363     		str	r3, [r0, #56]
+ 281 000e 0120     		movs	r0, #1
+ 282              	.L29:
+ 283 0010 10BD     		pop	{r4, pc}
+ 284              	.L28:
+ 285 0012 0368     		ldr	r3, [r0]
+ 286 0014 1A68     		ldr	r2, [r3]
+ 287 0016 22F00E02 		bic	r2, r2, #14
+ 288 001a 1A60     		str	r2, [r3]
+ 289 001c 1A68     		ldr	r2, [r3]
+ 290 001e 22F00102 		bic	r2, r2, #1
+ 291 0022 1A60     		str	r2, [r3]
+ 292 0024 184A     		ldr	r2, .L38
+ 293 0026 9342     		cmp	r3, r2
+ 294 0028 1FD0     		beq	.L31
+ 295 002a 1432     		adds	r2, r2, #20
+ 296 002c 9342     		cmp	r3, r2
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s 			page 6
+
+
+ 297 002e 1ED0     		beq	.L32
+ 298 0030 1432     		adds	r2, r2, #20
+ 299 0032 9342     		cmp	r3, r2
+ 300 0034 1DD0     		beq	.L33
+ 301 0036 1432     		adds	r2, r2, #20
+ 302 0038 9342     		cmp	r3, r2
+ 303 003a 1DD0     		beq	.L34
+ 304 003c 1432     		adds	r2, r2, #20
+ 305 003e 9342     		cmp	r3, r2
+ 306 0040 1DD0     		beq	.L35
+ 307 0042 1432     		adds	r2, r2, #20
+ 308 0044 9342     		cmp	r3, r2
+ 309 0046 0CBF     		ite	eq
+ 310 0048 4FF48013 		moveq	r3, #1048576
+ 311 004c 4FF08073 		movne	r3, #16777216
+ 312              	.L30:
+ 313 0050 0E4A     		ldr	r2, .L38+4
+ 314 0052 0024     		movs	r4, #0
+ 315 0054 5360     		str	r3, [r2, #4]
+ 316 0056 0123     		movs	r3, #1
+ 317 0058 80F82130 		strb	r3, [r0, #33]
+ 318 005c 436B     		ldr	r3, [r0, #52]
+ 319 005e 80F82040 		strb	r4, [r0, #32]
+ 320 0062 7BB1     		cbz	r3, .L37
+ 321 0064 9847     		blx	r3
+ 322 0066 2046     		mov	r0, r4
+ 323 0068 D2E7     		b	.L29
+ 324              	.L31:
+ 325 006a 0123     		movs	r3, #1
+ 326 006c F0E7     		b	.L30
+ 327              	.L32:
+ 328 006e 1023     		movs	r3, #16
+ 329 0070 EEE7     		b	.L30
+ 330              	.L33:
+ 331 0072 4FF48073 		mov	r3, #256
+ 332 0076 EBE7     		b	.L30
+ 333              	.L34:
+ 334 0078 4FF48053 		mov	r3, #4096
+ 335 007c E8E7     		b	.L30
+ 336              	.L35:
+ 337 007e 4FF48033 		mov	r3, #65536
+ 338 0082 E5E7     		b	.L30
+ 339              	.L37:
+ 340 0084 1846     		mov	r0, r3
+ 341 0086 C3E7     		b	.L29
+ 342              	.L39:
+ 343              		.align	2
+ 344              	.L38:
+ 345 0088 08000240 		.word	1073872904
+ 346 008c 00000240 		.word	1073872896
+ 348              		.section	.text.HAL_DMA_PollForTransfer,"ax",%progbits
+ 349              		.align	1
+ 350              		.global	HAL_DMA_PollForTransfer
+ 351              		.syntax unified
+ 352              		.thumb
+ 353              		.thumb_func
+ 354              		.fpu softvfp
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s 			page 7
+
+
+ 356              	HAL_DMA_PollForTransfer:
+ 357              		@ args = 0, pretend = 0, frame = 0
+ 358              		@ frame_needed = 0, uses_anonymous_args = 0
+ 359 0000 2DE9F84F 		push	{r3, r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 360 0004 90F82140 		ldrb	r4, [r0, #33]	@ zero_extendqisi2
+ 361 0008 0546     		mov	r5, r0
+ 362 000a 022C     		cmp	r4, #2
+ 363 000c 8846     		mov	r8, r1
+ 364 000e 1746     		mov	r7, r2
+ 365 0010 07D0     		beq	.L41
+ 366 0012 0423     		movs	r3, #4
+ 367 0014 8363     		str	r3, [r0, #56]
+ 368 0016 0023     		movs	r3, #0
+ 369 0018 80F82030 		strb	r3, [r0, #32]
+ 370              	.L89:
+ 371 001c 0120     		movs	r0, #1
+ 372              	.L42:
+ 373 001e BDE8F88F 		pop	{r3, r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 374              	.L41:
+ 375 0022 0368     		ldr	r3, [r0]
+ 376 0024 1A68     		ldr	r2, [r3]
+ 377 0026 9006     		lsls	r0, r2, #26
+ 378 0028 03D5     		bpl	.L43
+ 379 002a 4FF48073 		mov	r3, #256
+ 380 002e AB63     		str	r3, [r5, #56]
+ 381 0030 F4E7     		b	.L89
+ 382              	.L43:
+ 383 0032 794E     		ldr	r6, .L91
+ 384 0034 0029     		cmp	r1, #0
+ 385 0036 4AD1     		bne	.L44
+ 386 0038 B342     		cmp	r3, r6
+ 387 003a 12D0     		beq	.L45
+ 388 003c 774A     		ldr	r2, .L91+4
+ 389 003e 9342     		cmp	r3, r2
+ 390 0040 5BD0     		beq	.L58
+ 391 0042 1432     		adds	r2, r2, #20
+ 392 0044 9342     		cmp	r3, r2
+ 393 0046 5AD0     		beq	.L59
+ 394 0048 1432     		adds	r2, r2, #20
+ 395 004a 9342     		cmp	r3, r2
+ 396 004c 5AD0     		beq	.L60
+ 397 004e 1432     		adds	r2, r2, #20
+ 398 0050 9342     		cmp	r3, r2
+ 399 0052 5AD0     		beq	.L61
+ 400 0054 724C     		ldr	r4, .L91+8
+ 401 0056 A342     		cmp	r3, r4
+ 402 0058 14BF     		ite	ne
+ 403 005a 4FF00074 		movne	r4, #33554432
+ 404 005e 4FF40014 		moveq	r4, #2097152
+ 405              	.L45:
+ 406 0062 FFF7FEFF 		bl	HAL_GetTick
+ 407 0066 8146     		mov	r9, r0
+ 408 0068 DFF8C0A1 		ldr	r10, .L91+20
+ 409              	.L46:
+ 410 006c 2B68     		ldr	r3, [r5]
+ 411 006e 6D4A     		ldr	r2, .L91+12
+ 412 0070 6D48     		ldr	r0, .L91+16
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s 			page 8
+
+
+ 413 0072 DFF8BCC1 		ldr	ip, .L91+24
+ 414 0076 DFF8A8E1 		ldr	lr, .L91+8
+ 415              	.L49:
+ 416 007a 1168     		ldr	r1, [r2]
+ 417 007c 2142     		tst	r1, r4
+ 418 007e 54D0     		beq	.L52
+ 419 0080 B8F1000F 		cmp	r8, #0
+ 420 0084 40F0A280 		bne	.L53
+ 421 0088 B342     		cmp	r3, r6
+ 422 008a 00F09280 		beq	.L75
+ 423 008e 634A     		ldr	r2, .L91+4
+ 424 0090 9342     		cmp	r3, r2
+ 425 0092 00F09080 		beq	.L76
+ 426 0096 1432     		adds	r2, r2, #20
+ 427 0098 9342     		cmp	r3, r2
+ 428 009a 00F08E80 		beq	.L77
+ 429 009e 1432     		adds	r2, r2, #20
+ 430 00a0 9342     		cmp	r3, r2
+ 431 00a2 00F08D80 		beq	.L78
+ 432 00a6 1432     		adds	r2, r2, #20
+ 433 00a8 9342     		cmp	r3, r2
+ 434 00aa 00F08C80 		beq	.L79
+ 435 00ae 1432     		adds	r2, r2, #20
+ 436 00b0 9342     		cmp	r3, r2
+ 437 00b2 14BF     		ite	ne
+ 438 00b4 4FF00073 		movne	r3, #33554432
+ 439 00b8 4FF40013 		moveq	r3, #2097152
+ 440              	.L54:
+ 441 00bc 594A     		ldr	r2, .L91+12
+ 442 00be 5360     		str	r3, [r2, #4]
+ 443 00c0 0123     		movs	r3, #1
+ 444 00c2 85F82130 		strb	r3, [r5, #33]
+ 445              	.L55:
+ 446 00c6 0020     		movs	r0, #0
+ 447 00c8 85F82000 		strb	r0, [r5, #32]
+ 448 00cc A7E7     		b	.L42
+ 449              	.L44:
+ 450 00ce B342     		cmp	r3, r6
+ 451 00d0 1ED0     		beq	.L63
+ 452 00d2 524A     		ldr	r2, .L91+4
+ 453 00d4 9342     		cmp	r3, r2
+ 454 00d6 1DD0     		beq	.L64
+ 455 00d8 1432     		adds	r2, r2, #20
+ 456 00da 9342     		cmp	r3, r2
+ 457 00dc 1CD0     		beq	.L65
+ 458 00de 1432     		adds	r2, r2, #20
+ 459 00e0 9342     		cmp	r3, r2
+ 460 00e2 1CD0     		beq	.L66
+ 461 00e4 1432     		adds	r2, r2, #20
+ 462 00e6 9342     		cmp	r3, r2
+ 463 00e8 1CD0     		beq	.L67
+ 464 00ea 4D4C     		ldr	r4, .L91+8
+ 465 00ec A342     		cmp	r3, r4
+ 466 00ee 14BF     		ite	ne
+ 467 00f0 4FF08064 		movne	r4, #67108864
+ 468 00f4 4FF48004 		moveq	r4, #4194304
+ 469 00f8 B3E7     		b	.L45
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s 			page 9
+
+
+ 470              	.L58:
+ 471 00fa 2024     		movs	r4, #32
+ 472 00fc B1E7     		b	.L45
+ 473              	.L59:
+ 474 00fe 4FF40074 		mov	r4, #512
+ 475 0102 AEE7     		b	.L45
+ 476              	.L60:
+ 477 0104 4FF40054 		mov	r4, #8192
+ 478 0108 ABE7     		b	.L45
+ 479              	.L61:
+ 480 010a 4FF40034 		mov	r4, #131072
+ 481 010e A8E7     		b	.L45
+ 482              	.L63:
+ 483 0110 0424     		movs	r4, #4
+ 484 0112 A6E7     		b	.L45
+ 485              	.L64:
+ 486 0114 4024     		movs	r4, #64
+ 487 0116 A4E7     		b	.L45
+ 488              	.L65:
+ 489 0118 4FF48064 		mov	r4, #1024
+ 490 011c A1E7     		b	.L45
+ 491              	.L66:
+ 492 011e 4FF48044 		mov	r4, #16384
+ 493 0122 9EE7     		b	.L45
+ 494              	.L67:
+ 495 0124 4FF48024 		mov	r4, #262144
+ 496 0128 9BE7     		b	.L45
+ 497              	.L52:
+ 498 012a B342     		cmp	r3, r6
+ 499 012c D2F800B0 		ldr	fp, [r2]
+ 500 0130 20D0     		beq	.L69
+ 501 0132 3A49     		ldr	r1, .L91+4
+ 502 0134 8B42     		cmp	r3, r1
+ 503 0136 1FD0     		beq	.L70
+ 504 0138 5345     		cmp	r3, r10
+ 505 013a 1FD0     		beq	.L71
+ 506 013c 8342     		cmp	r3, r0
+ 507 013e 20D0     		beq	.L72
+ 508 0140 6345     		cmp	r3, ip
+ 509 0142 21D0     		beq	.L73
+ 510 0144 7345     		cmp	r3, lr
+ 511 0146 14BF     		ite	ne
+ 512 0148 4FF00061 		movne	r1, #134217728
+ 513 014c 4FF40001 		moveq	r1, #8388608
+ 514              	.L47:
+ 515 0150 1BEA010F 		tst	fp, r1
+ 516 0154 1BD0     		beq	.L48
+ 517 0156 0120     		movs	r0, #1
+ 518 0158 2B6C     		ldr	r3, [r5, #64]
+ 519 015a EA6B     		ldr	r2, [r5, #60]
+ 520 015c 00FA03F3 		lsl	r3, r0, r3
+ 521 0160 5360     		str	r3, [r2, #4]
+ 522 0162 AB6B     		ldr	r3, [r5, #56]
+ 523 0164 0343     		orrs	r3, r3, r0
+ 524 0166 AB63     		str	r3, [r5, #56]
+ 525              	.L90:
+ 526 0168 0023     		movs	r3, #0
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s 			page 10
+
+
+ 527 016a 85F82100 		strb	r0, [r5, #33]
+ 528 016e 85F82030 		strb	r3, [r5, #32]
+ 529 0172 54E7     		b	.L42
+ 530              	.L69:
+ 531 0174 0821     		movs	r1, #8
+ 532 0176 EBE7     		b	.L47
+ 533              	.L70:
+ 534 0178 8021     		movs	r1, #128
+ 535 017a E9E7     		b	.L47
+ 536              	.L71:
+ 537 017c 4FF40061 		mov	r1, #2048
+ 538 0180 E6E7     		b	.L47
+ 539              	.L72:
+ 540 0182 4FF40041 		mov	r1, #32768
+ 541 0186 E3E7     		b	.L47
+ 542              	.L73:
+ 543 0188 4FF40021 		mov	r1, #524288
+ 544 018c E0E7     		b	.L47
+ 545              	.L48:
+ 546 018e 791C     		adds	r1, r7, #1
+ 547 0190 3FF473AF 		beq	.L49
+ 548 0194 2FB9     		cbnz	r7, .L50
+ 549              	.L51:
+ 550 0196 AB6B     		ldr	r3, [r5, #56]
+ 551 0198 0120     		movs	r0, #1
+ 552 019a 43F02003 		orr	r3, r3, #32
+ 553 019e AB63     		str	r3, [r5, #56]
+ 554 01a0 E2E7     		b	.L90
+ 555              	.L50:
+ 556 01a2 FFF7FEFF 		bl	HAL_GetTick
+ 557 01a6 A0EB0900 		sub	r0, r0, r9
+ 558 01aa B842     		cmp	r0, r7
+ 559 01ac 7FF65EAF 		bls	.L46
+ 560 01b0 F1E7     		b	.L51
+ 561              	.L75:
+ 562 01b2 0223     		movs	r3, #2
+ 563 01b4 82E7     		b	.L54
+ 564              	.L76:
+ 565 01b6 2023     		movs	r3, #32
+ 566 01b8 80E7     		b	.L54
+ 567              	.L77:
+ 568 01ba 4FF40073 		mov	r3, #512
+ 569 01be 7DE7     		b	.L54
+ 570              	.L78:
+ 571 01c0 4FF40053 		mov	r3, #8192
+ 572 01c4 7AE7     		b	.L54
+ 573              	.L79:
+ 574 01c6 4FF40033 		mov	r3, #131072
+ 575 01ca 77E7     		b	.L54
+ 576              	.L53:
+ 577 01cc B342     		cmp	r3, r6
+ 578 01ce 15D0     		beq	.L81
+ 579 01d0 124A     		ldr	r2, .L91+4
+ 580 01d2 9342     		cmp	r3, r2
+ 581 01d4 14D0     		beq	.L82
+ 582 01d6 1432     		adds	r2, r2, #20
+ 583 01d8 9342     		cmp	r3, r2
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s 			page 11
+
+
+ 584 01da 13D0     		beq	.L83
+ 585 01dc 1432     		adds	r2, r2, #20
+ 586 01de 9342     		cmp	r3, r2
+ 587 01e0 13D0     		beq	.L84
+ 588 01e2 1432     		adds	r2, r2, #20
+ 589 01e4 9342     		cmp	r3, r2
+ 590 01e6 13D0     		beq	.L85
+ 591 01e8 1432     		adds	r2, r2, #20
+ 592 01ea 9342     		cmp	r3, r2
+ 593 01ec 14BF     		ite	ne
+ 594 01ee 4FF08063 		movne	r3, #67108864
+ 595 01f2 4FF48003 		moveq	r3, #4194304
+ 596              	.L56:
+ 597 01f6 0B4A     		ldr	r2, .L91+12
+ 598 01f8 5360     		str	r3, [r2, #4]
+ 599 01fa 64E7     		b	.L55
+ 600              	.L81:
+ 601 01fc 0423     		movs	r3, #4
+ 602 01fe FAE7     		b	.L56
+ 603              	.L82:
+ 604 0200 4023     		movs	r3, #64
+ 605 0202 F8E7     		b	.L56
+ 606              	.L83:
+ 607 0204 4FF48063 		mov	r3, #1024
+ 608 0208 F5E7     		b	.L56
+ 609              	.L84:
+ 610 020a 4FF48043 		mov	r3, #16384
+ 611 020e F2E7     		b	.L56
+ 612              	.L85:
+ 613 0210 4FF48023 		mov	r3, #262144
+ 614 0214 EFE7     		b	.L56
+ 615              	.L92:
+ 616 0216 00BF     		.align	2
+ 617              	.L91:
+ 618 0218 08000240 		.word	1073872904
+ 619 021c 1C000240 		.word	1073872924
+ 620 0220 6C000240 		.word	1073873004
+ 621 0224 00000240 		.word	1073872896
+ 622 0228 44000240 		.word	1073872964
+ 623 022c 30000240 		.word	1073872944
+ 624 0230 58000240 		.word	1073872984
+ 626              		.section	.text.HAL_DMA_IRQHandler,"ax",%progbits
+ 627              		.align	1
+ 628              		.global	HAL_DMA_IRQHandler
+ 629              		.syntax unified
+ 630              		.thumb
+ 631              		.thumb_func
+ 632              		.fpu softvfp
+ 634              	HAL_DMA_IRQHandler:
+ 635              		@ args = 0, pretend = 0, frame = 0
+ 636              		@ frame_needed = 0, uses_anonymous_args = 0
+ 637              		@ link register save eliminated.
+ 638 0000 70B4     		push	{r4, r5, r6}
+ 639 0002 0425     		movs	r5, #4
+ 640 0004 C66B     		ldr	r6, [r0, #60]
+ 641 0006 026C     		ldr	r2, [r0, #64]
+ 642 0008 3468     		ldr	r4, [r6]
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s 			page 12
+
+
+ 643 000a 0368     		ldr	r3, [r0]
+ 644 000c 9540     		lsls	r5, r5, r2
+ 645 000e 2542     		tst	r5, r4
+ 646 0010 1968     		ldr	r1, [r3]
+ 647 0012 32D0     		beq	.L94
+ 648 0014 4D07     		lsls	r5, r1, #29
+ 649 0016 30D5     		bpl	.L94
+ 650 0018 1A68     		ldr	r2, [r3]
+ 651 001a 9606     		lsls	r6, r2, #26
+ 652 001c 5EBF     		ittt	pl
+ 653 001e 1A68     		ldrpl	r2, [r3]
+ 654 0020 22F00402 		bicpl	r2, r2, #4
+ 655 0024 1A60     		strpl	r2, [r3]
+ 656 0026 3E4A     		ldr	r2, .L143
+ 657 0028 9342     		cmp	r3, r2
+ 658 002a 19D0     		beq	.L103
+ 659 002c 1432     		adds	r2, r2, #20
+ 660 002e 9342     		cmp	r3, r2
+ 661 0030 18D0     		beq	.L104
+ 662 0032 1432     		adds	r2, r2, #20
+ 663 0034 9342     		cmp	r3, r2
+ 664 0036 17D0     		beq	.L105
+ 665 0038 1432     		adds	r2, r2, #20
+ 666 003a 9342     		cmp	r3, r2
+ 667 003c 17D0     		beq	.L106
+ 668 003e 1432     		adds	r2, r2, #20
+ 669 0040 9342     		cmp	r3, r2
+ 670 0042 17D0     		beq	.L107
+ 671 0044 1432     		adds	r2, r2, #20
+ 672 0046 9342     		cmp	r3, r2
+ 673 0048 0CBF     		ite	eq
+ 674 004a 4FF48003 		moveq	r3, #4194304
+ 675 004e 4FF08063 		movne	r3, #67108864
+ 676              	.L96:
+ 677 0052 344A     		ldr	r2, .L143+4
+ 678 0054 5360     		str	r3, [r2, #4]
+ 679 0056 C36A     		ldr	r3, [r0, #44]
+ 680              	.L141:
+ 681 0058 002B     		cmp	r3, #0
+ 682 005a 5ED0     		beq	.L93
+ 683 005c 70BC     		pop	{r4, r5, r6}
+ 684 005e 1847     		bx	r3	@ indirect register sibling call
+ 685              	.L103:
+ 686 0060 0423     		movs	r3, #4
+ 687 0062 F6E7     		b	.L96
+ 688              	.L104:
+ 689 0064 4023     		movs	r3, #64
+ 690 0066 F4E7     		b	.L96
+ 691              	.L105:
+ 692 0068 4FF48063 		mov	r3, #1024
+ 693 006c F1E7     		b	.L96
+ 694              	.L106:
+ 695 006e 4FF48043 		mov	r3, #16384
+ 696 0072 EEE7     		b	.L96
+ 697              	.L107:
+ 698 0074 4FF48023 		mov	r3, #262144
+ 699 0078 EBE7     		b	.L96
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s 			page 13
+
+
+ 700              	.L94:
+ 701 007a 0225     		movs	r5, #2
+ 702 007c 9540     		lsls	r5, r5, r2
+ 703 007e 2542     		tst	r5, r4
+ 704 0080 35D0     		beq	.L99
+ 705 0082 8D07     		lsls	r5, r1, #30
+ 706 0084 33D5     		bpl	.L99
+ 707 0086 1A68     		ldr	r2, [r3]
+ 708 0088 9406     		lsls	r4, r2, #26
+ 709 008a 06D4     		bmi	.L100
+ 710 008c 1A68     		ldr	r2, [r3]
+ 711 008e 22F00A02 		bic	r2, r2, #10
+ 712 0092 1A60     		str	r2, [r3]
+ 713 0094 0122     		movs	r2, #1
+ 714 0096 80F82120 		strb	r2, [r0, #33]
+ 715              	.L100:
+ 716 009a 214A     		ldr	r2, .L143
+ 717 009c 9342     		cmp	r3, r2
+ 718 009e 19D0     		beq	.L109
+ 719 00a0 1432     		adds	r2, r2, #20
+ 720 00a2 9342     		cmp	r3, r2
+ 721 00a4 18D0     		beq	.L110
+ 722 00a6 1432     		adds	r2, r2, #20
+ 723 00a8 9342     		cmp	r3, r2
+ 724 00aa 17D0     		beq	.L111
+ 725 00ac 1432     		adds	r2, r2, #20
+ 726 00ae 9342     		cmp	r3, r2
+ 727 00b0 17D0     		beq	.L112
+ 728 00b2 1432     		adds	r2, r2, #20
+ 729 00b4 9342     		cmp	r3, r2
+ 730 00b6 17D0     		beq	.L113
+ 731 00b8 1432     		adds	r2, r2, #20
+ 732 00ba 9342     		cmp	r3, r2
+ 733 00bc 0CBF     		ite	eq
+ 734 00be 4FF40013 		moveq	r3, #2097152
+ 735 00c2 4FF00073 		movne	r3, #33554432
+ 736              	.L101:
+ 737 00c6 174A     		ldr	r2, .L143+4
+ 738 00c8 5360     		str	r3, [r2, #4]
+ 739 00ca 0023     		movs	r3, #0
+ 740 00cc 80F82030 		strb	r3, [r0, #32]
+ 741 00d0 836A     		ldr	r3, [r0, #40]
+ 742 00d2 C1E7     		b	.L141
+ 743              	.L109:
+ 744 00d4 0223     		movs	r3, #2
+ 745 00d6 F6E7     		b	.L101
+ 746              	.L110:
+ 747 00d8 2023     		movs	r3, #32
+ 748 00da F4E7     		b	.L101
+ 749              	.L111:
+ 750 00dc 4FF40073 		mov	r3, #512
+ 751 00e0 F1E7     		b	.L101
+ 752              	.L112:
+ 753 00e2 4FF40053 		mov	r3, #8192
+ 754 00e6 EEE7     		b	.L101
+ 755              	.L113:
+ 756 00e8 4FF40033 		mov	r3, #131072
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s 			page 14
+
+
+ 757 00ec EBE7     		b	.L101
+ 758              	.L99:
+ 759 00ee 0825     		movs	r5, #8
+ 760 00f0 9540     		lsls	r5, r5, r2
+ 761 00f2 2542     		tst	r5, r4
+ 762 00f4 11D0     		beq	.L93
+ 763 00f6 0907     		lsls	r1, r1, #28
+ 764 00f8 0FD5     		bpl	.L93
+ 765 00fa 1968     		ldr	r1, [r3]
+ 766 00fc 21F00E01 		bic	r1, r1, #14
+ 767 0100 1960     		str	r1, [r3]
+ 768 0102 0123     		movs	r3, #1
+ 769 0104 03FA02F2 		lsl	r2, r3, r2
+ 770 0108 7260     		str	r2, [r6, #4]
+ 771 010a 8363     		str	r3, [r0, #56]
+ 772 010c 80F82130 		strb	r3, [r0, #33]
+ 773 0110 0023     		movs	r3, #0
+ 774 0112 80F82030 		strb	r3, [r0, #32]
+ 775 0116 036B     		ldr	r3, [r0, #48]
+ 776 0118 9EE7     		b	.L141
+ 777              	.L93:
+ 778 011a 70BC     		pop	{r4, r5, r6}
+ 779 011c 7047     		bx	lr
+ 780              	.L144:
+ 781 011e 00BF     		.align	2
+ 782              	.L143:
+ 783 0120 08000240 		.word	1073872904
+ 784 0124 00000240 		.word	1073872896
+ 786              		.section	.text.HAL_DMA_RegisterCallback,"ax",%progbits
+ 787              		.align	1
+ 788              		.global	HAL_DMA_RegisterCallback
+ 789              		.syntax unified
+ 790              		.thumb
+ 791              		.thumb_func
+ 792              		.fpu softvfp
+ 794              	HAL_DMA_RegisterCallback:
+ 795              		@ args = 0, pretend = 0, frame = 0
+ 796              		@ frame_needed = 0, uses_anonymous_args = 0
+ 797 0000 90F82030 		ldrb	r3, [r0, #32]	@ zero_extendqisi2
+ 798 0004 10B5     		push	{r4, lr}
+ 799 0006 012B     		cmp	r3, #1
+ 800 0008 0446     		mov	r4, r0
+ 801 000a 1AD0     		beq	.L153
+ 802 000c 0123     		movs	r3, #1
+ 803 000e 80F82030 		strb	r3, [r0, #32]
+ 804 0012 90F82100 		ldrb	r0, [r0, #33]	@ zero_extendqisi2
+ 805 0016 9842     		cmp	r0, r3
+ 806 0018 11D1     		bne	.L155
+ 807 001a 0329     		cmp	r1, #3
+ 808 001c 0FD8     		bhi	.L155
+ 809 001e DFE801F0 		tbb	[pc, r1]
+ 810              	.L149:
+ 811 0022 02       		.byte	(.L148-.L149)/2
+ 812 0023 08       		.byte	(.L150-.L149)/2
+ 813 0024 0A       		.byte	(.L151-.L149)/2
+ 814 0025 0C       		.byte	(.L152-.L149)/2
+ 815              		.p2align 1
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s 			page 15
+
+
+ 816              	.L148:
+ 817 0026 A262     		str	r2, [r4, #40]
+ 818              	.L156:
+ 819 0028 0020     		movs	r0, #0
+ 820              	.L147:
+ 821 002a 0023     		movs	r3, #0
+ 822 002c 84F82030 		strb	r3, [r4, #32]
+ 823              	.L146:
+ 824 0030 10BD     		pop	{r4, pc}
+ 825              	.L150:
+ 826 0032 E262     		str	r2, [r4, #44]
+ 827 0034 F8E7     		b	.L156
+ 828              	.L151:
+ 829 0036 2263     		str	r2, [r4, #48]
+ 830 0038 F6E7     		b	.L156
+ 831              	.L152:
+ 832 003a 6263     		str	r2, [r4, #52]
+ 833 003c F4E7     		b	.L156
+ 834              	.L155:
+ 835 003e 0120     		movs	r0, #1
+ 836 0040 F3E7     		b	.L147
+ 837              	.L153:
+ 838 0042 0220     		movs	r0, #2
+ 839 0044 F4E7     		b	.L146
+ 841              		.section	.text.HAL_DMA_UnRegisterCallback,"ax",%progbits
+ 842              		.align	1
+ 843              		.global	HAL_DMA_UnRegisterCallback
+ 844              		.syntax unified
+ 845              		.thumb
+ 846              		.thumb_func
+ 847              		.fpu softvfp
+ 849              	HAL_DMA_UnRegisterCallback:
+ 850              		@ args = 0, pretend = 0, frame = 0
+ 851              		@ frame_needed = 0, uses_anonymous_args = 0
+ 852              		@ link register save eliminated.
+ 853 0000 90F82020 		ldrb	r2, [r0, #32]	@ zero_extendqisi2
+ 854 0004 0346     		mov	r3, r0
+ 855 0006 012A     		cmp	r2, #1
+ 856 0008 1FD0     		beq	.L166
+ 857 000a 0120     		movs	r0, #1
+ 858 000c 93F82120 		ldrb	r2, [r3, #33]	@ zero_extendqisi2
+ 859 0010 83F82000 		strb	r0, [r3, #32]
+ 860 0014 8242     		cmp	r2, r0
+ 861 0016 09D1     		bne	.L159
+ 862 0018 0022     		movs	r2, #0
+ 863 001a 0429     		cmp	r1, #4
+ 864 001c 13D8     		bhi	.L168
+ 865 001e DFE801F0 		tbb	[pc, r1]
+ 866              	.L161:
+ 867 0022 03       		.byte	(.L160-.L161)/2
+ 868 0023 09       		.byte	(.L162-.L161)/2
+ 869 0024 0B       		.byte	(.L163-.L161)/2
+ 870 0025 10       		.byte	(.L164-.L161)/2
+ 871 0026 0D       		.byte	(.L165-.L161)/2
+ 872 0027 00       		.p2align 1
+ 873              	.L160:
+ 874 0028 9A62     		str	r2, [r3, #40]
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s 			page 16
+
+
+ 875              	.L169:
+ 876 002a 0020     		movs	r0, #0
+ 877              	.L159:
+ 878 002c 0022     		movs	r2, #0
+ 879 002e 83F82020 		strb	r2, [r3, #32]
+ 880 0032 7047     		bx	lr
+ 881              	.L162:
+ 882 0034 DA62     		str	r2, [r3, #44]
+ 883 0036 F8E7     		b	.L169
+ 884              	.L163:
+ 885 0038 1A63     		str	r2, [r3, #48]
+ 886 003a F6E7     		b	.L169
+ 887              	.L165:
+ 888 003c C3E90A22 		strd	r2, r2, [r3, #40]
+ 889 0040 1A63     		str	r2, [r3, #48]
+ 890              	.L164:
+ 891 0042 5A63     		str	r2, [r3, #52]
+ 892 0044 F1E7     		b	.L169
+ 893              	.L168:
+ 894 0046 0120     		movs	r0, #1
+ 895 0048 F0E7     		b	.L159
+ 896              	.L166:
+ 897 004a 0220     		movs	r0, #2
+ 898 004c 7047     		bx	lr
+ 900              		.section	.text.HAL_DMA_GetState,"ax",%progbits
+ 901              		.align	1
+ 902              		.global	HAL_DMA_GetState
+ 903              		.syntax unified
+ 904              		.thumb
+ 905              		.thumb_func
+ 906              		.fpu softvfp
+ 908              	HAL_DMA_GetState:
+ 909              		@ args = 0, pretend = 0, frame = 0
+ 910              		@ frame_needed = 0, uses_anonymous_args = 0
+ 911              		@ link register save eliminated.
+ 912 0000 90F82100 		ldrb	r0, [r0, #33]	@ zero_extendqisi2
+ 913 0004 7047     		bx	lr
+ 915              		.section	.text.HAL_DMA_GetError,"ax",%progbits
+ 916              		.align	1
+ 917              		.global	HAL_DMA_GetError
+ 918              		.syntax unified
+ 919              		.thumb
+ 920              		.thumb_func
+ 921              		.fpu softvfp
+ 923              	HAL_DMA_GetError:
+ 924              		@ args = 0, pretend = 0, frame = 0
+ 925              		@ frame_needed = 0, uses_anonymous_args = 0
+ 926              		@ link register save eliminated.
+ 927 0000 806B     		ldr	r0, [r0, #56]
+ 928 0002 7047     		bx	lr
+ 930              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s 			page 17
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f1xx_hal_dma.c
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:13     .text.HAL_DMA_Init:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:20     .text.HAL_DMA_Init:00000000 HAL_DMA_Init
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:67     .text.HAL_DMA_Init:00000060 $d
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:71     .text.HAL_DMA_DeInit:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:78     .text.HAL_DMA_DeInit:00000000 HAL_DMA_DeInit
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:115    .text.HAL_DMA_DeInit:00000044 $d
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:119    .text.HAL_DMA_Start:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:126    .text.HAL_DMA_Start:00000000 HAL_DMA_Start
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:170    .text.HAL_DMA_Start_IT:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:177    .text.HAL_DMA_Start_IT:00000000 HAL_DMA_Start_IT
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:235    .text.HAL_DMA_Abort:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:242    .text.HAL_DMA_Abort:00000000 HAL_DMA_Abort
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:265    .text.HAL_DMA_Abort_IT:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:272    .text.HAL_DMA_Abort_IT:00000000 HAL_DMA_Abort_IT
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:345    .text.HAL_DMA_Abort_IT:00000088 $d
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:349    .text.HAL_DMA_PollForTransfer:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:356    .text.HAL_DMA_PollForTransfer:00000000 HAL_DMA_PollForTransfer
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:618    .text.HAL_DMA_PollForTransfer:00000218 $d
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:627    .text.HAL_DMA_IRQHandler:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:634    .text.HAL_DMA_IRQHandler:00000000 HAL_DMA_IRQHandler
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:783    .text.HAL_DMA_IRQHandler:00000120 $d
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:787    .text.HAL_DMA_RegisterCallback:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:794    .text.HAL_DMA_RegisterCallback:00000000 HAL_DMA_RegisterCallback
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:811    .text.HAL_DMA_RegisterCallback:00000022 $d
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:815    .text.HAL_DMA_RegisterCallback:00000026 $t
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:842    .text.HAL_DMA_UnRegisterCallback:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:849    .text.HAL_DMA_UnRegisterCallback:00000000 HAL_DMA_UnRegisterCallback
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:867    .text.HAL_DMA_UnRegisterCallback:00000022 $d
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:901    .text.HAL_DMA_GetState:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:908    .text.HAL_DMA_GetState:00000000 HAL_DMA_GetState
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:916    .text.HAL_DMA_GetError:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:923    .text.HAL_DMA_GetError:00000000 HAL_DMA_GetError
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:872    .text.HAL_DMA_UnRegisterCallback:00000027 $d
+C:\Users\Qian\AppData\Local\Temp\ccz8vfOd.s:872    .text.HAL_DMA_UnRegisterCallback:00000028 $t
+
+UNDEFINED SYMBOLS
+HAL_GetTick

@@ -1,0 +1,627 @@
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_hal_flash_ex.c"
+  12              		.section	.text.FLASH_MassErase.isra.0,"ax",%progbits
+  13              		.align	1
+  14              		.syntax unified
+  15              		.thumb
+  16              		.thumb_func
+  17              		.fpu softvfp
+  19              	FLASH_MassErase.isra.0:
+  20              		@ args = 0, pretend = 0, frame = 0
+  21              		@ frame_needed = 0, uses_anonymous_args = 0
+  22              		@ link register save eliminated.
+  23 0000 0022     		movs	r2, #0
+  24 0002 064B     		ldr	r3, .L2
+  25 0004 DA61     		str	r2, [r3, #28]
+  26 0006 064B     		ldr	r3, .L2+4
+  27 0008 1A69     		ldr	r2, [r3, #16]
+  28 000a 42F00402 		orr	r2, r2, #4
+  29 000e 1A61     		str	r2, [r3, #16]
+  30 0010 1A69     		ldr	r2, [r3, #16]
+  31 0012 42F04002 		orr	r2, r2, #64
+  32 0016 1A61     		str	r2, [r3, #16]
+  33 0018 7047     		bx	lr
+  34              	.L3:
+  35 001a 00BF     		.align	2
+  36              	.L2:
+  37 001c 00000000 		.word	pFlash
+  38 0020 00200240 		.word	1073881088
+  40              		.section	.text.FLASH_OB_RDP_LevelConfig,"ax",%progbits
+  41              		.align	1
+  42              		.syntax unified
+  43              		.thumb
+  44              		.thumb_func
+  45              		.fpu softvfp
+  47              	FLASH_OB_RDP_LevelConfig:
+  48              		@ args = 0, pretend = 0, frame = 0
+  49              		@ frame_needed = 0, uses_anonymous_args = 0
+  50 0000 38B5     		push	{r3, r4, r5, lr}
+  51 0002 0546     		mov	r5, r0
+  52 0004 4CF25030 		movw	r0, #50000
+  53 0008 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+  54 000c 10BB     		cbnz	r0, .L5
+  55 000e 124B     		ldr	r3, .L6
+  56 0010 124C     		ldr	r4, .L6+4
+  57 0012 D861     		str	r0, [r3, #28]
+  58 0014 2369     		ldr	r3, [r4, #16]
+  59 0016 4CF25030 		movw	r0, #50000
+  60 001a 43F02003 		orr	r3, r3, #32
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s 			page 2
+
+
+  61 001e 2361     		str	r3, [r4, #16]
+  62 0020 2369     		ldr	r3, [r4, #16]
+  63 0022 43F04003 		orr	r3, r3, #64
+  64 0026 2361     		str	r3, [r4, #16]
+  65 0028 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+  66 002c 2369     		ldr	r3, [r4, #16]
+  67 002e 23F02003 		bic	r3, r3, #32
+  68 0032 2361     		str	r3, [r4, #16]
+  69 0034 70B9     		cbnz	r0, .L5
+  70 0036 2369     		ldr	r3, [r4, #16]
+  71 0038 ADB2     		uxth	r5, r5
+  72 003a 43F01003 		orr	r3, r3, #16
+  73 003e 2361     		str	r3, [r4, #16]
+  74 0040 074B     		ldr	r3, .L6+8
+  75 0042 4CF25030 		movw	r0, #50000
+  76 0046 1D80     		strh	r5, [r3]	@ movhi
+  77 0048 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+  78 004c 2369     		ldr	r3, [r4, #16]
+  79 004e 23F01003 		bic	r3, r3, #16
+  80 0052 2361     		str	r3, [r4, #16]
+  81              	.L5:
+  82 0054 38BD     		pop	{r3, r4, r5, pc}
+  83              	.L7:
+  84 0056 00BF     		.align	2
+  85              	.L6:
+  86 0058 00000000 		.word	pFlash
+  87 005c 00200240 		.word	1073881088
+  88 0060 00F8FF1F 		.word	536868864
+  90              		.section	.text.HAL_FLASHEx_OBErase,"ax",%progbits
+  91              		.align	1
+  92              		.global	HAL_FLASHEx_OBErase
+  93              		.syntax unified
+  94              		.thumb
+  95              		.thumb_func
+  96              		.fpu softvfp
+  98              	HAL_FLASHEx_OBErase:
+  99              		@ args = 0, pretend = 0, frame = 0
+ 100              		@ frame_needed = 0, uses_anonymous_args = 0
+ 101 0000 38B5     		push	{r3, r4, r5, lr}
+ 102 0002 124C     		ldr	r4, .L12
+ 103 0004 4CF25030 		movw	r0, #50000
+ 104 0008 E369     		ldr	r3, [r4, #28]
+ 105 000a 13F0020F 		tst	r3, #2
+ 106 000e 14BF     		ite	ne
+ 107 0010 0025     		movne	r5, #0
+ 108 0012 A525     		moveq	r5, #165
+ 109 0014 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 110 0018 B8B9     		cbnz	r0, .L10
+ 111 001a 0D4A     		ldr	r2, .L12+4
+ 112 001c D061     		str	r0, [r2, #28]
+ 113 001e 2369     		ldr	r3, [r4, #16]
+ 114 0020 4CF25030 		movw	r0, #50000
+ 115 0024 43F02003 		orr	r3, r3, #32
+ 116 0028 2361     		str	r3, [r4, #16]
+ 117 002a 2369     		ldr	r3, [r4, #16]
+ 118 002c 43F04003 		orr	r3, r3, #64
+ 119 0030 2361     		str	r3, [r4, #16]
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s 			page 3
+
+
+ 120 0032 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 121 0036 2369     		ldr	r3, [r4, #16]
+ 122 0038 23F02003 		bic	r3, r3, #32
+ 123 003c 2361     		str	r3, [r4, #16]
+ 124 003e 20B9     		cbnz	r0, .L10
+ 125 0040 2846     		mov	r0, r5
+ 126 0042 BDE83840 		pop	{r3, r4, r5, lr}
+ 127 0046 FFF7FEBF 		b	FLASH_OB_RDP_LevelConfig
+ 128              	.L10:
+ 129 004a 38BD     		pop	{r3, r4, r5, pc}
+ 130              	.L13:
+ 131              		.align	2
+ 132              	.L12:
+ 133 004c 00200240 		.word	1073881088
+ 134 0050 00000000 		.word	pFlash
+ 136              		.section	.text.HAL_FLASHEx_OBProgram,"ax",%progbits
+ 137              		.align	1
+ 138              		.global	HAL_FLASHEx_OBProgram
+ 139              		.syntax unified
+ 140              		.thumb
+ 141              		.thumb_func
+ 142              		.fpu softvfp
+ 144              	HAL_FLASHEx_OBProgram:
+ 145              		@ args = 0, pretend = 0, frame = 0
+ 146              		@ frame_needed = 0, uses_anonymous_args = 0
+ 147 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 148 0004 734C     		ldr	r4, .L84
+ 149 0006 0646     		mov	r6, r0
+ 150 0008 237E     		ldrb	r3, [r4, #24]	@ zero_extendqisi2
+ 151 000a 012B     		cmp	r3, #1
+ 152 000c 00F0E080 		beq	.L41
+ 153 0010 0120     		movs	r0, #1
+ 154 0012 3368     		ldr	r3, [r6]
+ 155 0014 2076     		strb	r0, [r4, #24]
+ 156 0016 DD07     		lsls	r5, r3, #31
+ 157 0018 40F19880 		bpl	.L16
+ 158 001c D6E90135 		ldrd	r3, r5, [r6, #4]
+ 159 0020 6D4F     		ldr	r7, .L84+4
+ 160 0022 8342     		cmp	r3, r0
+ 161 0024 D7F82080 		ldr	r8, [r7, #32]
+ 162 0028 4CF25030 		movw	r0, #50000
+ 163 002c 4ED1     		bne	.L17
+ 164 002e FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 165 0032 0028     		cmp	r0, #0
+ 166 0034 3DD1     		bne	.L39
+ 167 0036 E061     		str	r0, [r4, #28]
+ 168 0038 FFF7FEFF 		bl	HAL_FLASHEx_OBErase
+ 169 003c 0028     		cmp	r0, #0
+ 170 003e 38D1     		bne	.L39
+ 171 0040 3A69     		ldr	r2, [r7, #16]
+ 172 0042 28EA0505 		bic	r5, r8, r5
+ 173 0046 EBB2     		uxtb	r3, r5
+ 174 0048 42F01002 		orr	r2, r2, #16
+ 175 004c FF2B     		cmp	r3, #255
+ 176 004e 3A61     		str	r2, [r7, #16]
+ 177 0050 1ED1     		bne	.L19
+ 178              	.L22:
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s 			page 4
+
+
+ 179 0052 C5F30723 		ubfx	r3, r5, #8, #8
+ 180 0056 FF2B     		cmp	r3, #255
+ 181 0058 08D0     		beq	.L21
+ 182 005a 604A     		ldr	r2, .L84+8
+ 183 005c 4CF25030 		movw	r0, #50000
+ 184 0060 5189     		ldrh	r1, [r2, #10]
+ 185 0062 0B40     		ands	r3, r3, r1
+ 186 0064 5381     		strh	r3, [r2, #10]	@ movhi
+ 187 0066 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 188 006a D8B9     		cbnz	r0, .L32
+ 189              	.L21:
+ 190 006c C5F30743 		ubfx	r3, r5, #16, #8
+ 191 0070 FF2B     		cmp	r3, #255
+ 192 0072 08D0     		beq	.L25
+ 193 0074 594A     		ldr	r2, .L84+8
+ 194 0076 4CF25030 		movw	r0, #50000
+ 195 007a 9189     		ldrh	r1, [r2, #12]
+ 196 007c 0B40     		ands	r3, r3, r1
+ 197 007e 9381     		strh	r3, [r2, #12]	@ movhi
+ 198 0080 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 199 0084 70B9     		cbnz	r0, .L32
+ 200              	.L25:
+ 201 0086 2D0E     		lsrs	r5, r5, #24
+ 202 0088 FF2D     		cmp	r5, #255
+ 203 008a 16D1     		bne	.L26
+ 204              	.L83:
+ 205 008c 0020     		movs	r0, #0
+ 206 008e 09E0     		b	.L32
+ 207              	.L19:
+ 208 0090 524A     		ldr	r2, .L84+8
+ 209 0092 4CF25030 		movw	r0, #50000
+ 210 0096 1189     		ldrh	r1, [r2, #8]
+ 211 0098 0B40     		ands	r3, r3, r1
+ 212 009a 1381     		strh	r3, [r2, #8]	@ movhi
+ 213 009c FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 214 00a0 0028     		cmp	r0, #0
+ 215 00a2 D6D0     		beq	.L22
+ 216              	.L32:
+ 217 00a4 4C4A     		ldr	r2, .L84+4
+ 218 00a6 1369     		ldr	r3, [r2, #16]
+ 219 00a8 23F01003 		bic	r3, r3, #16
+ 220 00ac 1361     		str	r3, [r2, #16]
+ 221 00ae 0028     		cmp	r0, #0
+ 222 00b0 4CD0     		beq	.L16
+ 223              	.L39:
+ 224 00b2 0023     		movs	r3, #0
+ 225 00b4 2376     		strb	r3, [r4, #24]
+ 226              	.L15:
+ 227 00b6 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 228              	.L26:
+ 229 00ba 484B     		ldr	r3, .L84+8
+ 230 00bc DA89     		ldrh	r2, [r3, #14]
+ 231 00be 1540     		ands	r5, r5, r2
+ 232              	.L82:
+ 233 00c0 DD81     		strh	r5, [r3, #14]	@ movhi
+ 234 00c2 4CF25030 		movw	r0, #50000
+ 235 00c6 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s 			page 5
+
+
+ 236 00ca EBE7     		b	.L32
+ 237              	.L17:
+ 238 00cc FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 239 00d0 0028     		cmp	r0, #0
+ 240 00d2 EED1     		bne	.L39
+ 241 00d4 E061     		str	r0, [r4, #28]
+ 242 00d6 FFF7FEFF 		bl	HAL_FLASHEx_OBErase
+ 243 00da 0028     		cmp	r0, #0
+ 244 00dc E9D1     		bne	.L39
+ 245 00de 3A69     		ldr	r2, [r7, #16]
+ 246 00e0 48EA0505 		orr	r5, r8, r5
+ 247 00e4 EBB2     		uxtb	r3, r5
+ 248 00e6 42F01002 		orr	r2, r2, #16
+ 249 00ea FF2B     		cmp	r3, #255
+ 250 00ec 3A61     		str	r2, [r7, #16]
+ 251 00ee 22D1     		bne	.L28
+ 252              	.L31:
+ 253 00f0 C5F30723 		ubfx	r3, r5, #8, #8
+ 254 00f4 FF2B     		cmp	r3, #255
+ 255 00f6 09D0     		beq	.L30
+ 256 00f8 384A     		ldr	r2, .L84+8
+ 257 00fa 4CF25030 		movw	r0, #50000
+ 258 00fe 5189     		ldrh	r1, [r2, #10]
+ 259 0100 0B43     		orrs	r3, r3, r1
+ 260 0102 5381     		strh	r3, [r2, #10]	@ movhi
+ 261 0104 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 262 0108 0028     		cmp	r0, #0
+ 263 010a CBD1     		bne	.L32
+ 264              	.L30:
+ 265 010c C5F30743 		ubfx	r3, r5, #16, #8
+ 266 0110 FF2B     		cmp	r3, #255
+ 267 0112 09D0     		beq	.L34
+ 268 0114 314A     		ldr	r2, .L84+8
+ 269 0116 4CF25030 		movw	r0, #50000
+ 270 011a 9189     		ldrh	r1, [r2, #12]
+ 271 011c 0B43     		orrs	r3, r3, r1
+ 272 011e 9381     		strh	r3, [r2, #12]	@ movhi
+ 273 0120 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 274 0124 0028     		cmp	r0, #0
+ 275 0126 BDD1     		bne	.L32
+ 276              	.L34:
+ 277 0128 2D0E     		lsrs	r5, r5, #24
+ 278 012a FF2D     		cmp	r5, #255
+ 279 012c AED0     		beq	.L83
+ 280 012e 2B4B     		ldr	r3, .L84+8
+ 281 0130 DA89     		ldrh	r2, [r3, #14]
+ 282 0132 1543     		orrs	r5, r5, r2
+ 283 0134 C4E7     		b	.L82
+ 284              	.L28:
+ 285 0136 294A     		ldr	r2, .L84+8
+ 286 0138 4CF25030 		movw	r0, #50000
+ 287 013c 1189     		ldrh	r1, [r2, #8]
+ 288 013e 0B43     		orrs	r3, r3, r1
+ 289 0140 1381     		strh	r3, [r2, #8]	@ movhi
+ 290 0142 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 291 0146 0028     		cmp	r0, #0
+ 292 0148 ACD1     		bne	.L32
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s 			page 6
+
+
+ 293 014a D1E7     		b	.L31
+ 294              	.L16:
+ 295 014c 3368     		ldr	r3, [r6]
+ 296 014e 9907     		lsls	r1, r3, #30
+ 297 0150 04D5     		bpl	.L36
+ 298 0152 307C     		ldrb	r0, [r6, #16]	@ zero_extendqisi2
+ 299 0154 FFF7FEFF 		bl	FLASH_OB_RDP_LevelConfig
+ 300 0158 0028     		cmp	r0, #0
+ 301 015a AAD1     		bne	.L39
+ 302              	.L36:
+ 303 015c 3368     		ldr	r3, [r6]
+ 304 015e 5A07     		lsls	r2, r3, #29
+ 305 0160 1AD5     		bpl	.L37
+ 306 0162 4CF25030 		movw	r0, #50000
+ 307 0166 777C     		ldrb	r7, [r6, #17]	@ zero_extendqisi2
+ 308 0168 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 309 016c 0028     		cmp	r0, #0
+ 310 016e A0D1     		bne	.L39
+ 311 0170 194D     		ldr	r5, .L84+4
+ 312 0172 E061     		str	r0, [r4, #28]
+ 313 0174 2B69     		ldr	r3, [r5, #16]
+ 314 0176 47F08807 		orr	r7, r7, #136
+ 315 017a 43F01003 		orr	r3, r3, #16
+ 316 017e 2B61     		str	r3, [r5, #16]
+ 317 0180 164B     		ldr	r3, .L84+8
+ 318 0182 4CF25030 		movw	r0, #50000
+ 319 0186 5F80     		strh	r7, [r3, #2]	@ movhi
+ 320 0188 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 321 018c 2B69     		ldr	r3, [r5, #16]
+ 322 018e 23F01003 		bic	r3, r3, #16
+ 323 0192 2B61     		str	r3, [r5, #16]
+ 324 0194 0028     		cmp	r0, #0
+ 325 0196 8CD1     		bne	.L39
+ 326              	.L37:
+ 327 0198 3368     		ldr	r3, [r6]
+ 328 019a 1B07     		lsls	r3, r3, #28
+ 329 019c 89D5     		bpl	.L39
+ 330 019e 4CF25030 		movw	r0, #50000
+ 331 01a2 7769     		ldr	r7, [r6, #20]
+ 332 01a4 367E     		ldrb	r6, [r6, #24]	@ zero_extendqisi2
+ 333 01a6 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 334 01aa 0028     		cmp	r0, #0
+ 335 01ac 81D1     		bne	.L39
+ 336 01ae 0A4D     		ldr	r5, .L84+4
+ 337 01b0 E061     		str	r0, [r4, #28]
+ 338 01b2 2B69     		ldr	r3, [r5, #16]
+ 339 01b4 B6B2     		uxth	r6, r6
+ 340 01b6 43F01003 		orr	r3, r3, #16
+ 341 01ba 2B61     		str	r3, [r5, #16]
+ 342 01bc 4CF25030 		movw	r0, #50000
+ 343 01c0 3E80     		strh	r6, [r7]	@ movhi
+ 344 01c2 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 345 01c6 2B69     		ldr	r3, [r5, #16]
+ 346 01c8 23F01003 		bic	r3, r3, #16
+ 347 01cc 2B61     		str	r3, [r5, #16]
+ 348 01ce 70E7     		b	.L39
+ 349              	.L41:
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s 			page 7
+
+
+ 350 01d0 0220     		movs	r0, #2
+ 351 01d2 70E7     		b	.L15
+ 352              	.L85:
+ 353              		.align	2
+ 354              	.L84:
+ 355 01d4 00000000 		.word	pFlash
+ 356 01d8 00200240 		.word	1073881088
+ 357 01dc 00F8FF1F 		.word	536868864
+ 359              		.section	.text.HAL_FLASHEx_OBGetConfig,"ax",%progbits
+ 360              		.align	1
+ 361              		.global	HAL_FLASHEx_OBGetConfig
+ 362              		.syntax unified
+ 363              		.thumb
+ 364              		.thumb_func
+ 365              		.fpu softvfp
+ 367              	HAL_FLASHEx_OBGetConfig:
+ 368              		@ args = 0, pretend = 0, frame = 0
+ 369              		@ frame_needed = 0, uses_anonymous_args = 0
+ 370              		@ link register save eliminated.
+ 371 0000 0723     		movs	r3, #7
+ 372 0002 0360     		str	r3, [r0]
+ 373 0004 074B     		ldr	r3, .L89
+ 374 0006 1A6A     		ldr	r2, [r3, #32]
+ 375 0008 8260     		str	r2, [r0, #8]
+ 376 000a DA69     		ldr	r2, [r3, #28]
+ 377 000c 12F0020F 		tst	r2, #2
+ 378 0010 14BF     		ite	ne
+ 379 0012 0022     		movne	r2, #0
+ 380 0014 A522     		moveq	r2, #165
+ 381 0016 0274     		strb	r2, [r0, #16]
+ 382 0018 DB69     		ldr	r3, [r3, #28]
+ 383 001a C3F38203 		ubfx	r3, r3, #2, #3
+ 384 001e 4374     		strb	r3, [r0, #17]
+ 385 0020 7047     		bx	lr
+ 386              	.L90:
+ 387 0022 00BF     		.align	2
+ 388              	.L89:
+ 389 0024 00200240 		.word	1073881088
+ 391              		.section	.text.HAL_FLASHEx_OBGetUserData,"ax",%progbits
+ 392              		.align	1
+ 393              		.global	HAL_FLASHEx_OBGetUserData
+ 394              		.syntax unified
+ 395              		.thumb
+ 396              		.thumb_func
+ 397              		.fpu softvfp
+ 399              	HAL_FLASHEx_OBGetUserData:
+ 400              		@ args = 0, pretend = 0, frame = 0
+ 401              		@ frame_needed = 0, uses_anonymous_args = 0
+ 402              		@ link register save eliminated.
+ 403 0000 044B     		ldr	r3, .L94
+ 404 0002 9842     		cmp	r0, r3
+ 405 0004 044B     		ldr	r3, .L94+4
+ 406 0006 D869     		ldr	r0, [r3, #28]
+ 407 0008 0CBF     		ite	eq
+ 408 000a C0F38720 		ubfxeq	r0, r0, #10, #8
+ 409 000e C0F38740 		ubfxne	r0, r0, #18, #8
+ 410 0012 7047     		bx	lr
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s 			page 8
+
+
+ 411              	.L95:
+ 412              		.align	2
+ 413              	.L94:
+ 414 0014 04F8FF1F 		.word	536868868
+ 415 0018 00200240 		.word	1073881088
+ 417              		.section	.text.FLASH_PageErase,"ax",%progbits
+ 418              		.align	1
+ 419              		.global	FLASH_PageErase
+ 420              		.syntax unified
+ 421              		.thumb
+ 422              		.thumb_func
+ 423              		.fpu softvfp
+ 425              	FLASH_PageErase:
+ 426              		@ args = 0, pretend = 0, frame = 0
+ 427              		@ frame_needed = 0, uses_anonymous_args = 0
+ 428              		@ link register save eliminated.
+ 429 0000 0022     		movs	r2, #0
+ 430 0002 064B     		ldr	r3, .L97
+ 431 0004 DA61     		str	r2, [r3, #28]
+ 432 0006 064B     		ldr	r3, .L97+4
+ 433 0008 1A69     		ldr	r2, [r3, #16]
+ 434 000a 42F00202 		orr	r2, r2, #2
+ 435 000e 1A61     		str	r2, [r3, #16]
+ 436 0010 5861     		str	r0, [r3, #20]
+ 437 0012 1A69     		ldr	r2, [r3, #16]
+ 438 0014 42F04002 		orr	r2, r2, #64
+ 439 0018 1A61     		str	r2, [r3, #16]
+ 440 001a 7047     		bx	lr
+ 441              	.L98:
+ 442              		.align	2
+ 443              	.L97:
+ 444 001c 00000000 		.word	pFlash
+ 445 0020 00200240 		.word	1073881088
+ 447              		.section	.text.HAL_FLASHEx_Erase,"ax",%progbits
+ 448              		.align	1
+ 449              		.global	HAL_FLASHEx_Erase
+ 450              		.syntax unified
+ 451              		.thumb
+ 452              		.thumb_func
+ 453              		.fpu softvfp
+ 455              	HAL_FLASHEx_Erase:
+ 456              		@ args = 0, pretend = 0, frame = 0
+ 457              		@ frame_needed = 0, uses_anonymous_args = 0
+ 458 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 459 0004 224D     		ldr	r5, .L109
+ 460 0006 0746     		mov	r7, r0
+ 461 0008 2B7E     		ldrb	r3, [r5, #24]	@ zero_extendqisi2
+ 462 000a 8846     		mov	r8, r1
+ 463 000c 012B     		cmp	r3, #1
+ 464 000e 3DD0     		beq	.L108
+ 465 0010 0124     		movs	r4, #1
+ 466 0012 0368     		ldr	r3, [r0]
+ 467 0014 2C76     		strb	r4, [r5, #24]
+ 468 0016 022B     		cmp	r3, #2
+ 469 0018 4CF25030 		movw	r0, #50000
+ 470 001c 13D1     		bne	.L101
+ 471 001e FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s 			page 9
+
+
+ 472 0022 20B1     		cbz	r0, .L102
+ 473              	.L104:
+ 474 0024 0120     		movs	r0, #1
+ 475              	.L103:
+ 476 0026 0023     		movs	r3, #0
+ 477 0028 2B76     		strb	r3, [r5, #24]
+ 478              	.L100:
+ 479 002a BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 480              	.L102:
+ 481 002e FFF7FEFF 		bl	FLASH_MassErase.isra.0
+ 482 0032 4CF25030 		movw	r0, #50000
+ 483 0036 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 484 003a 164A     		ldr	r2, .L109+4
+ 485 003c 1369     		ldr	r3, [r2, #16]
+ 486 003e 23F00403 		bic	r3, r3, #4
+ 487 0042 1361     		str	r3, [r2, #16]
+ 488 0044 EFE7     		b	.L103
+ 489              	.L101:
+ 490 0046 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 491 004a 0028     		cmp	r0, #0
+ 492 004c EAD1     		bne	.L104
+ 493 004e 4FF0FF33 		mov	r3, #-1
+ 494 0052 C8F80030 		str	r3, [r8]
+ 495 0056 2046     		mov	r0, r4
+ 496 0058 BE68     		ldr	r6, [r7, #8]
+ 497 005a 0E4C     		ldr	r4, .L109+4
+ 498              	.L105:
+ 499 005c D7E90232 		ldrd	r3, r2, [r7, #8]
+ 500 0060 03EB8223 		add	r3, r3, r2, lsl #10
+ 501 0064 B342     		cmp	r3, r6
+ 502 0066 DED9     		bls	.L103
+ 503 0068 3046     		mov	r0, r6
+ 504 006a FFF7FEFF 		bl	FLASH_PageErase
+ 505 006e 4CF25030 		movw	r0, #50000
+ 506 0072 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 507 0076 2369     		ldr	r3, [r4, #16]
+ 508 0078 23F00203 		bic	r3, r3, #2
+ 509 007c 2361     		str	r3, [r4, #16]
+ 510 007e 10B1     		cbz	r0, .L106
+ 511 0080 C8F80060 		str	r6, [r8]
+ 512 0084 CFE7     		b	.L103
+ 513              	.L106:
+ 514 0086 06F58066 		add	r6, r6, #1024
+ 515 008a E7E7     		b	.L105
+ 516              	.L108:
+ 517 008c 0220     		movs	r0, #2
+ 518 008e CCE7     		b	.L100
+ 519              	.L110:
+ 520              		.align	2
+ 521              	.L109:
+ 522 0090 00000000 		.word	pFlash
+ 523 0094 00200240 		.word	1073881088
+ 525              		.section	.text.HAL_FLASHEx_Erase_IT,"ax",%progbits
+ 526              		.align	1
+ 527              		.global	HAL_FLASHEx_Erase_IT
+ 528              		.syntax unified
+ 529              		.thumb
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s 			page 10
+
+
+ 530              		.thumb_func
+ 531              		.fpu softvfp
+ 533              	HAL_FLASHEx_Erase_IT:
+ 534              		@ args = 0, pretend = 0, frame = 0
+ 535              		@ frame_needed = 0, uses_anonymous_args = 0
+ 536 0000 114A     		ldr	r2, .L117
+ 537 0002 38B5     		push	{r3, r4, r5, lr}
+ 538 0004 137E     		ldrb	r3, [r2, #24]	@ zero_extendqisi2
+ 539 0006 012B     		cmp	r3, #1
+ 540 0008 1AD0     		beq	.L114
+ 541 000a 0123     		movs	r3, #1
+ 542 000c 1178     		ldrb	r1, [r2]	@ zero_extendqisi2
+ 543 000e 1376     		strb	r3, [r2, #24]
+ 544 0010 01F0FF04 		and	r4, r1, #255
+ 545 0014 B1B9     		cbnz	r1, .L115
+ 546 0016 0D4D     		ldr	r5, .L117+4
+ 547 0018 2969     		ldr	r1, [r5, #16]
+ 548 001a 41F4A051 		orr	r1, r1, #5120
+ 549 001e 2961     		str	r1, [r5, #16]
+ 550 0020 0168     		ldr	r1, [r0]
+ 551 0022 0229     		cmp	r1, #2
+ 552 0024 04D1     		bne	.L113
+ 553 0026 1170     		strb	r1, [r2]
+ 554 0028 FFF7FEFF 		bl	FLASH_MassErase.isra.0
+ 555              	.L116:
+ 556 002c 2046     		mov	r0, r4
+ 557              	.L112:
+ 558 002e 38BD     		pop	{r3, r4, r5, pc}
+ 559              	.L113:
+ 560 0030 1370     		strb	r3, [r2]
+ 561 0032 C368     		ldr	r3, [r0, #12]
+ 562 0034 8068     		ldr	r0, [r0, #8]
+ 563 0036 5360     		str	r3, [r2, #4]
+ 564 0038 9060     		str	r0, [r2, #8]
+ 565 003a FFF7FEFF 		bl	FLASH_PageErase
+ 566 003e F5E7     		b	.L116
+ 567              	.L114:
+ 568 0040 0220     		movs	r0, #2
+ 569 0042 F4E7     		b	.L112
+ 570              	.L115:
+ 571 0044 1846     		mov	r0, r3
+ 572 0046 F2E7     		b	.L112
+ 573              	.L118:
+ 574              		.align	2
+ 575              	.L117:
+ 576 0048 00000000 		.word	pFlash
+ 577 004c 00200240 		.word	1073881088
+ 579              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s 			page 11
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f1xx_hal_flash_ex.c
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:13     .text.FLASH_MassErase.isra.0:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:19     .text.FLASH_MassErase.isra.0:00000000 FLASH_MassErase.isra.0
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:37     .text.FLASH_MassErase.isra.0:0000001c $d
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:41     .text.FLASH_OB_RDP_LevelConfig:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:47     .text.FLASH_OB_RDP_LevelConfig:00000000 FLASH_OB_RDP_LevelConfig
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:86     .text.FLASH_OB_RDP_LevelConfig:00000058 $d
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:91     .text.HAL_FLASHEx_OBErase:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:98     .text.HAL_FLASHEx_OBErase:00000000 HAL_FLASHEx_OBErase
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:133    .text.HAL_FLASHEx_OBErase:0000004c $d
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:137    .text.HAL_FLASHEx_OBProgram:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:144    .text.HAL_FLASHEx_OBProgram:00000000 HAL_FLASHEx_OBProgram
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:355    .text.HAL_FLASHEx_OBProgram:000001d4 $d
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:360    .text.HAL_FLASHEx_OBGetConfig:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:367    .text.HAL_FLASHEx_OBGetConfig:00000000 HAL_FLASHEx_OBGetConfig
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:389    .text.HAL_FLASHEx_OBGetConfig:00000024 $d
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:392    .text.HAL_FLASHEx_OBGetUserData:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:399    .text.HAL_FLASHEx_OBGetUserData:00000000 HAL_FLASHEx_OBGetUserData
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:414    .text.HAL_FLASHEx_OBGetUserData:00000014 $d
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:418    .text.FLASH_PageErase:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:425    .text.FLASH_PageErase:00000000 FLASH_PageErase
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:444    .text.FLASH_PageErase:0000001c $d
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:448    .text.HAL_FLASHEx_Erase:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:455    .text.HAL_FLASHEx_Erase:00000000 HAL_FLASHEx_Erase
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:522    .text.HAL_FLASHEx_Erase:00000090 $d
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:526    .text.HAL_FLASHEx_Erase_IT:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:533    .text.HAL_FLASHEx_Erase_IT:00000000 HAL_FLASHEx_Erase_IT
+C:\Users\Qian\AppData\Local\Temp\ccZefHEL.s:576    .text.HAL_FLASHEx_Erase_IT:00000048 $d
+
+UNDEFINED SYMBOLS
+pFlash
+FLASH_WaitForLastOperation

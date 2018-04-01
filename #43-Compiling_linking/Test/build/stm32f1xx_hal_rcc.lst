@@ -1,0 +1,1167 @@
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_hal_rcc.c"
+  12              		.section	.text.HAL_RCC_DeInit,"ax",%progbits
+  13              		.align	1
+  14              		.global	HAL_RCC_DeInit
+  15              		.syntax unified
+  16              		.thumb
+  17              		.thumb_func
+  18              		.fpu softvfp
+  20              	HAL_RCC_DeInit:
+  21              		@ args = 0, pretend = 0, frame = 0
+  22              		@ frame_needed = 0, uses_anonymous_args = 0
+  23 0000 70B5     		push	{r4, r5, r6, lr}
+  24 0002 FFF7FEFF 		bl	HAL_GetTick
+  25 0006 0546     		mov	r5, r0
+  26 0008 2E4C     		ldr	r4, .L14
+  27 000a 2368     		ldr	r3, [r4]
+  28 000c 43F00103 		orr	r3, r3, #1
+  29 0010 2360     		str	r3, [r4]
+  30              	.L2:
+  31 0012 2368     		ldr	r3, [r4]
+  32 0014 9B07     		lsls	r3, r3, #30
+  33 0016 39D5     		bpl	.L4
+  34 0018 2368     		ldr	r3, [r4]
+  35 001a 41F28836 		movw	r6, #5000
+  36 001e 23F0F803 		bic	r3, r3, #248
+  37 0022 43F08003 		orr	r3, r3, #128
+  38 0026 2360     		str	r3, [r4]
+  39 0028 FFF7FEFF 		bl	HAL_GetTick
+  40 002c 0023     		movs	r3, #0
+  41 002e 0546     		mov	r5, r0
+  42 0030 6360     		str	r3, [r4, #4]
+  43              	.L5:
+  44 0032 6068     		ldr	r0, [r4, #4]
+  45 0034 10F00C00 		ands	r0, r0, #12
+  46 0038 30D1     		bne	.L7
+  47 003a 234B     		ldr	r3, .L14+4
+  48 003c 234A     		ldr	r2, .L14+8
+  49 003e 1A60     		str	r2, [r3]
+  50 0040 FFF7FEFF 		bl	HAL_InitTick
+  51 0044 0546     		mov	r5, r0
+  52 0046 0028     		cmp	r0, #0
+  53 0048 3AD1     		bne	.L12
+  54 004a FFF7FEFF 		bl	HAL_GetTick
+  55 004e 0646     		mov	r6, r0
+  56 0050 2368     		ldr	r3, [r4]
+  57 0052 23F08073 		bic	r3, r3, #16777216
+  58 0056 2360     		str	r3, [r4]
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 2
+
+
+  59              	.L8:
+  60 0058 2368     		ldr	r3, [r4]
+  61 005a 13F00073 		ands	r3, r3, #33554432
+  62 005e 23D1     		bne	.L9
+  63 0060 6360     		str	r3, [r4, #4]
+  64 0062 FFF7FEFF 		bl	HAL_GetTick
+  65 0066 0646     		mov	r6, r0
+  66 0068 2368     		ldr	r3, [r4]
+  67 006a 23F41023 		bic	r3, r3, #589824
+  68 006e 2360     		str	r3, [r4]
+  69              	.L10:
+  70 0070 2368     		ldr	r3, [r4]
+  71 0072 13F40033 		ands	r3, r3, #131072
+  72 0076 1DD1     		bne	.L11
+  73 0078 2268     		ldr	r2, [r4]
+  74 007a 22F48022 		bic	r2, r2, #262144
+  75 007e 2260     		str	r2, [r4]
+  76 0080 626A     		ldr	r2, [r4, #36]
+  77 0082 42F08072 		orr	r2, r2, #16777216
+  78 0086 6262     		str	r2, [r4, #36]
+  79 0088 A360     		str	r3, [r4, #8]
+  80 008a 05E0     		b	.L3
+  81              	.L4:
+  82 008c FFF7FEFF 		bl	HAL_GetTick
+  83 0090 401B     		subs	r0, r0, r5
+  84 0092 0228     		cmp	r0, #2
+  85 0094 BDD9     		bls	.L2
+  86              	.L6:
+  87 0096 0325     		movs	r5, #3
+  88              	.L3:
+  89 0098 2846     		mov	r0, r5
+  90 009a 70BD     		pop	{r4, r5, r6, pc}
+  91              	.L7:
+  92 009c FFF7FEFF 		bl	HAL_GetTick
+  93 00a0 401B     		subs	r0, r0, r5
+  94 00a2 B042     		cmp	r0, r6
+  95 00a4 C5D9     		bls	.L5
+  96 00a6 F6E7     		b	.L6
+  97              	.L9:
+  98 00a8 FFF7FEFF 		bl	HAL_GetTick
+  99 00ac 801B     		subs	r0, r0, r6
+ 100 00ae 0228     		cmp	r0, #2
+ 101 00b0 D2D9     		bls	.L8
+ 102 00b2 F0E7     		b	.L6
+ 103              	.L11:
+ 104 00b4 FFF7FEFF 		bl	HAL_GetTick
+ 105 00b8 801B     		subs	r0, r0, r6
+ 106 00ba 6428     		cmp	r0, #100
+ 107 00bc D8D9     		bls	.L10
+ 108 00be EAE7     		b	.L6
+ 109              	.L12:
+ 110 00c0 0125     		movs	r5, #1
+ 111 00c2 E9E7     		b	.L3
+ 112              	.L15:
+ 113              		.align	2
+ 114              	.L14:
+ 115 00c4 00100240 		.word	1073876992
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 3
+
+
+ 116 00c8 00000000 		.word	SystemCoreClock
+ 117 00cc 00127A00 		.word	8000000
+ 119              		.section	.text.HAL_RCC_OscConfig,"ax",%progbits
+ 120              		.align	1
+ 121              		.global	HAL_RCC_OscConfig
+ 122              		.syntax unified
+ 123              		.thumb
+ 124              		.thumb_func
+ 125              		.fpu softvfp
+ 127              	HAL_RCC_OscConfig:
+ 128              		@ args = 0, pretend = 0, frame = 8
+ 129              		@ frame_needed = 0, uses_anonymous_args = 0
+ 130 0000 0368     		ldr	r3, [r0]
+ 131 0002 2DE9F341 		push	{r0, r1, r4, r5, r6, r7, r8, lr}
+ 132 0006 DB07     		lsls	r3, r3, #31
+ 133 0008 0546     		mov	r5, r0
+ 134 000a 10D4     		bmi	.L17
+ 135              	.L22:
+ 136 000c 2B68     		ldr	r3, [r5]
+ 137 000e 9F07     		lsls	r7, r3, #30
+ 138 0010 5ED4     		bmi	.L18
+ 139              	.L33:
+ 140 0012 2B68     		ldr	r3, [r5]
+ 141 0014 1907     		lsls	r1, r3, #28
+ 142 0016 00F19580 		bmi	.L43
+ 143              	.L50:
+ 144 001a 2B68     		ldr	r3, [r5]
+ 145 001c 5A07     		lsls	r2, r3, #29
+ 146 001e 00F1BF80 		bmi	.L44
+ 147              	.L53:
+ 148 0022 EA69     		ldr	r2, [r5, #28]
+ 149 0024 002A     		cmp	r2, #0
+ 150 0026 40F02D81 		bne	.L69
+ 151              	.L76:
+ 152 002a 0020     		movs	r0, #0
+ 153 002c 14E0     		b	.L101
+ 154              	.L17:
+ 155 002e 904C     		ldr	r4, .L108
+ 156 0030 6368     		ldr	r3, [r4, #4]
+ 157 0032 03F00C03 		and	r3, r3, #12
+ 158 0036 042B     		cmp	r3, #4
+ 159 0038 07D0     		beq	.L20
+ 160 003a 6368     		ldr	r3, [r4, #4]
+ 161 003c 03F00C03 		and	r3, r3, #12
+ 162 0040 082B     		cmp	r3, #8
+ 163 0042 0CD1     		bne	.L21
+ 164 0044 6368     		ldr	r3, [r4, #4]
+ 165 0046 DE03     		lsls	r6, r3, #15
+ 166 0048 09D5     		bpl	.L21
+ 167              	.L20:
+ 168 004a 2368     		ldr	r3, [r4]
+ 169 004c 9C03     		lsls	r4, r3, #14
+ 170 004e DDD5     		bpl	.L22
+ 171 0050 6B68     		ldr	r3, [r5, #4]
+ 172 0052 002B     		cmp	r3, #0
+ 173 0054 DAD1     		bne	.L22
+ 174              	.L37:
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 4
+
+
+ 175 0056 0120     		movs	r0, #1
+ 176              	.L101:
+ 177 0058 02B0     		add	sp, sp, #8
+ 178              		@ sp needed
+ 179 005a BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 180              	.L21:
+ 181 005e 6B68     		ldr	r3, [r5, #4]
+ 182 0060 B3F5803F 		cmp	r3, #65536
+ 183 0064 10D1     		bne	.L24
+ 184              	.L106:
+ 185 0066 2368     		ldr	r3, [r4]
+ 186 0068 43F48033 		orr	r3, r3, #65536
+ 187              	.L104:
+ 188 006c 2360     		str	r3, [r4]
+ 189 006e FFF7FEFF 		bl	HAL_GetTick
+ 190 0072 0646     		mov	r6, r0
+ 191              	.L29:
+ 192 0074 2368     		ldr	r3, [r4]
+ 193 0076 9803     		lsls	r0, r3, #14
+ 194 0078 C8D4     		bmi	.L22
+ 195 007a FFF7FEFF 		bl	HAL_GetTick
+ 196 007e 801B     		subs	r0, r0, r6
+ 197 0080 6428     		cmp	r0, #100
+ 198 0082 F7D9     		bls	.L29
+ 199              	.L31:
+ 200 0084 0320     		movs	r0, #3
+ 201 0086 E7E7     		b	.L101
+ 202              	.L24:
+ 203 0088 9BB9     		cbnz	r3, .L26
+ 204 008a 2368     		ldr	r3, [r4]
+ 205 008c 23F48033 		bic	r3, r3, #65536
+ 206 0090 2360     		str	r3, [r4]
+ 207 0092 2368     		ldr	r3, [r4]
+ 208 0094 23F48023 		bic	r3, r3, #262144
+ 209 0098 2360     		str	r3, [r4]
+ 210 009a FFF7FEFF 		bl	HAL_GetTick
+ 211 009e 0646     		mov	r6, r0
+ 212              	.L27:
+ 213 00a0 2368     		ldr	r3, [r4]
+ 214 00a2 9903     		lsls	r1, r3, #14
+ 215 00a4 B2D5     		bpl	.L22
+ 216 00a6 FFF7FEFF 		bl	HAL_GetTick
+ 217 00aa 801B     		subs	r0, r0, r6
+ 218 00ac 6428     		cmp	r0, #100
+ 219 00ae F7D9     		bls	.L27
+ 220 00b0 E8E7     		b	.L31
+ 221              	.L26:
+ 222 00b2 B3F5A02F 		cmp	r3, #327680
+ 223 00b6 2368     		ldr	r3, [r4]
+ 224 00b8 03D1     		bne	.L28
+ 225 00ba 43F48023 		orr	r3, r3, #262144
+ 226 00be 2360     		str	r3, [r4]
+ 227 00c0 D1E7     		b	.L106
+ 228              	.L28:
+ 229 00c2 23F48033 		bic	r3, r3, #65536
+ 230 00c6 2360     		str	r3, [r4]
+ 231 00c8 2368     		ldr	r3, [r4]
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 5
+
+
+ 232 00ca 23F48023 		bic	r3, r3, #262144
+ 233 00ce CDE7     		b	.L104
+ 234              	.L18:
+ 235 00d0 674C     		ldr	r4, .L108
+ 236 00d2 6368     		ldr	r3, [r4, #4]
+ 237 00d4 13F00C0F 		tst	r3, #12
+ 238 00d8 07D0     		beq	.L34
+ 239 00da 6368     		ldr	r3, [r4, #4]
+ 240 00dc 03F00C03 		and	r3, r3, #12
+ 241 00e0 082B     		cmp	r3, #8
+ 242 00e2 10D1     		bne	.L35
+ 243 00e4 6368     		ldr	r3, [r4, #4]
+ 244 00e6 DA03     		lsls	r2, r3, #15
+ 245 00e8 0DD4     		bmi	.L35
+ 246              	.L34:
+ 247 00ea 2368     		ldr	r3, [r4]
+ 248 00ec 9B07     		lsls	r3, r3, #30
+ 249 00ee 02D5     		bpl	.L103
+ 250 00f0 2B69     		ldr	r3, [r5, #16]
+ 251 00f2 012B     		cmp	r3, #1
+ 252 00f4 AFD1     		bne	.L37
+ 253              	.L103:
+ 254 00f6 2368     		ldr	r3, [r4]
+ 255 00f8 6A69     		ldr	r2, [r5, #20]
+ 256 00fa 23F0F803 		bic	r3, r3, #248
+ 257 00fe 43EAC203 		orr	r3, r3, r2, lsl #3
+ 258 0102 2360     		str	r3, [r4]
+ 259 0104 85E7     		b	.L33
+ 260              	.L35:
+ 261 0106 2A69     		ldr	r2, [r5, #16]
+ 262 0108 5A4B     		ldr	r3, .L108+4
+ 263 010a 6AB1     		cbz	r2, .L38
+ 264 010c 0122     		movs	r2, #1
+ 265 010e 1A60     		str	r2, [r3]
+ 266 0110 FFF7FEFF 		bl	HAL_GetTick
+ 267 0114 0646     		mov	r6, r0
+ 268              	.L39:
+ 269 0116 2368     		ldr	r3, [r4]
+ 270 0118 9F07     		lsls	r7, r3, #30
+ 271 011a ECD4     		bmi	.L103
+ 272 011c FFF7FEFF 		bl	HAL_GetTick
+ 273 0120 801B     		subs	r0, r0, r6
+ 274 0122 0228     		cmp	r0, #2
+ 275 0124 F7D9     		bls	.L39
+ 276 0126 ADE7     		b	.L31
+ 277              	.L38:
+ 278 0128 1A60     		str	r2, [r3]
+ 279 012a FFF7FEFF 		bl	HAL_GetTick
+ 280 012e 0646     		mov	r6, r0
+ 281              	.L41:
+ 282 0130 2368     		ldr	r3, [r4]
+ 283 0132 9807     		lsls	r0, r3, #30
+ 284 0134 7FF56DAF 		bpl	.L33
+ 285 0138 FFF7FEFF 		bl	HAL_GetTick
+ 286 013c 801B     		subs	r0, r0, r6
+ 287 013e 0228     		cmp	r0, #2
+ 288 0140 F6D9     		bls	.L41
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 6
+
+
+ 289 0142 9FE7     		b	.L31
+ 290              	.L43:
+ 291 0144 AA69     		ldr	r2, [r5, #24]
+ 292 0146 4A4C     		ldr	r4, .L108
+ 293 0148 4B4B     		ldr	r3, .L108+8
+ 294 014a DAB1     		cbz	r2, .L46
+ 295 014c 0122     		movs	r2, #1
+ 296 014e 1A60     		str	r2, [r3]
+ 297 0150 FFF7FEFF 		bl	HAL_GetTick
+ 298 0154 0646     		mov	r6, r0
+ 299              	.L47:
+ 300 0156 636A     		ldr	r3, [r4, #36]
+ 301 0158 9B07     		lsls	r3, r3, #30
+ 302 015a 0DD5     		bpl	.L48
+ 303 015c 4FF4FA52 		mov	r2, #8000
+ 304 0160 464B     		ldr	r3, .L108+12
+ 305 0162 1B68     		ldr	r3, [r3]
+ 306 0164 B3FBF2F3 		udiv	r3, r3, r2
+ 307 0168 0193     		str	r3, [sp, #4]
+ 308              	.L49:
+ 309              		.syntax unified
+ 310              	@ 375 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 311 016a 00BF     		nop
+ 312              	@ 0 "" 2
+ 313              		.thumb
+ 314              		.syntax unified
+ 315 016c 019B     		ldr	r3, [sp, #4]
+ 316 016e 5A1E     		subs	r2, r3, #1
+ 317 0170 0192     		str	r2, [sp, #4]
+ 318 0172 002B     		cmp	r3, #0
+ 319 0174 F9D1     		bne	.L49
+ 320 0176 50E7     		b	.L50
+ 321              	.L48:
+ 322 0178 FFF7FEFF 		bl	HAL_GetTick
+ 323 017c 801B     		subs	r0, r0, r6
+ 324 017e 0228     		cmp	r0, #2
+ 325 0180 E9D9     		bls	.L47
+ 326 0182 7FE7     		b	.L31
+ 327              	.L46:
+ 328 0184 1A60     		str	r2, [r3]
+ 329 0186 FFF7FEFF 		bl	HAL_GetTick
+ 330 018a 0646     		mov	r6, r0
+ 331              	.L51:
+ 332 018c 636A     		ldr	r3, [r4, #36]
+ 333 018e 9F07     		lsls	r7, r3, #30
+ 334 0190 7FF543AF 		bpl	.L50
+ 335 0194 FFF7FEFF 		bl	HAL_GetTick
+ 336 0198 801B     		subs	r0, r0, r6
+ 337 019a 0228     		cmp	r0, #2
+ 338 019c F6D9     		bls	.L51
+ 339 019e 71E7     		b	.L31
+ 340              	.L44:
+ 341 01a0 334C     		ldr	r4, .L108
+ 342 01a2 E369     		ldr	r3, [r4, #28]
+ 343 01a4 D800     		lsls	r0, r3, #3
+ 344 01a6 24D4     		bmi	.L80
+ 345 01a8 0127     		movs	r7, #1
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 7
+
+
+ 346 01aa E369     		ldr	r3, [r4, #28]
+ 347 01ac 43F08053 		orr	r3, r3, #268435456
+ 348 01b0 E361     		str	r3, [r4, #28]
+ 349 01b2 E369     		ldr	r3, [r4, #28]
+ 350 01b4 03F08053 		and	r3, r3, #268435456
+ 351 01b8 0093     		str	r3, [sp]
+ 352 01ba 009B     		ldr	r3, [sp]
+ 353              	.L54:
+ 354 01bc 304E     		ldr	r6, .L108+16
+ 355 01be 3368     		ldr	r3, [r6]
+ 356 01c0 D905     		lsls	r1, r3, #23
+ 357 01c2 18D5     		bpl	.L55
+ 358              	.L60:
+ 359 01c4 EB68     		ldr	r3, [r5, #12]
+ 360 01c6 012B     		cmp	r3, #1
+ 361 01c8 26D1     		bne	.L102
+ 362              	.L107:
+ 363 01ca 236A     		ldr	r3, [r4, #32]
+ 364 01cc 43F00103 		orr	r3, r3, #1
+ 365              	.L105:
+ 366 01d0 2362     		str	r3, [r4, #32]
+ 367 01d2 FFF7FEFF 		bl	HAL_GetTick
+ 368 01d6 41F28836 		movw	r6, #5000
+ 369 01da 8046     		mov	r8, r0
+ 370              	.L79:
+ 371 01dc 236A     		ldr	r3, [r4, #32]
+ 372 01de 9B07     		lsls	r3, r3, #30
+ 373 01e0 3FD5     		bpl	.L65
+ 374              	.L68:
+ 375 01e2 002F     		cmp	r7, #0
+ 376 01e4 3FF41DAF 		beq	.L53
+ 377 01e8 E369     		ldr	r3, [r4, #28]
+ 378 01ea 23F08053 		bic	r3, r3, #268435456
+ 379 01ee E361     		str	r3, [r4, #28]
+ 380 01f0 17E7     		b	.L53
+ 381              	.L80:
+ 382 01f2 0027     		movs	r7, #0
+ 383 01f4 E2E7     		b	.L54
+ 384              	.L55:
+ 385 01f6 3368     		ldr	r3, [r6]
+ 386 01f8 43F48073 		orr	r3, r3, #256
+ 387 01fc 3360     		str	r3, [r6]
+ 388 01fe FFF7FEFF 		bl	HAL_GetTick
+ 389 0202 8046     		mov	r8, r0
+ 390              	.L58:
+ 391 0204 3368     		ldr	r3, [r6]
+ 392 0206 DA05     		lsls	r2, r3, #23
+ 393 0208 DCD4     		bmi	.L60
+ 394 020a FFF7FEFF 		bl	HAL_GetTick
+ 395 020e A0EB0800 		sub	r0, r0, r8
+ 396 0212 6428     		cmp	r0, #100
+ 397 0214 F6D9     		bls	.L58
+ 398 0216 35E7     		b	.L31
+ 399              	.L102:
+ 400 0218 ABB9     		cbnz	r3, .L62
+ 401 021a 236A     		ldr	r3, [r4, #32]
+ 402 021c 41F28838 		movw	r8, #5000
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 8
+
+
+ 403 0220 23F00103 		bic	r3, r3, #1
+ 404 0224 2362     		str	r3, [r4, #32]
+ 405 0226 236A     		ldr	r3, [r4, #32]
+ 406 0228 23F00403 		bic	r3, r3, #4
+ 407 022c 2362     		str	r3, [r4, #32]
+ 408 022e FFF7FEFF 		bl	HAL_GetTick
+ 409 0232 0646     		mov	r6, r0
+ 410              	.L63:
+ 411 0234 236A     		ldr	r3, [r4, #32]
+ 412 0236 9807     		lsls	r0, r3, #30
+ 413 0238 D3D5     		bpl	.L68
+ 414 023a FFF7FEFF 		bl	HAL_GetTick
+ 415 023e 801B     		subs	r0, r0, r6
+ 416 0240 4045     		cmp	r0, r8
+ 417 0242 F7D9     		bls	.L63
+ 418 0244 1EE7     		b	.L31
+ 419              	.L62:
+ 420 0246 052B     		cmp	r3, #5
+ 421 0248 236A     		ldr	r3, [r4, #32]
+ 422 024a 03D1     		bne	.L64
+ 423 024c 43F00403 		orr	r3, r3, #4
+ 424 0250 2362     		str	r3, [r4, #32]
+ 425 0252 BAE7     		b	.L107
+ 426              	.L64:
+ 427 0254 23F00103 		bic	r3, r3, #1
+ 428 0258 2362     		str	r3, [r4, #32]
+ 429 025a 236A     		ldr	r3, [r4, #32]
+ 430 025c 23F00403 		bic	r3, r3, #4
+ 431 0260 B6E7     		b	.L105
+ 432              	.L65:
+ 433 0262 FFF7FEFF 		bl	HAL_GetTick
+ 434 0266 A0EB0800 		sub	r0, r0, r8
+ 435 026a B042     		cmp	r0, r6
+ 436 026c B6D9     		bls	.L79
+ 437 026e 09E7     		b	.L31
+ 438              	.L109:
+ 439              		.align	2
+ 440              	.L108:
+ 441 0270 00100240 		.word	1073876992
+ 442 0274 00004242 		.word	1111621632
+ 443 0278 80044242 		.word	1111622784
+ 444 027c 00000000 		.word	SystemCoreClock
+ 445 0280 00700040 		.word	1073770496
+ 446              	.L69:
+ 447 0284 224C     		ldr	r4, .L110
+ 448 0286 6368     		ldr	r3, [r4, #4]
+ 449 0288 03F00C03 		and	r3, r3, #12
+ 450 028c 082B     		cmp	r3, #8
+ 451 028e 3FF4E2AE 		beq	.L37
+ 452 0292 0023     		movs	r3, #0
+ 453 0294 1F4E     		ldr	r6, .L110+4
+ 454 0296 022A     		cmp	r2, #2
+ 455 0298 3360     		str	r3, [r6]
+ 456 029a 2BD1     		bne	.L70
+ 457 029c FFF7FEFF 		bl	HAL_GetTick
+ 458 02a0 0746     		mov	r7, r0
+ 459              	.L71:
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 9
+
+
+ 460 02a2 2368     		ldr	r3, [r4]
+ 461 02a4 9901     		lsls	r1, r3, #6
+ 462 02a6 1FD4     		bmi	.L72
+ 463 02a8 2B6A     		ldr	r3, [r5, #32]
+ 464 02aa B3F5803F 		cmp	r3, #65536
+ 465 02ae 05D1     		bne	.L73
+ 466 02b0 6268     		ldr	r2, [r4, #4]
+ 467 02b2 A968     		ldr	r1, [r5, #8]
+ 468 02b4 22F40032 		bic	r2, r2, #131072
+ 469 02b8 0A43     		orrs	r2, r2, r1
+ 470 02ba 6260     		str	r2, [r4, #4]
+ 471              	.L73:
+ 472 02bc 696A     		ldr	r1, [r5, #36]
+ 473 02be 6268     		ldr	r2, [r4, #4]
+ 474 02c0 0B43     		orrs	r3, r3, r1
+ 475 02c2 22F47412 		bic	r2, r2, #3997696
+ 476 02c6 1343     		orrs	r3, r3, r2
+ 477 02c8 6360     		str	r3, [r4, #4]
+ 478 02ca 0123     		movs	r3, #1
+ 479 02cc 3360     		str	r3, [r6]
+ 480 02ce FFF7FEFF 		bl	HAL_GetTick
+ 481 02d2 0546     		mov	r5, r0
+ 482              	.L74:
+ 483 02d4 2368     		ldr	r3, [r4]
+ 484 02d6 9A01     		lsls	r2, r3, #6
+ 485 02d8 3FF5A7AE 		bmi	.L76
+ 486 02dc FFF7FEFF 		bl	HAL_GetTick
+ 487 02e0 401B     		subs	r0, r0, r5
+ 488 02e2 0228     		cmp	r0, #2
+ 489 02e4 F6D9     		bls	.L74
+ 490 02e6 CDE6     		b	.L31
+ 491              	.L72:
+ 492 02e8 FFF7FEFF 		bl	HAL_GetTick
+ 493 02ec C01B     		subs	r0, r0, r7
+ 494 02ee 0228     		cmp	r0, #2
+ 495 02f0 D7D9     		bls	.L71
+ 496 02f2 C7E6     		b	.L31
+ 497              	.L70:
+ 498 02f4 FFF7FEFF 		bl	HAL_GetTick
+ 499 02f8 0546     		mov	r5, r0
+ 500              	.L77:
+ 501 02fa 2368     		ldr	r3, [r4]
+ 502 02fc 9B01     		lsls	r3, r3, #6
+ 503 02fe 7FF594AE 		bpl	.L76
+ 504 0302 FFF7FEFF 		bl	HAL_GetTick
+ 505 0306 401B     		subs	r0, r0, r5
+ 506 0308 0228     		cmp	r0, #2
+ 507 030a F6D9     		bls	.L77
+ 508 030c BAE6     		b	.L31
+ 509              	.L111:
+ 510 030e 00BF     		.align	2
+ 511              	.L110:
+ 512 0310 00100240 		.word	1073876992
+ 513 0314 60004242 		.word	1111621728
+ 515              		.section	.text.HAL_RCC_MCOConfig,"ax",%progbits
+ 516              		.align	1
+ 517              		.global	HAL_RCC_MCOConfig
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 10
+
+
+ 518              		.syntax unified
+ 519              		.thumb
+ 520              		.thumb_func
+ 521              		.fpu softvfp
+ 523              	HAL_RCC_MCOConfig:
+ 524              		@ args = 0, pretend = 0, frame = 24
+ 525              		@ frame_needed = 0, uses_anonymous_args = 0
+ 526 0000 0022     		movs	r2, #0
+ 527 0002 0223     		movs	r3, #2
+ 528 0004 30B5     		push	{r4, r5, lr}
+ 529 0006 87B0     		sub	sp, sp, #28
+ 530 0008 CDE90332 		strd	r3, r2, [sp, #12]
+ 531 000c 0323     		movs	r3, #3
+ 532 000e 0593     		str	r3, [sp, #20]
+ 533 0010 4FF48073 		mov	r3, #256
+ 534 0014 0B4C     		ldr	r4, .L113
+ 535 0016 0293     		str	r3, [sp, #8]
+ 536 0018 A369     		ldr	r3, [r4, #24]
+ 537 001a 0D46     		mov	r5, r1
+ 538 001c 43F00403 		orr	r3, r3, #4
+ 539 0020 A361     		str	r3, [r4, #24]
+ 540 0022 A369     		ldr	r3, [r4, #24]
+ 541 0024 02A9     		add	r1, sp, #8
+ 542 0026 03F00403 		and	r3, r3, #4
+ 543 002a 0193     		str	r3, [sp, #4]
+ 544 002c 0648     		ldr	r0, .L113+4
+ 545 002e 019B     		ldr	r3, [sp, #4]
+ 546 0030 FFF7FEFF 		bl	HAL_GPIO_Init
+ 547 0034 6168     		ldr	r1, [r4, #4]
+ 548 0036 21F0E061 		bic	r1, r1, #117440512
+ 549 003a 2943     		orrs	r1, r1, r5
+ 550 003c 6160     		str	r1, [r4, #4]
+ 551 003e 07B0     		add	sp, sp, #28
+ 552              		@ sp needed
+ 553 0040 30BD     		pop	{r4, r5, pc}
+ 554              	.L114:
+ 555 0042 00BF     		.align	2
+ 556              	.L113:
+ 557 0044 00100240 		.word	1073876992
+ 558 0048 00080140 		.word	1073809408
+ 560              		.section	.text.HAL_RCC_EnableCSS,"ax",%progbits
+ 561              		.align	1
+ 562              		.global	HAL_RCC_EnableCSS
+ 563              		.syntax unified
+ 564              		.thumb
+ 565              		.thumb_func
+ 566              		.fpu softvfp
+ 568              	HAL_RCC_EnableCSS:
+ 569              		@ args = 0, pretend = 0, frame = 0
+ 570              		@ frame_needed = 0, uses_anonymous_args = 0
+ 571              		@ link register save eliminated.
+ 572 0000 0122     		movs	r2, #1
+ 573 0002 014B     		ldr	r3, .L116
+ 574 0004 1A60     		str	r2, [r3]
+ 575 0006 7047     		bx	lr
+ 576              	.L117:
+ 577              		.align	2
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 11
+
+
+ 578              	.L116:
+ 579 0008 4C004242 		.word	1111621708
+ 581              		.section	.text.HAL_RCC_DisableCSS,"ax",%progbits
+ 582              		.align	1
+ 583              		.global	HAL_RCC_DisableCSS
+ 584              		.syntax unified
+ 585              		.thumb
+ 586              		.thumb_func
+ 587              		.fpu softvfp
+ 589              	HAL_RCC_DisableCSS:
+ 590              		@ args = 0, pretend = 0, frame = 0
+ 591              		@ frame_needed = 0, uses_anonymous_args = 0
+ 592              		@ link register save eliminated.
+ 593 0000 0022     		movs	r2, #0
+ 594 0002 014B     		ldr	r3, .L119
+ 595 0004 1A60     		str	r2, [r3]
+ 596 0006 7047     		bx	lr
+ 597              	.L120:
+ 598              		.align	2
+ 599              	.L119:
+ 600 0008 4C004242 		.word	1111621708
+ 602              		.section	.text.HAL_RCC_GetSysClockFreq,"ax",%progbits
+ 603              		.align	1
+ 604              		.global	HAL_RCC_GetSysClockFreq
+ 605              		.syntax unified
+ 606              		.thumb
+ 607              		.thumb_func
+ 608              		.fpu softvfp
+ 610              	HAL_RCC_GetSysClockFreq:
+ 611              		@ args = 0, pretend = 0, frame = 24
+ 612              		@ frame_needed = 0, uses_anonymous_args = 0
+ 613 0000 30B5     		push	{r4, r5, lr}
+ 614 0002 184B     		ldr	r3, .L129
+ 615 0004 87B0     		sub	sp, sp, #28
+ 616 0006 02AC     		add	r4, sp, #8
+ 617 0008 03F11005 		add	r5, r3, #16
+ 618              	.L122:
+ 619 000c 2246     		mov	r2, r4
+ 620 000e 1868     		ldr	r0, [r3]	@ unaligned
+ 621 0010 5968     		ldr	r1, [r3, #4]	@ unaligned
+ 622 0012 0833     		adds	r3, r3, #8
+ 623 0014 03C2     		stmia	r2!, {r0, r1}
+ 624 0016 AB42     		cmp	r3, r5
+ 625 0018 1446     		mov	r4, r2
+ 626 001a F7D1     		bne	.L122
+ 627 001c 40F20123 		movw	r3, #513
+ 628 0020 1149     		ldr	r1, .L129+4
+ 629 0022 ADF80430 		strh	r3, [sp, #4]	@ movhi
+ 630 0026 4B68     		ldr	r3, [r1, #4]
+ 631 0028 03F00C02 		and	r2, r3, #12
+ 632 002c 082A     		cmp	r2, #8
+ 633 002e 17D1     		bne	.L128
+ 634 0030 C3F38342 		ubfx	r2, r3, #18, #4
+ 635 0034 06A8     		add	r0, sp, #24
+ 636 0036 0244     		add	r2, r2, r0
+ 637 0038 DB03     		lsls	r3, r3, #15
+ 638 003a 12F8102C 		ldrb	r2, [r2, #-16]	@ zero_extendqisi2
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 12
+
+
+ 639 003e 0CD5     		bpl	.L125
+ 640 0040 4B68     		ldr	r3, [r1, #4]
+ 641 0042 0A48     		ldr	r0, .L129+8
+ 642 0044 C3F34043 		ubfx	r3, r3, #17, #1
+ 643 0048 5043     		muls	r0, r2, r0
+ 644 004a 06AA     		add	r2, sp, #24
+ 645 004c 1344     		add	r3, r3, r2
+ 646 004e 13F8143C 		ldrb	r3, [r3, #-20]	@ zero_extendqisi2
+ 647 0052 B0FBF3F0 		udiv	r0, r0, r3
+ 648              	.L121:
+ 649 0056 07B0     		add	sp, sp, #28
+ 650              		@ sp needed
+ 651 0058 30BD     		pop	{r4, r5, pc}
+ 652              	.L125:
+ 653 005a 0548     		ldr	r0, .L129+12
+ 654 005c 5043     		muls	r0, r2, r0
+ 655 005e FAE7     		b	.L121
+ 656              	.L128:
+ 657 0060 0248     		ldr	r0, .L129+8
+ 658 0062 F8E7     		b	.L121
+ 659              	.L130:
+ 660              		.align	2
+ 661              	.L129:
+ 662 0064 00000000 		.word	.LANCHOR0
+ 663 0068 00100240 		.word	1073876992
+ 664 006c 00127A00 		.word	8000000
+ 665 0070 00093D00 		.word	4000000
+ 667              		.section	.text.HAL_RCC_ClockConfig,"ax",%progbits
+ 668              		.align	1
+ 669              		.global	HAL_RCC_ClockConfig
+ 670              		.syntax unified
+ 671              		.thumb
+ 672              		.thumb_func
+ 673              		.fpu softvfp
+ 675              	HAL_RCC_ClockConfig:
+ 676              		@ args = 0, pretend = 0, frame = 0
+ 677              		@ frame_needed = 0, uses_anonymous_args = 0
+ 678 0000 4C4A     		ldr	r2, .L176
+ 679 0002 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 680 0006 1368     		ldr	r3, [r2]
+ 681 0008 0546     		mov	r5, r0
+ 682 000a 03F00703 		and	r3, r3, #7
+ 683 000e 8B42     		cmp	r3, r1
+ 684 0010 0E46     		mov	r6, r1
+ 685 0012 27D3     		bcc	.L132
+ 686              	.L135:
+ 687 0014 2A68     		ldr	r2, [r5]
+ 688 0016 9107     		lsls	r1, r2, #30
+ 689 0018 31D4     		bmi	.L133
+ 690              	.L134:
+ 691 001a D207     		lsls	r2, r2, #31
+ 692 001c 37D4     		bmi	.L137
+ 693              	.L147:
+ 694 001e 454A     		ldr	r2, .L176
+ 695 0020 1368     		ldr	r3, [r2]
+ 696 0022 03F00703 		and	r3, r3, #7
+ 697 0026 B342     		cmp	r3, r6
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 13
+
+
+ 698 0028 71D8     		bhi	.L138
+ 699              	.L139:
+ 700 002a 2A68     		ldr	r2, [r5]
+ 701 002c 424C     		ldr	r4, .L176+4
+ 702 002e 12F0040F 		tst	r2, #4
+ 703 0032 77D1     		bne	.L153
+ 704              	.L154:
+ 705 0034 1307     		lsls	r3, r2, #28
+ 706 0036 06D5     		bpl	.L155
+ 707 0038 6368     		ldr	r3, [r4, #4]
+ 708 003a 2A69     		ldr	r2, [r5, #16]
+ 709 003c 23F46053 		bic	r3, r3, #14336
+ 710 0040 43EAC203 		orr	r3, r3, r2, lsl #3
+ 711 0044 6360     		str	r3, [r4, #4]
+ 712              	.L155:
+ 713 0046 FFF7FEFF 		bl	HAL_RCC_GetSysClockFreq
+ 714 004a 6368     		ldr	r3, [r4, #4]
+ 715 004c 3B4A     		ldr	r2, .L176+8
+ 716 004e C3F30313 		ubfx	r3, r3, #4, #4
+ 717 0052 D35C     		ldrb	r3, [r2, r3]	@ zero_extendqisi2
+ 718 0054 D840     		lsrs	r0, r0, r3
+ 719 0056 3A4B     		ldr	r3, .L176+12
+ 720 0058 1860     		str	r0, [r3]
+ 721 005a 0020     		movs	r0, #0
+ 722 005c FFF7FEFF 		bl	HAL_InitTick
+ 723 0060 0020     		movs	r0, #0
+ 724 0062 0AE0     		b	.L136
+ 725              	.L132:
+ 726 0064 1368     		ldr	r3, [r2]
+ 727 0066 23F00703 		bic	r3, r3, #7
+ 728 006a 0B43     		orrs	r3, r3, r1
+ 729 006c 1360     		str	r3, [r2]
+ 730 006e 1368     		ldr	r3, [r2]
+ 731 0070 03F00703 		and	r3, r3, #7
+ 732 0074 8B42     		cmp	r3, r1
+ 733 0076 CDD0     		beq	.L135
+ 734              	.L141:
+ 735 0078 0120     		movs	r0, #1
+ 736              	.L136:
+ 737 007a BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 738              	.L133:
+ 739 007e 2E49     		ldr	r1, .L176+4
+ 740 0080 A868     		ldr	r0, [r5, #8]
+ 741 0082 4B68     		ldr	r3, [r1, #4]
+ 742 0084 23F0F003 		bic	r3, r3, #240
+ 743 0088 0343     		orrs	r3, r3, r0
+ 744 008a 4B60     		str	r3, [r1, #4]
+ 745 008c C5E7     		b	.L134
+ 746              	.L137:
+ 747 008e 6A68     		ldr	r2, [r5, #4]
+ 748 0090 294C     		ldr	r4, .L176+4
+ 749 0092 012A     		cmp	r2, #1
+ 750 0094 2368     		ldr	r3, [r4]
+ 751 0096 1BD1     		bne	.L140
+ 752 0098 13F4003F 		tst	r3, #131072
+ 753              	.L174:
+ 754 009c ECD0     		beq	.L141
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 14
+
+
+ 755 009e 6368     		ldr	r3, [r4, #4]
+ 756 00a0 41F28838 		movw	r8, #5000
+ 757 00a4 23F00303 		bic	r3, r3, #3
+ 758 00a8 1343     		orrs	r3, r3, r2
+ 759 00aa 6360     		str	r3, [r4, #4]
+ 760 00ac FFF7FEFF 		bl	HAL_GetTick
+ 761 00b0 6B68     		ldr	r3, [r5, #4]
+ 762 00b2 0746     		mov	r7, r0
+ 763 00b4 012B     		cmp	r3, #1
+ 764 00b6 13D1     		bne	.L171
+ 765              	.L144:
+ 766 00b8 6368     		ldr	r3, [r4, #4]
+ 767 00ba 03F00C03 		and	r3, r3, #12
+ 768 00be 042B     		cmp	r3, #4
+ 769 00c0 ADD0     		beq	.L147
+ 770 00c2 FFF7FEFF 		bl	HAL_GetTick
+ 771 00c6 C01B     		subs	r0, r0, r7
+ 772 00c8 4045     		cmp	r0, r8
+ 773 00ca F5D9     		bls	.L144
+ 774              	.L150:
+ 775 00cc 0320     		movs	r0, #3
+ 776 00ce D4E7     		b	.L136
+ 777              	.L140:
+ 778 00d0 022A     		cmp	r2, #2
+ 779 00d2 02D1     		bne	.L143
+ 780 00d4 13F0007F 		tst	r3, #33554432
+ 781 00d8 E0E7     		b	.L174
+ 782              	.L143:
+ 783 00da 13F0020F 		tst	r3, #2
+ 784 00de DDE7     		b	.L174
+ 785              	.L171:
+ 786 00e0 022B     		cmp	r3, #2
+ 787 00e2 0FD1     		bne	.L149
+ 788              	.L148:
+ 789 00e4 6368     		ldr	r3, [r4, #4]
+ 790 00e6 03F00C03 		and	r3, r3, #12
+ 791 00ea 082B     		cmp	r3, #8
+ 792 00ec 97D0     		beq	.L147
+ 793 00ee FFF7FEFF 		bl	HAL_GetTick
+ 794 00f2 C01B     		subs	r0, r0, r7
+ 795 00f4 4045     		cmp	r0, r8
+ 796 00f6 F5D9     		bls	.L148
+ 797 00f8 E8E7     		b	.L150
+ 798              	.L152:
+ 799 00fa FFF7FEFF 		bl	HAL_GetTick
+ 800 00fe C01B     		subs	r0, r0, r7
+ 801 0100 4045     		cmp	r0, r8
+ 802 0102 E3D8     		bhi	.L150
+ 803              	.L149:
+ 804 0104 6368     		ldr	r3, [r4, #4]
+ 805 0106 13F00C0F 		tst	r3, #12
+ 806 010a F6D1     		bne	.L152
+ 807 010c 87E7     		b	.L147
+ 808              	.L138:
+ 809 010e 1368     		ldr	r3, [r2]
+ 810 0110 23F00703 		bic	r3, r3, #7
+ 811 0114 3343     		orrs	r3, r3, r6
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 15
+
+
+ 812 0116 1360     		str	r3, [r2]
+ 813 0118 1368     		ldr	r3, [r2]
+ 814 011a 03F00703 		and	r3, r3, #7
+ 815 011e B342     		cmp	r3, r6
+ 816 0120 AAD1     		bne	.L141
+ 817 0122 82E7     		b	.L139
+ 818              	.L153:
+ 819 0124 6368     		ldr	r3, [r4, #4]
+ 820 0126 E968     		ldr	r1, [r5, #12]
+ 821 0128 23F4E063 		bic	r3, r3, #1792
+ 822 012c 0B43     		orrs	r3, r3, r1
+ 823 012e 6360     		str	r3, [r4, #4]
+ 824 0130 80E7     		b	.L154
+ 825              	.L177:
+ 826 0132 00BF     		.align	2
+ 827              	.L176:
+ 828 0134 00200240 		.word	1073881088
+ 829 0138 00100240 		.word	1073876992
+ 830 013c 00000000 		.word	AHBPrescTable
+ 831 0140 00000000 		.word	SystemCoreClock
+ 833              		.section	.text.HAL_RCC_GetHCLKFreq,"ax",%progbits
+ 834              		.align	1
+ 835              		.global	HAL_RCC_GetHCLKFreq
+ 836              		.syntax unified
+ 837              		.thumb
+ 838              		.thumb_func
+ 839              		.fpu softvfp
+ 841              	HAL_RCC_GetHCLKFreq:
+ 842              		@ args = 0, pretend = 0, frame = 0
+ 843              		@ frame_needed = 0, uses_anonymous_args = 0
+ 844              		@ link register save eliminated.
+ 845 0000 014B     		ldr	r3, .L179
+ 846 0002 1868     		ldr	r0, [r3]
+ 847 0004 7047     		bx	lr
+ 848              	.L180:
+ 849 0006 00BF     		.align	2
+ 850              	.L179:
+ 851 0008 00000000 		.word	SystemCoreClock
+ 853              		.section	.text.HAL_RCC_GetPCLK1Freq,"ax",%progbits
+ 854              		.align	1
+ 855              		.global	HAL_RCC_GetPCLK1Freq
+ 856              		.syntax unified
+ 857              		.thumb
+ 858              		.thumb_func
+ 859              		.fpu softvfp
+ 861              	HAL_RCC_GetPCLK1Freq:
+ 862              		@ args = 0, pretend = 0, frame = 0
+ 863              		@ frame_needed = 0, uses_anonymous_args = 0
+ 864              		@ link register save eliminated.
+ 865 0000 044B     		ldr	r3, .L182
+ 866 0002 054A     		ldr	r2, .L182+4
+ 867 0004 5B68     		ldr	r3, [r3, #4]
+ 868 0006 C3F30223 		ubfx	r3, r3, #8, #3
+ 869 000a D35C     		ldrb	r3, [r2, r3]	@ zero_extendqisi2
+ 870 000c 034A     		ldr	r2, .L182+8
+ 871 000e 1068     		ldr	r0, [r2]
+ 872 0010 D840     		lsrs	r0, r0, r3
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 16
+
+
+ 873 0012 7047     		bx	lr
+ 874              	.L183:
+ 875              		.align	2
+ 876              	.L182:
+ 877 0014 00100240 		.word	1073876992
+ 878 0018 00000000 		.word	APBPrescTable
+ 879 001c 00000000 		.word	SystemCoreClock
+ 881              		.section	.text.HAL_RCC_GetPCLK2Freq,"ax",%progbits
+ 882              		.align	1
+ 883              		.global	HAL_RCC_GetPCLK2Freq
+ 884              		.syntax unified
+ 885              		.thumb
+ 886              		.thumb_func
+ 887              		.fpu softvfp
+ 889              	HAL_RCC_GetPCLK2Freq:
+ 890              		@ args = 0, pretend = 0, frame = 0
+ 891              		@ frame_needed = 0, uses_anonymous_args = 0
+ 892              		@ link register save eliminated.
+ 893 0000 044B     		ldr	r3, .L185
+ 894 0002 054A     		ldr	r2, .L185+4
+ 895 0004 5B68     		ldr	r3, [r3, #4]
+ 896 0006 C3F3C223 		ubfx	r3, r3, #11, #3
+ 897 000a D35C     		ldrb	r3, [r2, r3]	@ zero_extendqisi2
+ 898 000c 034A     		ldr	r2, .L185+8
+ 899 000e 1068     		ldr	r0, [r2]
+ 900 0010 D840     		lsrs	r0, r0, r3
+ 901 0012 7047     		bx	lr
+ 902              	.L186:
+ 903              		.align	2
+ 904              	.L185:
+ 905 0014 00100240 		.word	1073876992
+ 906 0018 00000000 		.word	APBPrescTable
+ 907 001c 00000000 		.word	SystemCoreClock
+ 909              		.section	.text.HAL_RCC_GetOscConfig,"ax",%progbits
+ 910              		.align	1
+ 911              		.global	HAL_RCC_GetOscConfig
+ 912              		.syntax unified
+ 913              		.thumb
+ 914              		.thumb_func
+ 915              		.fpu softvfp
+ 917              	HAL_RCC_GetOscConfig:
+ 918              		@ args = 0, pretend = 0, frame = 0
+ 919              		@ frame_needed = 0, uses_anonymous_args = 0
+ 920              		@ link register save eliminated.
+ 921 0000 0F23     		movs	r3, #15
+ 922 0002 0360     		str	r3, [r0]
+ 923 0004 1D4B     		ldr	r3, .L201
+ 924 0006 1A68     		ldr	r2, [r3]
+ 925 0008 5203     		lsls	r2, r2, #13
+ 926 000a 2AD5     		bpl	.L188
+ 927 000c 4FF4A022 		mov	r2, #327680
+ 928              	.L190:
+ 929 0010 4260     		str	r2, [r0, #4]
+ 930 0012 5A68     		ldr	r2, [r3, #4]
+ 931 0014 02F40032 		and	r2, r2, #131072
+ 932 0018 8260     		str	r2, [r0, #8]
+ 933 001a 1A68     		ldr	r2, [r3]
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 17
+
+
+ 934 001c 12F00102 		ands	r2, r2, #1
+ 935 0020 18BF     		it	ne
+ 936 0022 0122     		movne	r2, #1
+ 937 0024 0261     		str	r2, [r0, #16]
+ 938 0026 1A68     		ldr	r2, [r3]
+ 939 0028 C2F3C402 		ubfx	r2, r2, #3, #5
+ 940 002c 4261     		str	r2, [r0, #20]
+ 941 002e 1A6A     		ldr	r2, [r3, #32]
+ 942 0030 5107     		lsls	r1, r2, #29
+ 943 0032 1DD5     		bpl	.L193
+ 944 0034 0522     		movs	r2, #5
+ 945              	.L195:
+ 946 0036 C260     		str	r2, [r0, #12]
+ 947 0038 5A6A     		ldr	r2, [r3, #36]
+ 948 003a 12F00102 		ands	r2, r2, #1
+ 949 003e 18BF     		it	ne
+ 950 0040 0122     		movne	r2, #1
+ 951 0042 8261     		str	r2, [r0, #24]
+ 952 0044 1A68     		ldr	r2, [r3]
+ 953 0046 D201     		lsls	r2, r2, #7
+ 954 0048 4CBF     		ite	mi
+ 955 004a 0222     		movmi	r2, #2
+ 956 004c 0122     		movpl	r2, #1
+ 957 004e C261     		str	r2, [r0, #28]
+ 958 0050 5A68     		ldr	r2, [r3, #4]
+ 959 0052 02F48032 		and	r2, r2, #65536
+ 960 0056 0262     		str	r2, [r0, #32]
+ 961 0058 5B68     		ldr	r3, [r3, #4]
+ 962 005a 03F47013 		and	r3, r3, #3932160
+ 963 005e 4362     		str	r3, [r0, #36]
+ 964 0060 7047     		bx	lr
+ 965              	.L188:
+ 966 0062 1A68     		ldr	r2, [r3]
+ 967 0064 12F48032 		ands	r2, r2, #65536
+ 968 0068 18BF     		it	ne
+ 969 006a 4FF48032 		movne	r2, #65536
+ 970 006e CFE7     		b	.L190
+ 971              	.L193:
+ 972 0070 1A6A     		ldr	r2, [r3, #32]
+ 973 0072 12F00102 		ands	r2, r2, #1
+ 974 0076 18BF     		it	ne
+ 975 0078 0122     		movne	r2, #1
+ 976 007a DCE7     		b	.L195
+ 977              	.L202:
+ 978              		.align	2
+ 979              	.L201:
+ 980 007c 00100240 		.word	1073876992
+ 982              		.section	.text.HAL_RCC_GetClockConfig,"ax",%progbits
+ 983              		.align	1
+ 984              		.global	HAL_RCC_GetClockConfig
+ 985              		.syntax unified
+ 986              		.thumb
+ 987              		.thumb_func
+ 988              		.fpu softvfp
+ 990              	HAL_RCC_GetClockConfig:
+ 991              		@ args = 0, pretend = 0, frame = 0
+ 992              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 18
+
+
+ 993              		@ link register save eliminated.
+ 994 0000 0F23     		movs	r3, #15
+ 995 0002 0360     		str	r3, [r0]
+ 996 0004 0B4B     		ldr	r3, .L204
+ 997 0006 5A68     		ldr	r2, [r3, #4]
+ 998 0008 02F00302 		and	r2, r2, #3
+ 999 000c 4260     		str	r2, [r0, #4]
+ 1000 000e 5A68     		ldr	r2, [r3, #4]
+ 1001 0010 02F0F002 		and	r2, r2, #240
+ 1002 0014 8260     		str	r2, [r0, #8]
+ 1003 0016 5A68     		ldr	r2, [r3, #4]
+ 1004 0018 02F4E062 		and	r2, r2, #1792
+ 1005 001c C260     		str	r2, [r0, #12]
+ 1006 001e 5B68     		ldr	r3, [r3, #4]
+ 1007 0020 DB08     		lsrs	r3, r3, #3
+ 1008 0022 03F4E063 		and	r3, r3, #1792
+ 1009 0026 0361     		str	r3, [r0, #16]
+ 1010 0028 034B     		ldr	r3, .L204+4
+ 1011 002a 1B68     		ldr	r3, [r3]
+ 1012 002c 03F00703 		and	r3, r3, #7
+ 1013 0030 0B60     		str	r3, [r1]
+ 1014 0032 7047     		bx	lr
+ 1015              	.L205:
+ 1016              		.align	2
+ 1017              	.L204:
+ 1018 0034 00100240 		.word	1073876992
+ 1019 0038 00200240 		.word	1073881088
+ 1021              		.section	.text.HAL_RCC_CSSCallback,"ax",%progbits
+ 1022              		.align	1
+ 1023              		.weak	HAL_RCC_CSSCallback
+ 1024              		.syntax unified
+ 1025              		.thumb
+ 1026              		.thumb_func
+ 1027              		.fpu softvfp
+ 1029              	HAL_RCC_CSSCallback:
+ 1030              		@ args = 0, pretend = 0, frame = 0
+ 1031              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1032              		@ link register save eliminated.
+ 1033 0000 7047     		bx	lr
+ 1035              		.section	.text.HAL_RCC_NMI_IRQHandler,"ax",%progbits
+ 1036              		.align	1
+ 1037              		.global	HAL_RCC_NMI_IRQHandler
+ 1038              		.syntax unified
+ 1039              		.thumb
+ 1040              		.thumb_func
+ 1041              		.fpu softvfp
+ 1043              	HAL_RCC_NMI_IRQHandler:
+ 1044              		@ args = 0, pretend = 0, frame = 0
+ 1045              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1046 0000 08B5     		push	{r3, lr}
+ 1047 0002 054B     		ldr	r3, .L212
+ 1048 0004 9B68     		ldr	r3, [r3, #8]
+ 1049 0006 1B06     		lsls	r3, r3, #24
+ 1050 0008 04D5     		bpl	.L207
+ 1051 000a FFF7FEFF 		bl	HAL_RCC_CSSCallback
+ 1052 000e 8022     		movs	r2, #128
+ 1053 0010 024B     		ldr	r3, .L212+4
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 19
+
+
+ 1054 0012 1A70     		strb	r2, [r3]
+ 1055              	.L207:
+ 1056 0014 08BD     		pop	{r3, pc}
+ 1057              	.L213:
+ 1058 0016 00BF     		.align	2
+ 1059              	.L212:
+ 1060 0018 00100240 		.word	1073876992
+ 1061 001c 0A100240 		.word	1073877002
+ 1063              		.section	.rodata
+ 1064              		.set	.LANCHOR0,. + 0
+ 1065              	.LC0:
+ 1066 0000 02       		.byte	2
+ 1067 0001 03       		.byte	3
+ 1068 0002 04       		.byte	4
+ 1069 0003 05       		.byte	5
+ 1070 0004 06       		.byte	6
+ 1071 0005 07       		.byte	7
+ 1072 0006 08       		.byte	8
+ 1073 0007 09       		.byte	9
+ 1074 0008 0A       		.byte	10
+ 1075 0009 0B       		.byte	11
+ 1076 000a 0C       		.byte	12
+ 1077 000b 0D       		.byte	13
+ 1078 000c 0E       		.byte	14
+ 1079 000d 0F       		.byte	15
+ 1080 000e 10       		.byte	16
+ 1081 000f 10       		.byte	16
+ 1082              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s 			page 20
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f1xx_hal_rcc.c
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:13     .text.HAL_RCC_DeInit:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:20     .text.HAL_RCC_DeInit:00000000 HAL_RCC_DeInit
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:115    .text.HAL_RCC_DeInit:000000c4 $d
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:120    .text.HAL_RCC_OscConfig:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:127    .text.HAL_RCC_OscConfig:00000000 HAL_RCC_OscConfig
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:441    .text.HAL_RCC_OscConfig:00000270 $d
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:447    .text.HAL_RCC_OscConfig:00000284 $t
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:512    .text.HAL_RCC_OscConfig:00000310 $d
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:516    .text.HAL_RCC_MCOConfig:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:523    .text.HAL_RCC_MCOConfig:00000000 HAL_RCC_MCOConfig
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:557    .text.HAL_RCC_MCOConfig:00000044 $d
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:561    .text.HAL_RCC_EnableCSS:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:568    .text.HAL_RCC_EnableCSS:00000000 HAL_RCC_EnableCSS
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:579    .text.HAL_RCC_EnableCSS:00000008 $d
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:582    .text.HAL_RCC_DisableCSS:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:589    .text.HAL_RCC_DisableCSS:00000000 HAL_RCC_DisableCSS
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:600    .text.HAL_RCC_DisableCSS:00000008 $d
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:603    .text.HAL_RCC_GetSysClockFreq:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:610    .text.HAL_RCC_GetSysClockFreq:00000000 HAL_RCC_GetSysClockFreq
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:662    .text.HAL_RCC_GetSysClockFreq:00000064 $d
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:668    .text.HAL_RCC_ClockConfig:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:675    .text.HAL_RCC_ClockConfig:00000000 HAL_RCC_ClockConfig
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:828    .text.HAL_RCC_ClockConfig:00000134 $d
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:834    .text.HAL_RCC_GetHCLKFreq:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:841    .text.HAL_RCC_GetHCLKFreq:00000000 HAL_RCC_GetHCLKFreq
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:851    .text.HAL_RCC_GetHCLKFreq:00000008 $d
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:854    .text.HAL_RCC_GetPCLK1Freq:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:861    .text.HAL_RCC_GetPCLK1Freq:00000000 HAL_RCC_GetPCLK1Freq
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:877    .text.HAL_RCC_GetPCLK1Freq:00000014 $d
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:882    .text.HAL_RCC_GetPCLK2Freq:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:889    .text.HAL_RCC_GetPCLK2Freq:00000000 HAL_RCC_GetPCLK2Freq
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:905    .text.HAL_RCC_GetPCLK2Freq:00000014 $d
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:910    .text.HAL_RCC_GetOscConfig:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:917    .text.HAL_RCC_GetOscConfig:00000000 HAL_RCC_GetOscConfig
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:980    .text.HAL_RCC_GetOscConfig:0000007c $d
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:983    .text.HAL_RCC_GetClockConfig:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:990    .text.HAL_RCC_GetClockConfig:00000000 HAL_RCC_GetClockConfig
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:1018   .text.HAL_RCC_GetClockConfig:00000034 $d
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:1022   .text.HAL_RCC_CSSCallback:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:1029   .text.HAL_RCC_CSSCallback:00000000 HAL_RCC_CSSCallback
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:1036   .text.HAL_RCC_NMI_IRQHandler:00000000 $t
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:1043   .text.HAL_RCC_NMI_IRQHandler:00000000 HAL_RCC_NMI_IRQHandler
+C:\Users\Qian\AppData\Local\Temp\ccwGmZTc.s:1060   .text.HAL_RCC_NMI_IRQHandler:00000018 $d
+
+UNDEFINED SYMBOLS
+HAL_GetTick
+HAL_InitTick
+SystemCoreClock
+HAL_GPIO_Init
+AHBPrescTable
+APBPrescTable
