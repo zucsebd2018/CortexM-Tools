@@ -60,7 +60,7 @@ HAL is short for "Hardware Abstraction Layer", which represents the closest leve
 
 All of these configuration functions are in the Hal directories and all of these functions are defined **dependent** on specific hardwares. All of the hardware has the same interface but with different implementation.
 
-![1](D:\ljh\Files\C3\Embedded System\Experiment\W4\img\001.png)
+![1](img/001.png)
 
 We check the directory **"targets/TARGET_STM/TARGET_STM32F1"**, and go into "**serial_api.h**".
 
