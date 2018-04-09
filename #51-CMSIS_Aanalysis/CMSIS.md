@@ -4,7 +4,7 @@ All the CMSIS functions are packed in a .pack file. Then we need a software/tool
 
 Then we will talk about the **CMSIS**, it is just a single part of the tool chains but not all of them.
 
-![5](img\014.png)
+![5](img/014.png)
 
 
 
@@ -12,7 +12,7 @@ Then we will talk about the **CMSIS**, it is just a single part of the tool chai
 
 CMSIS is short for **The Cortex Microcontroller Software Interface Standard**. It provides a ground-up software framework for embedded applications that run on Cortex-M based microcontrollers. You can download the .pack file or the source code of the latest version of CMSIS [here][https://github.com/ARM-software/CMSIS_5/releases/tag/5.3.0].
 
-![1523254466551](img\017.png)
+![1523254466551](img/017.png)
 
 - **CMSIS-CORE**：提供与 Cortex-M0、Cortex-M3、Cortex-M4、SC000 和 SC300 处理器与外围寄存器之间的接口
 - CMSIS-DSP：包含以定点（分数 q7、q15、q31）和单精度浮点（32 位）实现的 60 多种函数的 DSP 库
