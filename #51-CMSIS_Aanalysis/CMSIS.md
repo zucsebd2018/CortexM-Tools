@@ -358,12 +358,12 @@ void mySPI_Thread(void const* arg)
 2. Run **CMSIS\Utilities\gen_pack.bat**
 3. If it says there is no command named "xcopy", then add **Windows\System32** to the **PATH** environment variable
 
-![15213625](img\004.png)
+![15213625](img/004.png)
 
 4. Wait for the **.bat** to dealing with the documents
 
-![523197448406](img\005.png)
+![523197448406](img/005.png)
 
 5. The **.pack** file is generated at \Local_Release directory.
 
-![1523235498952](img\009.png)
+![1523235498952](img/009.png)
