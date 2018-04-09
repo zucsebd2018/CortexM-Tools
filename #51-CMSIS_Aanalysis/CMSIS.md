@@ -1,6 +1,6 @@
 ### Product Components
 
-All the CMSIS functions are packed in a .pack file. Then we need a software/toolchain to take advantage of the .pack file and its name is $$\mu$$**Vision IDE**. You can download $$\mu$$**Vision IDE** http://www.keil.com/mdk5/install. The software is briefly introduced at http://www2.keil.com/mdk5.
+All the CMSIS functions are packed in a .pack file. Then we need a software/toolchain to take advantage of the .pack file and its name is $$\mu$$**Vision IDE**. You can download $$\mu$$**Vision IDE** at http://www.keil.com/mdk5/install. The software is briefly introduced at http://www2.keil.com/mdk5.
 
 Then we will talk about the **CMSIS**, it is just a single part of the tool chains but not all of them.
 
@@ -10,7 +10,7 @@ Then we will talk about the **CMSIS**, it is just a single part of the tool chai
 
 ### Components of CMSIS
 
-CMSIS is short for **The Cortex Microcontroller Software Interface Standard**. It provides a ground-up software framework for embedded applications that run on Cortex-M based microcontrollers. You can download the .pack file or the source code of the latest version of CMSIS [here][https://github.com/ARM-software/CMSIS_5/releases/tag/5.3.0].
+CMSIS is short for **The Cortex Microcontroller Software Interface Standard**. It provides a ground-up software framework for embedded applications that run on Cortex-M based microcontrollers. You can download the .pack file or the source code of the latest version of CMSIS at https://github.com/ARM-software/CMSIS_5/releases/tag/5.3.0.
 
 ![1523254466551](img/017.png)
 
@@ -236,9 +236,9 @@ void timer1_init(int frequency) {                // Set up Timer (device specifi
 
 
 
-###CMSIS-Driver
+### CMSIS-Driver
 
-####Common Driver Functions
+#### Common Driver Functions
 
 Each CMSIS-Driver contains these functions:
 
