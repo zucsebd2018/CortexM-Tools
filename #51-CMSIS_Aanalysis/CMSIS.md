@@ -1,18 +1,18 @@
 ### Product Components
 
-All the CMSIS functions are packed in a .pack file. Then we need a software/toolchain to take advantage of the .pack file and its name is $$\mu$$**Vision IDE**. You can download $$\mu$$**Vision IDE** [here][www.keil.com/mdk5/install]. The software is briefly introduced at http://www2.keil.com/mdk5.
+All the CMSIS functions are packed in a .pack file. Then we need a software/toolchain to take advantage of the .pack file and its name is $$\mu$$**Vision IDE**. You can download $$\mu$$**Vision IDE** at http://www.keil.com/mdk5/install. The software is briefly introduced at http://www2.keil.com/mdk5.
 
 Then we will talk about the **CMSIS**, it is just a single part of the tool chains but not all of them.
 
-![5](img\014.png)
+![5](img/014.png)
 
 
 
 ### Components of CMSIS
 
-CMSIS is short for **The Cortex Microcontroller Software Interface Standard**. It provides a ground-up software framework for embedded applications that run on Cortex-M based microcontrollers. You can download the .pack file or the source code of the latest version of CMSIS [here][https://github.com/ARM-software/CMSIS_5/releases/tag/5.3.0].
+CMSIS is short for **The Cortex Microcontroller Software Interface Standard**. It provides a ground-up software framework for embedded applications that run on Cortex-M based microcontrollers. You can download the .pack file or the source code of the latest version of CMSIS at https://github.com/ARM-software/CMSIS_5/releases/tag/5.3.0.
 
-![1523254466551](img\017.png)
+![1523254466551](img/017.png)
 
 - **CMSIS-CORE**：提供与 Cortex-M0、Cortex-M3、Cortex-M4、SC000 和 SC300 处理器与外围寄存器之间的接口
 - CMSIS-DSP：包含以定点（分数 q7、q15、q31）和单精度浮点（32 位）实现的 60 多种函数的 DSP 库
@@ -22,7 +22,7 @@ CMSIS is short for **The Cortex Microcontroller Software Interface Standard**. I
 - **CMSIS-Driver**：连接应用层和中间层以及外围设备的接口
 
 
-![5](img\010.png)
+![5](img/010.png)
 
 
 
@@ -96,7 +96,7 @@ The list of IRQ numbers is showed as followed:
 
 
 
-#### **CMSIS functions on Cortex-M3**
+#### CMSIS functions on Cortex-M3
 
 For Cortex-M3 processors, CMSIS functions may help us generate some Cortex-M3 instructions:
 
@@ -236,9 +236,9 @@ void timer1_init(int frequency) {                // Set up Timer (device specifi
 
 
 
-###CMSIS-Driver
+### CMSIS-Driver
 
-####Common Driver Functions
+#### Common Driver Functions
 
 Each CMSIS-Driver contains these functions:
 
@@ -358,12 +358,12 @@ void mySPI_Thread(void const* arg)
 2. Run **CMSIS\Utilities\gen_pack.bat**
 3. If it says there is no command named "xcopy", then add **Windows\System32** to the **PATH** environment variable
 
-![15213625](img\004.png)
+![15213625](img/004.png)
 
 4. Wait for the **.bat** to dealing with the documents
 
-![523197448406](img\005.png)
+![523197448406](img/005.png)
 
 5. The **.pack** file is generated at \Local_Release directory.
 
-![1523235498952](img\009.png)
+![1523235498952](img/009.png)
