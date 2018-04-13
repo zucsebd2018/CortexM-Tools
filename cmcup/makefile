@@ -13,14 +13,14 @@ OBJS = src/main.o \
 	src/stm32f10x_it.o \
 	src/system.o \
 	src/startup.o \
-	src/gpio.o \
-	src/uart.o
+	src/gpio.o 
+#	src/uart.o
 
 CPU = -mcpu=cortex-m3
 MCU = $(CPU) -mthumb
 
 CFLAG = -Xlinker --gc-sections -Wl,-Map,$(PROJECT).map $(MCU)
-MACRO = -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER 
+MACRO = -DSTM32F10X_LD 
 INCLUDE = \
 	-I$(CMSISDEVICE)\
 	-I$(CMSISCORE) \
