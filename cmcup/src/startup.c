@@ -16,7 +16,7 @@
  *******************************************************************************
  */
  
-
+extern "C" {
 /*----------Stack Configuration-----------------------------------------------*/  
 #define STACK_SIZE       0x00000100      /*!< Stack size (in Words)           */
 __attribute__ ((section(".co_stack")))
@@ -88,7 +88,7 @@ extern unsigned long _sdata;     /*!< Start address for the .data section     */
 extern unsigned long _edata;     /*!< End address for the .data section       */    
 extern unsigned long _sbss;      /*!< Start address for the .bss section      */
 extern unsigned long _ebss;      /*!< End address for the .bss section        */      
-extern void _eram;               /*!< End address for ram                     */
+extern void* _eram;               /*!< End address for ram                     */
 
 
 /*----------Function prototypes-----------------------------------------------*/  
@@ -97,7 +97,7 @@ extern void SystemInit(void);    /*!< Setup the microcontroller system(CMSIS) */
 void Default_Reset_Handler(void);   /*!< Default reset handler                */
 static void Default_Handler(void);  /*!< Default exception handler            */
 
-
+typedef void (*NoParam)(void);
 /**
   *@brief The minimal vector table for a Cortex M3.  Note that the proper constructs
   *       must be placed on this to ensure that it ends up at physical address
@@ -107,7 +107,7 @@ __attribute__ ((section(".isr_vector")))
 void (* const g_pfnVectors[])(void) =
 {       
   /*----------Core Exceptions-------------------------------------------------*/
-  (void *)&pulStack[STACK_SIZE-1],     /*!< The initial stack pointer         */
+  (NoParam)(pulStack + STACK_SIZE - 1),     /*!< The initial stack pointer         */
   Reset_Handler,                /*!< Reset Handler                            */
   NMI_Handler,                  /*!< NMI Handler                              */
   HardFault_Handler,            /*!< Hard Fault Handler                       */
@@ -169,7 +169,7 @@ void (* const g_pfnVectors[])(void) =
   0,0,0,0,0,                    /*!< Reserved                                 */ 
   TIM6_DAC_IRQHandler,           /*!< 54: TIM6 and DAC underrun                */
   TIM7_IRQHandler,               /*!< 55: TIM7                                 */
-  (void *)0xF108F85F            /*!< Boot in RAM mode                         */
+  (NoParam)0xF108F85F            /*!< Boot in RAM mode                         */
 };        
 
 
@@ -284,5 +284,5 @@ static void Default_Handler(void)
   {
   }
 }
-
+}
 /*********************** (C) COPYRIGHT 2011 Coocox ************END OF FILE*****/
