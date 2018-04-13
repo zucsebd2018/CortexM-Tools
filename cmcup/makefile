@@ -20,7 +20,8 @@ CPU = -mcpu=cortex-m3
 MCU = $(CPU) -mthumb
 
 CFLAG = -Xlinker --gc-sections -Wl,-Map,$(PROJECT).map $(MCU)
-MACRO = -DSTM32F10X_LD 
+MACRO = -DSTM32F10X_MD_VL # For stm32f100xx 
+# MACRO = -DSTM32F10X_MD  # For stm32f103c8
 INCLUDE = \
 	-I$(CMSISDEVICE)\
 	-I$(CMSISCORE) \
