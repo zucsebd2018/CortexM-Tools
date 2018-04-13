@@ -13,8 +13,8 @@ OBJS = src/main.o \
 	src/stm32f10x_it.o \
 	src/system.o \
 	src/startup.o \
-	src/gpio.o 
-#	src/uart.o
+	src/gpio.o \
+	src/uart.o
 
 CPU = -mcpu=cortex-m3
 MCU = $(CPU) -mthumb
@@ -50,4 +50,4 @@ term: $(PROJECT).hex
 	stm32isp -term 9600 -termonly -verbose -bootp RTS -reset DTR $(PROJECT).hex $(COMPORT) 115200
 
 clean:
-	-rm $(OBJS)
+	-rm $(OBJS) blink.*
