@@ -104,15 +104,10 @@
     */
     
 #if defined (STM32F10X_LD_VL) || (defined STM32F10X_MD_VL) || (defined STM32F10X_HD_VL)
-/* #define SYSCLK_FREQ_HSE    HSE_VALUE */
- #define SYSCLK_FREQ_24MHz  24000000
+/* #define SYSCLK_FREQ_HSE  */
+ #define SYSCLK_FREQ_24MHz
 #else
-/* #define SYSCLK_FREQ_HSE    HSE_VALUE */
-/* #define SYSCLK_FREQ_24MHz  24000000 */ 
-/* #define SYSCLK_FREQ_36MHz  36000000 */
-/* #define SYSCLK_FREQ_48MHz  48000000 */
-/* #define SYSCLK_FREQ_56MHz  56000000 */
-#define SYSCLK_FREQ_72MHz  72000000
+
 #endif
 
 /*!< Uncomment the following line if you need to use external SRAM mounted
@@ -149,17 +144,17 @@
 *  Clock Definitions
 *******************************************************************************/
 #ifdef SYSCLK_FREQ_HSE
-  uint32_t SystemCoreClock         = SYSCLK_FREQ_HSE;        /*!< System Clock Frequency (Core Clock) */
+  uint32_t SystemCoreClock         = HSE_VALUE;        /*!< System Clock Frequency (Core Clock) */
 #elif defined SYSCLK_FREQ_24MHz
-  uint32_t SystemCoreClock         = SYSCLK_FREQ_24MHz;        /*!< System Clock Frequency (Core Clock) */
+  uint32_t SystemCoreClock         = 24000000;        /*!< System Clock Frequency (Core Clock) */
 #elif defined SYSCLK_FREQ_36MHz
-  uint32_t SystemCoreClock         = SYSCLK_FREQ_36MHz;        /*!< System Clock Frequency (Core Clock) */
+  uint32_t SystemCoreClock         = 36000000;        /*!< System Clock Frequency (Core Clock) */
 #elif defined SYSCLK_FREQ_48MHz
-  uint32_t SystemCoreClock         = SYSCLK_FREQ_48MHz;        /*!< System Clock Frequency (Core Clock) */
+  uint32_t SystemCoreClock         = 48000000;        /*!< System Clock Frequency (Core Clock) */
 #elif defined SYSCLK_FREQ_56MHz
-  uint32_t SystemCoreClock         = SYSCLK_FREQ_56MHz;        /*!< System Clock Frequency (Core Clock) */
+  uint32_t SystemCoreClock         = 56000000;        /*!< System Clock Frequency (Core Clock) */
 #elif defined SYSCLK_FREQ_72MHz
-  uint32_t SystemCoreClock         = SYSCLK_FREQ_72MHz;        /*!< System Clock Frequency (Core Clock) */
+  uint32_t SystemCoreClock         = 72000000;        /*!< System Clock Frequency (Core Clock) */
 #else /*!< HSI Selected as System Clock source */
   uint32_t SystemCoreClock         = HSI_VALUE;        /*!< System Clock Frequency (Core Clock) */
 #endif

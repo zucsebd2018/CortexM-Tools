@@ -13,14 +13,34 @@ OBJS = src/main.o \
 	src/stm32f10x_it.o \
 	src/system.o \
 	src/startup.o \
-	src/gpio.o \
-	src/uart.o
+	src/gpio.o
+	#src/uart.o
 
 CPU = -mcpu=cortex-m3
 MCU = $(CPU) -mthumb
 
 CFLAG = -Xlinker --gc-sections -Wl,-Map,$(PROJECT).map $(MCU)
-MACRO = -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER 
+
+#MACRO += -DUSE_STDPERIPH_DRIVER
+
+# Select target device
+#MACRO += -DSTM32F10X_LD    # STM32F10[1,2,3]x[4-6]  16 and   32 Kbytes
+#MACRO += -DSTM32F10X_LD_VL # STM32F100x[4-6]        16 and   32 Kbytes
+MACRO += -DSTM32F10X_MD    # STM32F10[1,2,3]x[8-B]  64 and  128 Kbytes
+#MACRO += -DSTM32F10X_MD_VL # STM32F100x[8-B]        64 and  128 Kbytes
+#MACRO += -DSTM32F10X_HD    # STM32F10[1,3]x[C-E]   256 and  512 Kbytes
+#MACRO += -DSTM32F10X_HD_VL # STM32F100x[C-E]       256 and  512 Kbytes
+#MACRO += -DSTM32F10X_XL    # STM32F10[1,3]x[C-E]   512 and 1024 Kbytes
+#MACRO += -DSTM32F10X_CL    # STM32F10[5,7]
+
+# Select one of the frequency
+#MACRO += -SYSCLK_FREQ_HSE  # F105,F107 are 25Mhz, others are 8Mhz
+#MACRO += -DSYSCLK_FREQ_24MHz # F100 is limited to 24Mhz
+#MACRO += -DSYSCLK_FREQ_36MHz
+#MACRO += -DSYSCLK_FREQ_48MHz
+#MACRO += -DSYSCLK_FREQ_56MHz
+MACRO += -DSYSCLK_FREQ_72MHz
+
 INCLUDE = \
 	-I$(CMSISDEVICE)\
 	-I$(CMSISCORE) \
