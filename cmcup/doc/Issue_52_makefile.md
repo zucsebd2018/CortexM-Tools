@@ -68,6 +68,56 @@ INCLUDE = \
 	-Isrc/include
 ```
 
+7. 最后需要把-MACRO中的**-DUSE_STDPERIPH_DRIVER**去掉。这里定义了一个宏，它会在stm32_f10x_conf.h里的外设驱动调用出来，但因为我们现在已经不需要这个库了，所以必须去掉。
+
+```makefile
+# makefile
+-MACRO = -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER
+```
+
+```c
+/* stm32f10x.h, Line 8296-8298 */
+#ifdef USE_STDPERIPH_DRIVER
+  #include "stm32f10x_conf.h"
+#endif
+```
+
+​	我们可以瞄一眼stm32f10x_conf.h里的是什么内容。**这并不是在Libraries文件夹里定义的**。
+
+```c
+/* stm32f10x_conf.h, Line 22 */
+
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __STM32F10x_CONF_H
+#define __STM32F10x_CONF_H
+
+/* Includes ------------------------------------------------------------------*/
+/* Uncomment/Comment the line below to enable/disable peripheral header file inclusion */
+#include "stm32f10x_adc.h"
+#include "stm32f10x_bkp.h"
+#include "stm32f10x_can.h"
+#include "stm32f10x_cec.h"
+#include "stm32f10x_crc.h"
+#include "stm32f10x_dac.h"
+#include "stm32f10x_dbgmcu.h"
+#include "stm32f10x_dma.h"
+#include "stm32f10x_exti.h"
+#include "stm32f10x_flash.h"
+#include "stm32f10x_fsmc.h"
+#include "stm32f10x_gpio.h"
+#include "stm32f10x_i2c.h"
+#include "stm32f10x_iwdg.h"
+#include "stm32f10x_pwr.h"
+#include "stm32f10x_rcc.h"
+#include "stm32f10x_rtc.h"
+#include "stm32f10x_sdio.h"
+#include "stm32f10x_spi.h"
+#include "stm32f10x_tim.h"
+#include "stm32f10x_usart.h"
+#include "stm32f10x_wwdg.h"
+#include "misc.h" /* High level functions for NVIC and SysTick (add-on to CMSIS functions) */
+```
+
 
 
 ----
