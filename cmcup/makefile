@@ -13,8 +13,7 @@ OBJS = src/main.o \
 	src/stm32f10x_it.o \
 	src/system.o \
 	src/startup.o \
-	src/gpio.o \
-	src/uart.o
+	src/gpio.o 
 
 CPU = -mcpu=cortex-m3
 MCU = $(CPU) -mthumb
@@ -38,7 +37,7 @@ $(PROJECT).hex: $(PROJECT).elf
 
 $(PROJECT).elf: $(OBJS)
 	@echo 'Building : $@'
-	$(CC) -specs=nosys.specs -T"stm32_flash.ld" $(INCLUDE) $(MACRO) $(CFLAG) -o $@ $(OBJS) $(LIBS)
+	$(CC) -specs=nosys.specs -specs=nano.specs -T"stm32_flash.ld" $(INCLUDE) $(MACRO) $(CFLAG) -o $@ $(OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 
 .c.o:
