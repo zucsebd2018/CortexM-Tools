@@ -122,15 +122,14 @@ INCLUDE = \
 
 ----
 
-##以下和本次作业主要内容相关性不大
+## 以下和本次作业主要内容相关性不大
 
 #### 用汇编编译的方法
 
 （此部分只是mark一下，不是作业要求）
 
-1. Makefile里改编译选项。链接时加上-specs=nosys.specs，并删除-nostartfiles。如果不删除-nostartfiles会显示类似于找不到"_startup"之![img](file:///D:/ljh/Files/C3/Embedded%20System/Experiment/W6/img/004.png?lastModify=1523841755)
-2. 类的错误。
-3. Makefile里把startup.o的路径改成startup_stm32f10x_MD.s的对应路径，同时对.o的文件名也进行修改。
+1. Makefile里改编译选项。链接时加上-specs=nosys.specs，并删除-nostartfiles。如果不删除-nostartfiles会显示类似于找不到"_startup"之类的错误。![img](img/004.png)
+2. Makefile里把startup.o的路径改成startup_stm32f10x_MD.s的对应路径，同时对.o的文件名也进行修改。
 
 
 
