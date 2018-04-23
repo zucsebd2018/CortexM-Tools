@@ -42,8 +42,7 @@ MACRO += -DSTM32F10X_MD    # STM32F10[1,2,3]x[8-B]  64 and  128 Kbytes
 MACRO += -DSYSCLK_FREQ_72MHz
 
 INCLUDE = \
-	-I$(CMSISDEVICE)\
-	-I$(CMSISCORE) \
+	-I$(CMSISDEVICE) -I$(CMSISCORE) \
 	-Isrc/include
 
 all: $(PROJECT).hex
@@ -57,7 +56,7 @@ $(PROJECT).hex: $(PROJECT).elf
 
 $(PROJECT).elf: $(OBJS)
 	@echo 'Building : $@'
-	$(CC) -specs=nosys.specs -T"stm32_flash.ld" $(INCLUDE) $(MACRO) $(CFLAG) -o $@ $(OBJS) $(LIBS)
+	$(CC) -specs=nosys.specs -specs=nano.specs -T"stm32_flash.ld" $(INCLUDE) $(MACRO) $(CFLAG) -o $@ $(OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 
 .c.o:
@@ -70,4 +69,4 @@ term: $(PROJECT).hex
 	stm32isp -term 9600 -termonly -verbose -bootp RTS -reset DTR $(PROJECT).hex $(COMPORT) 115200
 
 clean:
-	-rm $(OBJS)
+	-rm $(OBJS) blink.*

@@ -15,7 +15,7 @@
 **
 **  Environment : Atollic TrueSTUDIO(R)
 **
-**  Distribution: The file is distributed ìas is,î without any warranty
+**  Distribution: The file is distributed ‚Äúas is,‚Äù without any warranty
 **                of any kind.
 **
 **  (c)Copyright Atollic AB.
@@ -33,6 +33,7 @@
 ENTRY(Reset_Handler)
 
 /* Highest address of the user mode stack */
+
 _estack = 0x20005000;    /* end of 20K RAM */
 
 /* Generate a link error if heap and stack don't fit into RAM */
