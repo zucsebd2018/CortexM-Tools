@@ -1,0 +1,1096 @@
+Archive member included to satisfy reference by file (symbol)
+
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a(_arm_addsubdf3.o)
+                              src/main.o (__aeabi_dsub)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a(_arm_muldivdf3.o)
+                              src/main.o (__aeabi_dmul)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a(_arm_fixdfsi.o)
+                              src/main.o (__aeabi_d2iz)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-exit.o)
+                              d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o (exit)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-impure.o)
+                              d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-exit.o) (_global_impure_ptr)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-init.o)
+                              d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o (__libc_init_array)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memset.o)
+                              d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o (memset)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-sprintf.o)
+                              src/main.o (sprintf)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-svfprintf.o)
+                              d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-sprintf.o) (_svfprintf_r)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-vfprintf_i.o)
+                              d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-svfprintf.o) (_printf_i)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memchr-stub.o)
+                              d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-svfprintf.o) (memchr)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memcpy-stub.o)
+                              d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-svfprintf.o) (memcpy)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memmove.o)
+                              d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-svfprintf.o) (memmove)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-freer.o)
+                              d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-svfprintf.o) (_free_r)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-mallocr.o)
+                              d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-svfprintf.o) (_malloc_r)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-reallocr.o)
+                              d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-svfprintf.o) (_realloc_r)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-sbrkr.o)
+                              d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-mallocr.o) (_sbrk_r)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-mlock.o)
+                              d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-freer.o) (__malloc_lock)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-msizer.o)
+                              d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-reallocr.o) (_malloc_usable_size_r)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-reent.o)
+                              d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-sbrkr.o) (errno)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libnosys.a(sbrk.o)
+                              d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-sbrkr.o) (_sbrk)
+d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libnosys.a(_exit.o)
+                              d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-exit.o) (_exit)
+
+Allocating common symbols
+Common symbol       size              file
+
+errno               0x4               d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-reent.o)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+ .data          0x00000000        0x4 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+ .text          0x00000000       0x74 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .ARM.extab     0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .ARM.exidx     0x00000000        0x8 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .ARM.attributes
+                0x00000000       0x1b d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .text          0x00000000        0x0 src/main.o
+ .data          0x00000000        0x0 src/main.o
+ .text          0x00000000        0x0 src/stm32f10x_it.o
+ .data          0x00000000        0x0 src/stm32f10x_it.o
+ .bss           0x00000000        0x0 src/stm32f10x_it.o
+ .comment       0x00000000       0x7f src/stm32f10x_it.o
+ .ARM.attributes
+                0x00000000       0x33 src/stm32f10x_it.o
+ .text          0x00000000        0x0 src/system.o
+ .bss           0x00000000        0x0 src/system.o
+ .text.SystemCoreClockUpdate
+                0x00000000       0xe4 src/system.o
+ .text          0x00000000        0x0 src/startup.o
+ .data          0x00000000        0x0 src/startup.o
+ .bss           0x00000000        0x0 src/startup.o
+ .text          0x00000000        0x0 src/gpio.o
+ .data          0x00000000        0x0 src/gpio.o
+ .text._ZN5IOPinD2Ev
+                0x00000000       0x80 src/gpio.o
+ .text._ZN5IOPin5writeEi
+                0x00000000       0x84 src/gpio.o
+ .text._ZN5IOPin11read_outputEv
+                0x00000000       0x64 src/gpio.o
+ .text          0x00000000        0x0 src/systick.o
+ .data          0x00000000        0x0 src/systick.o
+ .text._ZN9MySystick8getmtimeEv
+                0x00000000       0x1c src/systick.o
+ .text          0x00000000        0x0 Libraries/STM32F10x_StdPeriph_Driver/src/misc.o
+ .data          0x00000000        0x0 Libraries/STM32F10x_StdPeriph_Driver/src/misc.o
+ .bss           0x00000000        0x0 Libraries/STM32F10x_StdPeriph_Driver/src/misc.o
+ .text.NVIC_SetVectorTable
+                0x00000000       0x2c Libraries/STM32F10x_StdPeriph_Driver/src/misc.o
+ .text.NVIC_SystemLPConfig
+                0x00000000       0x40 Libraries/STM32F10x_StdPeriph_Driver/src/misc.o
+ .text.SysTick_CLKSourceConfig
+                0x00000000       0x38 Libraries/STM32F10x_StdPeriph_Driver/src/misc.o
+ .text          0x00000000        0x0 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .bss           0x00000000        0x0 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .text.RCC_AdjustHSICalibrationValue
+                0x00000000       0x3c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .text.RCC_HSICmd
+                0x00000000       0x20 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .text.RCC_ITConfig
+                0x00000000       0x4c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .text.RCC_USBCLKConfig
+                0x00000000       0x1c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .text.RCC_ADCCLKConfig
+                0x00000000       0x38 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .text.RCC_LSEConfig
+                0x00000000       0x40 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .text.RCC_LSICmd
+                0x00000000       0x20 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .text.RCC_RTCCLKConfig
+                0x00000000       0x24 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .text.RCC_RTCCLKCmd
+                0x00000000       0x20 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .text.RCC_AHBPeriphClockCmd
+                0x00000000       0x3c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .text.RCC_BackupResetCmd
+                0x00000000       0x20 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .text.RCC_ClockSecuritySystemCmd
+                0x00000000       0x20 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .text.RCC_MCOConfig
+                0x00000000       0x20 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .text.RCC_ClearFlag
+                0x00000000       0x1c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .text.RCC_GetITStatus
+                0x00000000       0x40 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .text.RCC_ClearITPendingBit
+                0x00000000       0x20 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .text          0x00000000        0x0 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .data          0x00000000        0x0 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .bss           0x00000000        0x0 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_HalfCycleAccessCmd
+                0x00000000       0x30 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_Unlock
+                0x00000000       0x24 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_UnlockBank1
+                0x00000000       0x24 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_Lock
+                0x00000000       0x1c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_LockBank1
+                0x00000000       0x1c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_ErasePage
+                0x00000000       0x64 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_EraseAllPages
+                0x00000000       0x5c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_EraseAllBank1Pages
+                0x00000000       0x5c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_EraseOptionBytes
+                0x00000000       0xe0 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_ProgramWord
+                0x00000000       0x94 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_ProgramHalfWord
+                0x00000000       0x5c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_ProgramOptionByteData
+                0x00000000       0x78 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_EnableWriteProtection
+                0x00000000      0x118 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_ReadOutProtection
+                0x00000000       0xd4 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_UserOptionByteConfig
+                0x00000000       0x94 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_GetUserOptionByte
+                0x00000000       0x18 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_GetWriteProtectionOptionByte
+                0x00000000       0x14 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_GetReadOutProtectionStatus
+                0x00000000       0x3c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_GetPrefetchBufferStatus
+                0x00000000       0x3c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_ITConfig
+                0x00000000       0x3c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_GetFlagStatus
+                0x00000000       0x64 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_ClearFlag
+                0x00000000       0x1c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_GetStatus
+                0x00000000       0x74 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_GetBank1Status
+                0x00000000       0x74 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_WaitForLastOperation
+                0x00000000       0x44 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text.FLASH_WaitForLastBank1Operation
+                0x00000000       0x44 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .text          0x00000000        0x0 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .data          0x00000000        0x0 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .bss           0x00000000        0x0 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OC1Init
+                0x00000000      0x118 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OC2Init
+                0x00000000      0x110 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OC3Init
+                0x00000000      0x10c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OC4Init
+                0x00000000       0xd0 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_ICInit
+                0x00000000       0xa8 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_PWMIConfig
+                0x00000000       0xb8 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_BDTRConfig
+                0x00000000       0x4e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_TimeBaseStructInit
+                0x00000000       0x32 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OCStructInit
+                0x00000000       0x42 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_ICStructInit
+                0x00000000       0x30 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_BDTRStructInit
+                0x00000000       0x3c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_CtrlPWMOutputs
+                0x00000000       0x4a Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_GenerateEvent
+                0x00000000       0x1c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_DMAConfig
+                0x00000000       0x28 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_DMACmd
+                0x00000000       0x46 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_ITRxExternalClockConfig
+                0x00000000       0x2e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_TIxExternalClockConfig
+                0x00000000       0x5c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_ETRClockMode1Config
+                0x00000000       0x5e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_ETRClockMode2Config
+                0x00000000       0x3e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_ETRConfig
+                0x00000000       0x52 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_PrescalerConfig
+                0x00000000       0x26 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_CounterModeConfig
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SelectInputTrigger
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_EncoderInterfaceConfig
+                0x00000000       0x96 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_ForcedOC1Config
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_ForcedOC2Config
+                0x00000000       0x3a Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_ForcedOC3Config
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_ForcedOC4Config
+                0x00000000       0x3a Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SelectCOM
+                0x00000000       0x3e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SelectCCDMA
+                0x00000000       0x3e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_CCPreloadControl
+                0x00000000       0x3e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OC1PreloadConfig
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OC2PreloadConfig
+                0x00000000       0x3a Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OC3PreloadConfig
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OC4PreloadConfig
+                0x00000000       0x3a Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OC1FastConfig
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OC2FastConfig
+                0x00000000       0x3a Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OC3FastConfig
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OC4FastConfig
+                0x00000000       0x3a Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_ClearOC1Ref
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_ClearOC2Ref
+                0x00000000       0x3a Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_ClearOC3Ref
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_ClearOC4Ref
+                0x00000000       0x3a Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OC1PolarityConfig
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OC1NPolarityConfig
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OC2PolarityConfig
+                0x00000000       0x3a Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OC2NPolarityConfig
+                0x00000000       0x3a Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OC3PolarityConfig
+                0x00000000       0x3a Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OC3NPolarityConfig
+                0x00000000       0x3a Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_OC4PolarityConfig
+                0x00000000       0x3a Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_CCxCmd
+                0x00000000       0x54 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_CCxNCmd
+                0x00000000       0x54 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SelectOCxM
+                0x00000000       0xaa Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_UpdateDisableConfig
+                0x00000000       0x3e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_UpdateRequestConfig
+                0x00000000       0x3e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SelectHallSensor
+                0x00000000       0x3e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SelectOnePulseMode
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SelectOutputTrigger
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SelectSlaveMode
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SelectMasterSlaveMode
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SetCounter
+                0x00000000       0x1c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SetAutoreload
+                0x00000000       0x1c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SetCompare1
+                0x00000000       0x1c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SetCompare2
+                0x00000000       0x1c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SetCompare3
+                0x00000000       0x1c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SetCompare4
+                0x00000000       0x1e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SetIC1Prescaler
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SetIC2Prescaler
+                0x00000000       0x3a Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SetIC3Prescaler
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SetIC4Prescaler
+                0x00000000       0x3a Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_SetClockDivision
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_GetCapture1
+                0x00000000       0x18 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_GetCapture2
+                0x00000000       0x18 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_GetCapture3
+                0x00000000       0x18 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_GetCapture4
+                0x00000000       0x1a Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_GetCounter
+                0x00000000       0x18 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_GetPrescaler
+                0x00000000       0x18 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text.TIM_GetFlagStatus
+                0x00000000       0x40 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text._ZL10TI1_ConfigP11TIM_TypeDefttt
+                0x00000000       0xe0 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text._ZL10TI2_ConfigP11TIM_TypeDefttt
+                0x00000000       0xf4 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text._ZL10TI3_ConfigP11TIM_TypeDefttt
+                0x00000000       0xec Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text._ZL10TI4_ConfigP11TIM_TypeDefttt
+                0x00000000       0xf8 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .text          0x00000000        0x0 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .data          0x00000000        0x0 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .bss           0x00000000        0x0 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_DeInit
+                0x00000000       0xb8 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_StructInit
+                0x00000000       0x38 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_ClockInit
+                0x00000000       0x56 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_ClockStructInit
+                0x00000000       0x2a Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_ITConfig
+                0x00000000       0x8c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_DMACmd
+                0x00000000       0x46 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_SetAddress
+                0x00000000       0x38 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_WakeUpConfig
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_ReceiverWakeUpCmd
+                0x00000000       0x3e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_LINBreakDetectLengthConfig
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_LINCmd
+                0x00000000       0x3e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_ReceiveData
+                0x00000000       0x1e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_SendBreak
+                0x00000000       0x22 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_SetGuardTime
+                0x00000000       0x3a Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_SetPrescaler
+                0x00000000       0x38 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_SmartCardCmd
+                0x00000000       0x3e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_SmartCardNACKCmd
+                0x00000000       0x3e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_HalfDuplexCmd
+                0x00000000       0x3e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_OverSampling8Cmd
+                0x00000000       0x42 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_OneBitMethodCmd
+                0x00000000       0x3e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_IrDAConfig
+                0x00000000       0x36 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_IrDACmd
+                0x00000000       0x3e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_GetITStatus
+                0x00000000       0xb0 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .text.USART_ClearITPendingBit
+                0x00000000       0x38 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a(_arm_addsubdf3.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a(_arm_addsubdf3.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a(_arm_muldivdf3.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a(_arm_muldivdf3.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a(_arm_fixdfsi.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a(_arm_fixdfsi.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-exit.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-exit.o)
+ .text.exit     0x00000000       0x28 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-exit.o)
+ .debug_frame   0x00000000       0x28 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-exit.o)
+ .ARM.attributes
+                0x00000000       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-exit.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-impure.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-impure.o)
+ .rodata._global_impure_ptr
+                0x00000000        0x4 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-impure.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-init.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-init.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-init.o)
+ .text.__libc_init_array
+                0x00000000       0x48 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x00000000       0x2c d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000000       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-init.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memset.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memset.o)
+ .text.memset   0x00000000       0x10 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000000       0x20 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000000       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memset.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-sprintf.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-sprintf.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-sprintf.o)
+ .text._sprintf_r
+                0x00000000       0x38 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-sprintf.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-svfprintf.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-svfprintf.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-svfprintf.o)
+ .text.__ssprint_r
+                0x00000000       0xf0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-svfprintf.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memchr-stub.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memchr-stub.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memchr-stub.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memcpy-stub.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memcpy-stub.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memcpy-stub.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memmove.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memmove.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memmove.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-freer.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-freer.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-freer.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-mallocr.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-mallocr.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-mallocr.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-reallocr.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-reallocr.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-reallocr.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-sbrkr.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-sbrkr.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-sbrkr.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-mlock.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-mlock.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-mlock.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-msizer.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-msizer.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-msizer.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-reent.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-reent.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-reent.o)
+ .text.cleanup_glue
+                0x00000000       0x1a d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-reent.o)
+ .text._reclaim_reent
+                0x00000000       0xb8 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-reent.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libnosys.a(sbrk.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libnosys.a(sbrk.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libnosys.a(sbrk.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libnosys.a(_exit.o)
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libnosys.a(_exit.o)
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libnosys.a(_exit.o)
+ .text._exit    0x00000000        0x4 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libnosys.a(_exit.o)
+ .debug_frame   0x00000000       0x20 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libnosys.a(_exit.o)
+ .ARM.attributes
+                0x00000000       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libnosys.a(_exit.o)
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtend.o
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtend.o
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtend.o
+ .eh_frame      0x00000000        0x4 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtend.o
+ .ARM.attributes
+                0x00000000       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtend.o
+ .text          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+ .data          0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+ .bss           0x00000000        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x08000000         0x00010000         xr
+RAM              0x20000000         0x00002000         xrw
+MEMORY_B1        0x60000000         0x00000000         xr
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+LOAD d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+LOAD d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+LOAD src/main.o
+LOAD src/stm32f10x_it.o
+LOAD src/system.o
+LOAD src/startup.o
+LOAD src/gpio.o
+LOAD src/systick.o
+LOAD Libraries/STM32F10x_StdPeriph_Driver/src/misc.o
+LOAD Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+LOAD Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+LOAD Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+LOAD Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+LOAD d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libstdc++_nano.a
+LOAD d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libm.a
+START GROUP
+LOAD d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a
+LOAD d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a
+END GROUP
+START GROUP
+LOAD d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a
+LOAD d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a
+LOAD d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libnosys.a
+END GROUP
+START GROUP
+LOAD d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a
+LOAD d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a
+LOAD d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libnosys.a
+END GROUP
+LOAD d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtend.o
+LOAD d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+                0x20002000                _estack = 0x20002000
+                0x00000000                _Min_Heap_Size = 0x0
+                0x00000100                _Min_Stack_Size = 0x100
+
+.isr_vector     0x08000000      0x124
+                0x08000000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x08000000      0x124 src/startup.o
+                0x08000124                . = ALIGN (0x4)
+
+.eh_frame       0x08000124        0x0
+ .eh_frame      0x08000124        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+
+.text           0x08000124     0x2bac
+                0x08000124                . = ALIGN (0x4)
+ *(.text)
+ .text          0x08000124       0x40 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+ .text          0x08000164      0x378 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a(_arm_addsubdf3.o)
+                0x08000164                __aeabi_drsub
+                0x0800016c                __aeabi_dsub
+                0x0800016c                __subdf3
+                0x08000170                __aeabi_dadd
+                0x08000170                __adddf3
+                0x080003e8                __floatunsidf
+                0x080003e8                __aeabi_ui2d
+                0x08000408                __floatsidf
+                0x08000408                __aeabi_i2d
+                0x0800042c                __aeabi_f2d
+                0x0800042c                __extendsfdf2
+                0x08000470                __floatundidf
+                0x08000470                __aeabi_ul2d
+                0x08000480                __floatdidf
+                0x08000480                __aeabi_l2d
+ .text          0x080004dc      0x424 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a(_arm_muldivdf3.o)
+                0x080004dc                __aeabi_dmul
+                0x080004dc                __muldf3
+                0x08000730                __divdf3
+                0x08000730                __aeabi_ddiv
+ .text          0x08000900       0x50 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a(_arm_fixdfsi.o)
+                0x08000900                __aeabi_d2iz
+                0x08000900                __fixdfsi
+ *(.text*)
+ .text.main     0x08000950       0x84 src/main.o
+                0x08000950                main
+ .text._Z10RCC_Configv
+                0x080009d4       0xa0 src/main.o
+                0x080009d4                RCC_Config()
+ .text._Z10TIM_Configv
+                0x08000a74       0x68 src/main.o
+                0x08000a74                TIM_Config()
+ .text._Z11EXTI_Configv
+                0x08000adc       0x58 src/main.o
+                0x08000adc                EXTI_Config()
+ .text._Z12USART_Configv
+                0x08000b34       0x48 src/main.o
+                0x08000b34                USART_Config()
+ .text._Z11NVIC_Configv
+                0x08000b7c       0x76 src/main.o
+                0x08000b7c                NVIC_Config()
+ *fill*         0x08000bf2        0x2 
+ .text._Z9Data_Initv
+                0x08000bf4       0x6c src/main.o
+                0x08000bf4                Data_Init()
+ .text.TIM2_IRQHandler
+                0x08000c60      0x1d0 src/main.o
+                0x08000c60                TIM2_IRQHandler
+ .text.EXTI2_IRQHandler
+                0x08000e30       0xfc src/main.o
+                0x08000e30                EXTI2_IRQHandler
+ .text.EXTI3_IRQHandler
+                0x08000f2c       0x54 src/main.o
+                0x08000f2c                EXTI3_IRQHandler
+ .text.SystemInit
+                0x08000f80       0x68 src/system.o
+                0x08000f80                SystemInit
+ .text._ZL11SetSysClockv
+                0x08000fe8        0xc src/system.o
+ .text._ZL15SetSysClockTo72v
+                0x08000ff4      0x134 src/system.o
+ .text.Default_Reset_Handler
+                0x08001128       0x60 src/startup.o
+                0x08001128                Default_Reset_Handler
+                0x08001128                Reset_Handler
+ .text.Default_Handler
+                0x08001188        0x6 src/startup.o
+                0x08001188                DebugMon_Handler
+                0x08001188                TIM1_CC_IRQHandler
+                0x08001188                HardFault_Handler
+                0x08001188                PVD_IRQHandler
+                0x08001188                PendSV_Handler
+                0x08001188                NMI_Handler
+                0x08001188                EXTI0_IRQHandler
+                0x08001188                I2C2_EV_IRQHandler
+                0x08001188                TIM1_UP_TIM16_IRQHandler
+                0x08001188                UsageFault_Handler
+                0x08001188                SPI1_IRQHandler
+                0x08001188                TAMPER_IRQHandler
+                0x08001188                TIM6_DAC_IRQHandler
+                0x08001188                DMA1_Channel4_IRQHandler
+                0x08001188                ADC1_IRQHandler
+                0x08001188                USART3_IRQHandler
+                0x08001188                RTC_IRQHandler
+                0x08001188                DMA1_Channel7_IRQHandler
+                0x08001188                TIM4_IRQHandler
+                0x08001188                I2C1_EV_IRQHandler
+                0x08001188                DMA1_Channel6_IRQHandler
+                0x08001188                TIM3_IRQHandler
+                0x08001188                RCC_IRQHandler
+                0x08001188                DMA1_Channel1_IRQHandler
+                0x08001188                CEC_IRQHandler
+                0x08001188                EXTI15_10_IRQHandler
+                0x08001188                TIM7_IRQHandler
+                0x08001188                EXTI9_5_IRQHandler
+                0x08001188                SPI2_IRQHandler
+                0x08001188                MemManage_Handler
+                0x08001188                SVC_Handler
+                0x08001188                DMA1_Channel5_IRQHandler
+                0x08001188                EXTI4_IRQHandler
+                0x08001188                TIM1_TRG_COM_TIM17_IRQHandler
+                0x08001188                DMA1_Channel3_IRQHandler
+                0x08001188                WWDG_IRQHandler
+                0x08001188                EXTI1_IRQHandler
+                0x08001188                RTCAlarm_IRQHandler
+                0x08001188                USART2_IRQHandler
+                0x08001188                I2C2_ER_IRQHandler
+                0x08001188                DMA1_Channel2_IRQHandler
+                0x08001188                FLASH_IRQHandler
+                0x08001188                BusFault_Handler
+                0x08001188                USART1_IRQHandler
+                0x08001188                I2C1_ER_IRQHandler
+                0x08001188                TIM1_BRK_TIM15_IRQHandler
+ .text._ZN5IOPinC2Eiiii
+                0x0800118e       0x32 src/gpio.o
+                0x0800118e                IOPin::IOPin(int, int, int, int)
+                0x0800118e                IOPin::IOPin(int, int, int, int)
+ .text._ZN5IOPin4initEv
+                0x080011c0      0x26c src/gpio.o
+                0x080011c0                IOPin::init()
+ .text._ZN5IOPin4readEv
+                0x0800142c       0x64 src/gpio.o
+                0x0800142c                IOPin::read()
+ .text._ZN5IOPin11exti_configEv
+                0x08001490       0x90 src/gpio.o
+                0x08001490                IOPin::exti_config()
+ .text.NVIC_SetPriority
+                0x08001520       0x5c src/systick.o
+ .text._ZN9MySystick5delayEi
+                0x0800157c       0x68 src/systick.o
+                0x0800157c                MySystick::delay(int)
+ .text._ZN9MySystick6enableEv
+                0x080015e4       0x48 src/systick.o
+                0x080015e4                MySystick::enable()
+ .text.SysTick_Handler
+                0x0800162c       0x58 src/systick.o
+                0x0800162c                SysTick_Handler
+ .text.NVIC_PriorityGroupConfig
+                0x08001684       0x24 Libraries/STM32F10x_StdPeriph_Driver/src/misc.o
+                0x08001684                NVIC_PriorityGroupConfig
+ .text.NVIC_Init
+                0x080016a8       0xbc Libraries/STM32F10x_StdPeriph_Driver/src/misc.o
+                0x080016a8                NVIC_Init
+ .text.RCC_DeInit
+                0x08001764       0x5c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x08001764                RCC_DeInit
+ .text.RCC_HSEConfig
+                0x080017c0       0x5c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x080017c0                RCC_HSEConfig
+ .text.RCC_WaitForHSEStartUp
+                0x0800181c       0x66 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x0800181c                RCC_WaitForHSEStartUp
+ *fill*         0x08001882        0x2 
+ .text.RCC_PLLConfig
+                0x08001884       0x3c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x08001884                RCC_PLLConfig
+ .text.RCC_PLLCmd
+                0x080018c0       0x20 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x080018c0                RCC_PLLCmd
+ .text.RCC_SYSCLKConfig
+                0x080018e0       0x38 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x080018e0                RCC_SYSCLKConfig
+ .text.RCC_GetSYSCLKSource
+                0x08001918       0x1c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x08001918                RCC_GetSYSCLKSource
+ .text.RCC_HCLKConfig
+                0x08001934       0x38 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x08001934                RCC_HCLKConfig
+ .text.RCC_PCLK1Config
+                0x0800196c       0x38 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x0800196c                RCC_PCLK1Config
+ .text.RCC_PCLK2Config
+                0x080019a4       0x38 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x080019a4                RCC_PCLK2Config
+ .text.RCC_GetClocksFreq
+                0x080019dc      0x16c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x080019dc                RCC_GetClocksFreq
+ .text.RCC_APB2PeriphClockCmd
+                0x08001b48       0x3c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x08001b48                RCC_APB2PeriphClockCmd
+ .text.RCC_APB1PeriphClockCmd
+                0x08001b84       0x3c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x08001b84                RCC_APB1PeriphClockCmd
+ .text.RCC_APB2PeriphResetCmd
+                0x08001bc0       0x3c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x08001bc0                RCC_APB2PeriphResetCmd
+ .text.RCC_APB1PeriphResetCmd
+                0x08001bfc       0x3c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x08001bfc                RCC_APB1PeriphResetCmd
+ .text.RCC_GetFlagStatus
+                0x08001c38       0x70 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+                0x08001c38                RCC_GetFlagStatus
+ .text.FLASH_SetLatency
+                0x08001ca8       0x38 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+                0x08001ca8                FLASH_SetLatency
+ .text.FLASH_PrefetchBufferCmd
+                0x08001ce0       0x30 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+                0x08001ce0                FLASH_PrefetchBufferCmd
+ .text.TIM_DeInit
+                0x08001d10      0x22c Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x08001d10                TIM_DeInit
+ .text.TIM_TimeBaseInit
+                0x08001f3c       0xf8 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x08001f3c                TIM_TimeBaseInit
+ .text.TIM_Cmd  0x08002034       0x3e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x08002034                TIM_Cmd
+ .text.TIM_ITConfig
+                0x08002072       0x46 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x08002072                TIM_ITConfig
+ .text.TIM_InternalClockConfig
+                0x080020b8       0x22 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x080020b8                TIM_InternalClockConfig
+ .text.TIM_ARRPreloadConfig
+                0x080020da       0x3e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x080020da                TIM_ARRPreloadConfig
+ .text.TIM_ClearFlag
+                0x08002118       0x20 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x08002118                TIM_ClearFlag
+ .text.TIM_GetITStatus
+                0x08002138       0x52 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x08002138                TIM_GetITStatus
+ .text.TIM_ClearITPendingBit
+                0x0800218a       0x20 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+                0x0800218a                TIM_ClearITPendingBit
+ *fill*         0x080021aa        0x2 
+ .text.USART_Init
+                0x080021ac      0x180 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+                0x080021ac                USART_Init
+ .text.USART_Cmd
+                0x0800232c       0x3e Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+                0x0800232c                USART_Cmd
+ .text.USART_SendData
+                0x0800236a       0x22 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+                0x0800236a                USART_SendData
+ .text.USART_GetFlagStatus
+                0x0800238c       0x40 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+                0x0800238c                USART_GetFlagStatus
+ .text.USART_ClearFlag
+                0x080023cc       0x20 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+                0x080023cc                USART_ClearFlag
+ .text.sprintf  0x080023ec       0x40 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-sprintf.o)
+                0x080023ec                siprintf
+                0x080023ec                sprintf
+ .text.__ssputs_r
+                0x0800242c       0xb4 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-svfprintf.o)
+                0x0800242c                __ssputs_r
+ .text._svfprintf_r
+                0x080024e0      0x1ec d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-svfprintf.o)
+                0x080024e0                _svfiprintf_r
+                0x080024e0                _svfprintf_r
+ .text._printf_common
+                0x080026cc       0xec d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x080026cc                _printf_common
+ .text._printf_i
+                0x080027b8      0x224 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x080027b8                _printf_i
+ .text.memchr   0x080029dc       0x1c d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memchr-stub.o)
+                0x080029dc                memchr
+ .text.memcpy   0x080029f8       0x16 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memcpy-stub.o)
+                0x080029f8                memcpy
+ .text.memmove  0x08002a0e       0x32 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memmove.o)
+                0x08002a0e                memmove
+ .text._free_r  0x08002a40       0x98 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-freer.o)
+                0x08002a40                _free_r
+ .text._malloc_r
+                0x08002ad8       0xb4 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-mallocr.o)
+                0x08002ad8                _malloc_r
+ .text._realloc_r
+                0x08002b8c       0x4c d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-reallocr.o)
+                0x08002b8c                _realloc_r
+ .text._sbrk_r  0x08002bd8       0x20 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-sbrkr.o)
+                0x08002bd8                _sbrk_r
+ .text.__malloc_lock
+                0x08002bf8        0x2 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-mlock.o)
+                0x08002bf8                __malloc_lock
+ .text.__malloc_unlock
+                0x08002bfa        0x2 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-mlock.o)
+                0x08002bfa                __malloc_unlock
+ .text._malloc_usable_size_r
+                0x08002bfc       0x10 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-msizer.o)
+                0x08002bfc                _malloc_usable_size_r
+ .text._sbrk    0x08002c0c       0x1c d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libnosys.a(sbrk.o)
+                0x08002c0c                _sbrk
+ *(.rodata)
+ .rodata        0x08002c28       0x5c src/main.o
+ *(.rodata*)
+ .rodata._svfprintf_r.str1.1
+                0x08002c84       0x11 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-svfprintf.o)
+ .rodata._printf_i.str1.1
+                0x08002c95       0x22 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-vfprintf_i.o)
+ *(.glue_7)
+ .glue_7        0x08002cb7        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x08002cb7        0x0 linker stubs
+ *(.init)
+ *fill*         0x08002cb7        0x1 
+ .init          0x08002cb8        0x4 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+                0x08002cb8                _init
+ .init          0x08002cbc        0x8 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+ *(.fini)
+ .fini          0x08002cc4        0x4 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+                0x08002cc4                _fini
+ .fini          0x08002cc8        0x8 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+                0x08002cd0                . = ALIGN (0x4)
+                0x08002cd0                _etext = .
+
+.vfp11_veneer   0x08002cd0        0x0
+ .vfp11_veneer  0x08002cd0        0x0 linker stubs
+
+.v4_bx          0x08002cd0        0x0
+ .v4_bx         0x08002cd0        0x0 linker stubs
+
+.iplt           0x08002cd0        0x0
+ .iplt          0x08002cd0        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+
+.rel.dyn        0x08002cd0        0x0
+ .rel.iplt      0x08002cd0        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM            0x08002cd0        0x0
+                0x08002cd0                __exidx_start = .
+ *(.ARM.exidx*)
+                0x08002cd0                __exidx_end = .
+
+.ARM.attributes
+                0x08002cd0       0x29
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x08002cd0       0x1d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+ .ARM.attributes
+                0x08002ced       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+ .ARM.attributes
+                0x08002d1a       0x33 src/main.o
+ .ARM.attributes
+                0x08002d4d       0x33 src/system.o
+ .ARM.attributes
+                0x08002d80       0x33 src/startup.o
+ .ARM.attributes
+                0x08002db3       0x33 src/gpio.o
+ .ARM.attributes
+                0x08002de6       0x33 src/systick.o
+ .ARM.attributes
+                0x08002e19       0x33 Libraries/STM32F10x_StdPeriph_Driver/src/misc.o
+ .ARM.attributes
+                0x08002e4c       0x33 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .ARM.attributes
+                0x08002e7f       0x33 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .ARM.attributes
+                0x08002eb2       0x33 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .ARM.attributes
+                0x08002ee5       0x33 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+ .ARM.attributes
+                0x08002f18       0x1d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x08002f35       0x1d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x08002f52       0x1d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a(_arm_fixdfsi.o)
+ .ARM.attributes
+                0x08002f6f       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x08002f9c       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-sprintf.o)
+ .ARM.attributes
+                0x08002fc9       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-svfprintf.o)
+ .ARM.attributes
+                0x08002ff6       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .ARM.attributes
+                0x08003023       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memchr-stub.o)
+ .ARM.attributes
+                0x08003050       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memcpy-stub.o)
+ .ARM.attributes
+                0x0800307d       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memmove.o)
+ .ARM.attributes
+                0x080030aa       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-freer.o)
+ .ARM.attributes
+                0x080030d7       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-mallocr.o)
+ .ARM.attributes
+                0x08003104       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-reallocr.o)
+ .ARM.attributes
+                0x08003131       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x0800315e       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x0800318b       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-msizer.o)
+ .ARM.attributes
+                0x080031b8       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-reent.o)
+ .ARM.attributes
+                0x080031e5       0x2d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libnosys.a(sbrk.o)
+ .ARM.attributes
+                0x08003212       0x1d d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+
+.preinit_array  0x08002cd0        0x0
+                0x08002cd0                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array*)
+                0x08002cd0                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x08002cd0        0x4
+                0x08002cd0                PROVIDE (__init_array_start, .)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array*)
+ .init_array    0x08002cd0        0x4 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+                0x08002cd4                PROVIDE (__init_array_end, .)
+
+.fini_array     0x08002cd4        0x4
+                [!provide]                PROVIDE (__fini_array_start, .)
+ *(.fini_array*)
+ .fini_array    0x08002cd4        0x4 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+ *(SORT_BY_NAME(.fini_array.*))
+                [!provide]                PROVIDE (__fini_array_end, .)
+                0x08002cd8                _sidata = .
+
+.data           0x20000000       0x8c load address 0x08002cd8
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                _sdata = .
+ *(.data)
+ .data          0x20000000       0x14 src/system.o
+                0x20000000                SystemCoreClock
+                0x20000004                AHBPrescTable
+ .data          0x20000014       0x14 Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ *(.data*)
+ .data._impure_ptr
+                0x20000028        0x4 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-impure.o)
+                0x20000028                _impure_ptr
+ .data.impure_data
+                0x2000002c       0x60 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-impure.o)
+                0x2000008c                . = ALIGN (0x4)
+                0x2000008c                _edata = .
+
+.igot.plt       0x2000008c        0x0 load address 0x08002d64
+ .igot.plt      0x2000008c        0x0 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+
+.co_stack       0x2000008c      0x400 load address 0x08002d64
+ .co_stack      0x2000008c      0x400 src/startup.o
+                0x2000008c                pulStack
+                0x2000048c                . = ALIGN (0x4)
+
+.bss            0x20000490       0x84 load address 0x08003168
+                0x20000490                _sbss = .
+                0x20000490                __bss_start__ = _sbss
+ *(.bss)
+ .bss           0x20000490       0x1c d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+ *fill*         0x200004ac        0x4 
+ .bss           0x200004b0       0x34 src/main.o
+                0x200004b0                current_time
+                0x200004b4                last_time
+                0x200004b8                mode
+                0x200004bc                circle
+                0x200004c0                distance
+                0x200004c4                last_distance
+                0x200004c8                current_speed
+                0x200004d0                average_speed
+                0x200004d8                systick
+                0x200004dc                sensor
+                0x200004e0                button
+ .bss           0x200004e4       0x18 src/gpio.o
+                0x200004e4                IOPin::pin_used
+                0x200004ec                IOPin::GPIOx
+ .bss           0x200004fc        0x8 src/systick.o
+ *(.bss*)
+ .bss.__malloc_free_list
+                0x20000504        0x4 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-mallocr.o)
+                0x20000504                __malloc_free_list
+ .bss.__malloc_sbrk_start
+                0x20000508        0x4 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-mallocr.o)
+                0x20000508                __malloc_sbrk_start
+ .bss.heap_end.4102
+                0x2000050c        0x4 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libnosys.a(sbrk.o)
+ *(COMMON)
+ COMMON         0x20000510        0x4 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-reent.o)
+                0x20000510                errno
+                0x20000514                . = ALIGN (0x4)
+                0x20000514                _ebss = .
+                0x20000514                __bss_end__ = _ebss
+                0x20000514                PROVIDE (end, _ebss)
+                [!provide]                PROVIDE (_end, _ebss)
+
+._user_heap_stack
+                0x20000514      0x100 load address 0x080031ec
+                0x20000514                . = ALIGN (0x4)
+                0x20000514                . = (. + _Min_Heap_Size)
+                0x20000614                . = (. + _Min_Stack_Size)
+ *fill*         0x20000514      0x100 
+                0x20000614                . = ALIGN (0x4)
+
+.memory_b1_text
+ *(.mb1text)
+ *(.mb1text*)
+ *(.mb1rodata)
+ *(.mb1rodata*)
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+OUTPUT(blink.elf elf32-littlearm)
+
+.comment        0x00000000       0x7e
+ .comment       0x00000000       0x7e src/main.o
+                                 0x7f (size before relaxing)
+ .comment       0x0000007e       0x7f src/system.o
+ .comment       0x0000007e       0x7f src/startup.o
+ .comment       0x0000007e       0x7f src/gpio.o
+ .comment       0x0000007e       0x7f src/systick.o
+ .comment       0x0000007e       0x7f Libraries/STM32F10x_StdPeriph_Driver/src/misc.o
+ .comment       0x0000007e       0x7f Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.o
+ .comment       0x0000007e       0x7f Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.o
+ .comment       0x0000007e       0x7f Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.o
+ .comment       0x0000007e       0x7f Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.o
+
+.debug_frame    0x00000000      0x48c
+ .debug_frame   0x00000000       0xac d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x000000ac       0x50 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x000000fc       0x24 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m\libgcc.a(_arm_fixdfsi.o)
+ .debug_frame   0x00000120       0x6c d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-sprintf.o)
+ .debug_frame   0x0000018c       0x90 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x0000021c       0x60 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x0000027c       0x28 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memchr-stub.o)
+ .debug_frame   0x000002a4       0x28 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x000002cc       0x28 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-memmove.o)
+ .debug_frame   0x000002f4       0x38 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x0000032c       0x2c d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x00000358       0x3c d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x00000394       0x2c d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x000003c0       0x30 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-mlock.o)
+ .debug_frame   0x000003f0       0x20 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x00000410       0x5c d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-reent.o)
+ .debug_frame   0x0000046c       0x20 d:/program files (x86)/gnu tools arm embedded/7 2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m\libnosys.a(sbrk.o)
