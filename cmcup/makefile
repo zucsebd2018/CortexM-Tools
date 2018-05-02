@@ -13,18 +13,13 @@ OBJS = src/main.o \
 	src/stm32f10x_it.o \
 	src/system.o \
 	src/startup.o \
-<<<<<<< HEAD
 	src/gpio.o
 	#src/uart.o
-=======
-	src/gpio.o 
->>>>>>> 0dd09610fa64868acf6379d6abb0a9eea5c0fc16
 
 CPU = -mcpu=cortex-m3
 MCU = $(CPU) -mthumb
 
 CFLAG = -Xlinker --gc-sections -Wl,-Map,$(PROJECT).map $(MCU)
-<<<<<<< HEAD
 
 #MACRO += -DUSE_STDPERIPH_DRIVER
 
@@ -46,10 +41,6 @@ MACRO += -DSTM32F10X_MD    # STM32F10[1,2,3]x[8-B]  64 and  128 Kbytes
 #MACRO += -DSYSCLK_FREQ_56MHz
 MACRO += -DSYSCLK_FREQ_72MHz
 
-=======
-MACRO = -DSTM32F10X_MD_VL # For stm32f100xx 
-# MACRO = -DSTM32F10X_MD  # For stm32f103c8
->>>>>>> 0dd09610fa64868acf6379d6abb0a9eea5c0fc16
 INCLUDE = \
 	-I$(CMSISDEVICE) -I$(CMSISCORE) \
 	-Isrc/include
