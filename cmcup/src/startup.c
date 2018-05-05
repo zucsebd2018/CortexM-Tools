@@ -211,6 +211,9 @@ void Default_Reset_Handler(void)
     
   /* Call the application's entry point.*/
   main();
+  
+  /* Panic */
+  while(1);
 }
 
 /**
