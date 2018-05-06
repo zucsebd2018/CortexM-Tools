@@ -1,0 +1,690 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(unwind-arm.o)
+                              src/system.o (__aeabi_unwind_cpp_pr0)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(libunwind.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(unwind-arm.o) (restore_core_regs)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(pr-support.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(unwind-arm.o) (__gnu_unwind_execute)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-abort.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(unwind-arm.o) (abort)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-exit.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o (exit)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-impure.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-exit.o) (_global_impure_ptr)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-init.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o (__libc_init_array)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memcpy.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(unwind-arm.o) (memcpy)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o (memset)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signal.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-abort.o) (raise)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signalr.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signal.o) (_kill_r)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-exit.o) (__call_exitprocs)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-atexit.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o) (atexit)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-fini.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o) (__libc_fini_array)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o) (__retarget_lock_acquire_recursive)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mallocr.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signal.o) (_malloc_r)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mlock.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mallocr.o) (__malloc_lock)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-reent.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signalr.o) (errno)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-sbrkr.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mallocr.o) (_sbrk_r)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__atexit.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-atexit.o) (__register_exitproc)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-freer.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mallocr.o) (_free_r)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(getpid.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signalr.o) (_getpid)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(kill.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signalr.o) (_kill)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-sbrkr.o) (_sbrk)
+/home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(_exit.o)
+                              /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-abort.o) (_exit)
+
+Allocating common symbols
+Common symbol       size              file
+
+__lock___atexit_recursive_mutex
+                    0x1               /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+__lock___arc4random_mutex
+                    0x1               /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+errno               0x4               /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-reent.o)
+__lock___env_recursive_mutex
+                    0x1               /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+__lock___sinit_recursive_mutex
+                    0x1               /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+__lock___malloc_recursive_mutex
+                    0x1               /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+__lock___at_quick_exit_mutex
+                    0x1               /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+__lock___dd_hash_mutex
+                    0x1               /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+__lock___tz_mutex   0x1               /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+__lock___sfp_recursive_mutex
+                    0x1               /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+ .data          0x0000000000000000        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+ .text          0x0000000000000000       0x74 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .ARM.extab     0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .ARM.exidx     0x0000000000000000        0x8 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .ARM.attributes
+                0x0000000000000000       0x1b /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .data          0x0000000000000000        0x0 src/main.o
+ .bss           0x0000000000000000        0x0 src/main.o
+ .ARM.extab     0x0000000000000000        0x0 src/main.o
+ .text          0x0000000000000000        0x0 src/stm32f10x_it.o
+ .data          0x0000000000000000        0x0 src/stm32f10x_it.o
+ .bss           0x0000000000000000        0x0 src/stm32f10x_it.o
+ .comment       0x0000000000000000       0x7f src/stm32f10x_it.o
+ .ARM.attributes
+                0x0000000000000000       0x33 src/stm32f10x_it.o
+ .bss           0x0000000000000000        0x0 src/system.o
+ .ARM.extab     0x0000000000000000        0x0 src/system.o
+ .data          0x0000000000000000        0x0 src/startup.o
+ .bss           0x0000000000000000        0x0 src/startup.o
+ .text          0x0000000000000000        0x0 src/gpio.o
+ .data          0x0000000000000000        0x0 src/gpio.o
+ .bss           0x0000000000000000        0x0 src/gpio.o
+ .comment       0x0000000000000000       0x7f src/gpio.o
+ .ARM.attributes
+                0x0000000000000000       0x33 src/gpio.o
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(unwind-arm.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(unwind-arm.o)
+ .ARM.extab     0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(unwind-arm.o)
+ .debug_frame   0x0000000000000000      0x2fc /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(unwind-arm.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(unwind-arm.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(libunwind.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(libunwind.o)
+ .ARM.attributes
+                0x0000000000000000       0x1d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(libunwind.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(pr-support.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(pr-support.o)
+ .debug_frame   0x0000000000000000      0x104 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(pr-support.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(pr-support.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-abort.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-abort.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-abort.o)
+ .debug_frame   0x0000000000000000       0x28 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-abort.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-abort.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-exit.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-exit.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-exit.o)
+ .text.exit     0x0000000000000000       0x20 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-exit.o)
+ .debug_frame   0x0000000000000000       0x28 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-exit.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-exit.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-impure.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-impure.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-impure.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-init.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-init.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-init.o)
+ .text.__libc_init_array
+                0x0000000000000000       0x48 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-init.o)
+ .debug_frame   0x0000000000000000       0x2c /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-init.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-init.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memcpy.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x0000000000000000       0x1b /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memcpy.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
+ .text.memset   0x0000000000000000       0x94 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
+ .debug_frame   0x0000000000000000       0x38 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memset.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signal.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signal.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signal.o)
+ .text._init_signal_r.part.0
+                0x0000000000000000       0x28 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signal.o)
+ .text._init_signal_r
+                0x0000000000000000       0x10 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signal.o)
+ .text._signal_r
+                0x0000000000000000       0x38 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signal.o)
+ .text.__sigtramp_r
+                0x0000000000000000       0x54 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signal.o)
+ .text.signal   0x0000000000000000       0x10 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signal.o)
+ .text._init_signal
+                0x0000000000000000       0x18 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signal.o)
+ .text.__sigtramp
+                0x0000000000000000       0x10 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signal.o)
+ .debug_frame   0x0000000000000000       0xe0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signal.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signal.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signalr.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signalr.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signalr.o)
+ .debug_frame   0x0000000000000000       0x3c /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signalr.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signalr.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
+ .text.__call_exitprocs
+                0x0000000000000000       0xe8 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-atexit.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-atexit.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-atexit.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-fini.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-fini.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-fini.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_init
+                0x0000000000000000        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_init_recursive
+                0x0000000000000000        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_close
+                0x0000000000000000        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_close_recursive
+                0x0000000000000000        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_acquire
+                0x0000000000000000        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire
+                0x0000000000000000        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire_recursive
+                0x0000000000000000        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_release
+                0x0000000000000000        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mallocr.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mallocr.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mallocr.o)
+ .text._malloc_r
+                0x0000000000000000      0x524 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mallocr.o)
+ .bss.__malloc_current_mallinfo
+                0x0000000000000000       0x28 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mallocr.o)
+ .bss.__malloc_max_sbrked_mem
+                0x0000000000000000        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mallocr.o)
+ .bss.__malloc_max_total_mem
+                0x0000000000000000        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mallocr.o)
+ .bss.__malloc_top_pad
+                0x0000000000000000        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mallocr.o)
+ .data.__malloc_av_
+                0x0000000000000000      0x408 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mallocr.o)
+ .data.__malloc_sbrk_base
+                0x0000000000000000        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mallocr.o)
+ .data.__malloc_trim_threshold
+                0x0000000000000000        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mallocr.o)
+ .debug_frame   0x0000000000000000       0x4c /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mallocr.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mallocr.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mlock.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mlock.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mlock.o)
+ .text.__malloc_lock
+                0x0000000000000000        0xc /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mlock.o)
+ .text.__malloc_unlock
+                0x0000000000000000        0xc /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mlock.o)
+ .debug_frame   0x0000000000000000       0x30 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-mlock.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-reent.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-reent.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-reent.o)
+ .text.cleanup_glue
+                0x0000000000000000       0x28 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-reent.o)
+ .text._reclaim_reent
+                0x0000000000000000       0x88 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-reent.o)
+ .debug_frame   0x0000000000000000       0x68 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-reent.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-reent.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-sbrkr.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-sbrkr.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-sbrkr.o)
+ .text._sbrk_r  0x0000000000000000       0x24 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000000000000000       0x2c /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-sbrkr.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__atexit.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__atexit.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__atexit.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-freer.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-freer.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-freer.o)
+ .text._malloc_trim_r
+                0x0000000000000000       0xa0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-freer.o)
+ .text._free_r  0x0000000000000000      0x1e8 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-freer.o)
+ .debug_frame   0x0000000000000000       0x80 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-freer.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-freer.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(getpid.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(getpid.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(getpid.o)
+ .stab          0x0000000000000000       0x24 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(getpid.o)
+ .debug_frame   0x0000000000000000       0x20 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(getpid.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(getpid.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(kill.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(kill.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(kill.o)
+ .stab          0x0000000000000000       0x18 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(kill.o)
+                                         0x24 (size before relaxing)
+ .debug_frame   0x0000000000000000       0x20 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(kill.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(kill.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
+ .text._sbrk    0x0000000000000000       0x1c /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
+ .bss.heap_end.4102
+                0x0000000000000000        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
+ .debug_frame   0x0000000000000000       0x20 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(sbrk.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(_exit.o)
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(_exit.o)
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(_exit.o)
+ .debug_frame   0x0000000000000000       0x20 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(_exit.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(_exit.o)
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtend.o
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtend.o
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtend.o
+ .eh_frame      0x0000000000000000        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtend.o
+ .ARM.attributes
+                0x0000000000000000       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtend.o
+ .text          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+ .data          0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+ .bss           0x0000000000000000        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000008000000 0x0000000000010000 xr
+RAM              0x0000000020000000 0x0000000000002000 xrw
+MEMORY_B1        0x0000000060000000 0x0000000000000000 xr
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+LOAD /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+LOAD /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+LOAD src/main.o
+LOAD src/stm32f10x_it.o
+LOAD src/system.o
+LOAD src/startup.o
+LOAD src/gpio.o
+LOAD /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libstdc++.a
+LOAD /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libm.a
+START GROUP
+LOAD /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a
+LOAD /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a
+END GROUP
+START GROUP
+LOAD /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a
+LOAD /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a
+LOAD /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a
+END GROUP
+LOAD /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtend.o
+LOAD /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+                0x0000000020002000                _estack = 0x20002000
+                0x0000000000000000                _Min_Heap_Size = 0x0
+                0x0000000000000100                _Min_Stack_Size = 0x100
+
+.isr_vector     0x0000000008000000      0x124
+                0x0000000008000000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x0000000008000000      0x124 src/startup.o
+                0x0000000008000124                . = ALIGN (0x4)
+
+.text           0x0000000008000124     0x1558
+                0x0000000008000124                . = ALIGN (0x4)
+ *(.text)
+ .text          0x0000000008000124       0x40 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+ .text          0x0000000008000164        0xe src/main.o
+                0x0000000008000164                main
+ *fill*         0x0000000008000172        0x2 
+ .text          0x0000000008000174      0x28c src/system.o
+                0x0000000008000174                SystemInit
+                0x00000000080001dc                SystemCoreClockUpdate
+ .text          0x0000000008000400       0x68 src/startup.o
+                0x0000000008000400                Reset_Handler
+                0x0000000008000400                Default_Reset_Handler
+                0x0000000008000458                EXTI2_IRQHandler
+                0x0000000008000458                DebugMon_Handler
+                0x0000000008000458                TIM1_CC_IRQHandler
+                0x0000000008000458                HardFault_Handler
+                0x0000000008000458                SysTick_Handler
+                0x0000000008000458                PVD_IRQHandler
+                0x0000000008000458                PendSV_Handler
+                0x0000000008000458                NMI_Handler
+                0x0000000008000458                EXTI3_IRQHandler
+                0x0000000008000458                EXTI0_IRQHandler
+                0x0000000008000458                I2C2_EV_IRQHandler
+                0x0000000008000458                TIM1_UP_TIM16_IRQHandler
+                0x0000000008000458                UsageFault_Handler
+                0x0000000008000458                SPI1_IRQHandler
+                0x0000000008000458                TAMPER_IRQHandler
+                0x0000000008000458                TIM6_DAC_IRQHandler
+                0x0000000008000458                DMA1_Channel4_IRQHandler
+                0x0000000008000458                ADC1_IRQHandler
+                0x0000000008000458                USART3_IRQHandler
+                0x0000000008000458                RTC_IRQHandler
+                0x0000000008000458                DMA1_Channel7_IRQHandler
+                0x0000000008000458                TIM4_IRQHandler
+                0x0000000008000458                I2C1_EV_IRQHandler
+                0x0000000008000458                DMA1_Channel6_IRQHandler
+                0x0000000008000458                TIM3_IRQHandler
+                0x0000000008000458                RCC_IRQHandler
+                0x0000000008000458                DMA1_Channel1_IRQHandler
+                0x0000000008000458                CEC_IRQHandler
+                0x0000000008000458                EXTI15_10_IRQHandler
+                0x0000000008000458                TIM7_IRQHandler
+                0x0000000008000458                EXTI9_5_IRQHandler
+                0x0000000008000458                SPI2_IRQHandler
+                0x0000000008000458                MemManage_Handler
+                0x0000000008000458                SVC_Handler
+                0x0000000008000458                DMA1_Channel5_IRQHandler
+                0x0000000008000458                EXTI4_IRQHandler
+                0x0000000008000458                TIM1_TRG_COM_TIM17_IRQHandler
+                0x0000000008000458                DMA1_Channel3_IRQHandler
+                0x0000000008000458                WWDG_IRQHandler
+                0x0000000008000458                TIM2_IRQHandler
+                0x0000000008000458                EXTI1_IRQHandler
+                0x0000000008000458                RTCAlarm_IRQHandler
+                0x0000000008000458                USART2_IRQHandler
+                0x0000000008000458                I2C2_ER_IRQHandler
+                0x0000000008000458                DMA1_Channel2_IRQHandler
+                0x0000000008000458                FLASH_IRQHandler
+                0x0000000008000458                BusFault_Handler
+                0x0000000008000458                USART1_IRQHandler
+                0x0000000008000458                I2C1_ER_IRQHandler
+                0x0000000008000458                TIM1_BRK_TIM15_IRQHandler
+ .text          0x0000000008000468      0xa00 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(unwind-arm.o)
+                0x0000000008000724                _Unwind_GetCFA
+                0x0000000008000728                __gnu_Unwind_RaiseException
+                0x0000000008000788                __gnu_Unwind_ForcedUnwind
+                0x000000000800079c                __gnu_Unwind_Resume
+                0x00000000080007e0                __gnu_Unwind_Resume_or_Rethrow
+                0x00000000080007f4                _Unwind_Complete
+                0x00000000080007f8                _Unwind_DeleteException
+                0x0000000008000804                _Unwind_VRS_Get
+                0x0000000008000848                _Unwind_VRS_Set
+                0x0000000008000890                __gnu_Unwind_Backtrace
+                0x0000000008000bd8                __aeabi_unwind_cpp_pr0
+                0x0000000008000bdc                __aeabi_unwind_cpp_pr1
+                0x0000000008000be0                __aeabi_unwind_cpp_pr2
+                0x0000000008000be4                _Unwind_VRS_Pop
+ .text          0x0000000008000e68      0x1ac /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(libunwind.o)
+                0x0000000008000e68                __restore_core_regs
+                0x0000000008000e68                restore_core_regs
+                0x0000000008000e80                __gnu_Unwind_Restore_VFP
+                0x0000000008000e88                __gnu_Unwind_Save_VFP
+                0x0000000008000e90                __gnu_Unwind_Restore_VFP_D
+                0x0000000008000e98                __gnu_Unwind_Save_VFP_D
+                0x0000000008000ea0                __gnu_Unwind_Restore_VFP_D_16_to_31
+                0x0000000008000ea8                __gnu_Unwind_Save_VFP_D_16_to_31
+                0x0000000008000eb0                __gnu_Unwind_Restore_WMMXD
+                0x0000000008000ef4                __gnu_Unwind_Save_WMMXD
+                0x0000000008000f38                __gnu_Unwind_Restore_WMMXC
+                0x0000000008000f4c                __gnu_Unwind_Save_WMMXC
+                0x0000000008000f60                ___Unwind_RaiseException
+                0x0000000008000f60                _Unwind_RaiseException
+                0x0000000008000f84                ___Unwind_Resume
+                0x0000000008000f84                _Unwind_Resume
+                0x0000000008000fa8                _Unwind_Resume_or_Rethrow
+                0x0000000008000fa8                ___Unwind_Resume_or_Rethrow
+                0x0000000008000fcc                ___Unwind_ForcedUnwind
+                0x0000000008000fcc                _Unwind_ForcedUnwind
+                0x0000000008000ff0                _Unwind_Backtrace
+                0x0000000008000ff0                ___Unwind_Backtrace
+ .text          0x0000000008001014      0x378 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(pr-support.o)
+                0x000000000800106c                __gnu_unwind_execute
+                0x0000000008001330                __gnu_unwind_frame
+                0x000000000800135c                _Unwind_GetRegionStart
+                0x0000000008001368                _Unwind_GetLanguageSpecificData
+                0x000000000800137c                _Unwind_GetDataRelBase
+                0x0000000008001384                _Unwind_GetTextRelBase
+ .text          0x000000000800138c       0xec /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-memcpy.o)
+                0x000000000800138c                memcpy
+ *(.text*)
+ .text.abort    0x0000000008001478       0x10 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-abort.o)
+                0x0000000008001478                abort
+ .text._raise_r
+                0x0000000008001488       0x5c /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signal.o)
+                0x0000000008001488                _raise_r
+ .text.raise    0x00000000080014e4       0x10 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signal.o)
+                0x00000000080014e4                raise
+ .text._kill_r  0x00000000080014f4       0x28 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signalr.o)
+                0x00000000080014f4                _kill_r
+ .text._getpid_r
+                0x000000000800151c        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-signalr.o)
+                0x000000000800151c                _getpid_r
+ .text.startup.register_fini
+                0x0000000008001520       0x14 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x0000000008001534        0xc /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-atexit.o)
+                0x0000000008001534                atexit
+ .text.__libc_fini_array
+                0x0000000008001540       0x34 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-fini.o)
+                0x0000000008001540                __libc_fini_array
+ .text.__retarget_lock_acquire_recursive
+                0x0000000008001574        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+                0x0000000008001574                __retarget_lock_acquire_recursive
+ .text.__retarget_lock_release_recursive
+                0x0000000008001578        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+                0x0000000008001578                __retarget_lock_release_recursive
+ .text.__register_exitproc
+                0x000000000800157c       0xc0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__atexit.o)
+                0x000000000800157c                __register_exitproc
+ .text._getpid  0x000000000800163c       0x10 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(getpid.o)
+                0x000000000800163c                _getpid
+ .text._kill    0x000000000800164c       0x10 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(kill.o)
+                0x000000000800164c                _kill
+ .text._exit    0x000000000800165c        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(_exit.o)
+                0x000000000800165c                _exit
+ *(.rodata)
+ *(.rodata*)
+ .rodata._global_impure_ptr
+                0x0000000008001660        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-impure.o)
+                0x0000000008001660                _global_impure_ptr
+ *(.glue_7)
+ .glue_7        0x0000000008001664        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x0000000008001664        0x0 linker stubs
+ *(.init)
+ .init          0x0000000008001664        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+                0x0000000008001664                _init
+ .init          0x0000000008001668        0x8 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+ *(.fini)
+ .fini          0x0000000008001670        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+                0x0000000008001670                _fini
+ .fini          0x0000000008001674        0x8 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+                0x000000000800167c                . = ALIGN (0x4)
+                0x000000000800167c                _etext = .
+
+.vfp11_veneer   0x000000000800167c        0x0
+ .vfp11_veneer  0x000000000800167c        0x0 linker stubs
+
+.v4_bx          0x000000000800167c        0x0
+ .v4_bx         0x000000000800167c        0x0 linker stubs
+
+.iplt           0x000000000800167c        0x0
+ .iplt          0x000000000800167c        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+
+.ARM.extab      0x000000000800167c       0x24
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ .ARM.extab     0x000000000800167c        0xc src/startup.o
+ .ARM.extab     0x0000000008001688       0x18 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(pr-support.o)
+
+.eh_frame       0x00000000080016a0        0x0
+ .eh_frame      0x00000000080016a0        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+
+.ARM            0x00000000080016a0       0xd8
+                0x00000000080016a0                __exidx_start = .
+ *(.ARM.exidx*)
+ .ARM.exidx     0x00000000080016a0        0x8 src/main.o
+ .ARM.exidx     0x00000000080016a8       0x10 src/system.o
+                                         0x20 (size before relaxing)
+ .ARM.exidx     0x00000000080016b8       0x10 src/startup.o
+ .ARM.exidx     0x00000000080016c8       0x78 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(unwind-arm.o)
+                                         0xd8 (size before relaxing)
+ .ARM.exidx     0x0000000008001740       0x38 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/libgcc.a(pr-support.o)
+                                         0x48 (size before relaxing)
+                0x0000000008001778                __exidx_end = .
+
+.rel.dyn        0x0000000008001778        0x0
+ .rel.iplt      0x0000000008001778        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+
+.ARM.attributes
+                0x0000000008001778       0x29
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x0000000008001778       0x1d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+ .ARM.attributes
+                0x0000000008001795       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+ .ARM.attributes
+                0x00000000080017c2       0x33 src/main.o
+ .ARM.attributes
+                0x00000000080017f5       0x33 src/system.o
+ .ARM.attributes
+                0x0000000008001828       0x33 src/startup.o
+ .ARM.attributes
+                0x000000000800185b       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x0000000008001888       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
+ .ARM.attributes
+                0x00000000080018b5       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-atexit.o)
+ .ARM.attributes
+                0x00000000080018e2       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-fini.o)
+ .ARM.attributes
+                0x000000000800190f       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+ .ARM.attributes
+                0x000000000800193c       0x2d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__atexit.o)
+ .ARM.attributes
+                0x0000000008001969       0x1d /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+
+.preinit_array  0x0000000008001778        0x0
+                0x0000000008001778                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array*)
+                0x0000000008001778                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x0000000008001778        0x8
+                0x0000000008001778                PROVIDE (__init_array_start, .)
+ *(SORT_BY_NAME(.init_array.*))
+ .init_array.00000
+                0x0000000008001778        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
+ *(.init_array*)
+ .init_array    0x000000000800177c        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+                0x0000000008001780                PROVIDE (__init_array_end, .)
+
+.fini_array     0x0000000008001780        0x4
+                0x0000000008001780                PROVIDE (__fini_array_start, .)
+ *(.fini_array*)
+ .fini_array    0x0000000008001780        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+ *(SORT_BY_NAME(.fini_array.*))
+                0x0000000008001784                PROVIDE (__fini_array_end, .)
+                0x0000000008001784                _sidata = .
+
+.data           0x0000000020000000      0x444 load address 0x0000000008001784
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                _sdata = .
+ *(.data)
+ .data          0x0000000020000000       0x14 src/system.o
+                0x0000000020000000                SystemCoreClock
+                0x0000000020000004                AHBPrescTable
+ *(.data*)
+ .data._impure_ptr
+                0x0000000020000014        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-impure.o)
+                0x0000000020000014                _impure_ptr
+ .data.impure_data
+                0x0000000020000018      0x428 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-impure.o)
+ .data.__atexit_recursive_mutex
+                0x0000000020000440        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
+                0x0000000020000440                __atexit_recursive_mutex
+                0x0000000020000444                . = ALIGN (0x4)
+                0x0000000020000444                _edata = .
+
+.igot.plt       0x0000000020000444        0x0 load address 0x0000000008001bc8
+ .igot.plt      0x0000000020000444        0x0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+
+.co_stack       0x0000000020000444      0x400 load address 0x0000000008001bc8
+ .co_stack      0x0000000020000444      0x400 src/startup.o
+                0x0000000020000444                pulStack
+                0x0000000020000844                . = ALIGN (0x4)
+
+.bss            0x0000000020000844       0x44 load address 0x0000000008001fc8
+                0x0000000020000844                _sbss = .
+                0x0000000020000844                __bss_start__ = _sbss
+ *(.bss)
+ .bss           0x0000000020000844       0x1c /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x0000000020000860       0x21 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+                0x0000000020000860                __lock___atexit_recursive_mutex
+                0x0000000020000864                __lock___arc4random_mutex
+                0x0000000020000868                __lock___env_recursive_mutex
+                0x000000002000086c                __lock___sinit_recursive_mutex
+                0x0000000020000870                __lock___malloc_recursive_mutex
+                0x0000000020000874                __lock___at_quick_exit_mutex
+                0x0000000020000878                __lock___dd_hash_mutex
+                0x000000002000087c                __lock___tz_mutex
+                0x0000000020000880                __lock___sfp_recursive_mutex
+ *fill*         0x0000000020000881        0x3 
+ COMMON         0x0000000020000884        0x4 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-reent.o)
+                0x0000000020000884                errno
+                0x0000000020000888                . = ALIGN (0x4)
+                0x0000000020000888                _ebss = .
+                0x0000000020000888                __bss_end__ = _ebss
+                0x0000000020000888                PROVIDE (end, _ebss)
+                [!provide]                        PROVIDE (_end, _ebss)
+
+._user_heap_stack
+                0x0000000020000888      0x100 load address 0x000000000800200c
+                0x0000000020000888                . = ALIGN (0x4)
+                0x0000000020000888                . = (. + _Min_Heap_Size)
+                0x0000000020000988                . = (. + _Min_Stack_Size)
+ *fill*         0x0000000020000888      0x100 
+                0x0000000020000988                . = ALIGN (0x4)
+
+.memory_b1_text
+ *(.mb1text)
+ *(.mb1text*)
+ *(.mb1rodata)
+ *(.mb1rodata*)
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+OUTPUT(blink.elf elf32-littlearm)
+
+.comment        0x0000000000000000       0x7e
+ .comment       0x0000000000000000       0x7e src/main.o
+                                         0x7f (size before relaxing)
+ .comment       0x000000000000007e       0x7f src/system.o
+ .comment       0x000000000000007e       0x7f src/startup.o
+
+.debug_frame    0x0000000000000000      0x194
+ .debug_frame   0x0000000000000000       0x5c /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x000000000000005c       0x20 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-atexit.o)
+ .debug_frame   0x000000000000007c       0x34 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-fini.o)
+ .debug_frame   0x00000000000000b0       0xb0 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-lock.o)
+ .debug_frame   0x0000000000000160       0x34 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc.a(lib_a-__atexit.o)
+
+.stabstr        0x0000000000000000       0x76
+ .stabstr       0x0000000000000000       0x76 /home/crabfish/tools/gcc-arm-none-eabi-7-2017-q4-major/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libnosys.a(getpid.o)
